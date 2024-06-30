@@ -1,0 +1,19 @@
+# top most 'editorconfig' file
+root = true
+
+# configurations for all files
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+
+# 2 spaces identation
+[{*.js, *.ts, *.vue, *.html}]
+indent_size = 2
+indent_style = space
+indent_brace_style = 1TBS
+quote_type = single
+trim_trailing_whitespace = true
+curly_bracket_next_line = false
+space_around_brackets = both
+space_around_operators = true
