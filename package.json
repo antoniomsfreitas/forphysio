@@ -8,7 +8,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lint": "npx stylelint '**/*.scss' --fix",
+    "lint": "stylelint '**/*.scss' --fix",
     "precommit": "npm run lint"
   },
   "dependencies": {
