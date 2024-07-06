@@ -1,0 +1,13 @@
+// breakpoints
+$breakpoints: (
+  mq1: 320px,
+  mq2: 480px,
+  mq3: 768px,
+  mq4: 1024px,
+  mq5: 1280px,
+  mq6: 1440px,
+);
+
+// wrappers
+$wrapper-padding-desktop: 32px;
+$wrapper-padding-mobile: 24px;

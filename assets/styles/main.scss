@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+// wrappers
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 $wrapper-padding-mobile;
+
+  @include breakpoint-from('mq3') {
+    padding: 0 $wrapper-padding-desktop;
+  }
+
+  &[size='m'] {
+    max-width: calc(1214px + 2 * #{$wrapper-padding-mobile});
+
+    @include breakpoint-from('mq3') {
+      max-width: calc(1214px + 2 * #{$wrapper-padding-desktop});
+    }
+  }
+
+  &[size='s'] {
+    max-width: calc(990px + 2 * #{$wrapper-padding-mobile});
+
+    @include breakpoint-from('mq3') {
+      max-width: calc(990px + 2 * #{$wrapper-padding-desktop});
+    }
+  }
+
+  &[size='xs'] {
+    max-width: calc(590px + 2 * #{$wrapper-padding-mobile});
+
+    @include breakpoint-from('mq3') {
+      max-width: calc(590px + 2 * #{$wrapper-padding-desktop});
+    }
+  }
+}
