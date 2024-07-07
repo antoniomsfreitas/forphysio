@@ -42,10 +42,10 @@
       "prettier --write"
     ],
     "*.{ts,js,vue}": [
-      "eslint"
+      "eslint --fix"
     ],
     "*.{css,scss,vue}": [
-      "stylelint"
+      "stylelint --fix"
     ]
   }
 }
