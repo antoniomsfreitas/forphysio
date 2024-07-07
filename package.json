@@ -8,7 +8,10 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint:styles": "stylelint '**/*.{css,scss,vue}'",
+    "lint:js": "eslint '**/*.{js,ts,vue}'",
+    "format": "prettier '**/*.{js,ts,vue,css,scss,json}' --write"
   },
   "dependencies": {
     "@nuxtjs/google-fonts": "^3.2.0",
@@ -37,7 +40,14 @@
     "stylelint-config-standard-vue": "^1.0.0"
   },
   "lint-staged": {
-    "*.{ts,js,vue}": "eslint --fix",
-    "*.{css,scss,vue}": "stylelint --fix"
+    "*.{js,ts,vue,css,scss,json}": [
+      "prettier --write"
+    ],
+    "*.{ts,js,vue}": [
+      "eslint '**/*.{js,ts,vue}'"
+    ],
+    "*.{css,scss,vue}": [
+      "stylelint"
+    ]
   }
 }
