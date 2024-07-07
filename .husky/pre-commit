@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-#run lint
+# runs the lint to the stage files
 npx lint-staged
