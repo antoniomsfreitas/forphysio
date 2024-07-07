@@ -1,0 +1,3 @@
+{
+  "extends": ["@nuxtjs", "plugin:vue/vue3-recommended"],
+}
