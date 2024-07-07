@@ -10,33 +10,17 @@ body {
 .wrapper {
   width: 100%;
   margin: 0 auto;
-  padding: 0 $wrapper-padding-mobile;
-
-  @include breakpoint-from('mq3') {
-    padding: 0 $wrapper-padding-desktop;
-  }
+  padding: 0 var(--wrapper-padding);
 
   &[size='m'] {
-    max-width: calc(1214px + 2 * #{$wrapper-padding-mobile});
-
-    @include breakpoint-from('mq3') {
-      max-width: calc(1214px + 2 * #{$wrapper-padding-desktop});
-    }
+    max-width: calc(1214px + 2 * var(--wrapper-padding));
   }
 
   &[size='s'] {
-    max-width: calc(990px + 2 * #{$wrapper-padding-mobile});
-
-    @include breakpoint-from('mq3') {
-      max-width: calc(990px + 2 * #{$wrapper-padding-desktop});
-    }
+    max-width: calc(990px + 2 * var(--wrapper-padding));
   }
 
   &[size='xs'] {
-    max-width: calc(590px + 2 * #{$wrapper-padding-mobile});
-
-    @include breakpoint-from('mq3') {
-      max-width: calc(590px + 2 * #{$wrapper-padding-desktop});
-    }
+    max-width: calc(590px + 2 * var(--wrapper-padding));
   }
 }
