@@ -25,3 +25,6 @@ logs
 
 # IDE
 .history
+
+# Husky
+.husky
