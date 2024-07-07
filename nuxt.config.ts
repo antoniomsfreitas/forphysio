@@ -8,10 +8,21 @@ export default defineNuxtConfig({
         scss: {
           additionalData: `
               @use "~/assets/styles/utils/_variables.scss" as *;
-             @use "~/assets/styles/utils/_mixins.scss" as *;
+              @use "~/assets/styles/utils/_mixins.scss" as *;
           `,
         },
       },
     },
   },
+  modules: [
+    [
+      '@nuxtjs/google-fonts',
+      {
+        families: {
+          Roboto: [300, 400, 500],
+        },
+        preload: true,
+      },
+    ],
+  ],
 });
