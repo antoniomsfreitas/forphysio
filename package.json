@@ -35,7 +35,7 @@
     "typescript-eslint": "^7.15.0"
   },
   "lint-staged": {
-    "!*.gitignore": "prettier --write",
+    "!*.{gitignore,/husky/**}": "prettier --write",
     "*.{ts,js,vue}": "eslint --fix",
     "*.{css,scss,vue}": "stylelint --fix"
   }
