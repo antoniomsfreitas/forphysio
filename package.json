@@ -44,7 +44,7 @@
       "prettier --write"
     ],
     "*.{ts,js,vue}": [
-      "eslint '**/*.{js,ts,vue}'"
+      "eslint"
     ],
     "*.{css,scss,vue}": [
       "stylelint"
