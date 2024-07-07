@@ -1,7 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  css: ['normalize.css'],
   vite: {
     css: {
       preprocessorOptions: {
@@ -13,4 +12,15 @@ export default defineNuxtConfig({
       },
     },
   },
+  modules: [
+    [
+      '@nuxtjs/google-fonts',
+      {
+        families: {
+          Roboto: [300, 400, 500],
+        },
+        preload: true,
+      },
+    ],
+  ],
 });
