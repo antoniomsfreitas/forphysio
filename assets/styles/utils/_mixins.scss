@@ -1,10 +1,18 @@
-@use 'variables.scss' as *;
+$breakpoints: (
+  // small mobile
+  sm: 320px,
+  // mobile
+  md: 480px,
+  // tablet
+  lg: 768px,
+  // desktop
+  xl: 1280px
+);
 
-// ----------------------------------------------------------------------------
 // Makes the @content apply to the given breakpoint and wider.
-// eg: @include utility.breakpoint-from(mq6)
 @mixin breakpoint-from($name) {
   $min: get-breakpoint-value($name);
+
   @if $min {
     @media (min-width: $min) {
       @content;
@@ -14,11 +22,10 @@
   }
 }
 
-// ----------------------------------------------------------------------------
 // Makes the @content apply to the given breakpoint and narrower.
-// eg: @include utility.breakpoint-to(mq3)
 @mixin breakpoint-to($name) {
-  $max: get-max-breakpoint-width($name);
+  $max: get-breakpoint-value($name) - 1;
+
   @if $max {
     @media (max-width: $max) {
       @content;
@@ -28,9 +35,7 @@
   }
 }
 
-// ----------------------------------------------------------------------------
-// Makes the @content apply to the between the given breakpoints.
-// eg: @include utility.breakpoint-between(mq1, mq3)
+// Makes the @content apply to the between the given breakpoints
 @mixin breakpoint-between($minName, $maxName) {
   $min: get-breakpoint-value($minName);
   $max: get-breakpoint-value($maxName) - 0.01;
@@ -46,16 +51,10 @@
   }
 }
 
-// ----------------------------------------------------------------------------
 // Value of the given breakpoint name
 @function get-breakpoint-value($name) {
   $min: map-get($breakpoints, $name);
   @return if($min != 0, $min, null);
 }
 
-// ----------------------------------------------------------------------------
-// Maximum breakpoint width. Null for the largest (last) breakpoint.
-@function get-max-breakpoint-width($name) {
-  $next: get-next-breakpoint-name($name, $breakpoints);
-  @return if($next, get-breakpoint-value($next) - 0.01, null);
-}
+// -----------------------

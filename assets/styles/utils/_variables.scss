@@ -1,16 +1,6 @@
 // typography
 $font-family: 'Roboto', sans-serif;
 
-// breakpoints
-$breakpoints: (
-  small-mobile: 480px,
-  mobile: 767px,
-  tablet: 1280px,
-  desktop: 1920px,
-  desktop-2k: 2560px,
-  desktop-4k: 3840px,
-);
-
 // colors
 $black: #000000;
 $white: #ffffff;
@@ -18,12 +8,3 @@ $light-grey: #e7e8e8;
 $medium-grey: #a1a2a4;
 $deep-grey: #14171b;
 $blue: #18a8bb;
-
-// responsive variables
-:root {
-  --wrapper-padding: 24px;
-
-  @media (min-width: map-get($breakpoints, 'mq3')) {
-    --wrapper-padding: 32px;
-  }
-}
