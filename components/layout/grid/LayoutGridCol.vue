@@ -1,30 +1,36 @@
 <template>
-  <div class="layout-grid-col" v-bind="attributes">
+  <div class="layout-grid-col" v-bind="{ ...attributes }">
     <slot />
   </div>
 </template>
 
-<script lang="ts" setup>
-import { type GridColumns, type GridColumnsMobile } from '../../../models/layout/grid.model';
+<script setup lang="ts">
+import type { GridColumns, GridColumnsMobile } from '../../../models/layout/grid.model';
 
 const props = defineProps({
   m: {
     type: [Number, String] as PropType<GridColumnsMobile | 'hide'>,
+    default: undefined,
   },
   t: {
     type: [Number, String] as PropType<GridColumns | 'hide'>,
+    default: undefined,
   },
   d: {
     type: [Number, String] as PropType<GridColumns | 'hide'>,
+    default: undefined,
   },
   startColM: {
     type: String as PropType<GridColumnsMobile>,
+    default: undefined,
   },
   startColT: {
     type: String as PropType<GridColumns>,
+    default: undefined,
   },
   startColD: {
     type: String as PropType<GridColumns>,
+    default: undefined,
   },
 });
 
@@ -38,14 +44,8 @@ const attributes = computed(() => ({
 }));
 </script>
 
-<style lang="scss" scoped>
-@mixin apply-grid-styles($breakpoint) {
-  $grid-columns: 4;
-
-  @include breakpoint-from('m') {
-    $grid-columns: 12;
-  }
-
+<style scoped lang="scss">
+@mixin apply-grid-styles($breakpoint, $grid-columns: 12) {
   &[#{$breakpoint}='hide'] {
     display: none;
   }
@@ -62,9 +62,9 @@ const attributes = computed(() => ({
 }
 
 .layout-grid-col {
-  @each $breakpoint in map-keys($breakpoints) {
+  @each $breakpoint in map.keys($breakpoints) {
     @if $breakpoint == 'm' {
-      @include apply-grid-styles($breakpoint);
+      @include apply-grid-styles($breakpoint, 4);
     } @else {
       @include breakpoint-from($breakpoint) {
         @include apply-grid-styles($breakpoint);
