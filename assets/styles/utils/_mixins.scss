@@ -1,12 +1,7 @@
 $breakpoints: (
-  // small mobile
-  sm: 320px,
-  // mobile
-  md: 480px,
-  // tablet
-  lg: 768px,
-  // desktop
-  xl: 1280px
+  m: 480px,
+  t: 768px,
+  d: 1280px,
 );
 
 // Makes the @content apply to the given breakpoint and wider.
@@ -38,7 +33,7 @@ $breakpoints: (
 // Makes the @content apply to the between the given breakpoints
 @mixin breakpoint-between($minName, $maxName) {
   $min: get-breakpoint-value($minName);
-  $max: get-breakpoint-value($maxName) - 0.01;
+  $max: get-breakpoint-value($maxName) - 1;
 
   @if $min {
     @media (min-width: $min) and (max-width: $max) {
@@ -56,5 +51,3 @@ $breakpoints: (
   $min: map-get($breakpoints, $name);
   @return if($min != 0, $min, null);
 }
-
-// -----------------------

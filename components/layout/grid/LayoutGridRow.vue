@@ -8,14 +8,12 @@
 .layout-grid-row {
   display: grid;
 
-  // mobile
-  @include breakpoint-to('lg') {
+  @include breakpoint-to('t') {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 16px;
   }
 
-  // tablet or bigger
-  @include breakpoint-from('lg') {
+  @include breakpoint-from('t') {
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 24px;
   }

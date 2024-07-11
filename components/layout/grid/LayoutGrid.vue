@@ -9,13 +9,11 @@
   width: 100%;
   margin: 0 auto;
 
-  // mobile
-  @include breakpoint-to('lg') {
+  @include breakpoint-to('t') {
     padding: 0 24px;
   }
 
-  // tablet or bigger
-  @include breakpoint-from('lg') {
+  @include breakpoint-from('t') {
     padding: 0 32px;
     max-width: 1504px;
   }

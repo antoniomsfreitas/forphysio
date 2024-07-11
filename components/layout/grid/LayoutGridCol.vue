@@ -5,61 +5,69 @@
 </template>
 
 <script lang="ts" setup>
-import { type GridColumns } from '../../../models/layout/grid.model';
+import { type GridColumns, type GridColumnsMobile } from '../../../models/layout/grid.model';
 
 const props = defineProps({
-  sm: {
+  m: {
+    type: [Number, String] as PropType<GridColumnsMobile | 'hide'>,
+  },
+  t: {
     type: [Number, String] as PropType<GridColumns | 'hide'>,
   },
-  md: {
+  d: {
     type: [Number, String] as PropType<GridColumns | 'hide'>,
   },
-  lg: {
-    type: [Number, String] as PropType<GridColumns | 'hide'>,
+  startColM: {
+    type: String as PropType<GridColumnsMobile>,
   },
-  xl: {
-    type: [Number, String] as PropType<GridColumns | 'hide'>,
+  startColT: {
+    type: String as PropType<GridColumns>,
   },
-  startColSm: {
-    type: [Number, String] as PropType<GridColumns | 'hide'>,
-  },
-  startColMd: {
-    type: [Number, String] as PropType<GridColumns | 'hide'>,
-  },
-  startColLg: {
-    type: [Number, String] as PropType<GridColumns | 'hide'>,
-  },
-  startColXl: {
-    type: [Number, String] as PropType<GridColumns | 'hide'>,
+  startColD: {
+    type: String as PropType<GridColumns>,
   },
 });
 
 const attributes = computed(() => ({
-  sm: props.sm,
-  md: props.md,
-  lg: props.lg,
-  xl: props.xl,
-  'start-col-sm': props.startColSm,
-  'start-col-md': props.startColMd,
-  'start-col-lg': props.startColLg,
-  'start-col-xl': props.startColXl,
+  m: props.m,
+  t: props.t,
+  d: props.d,
+  'start-col-m': props.startColM,
+  'start-col-t': props.startColT,
+  'start-col-d': props.startColD,
 }));
 </script>
 
 <style lang="scss" scoped>
-@each $mq in map-keys($breakpoints) {
-  @include breakpoint-from($mq) {
-    .layout-grid-col[#{$mq}='hide'] {
-      display: none;
+@mixin apply-grid-styles($breakpoint) {
+  $grid-columns: 4;
+
+  @include breakpoint-from('m') {
+    $grid-columns: 12;
+  }
+
+  &[#{$breakpoint}='hide'] {
+    display: none;
+  }
+
+  @for $i from 1 through $grid-columns {
+    &[start-col-#{$breakpoint}='#{$i}'] {
+      grid-column-start: $i;
     }
 
-    @for $i from 1 through 12 {
-      .layout-grid-col[start-col-#{$mq}='#{$i}'] {
-        grid-column-start: $i;
-      }
+    &[#{$breakpoint}='#{$i}'] {
+      grid-column-end: span $i;
+    }
+  }
+}
 
-      .layout-grid-col[#{$mq}='#{$i}'] {
-        grid-column-end: span $i;
+.layout-grid-col {
+  @each $breakpoint in map-keys($breakpoints) {
+    @if $breakpoint == 'm' {
+      @include apply-grid-styles($breakpoint);
+    } @else {
+      @include breakpoint-from($breakpoint) {
+        @include apply-grid-styles($breakpoint);
       }
     }
   }
