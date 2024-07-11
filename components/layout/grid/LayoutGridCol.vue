@@ -9,15 +9,15 @@ import type { GridColumns, GridColumnsMobile } from '../../../models/layout/grid
 
 const props = defineProps({
   m: {
-    type: [Number, String] as PropType<GridColumnsMobile | 'hide'>,
+    type: String as PropType<GridColumnsMobile | 'hide'>,
     default: undefined,
   },
   t: {
-    type: [Number, String] as PropType<GridColumns | 'hide'>,
+    type: String as PropType<GridColumns | 'hide'>,
     default: undefined,
   },
   d: {
-    type: [Number, String] as PropType<GridColumns | 'hide'>,
+    type: String as PropType<GridColumns | 'hide'>,
     default: undefined,
   },
   startColM: {
@@ -45,6 +45,8 @@ const attributes = computed(() => ({
 </script>
 
 <style scoped lang="scss">
+@use 'sass:map';
+
 @mixin apply-grid-styles($breakpoint, $grid-columns: 12) {
   &[#{$breakpoint}='hide'] {
     display: none;

@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 $breakpoints: (
   m: 480px,
   t: 768px,
@@ -48,6 +50,7 @@ $breakpoints: (
 
 // Value of the given breakpoint name
 @function get-breakpoint-value($name) {
-  $min: map-get($breakpoints, $name);
+  $min: map.get($breakpoints, $name);
+
   @return if($min != 0, $min, null);
 }

@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style scoped lang="scss">
 .layout-grid {
   width: 100%;
   margin: 0 auto;
@@ -14,8 +14,8 @@
   }
 
   @include breakpoint-from('t') {
-    padding: 0 32px;
     max-width: 1504px;
+    padding: 0 32px;
   }
 }
 </style>
