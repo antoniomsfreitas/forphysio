@@ -24,6 +24,7 @@ export default defineNuxtConfig({
         preload: true,
       },
     ],
+    '@nuxt/eslint',
   ],
   components: [
     {
