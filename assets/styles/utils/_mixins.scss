@@ -1,0 +1,56 @@
+@use 'sass:map';
+
+$breakpoints: (
+  m: 480px,
+  t: 768px,
+  d: 1280px,
+);
+
+// Makes the @content apply to the given breakpoint and wider.
+@mixin breakpoint-from($name) {
+  $min: get-breakpoint-value($name);
+
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+// Makes the @content apply to the given breakpoint and narrower.
+@mixin breakpoint-to($name) {
+  $max: get-breakpoint-value($name) - 1;
+
+  @if $max {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+// Makes the @content apply to the between the given breakpoints
+@mixin breakpoint-between($minName, $maxName) {
+  $min: get-breakpoint-value($minName);
+  $max: get-breakpoint-value($maxName) - 1;
+
+  @if $min {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @media (max-width: $max) {
+      @content;
+    }
+  }
+}
+
+// Value of the given breakpoint name
+@function get-breakpoint-value($name) {
+  $min: map.get($breakpoints, $name);
+
+  @return if($min != 0, $min, null);
+}
