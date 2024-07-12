@@ -1,6 +1,6 @@
 <!-- components/LayoutHeader.vue -->
 <template>
-  <header class="bg-deep-grey" background="deep-grey">
+  <header>
     <LayoutGrid>
       <LayoutGridRow>
         <LayoutGridCol m="4" t="12" class="header__inner" />
@@ -12,6 +12,7 @@
 <style scoped lang="scss">
 header {
   width: 100%;
+  background-color: $deep-grey;
 
   @include breakpoint-to('t') {
     position: fixed;
