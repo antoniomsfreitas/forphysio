@@ -54,3 +54,49 @@ $breakpoints: (
 
   @return if($min != 0, $min, null);
 }
+
+/**
+ * Applies a linear gradient background to an element
+ *
+ * @param {String} $direction - The direction of the gradient
+ * @param {Number} $coverage - The percentage of the element to be covered by the gradient
+ */
+@mixin gradient-overlay($direction: 'bottom-top', $coverage: '100') {
+  position: relative;
+
+  &::after {
+    $deg: 0deg;
+
+    position: absolute;
+    pointer-events: none;
+    content: '';
+
+    @if $direction == 'top-bottom' {
+      $deg: 180deg;
+
+      top: 0;
+    } @else if $direction == 'left-right' {
+      $deg: 90deg;
+
+      left: 0;
+    } @else if $direction == 'right-left' {
+      $deg: 270deg;
+
+      right: 0;
+    } @else {
+      bottom: 0;
+    }
+
+    @if $direction == 'top-bottom' or $direction == 'bottom-top' {
+      left: 0;
+      width: 100%;
+      height: #{$coverage} + '%';
+    } @else {
+      top: 0;
+      width: #{$coverage} + '%';
+      height: 100%;
+    }
+
+    background: linear-gradient($deg, #000 0%, rgb(0 0 0 / 0%) 100%);
+  }
+}
