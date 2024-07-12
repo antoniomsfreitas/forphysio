@@ -6,7 +6,6 @@
 
 <style scoped lang="scss">
 .card {
-  position: relative;
   overflow: hidden;
   border-radius: 15px;
 }
