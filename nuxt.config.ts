@@ -25,6 +25,7 @@ export default defineNuxtConfig({
       },
     ],
     '@nuxt/eslint',
+    '@nuxt/icon',
   ],
   components: [
     {
@@ -33,4 +34,12 @@ export default defineNuxtConfig({
     },
   ],
   compatibilityDate: '2024-07-11',
+  icon: {
+    customCollections: [
+      {
+        prefix: 'icon',
+        dir: './assets/icons',
+      },
+    ],
+  },
 });
