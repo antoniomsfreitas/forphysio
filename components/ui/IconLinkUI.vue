@@ -6,7 +6,7 @@
 </template>
 
 <script setup lang="ts">
-import { IconLinkColors } from '~/models/layout/ui.model';
+import { IconLinkColors } from '~/models/ui/ui.model';
 
 const props = defineProps({
   link: {
