@@ -26,6 +26,9 @@ export default defineNuxtConfig({
     ],
     '@nuxt/eslint',
     '@nuxt/icon',
+    '@vueuse/nuxt',
+    'nuxt-swiper',
+    '@nuxt/image',
   ],
   components: [
     {
@@ -41,5 +44,13 @@ export default defineNuxtConfig({
         dir: './assets/icons',
       },
     ],
+  },
+  image: {
+    dir: './assets/images',
+    screens: {
+      m: 480,
+      t: 768,
+      d: 1280,
+    },
   },
 });
