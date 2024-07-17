@@ -100,3 +100,33 @@ $breakpoints: (
     background: linear-gradient($deg, #000 0%, rgb(0 0 0 / 0%) 100%);
   }
 }
+
+@mixin mq-mobile() {
+  @include breakpoint-to('t') {
+    @content;
+  }
+}
+
+@mixin mq-tablet() {
+  @include breakpoint-between('t', 'd') {
+    @content;
+  }
+}
+
+@mixin mq-desktop() {
+  @include breakpoint-from('d') {
+    @content;
+  }
+}
+
+@mixin mq-tablet-desktop() {
+  @include breakpoint-from('t') {
+    @content;
+  }
+}
+
+@mixin mq-mobile-tablet() {
+  @include breakpoint-to('d') {
+    @content;
+  }
+}

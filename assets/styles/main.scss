@@ -11,6 +11,7 @@ body {
 h1,
 h2,
 h3 {
+  margin: 0;
   font-weight: $font-weight-semi-bold;
   line-height: 1;
   letter-spacing: 1px;
@@ -49,6 +50,10 @@ h3 {
   @include breakpoint-from('d') {
     font-size: 40px;
   }
+}
+
+p {
+  margin: 0;
 }
 
 .icon {
