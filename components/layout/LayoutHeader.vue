@@ -1,13 +1,19 @@
 <!-- components/LayoutHeader.vue -->
 <template>
-  <header>
+  <header class="header">
     <LayoutGrid>
       <LayoutGridRow>
-        <LayoutGridCol m="4" t="12" class="header__inner" />
+        <LayoutGridCol m="4" t="12" class="header__inner">
+          <NuxtImg v-if="!isMobile" src="/logo/logo-white.png" sizes="92px"/>
+        </LayoutGridCol>
       </LayoutGridRow>
     </LayoutGrid>
   </header>
 </template>
+
+<script setup lang="ts">
+import { isMobile } from '~/utils/viewport.util';
+</script>
 
 <style scoped lang="scss">
 header {
