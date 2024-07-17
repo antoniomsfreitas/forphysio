@@ -16,7 +16,7 @@
               melhores resultados, de forma mais rápida e segura.
             </p>
           </div>
-          <IconLinkUI link="/sobre-nos/" text="Conheça-nos melhor"/>
+          <IconLink link="/sobre-nos/" text="Conheça-nos melhor" />
         </div>
       </LayoutGridCol>
       <LayoutGridCol m="4" t="6">
