@@ -1,8 +1,8 @@
 <template>
-  <a :href="props.link" :title="props.text" class="icon-link" :target="external ? '_blank' : '_self'">
+  <NuxtLink :to="props.link" :target="linkTarget" class="icon-link">
     <span>{{ props.text }}</span>
     <Icon name="icon:link-arrow" />
-  </a>
+  </NuxtLink>
 </template>
 
 <script setup lang="ts">
@@ -28,6 +28,8 @@ const props = defineProps({
     required: false,
   },
 });
+
+const linkTarget = computed(() => (props.external ? '_blank' : '_self'));
 </script>
 
 <style scoped lang="scss">

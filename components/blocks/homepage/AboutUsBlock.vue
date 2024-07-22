@@ -10,8 +10,8 @@
             <p>
               Desde 2014, que o foco da ForPhysio Clinic reside na prestação dos melhores cuidados em fisioterapia aos
               nossos clientes.
-            </p>
-            <p>
+              <br >
+              <br >
               As sessões individualizadas, com 60 minutos de duração e sempre na presença do fisioterapeuta, garantem
               melhores resultados, de forma mais rápida e segura.
             </p>
