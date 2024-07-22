@@ -114,17 +114,11 @@
         font-weight: $font-weight-light;
         line-height: 1.2;
 
-        &:last-child {
-          padding-bottom: 0;
-        }
-
         @include mq-mobile {
-          padding-bottom: 18px;
           font-size: 16px;
         }
 
         @include mq-tablet-desktop {
-          padding-bottom: 22px;
           font-size: 18px;
         }
       }
