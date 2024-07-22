@@ -38,6 +38,8 @@ export default defineNuxtConfig({
   ],
   compatibilityDate: '2024-07-11',
   icon: {
+    class: 'icon',
+    mode: 'svg',
     customCollections: [
       {
         prefix: 'icon',
