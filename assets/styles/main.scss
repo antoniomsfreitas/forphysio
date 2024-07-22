@@ -11,6 +11,7 @@ body {
 h1,
 h2,
 h3 {
+  margin: 0;
   font-weight: $font-weight-semi-bold;
   line-height: 1;
   letter-spacing: 1px;
@@ -51,10 +52,18 @@ h3 {
   }
 }
 
+
 ul {
   padding: 0;
   margin: 0;
   list-style: none;
+
+p {
+  margin: 0;
+}
+
+.icon {
+  font-size: 24px;
 }
 
 .button {

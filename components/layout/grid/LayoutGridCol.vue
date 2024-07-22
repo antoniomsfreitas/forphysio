@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import type { GridColumns, GridColumnsMobile } from '../../../models/layout/grid.model';
+import type { GridColumns, GridColumnsMobile } from '../../../models/ui/ui.model';
 
 const props = defineProps({
   m: {
