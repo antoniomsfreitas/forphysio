@@ -105,6 +105,15 @@ const { mainMenu } = useHeader();
               z-index: 2;
               border-bottom: 1px solid $border-grey;
 
+              &--view-all {
+                order: 1;
+                border: none;
+
+                a {
+                  text-decoration: underline;
+                }
+              }
+
               a {
                 display: block;
                 padding: 20px 0;
