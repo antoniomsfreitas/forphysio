@@ -105,6 +105,16 @@ const { mainMenu } = useHeader();
               z-index: 2;
               border-bottom: 1px solid $border-grey;
 
+              a {
+                display: block;
+                padding: 20px 0;
+                font-size: 16px;
+                font-weight: $font-weight-light;
+                color: $white;
+                text-decoration: none;
+                transition: $transition-duration ease-in-out color;
+              }
+
               &--view-all {
                 order: 1;
                 border: none;
@@ -114,18 +124,8 @@ const { mainMenu } = useHeader();
                 }
               }
 
-              a {
-                display: block;
-                padding: 20px 0;
-                font-size: 16px;
-                font-weight: $font-weight-light;
-                color: $white;
-                text-decoration: none;
-                transition: $transition-duration ease-in-out color;
-
-                &:hover {
-                  color: $blue;
-                }
+              a:hover {
+                color: $blue;
               }
             }
           }
