@@ -3,6 +3,10 @@ import { Breakpoints } from '~/models/ui/ui.model';
 
 const { width } = useWindowSize();
 
+export const isViewportLoaded = computed(() => {
+  return width.value !== Infinity;
+});
+
 export const isMobile = computed(() => {
   return width.value < Breakpoints.TABLET;
 });
