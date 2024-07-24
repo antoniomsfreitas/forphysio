@@ -1,5 +1,5 @@
 <template>
-  <picture>
+  <picture :class="cover ? 'cover' : 'default'">
     <source v-if="srcM" :media="getImageMediaQuery(Breakpoints.MOBILE)" :srcset="srcM" >
     <source v-if="srcT" :media="getImageMediaQuery(Breakpoints.TABLET)" :srcset="srcT" >
     <source v-if="srcD" :media="getImageMediaQuery(Breakpoints.DESKTOP)" :srcset="srcD" >
@@ -22,7 +22,7 @@ const getImageMediaQuery = (breakpoint: Breakpoints) => {
       const minTablet = Breakpoints.TABLET;
       const maxTablet = Breakpoints.DESKTOP - 1;
 
-      return `(min-width: ${minTablet}px AND max-width: ${maxTablet}px)`;
+      return `(min-width: ${minTablet}px) and (max-width: ${maxTablet}px)`;
     }
 
     default: {
@@ -54,17 +54,34 @@ defineProps({
     type: String,
     default: '',
   },
+  cover: {
+    type: Boolean,
+    default: false,
+  },
 });
 </script>
 
 <style scoped lang="scss">
 picture {
-  display: block;
+  overflow: hidden;
 
   img {
     display: block;
-    max-width: 100%;
-    max-height: 100%;
+  }
+
+  &.default {
+    display: block;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &.cover {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
   }
 }
 </style>
