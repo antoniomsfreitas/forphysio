@@ -1,4 +1,6 @@
 <template>
-  <HeroBannerBlock />
-  <AboutUsBlock />
+  <main>
+    <HeroBannerBlock />
+    <AboutUsBlock />
+  </main>
 </template>
