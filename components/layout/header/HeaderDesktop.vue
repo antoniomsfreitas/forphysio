@@ -17,8 +17,8 @@
 
           <ul v-if="menu.submenu.length" class="header__inner__right__menu__item__submenu">
             <li
-              v-for="(submenu, subIndex) in menu.submenu"
-              :key="subIndex"
+              v-for="submenu in menu.submenu"
+              :key="submenu.name"
               class="header__inner__right__menu__item__submenu__item"
               :class="{
                 'header__inner__right__menu__item__submenu__item--view-all': submenu.viewAll,
@@ -144,10 +144,6 @@ const { mainMenu } = useHeader();
         gap: 24px;
         align-items: center;
         height: 100%;
-
-        :deep(.button) {
-          order: 1;
-        }
       }
     }
   }

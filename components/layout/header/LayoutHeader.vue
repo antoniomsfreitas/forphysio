@@ -1,4 +1,3 @@
-<!-- components/layout/header/LayoutHeader.vue -->
 <template>
   <header class="header">
     <LayoutGrid>
