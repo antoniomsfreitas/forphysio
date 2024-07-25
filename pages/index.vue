@@ -1,3 +1,6 @@
 <template>
-  <AboutUsBlock />
+  <div class="content">
+    <HeroBannerBlock />
+    <AboutUsBlock />
+  </div>
 </template>
