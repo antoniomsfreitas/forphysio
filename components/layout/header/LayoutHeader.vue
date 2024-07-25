@@ -9,12 +9,17 @@
       </LayoutGridRow>
     </LayoutGrid>
   </header>
+  <NuxtLink v-if="!isDesktop" to="/" class="logo-mobile">
+    <NuxtImg src="/logo/logo-mini-white.png" sizes="56px" />
+  </NuxtLink>
 </template>
 
 <style scoped lang="scss">
 .header {
   --header-height: 60px;
 
+  position: relative;
+  z-index: 9999;
   display: flex;
   align-items: center;
   width: 100%;
@@ -37,5 +42,12 @@
     font-size: 12px;
     line-height: 1.5;
   }
+}
+
+.logo-mobile {
+  position: absolute;
+  top: 28px;
+  left: 24px;
+  z-index: 999;
 }
 </style>
