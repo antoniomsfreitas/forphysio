@@ -81,6 +81,7 @@ const { mainMenu } = useHeader();
             line-height: 1.2;
             color: $white;
             text-decoration: none;
+            transition: $transition-duration ease-in-out color;
 
             .icon {
               margin-left: 4px;
@@ -124,7 +125,7 @@ const { mainMenu } = useHeader();
                 }
               }
 
-              a:hover {
+              &:hover > a {
                 color: $blue;
               }
             }
@@ -134,6 +135,10 @@ const { mainMenu } = useHeader();
             ul {
               visibility: visible;
               opacity: 1;
+            }
+
+            & > a {
+              color: $blue;
             }
           }
         }
