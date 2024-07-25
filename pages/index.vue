@@ -1,6 +1,6 @@
 <template>
-  <main>
+  <div class="content">
     <HeroBannerBlock />
     <AboutUsBlock />
-  </main>
+  </div>
 </template>

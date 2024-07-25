@@ -11,7 +11,7 @@
       :creative-effect="{
         prev: {
           shadow: false,
-          translate: ['-50%', 0, -1],
+          translate: ['-30%', 0, -1],
         },
         next: {
           translate: ['100%', 0, 0],
@@ -22,9 +22,9 @@
         <PictureImage
           alt="Imagem de um profissional de fisioterapia a ajudar o seu paciente no exercício supino com barra"
           class="hero-banner__slideshow__slide__image"
-          src="/images/homepage/hero-banner/image-1/image-1-mobile.jpg"
-          src-t="/images/homepage/hero-banner/image-1/image-1-tablet.jpg"
-          src-d="/images/homepage/hero-banner/image-1/image-1-desktop.jpg"
+          src="/images/homepage/hero-banner-block/image-1/image-1-mobile.jpg"
+          src-t="/images/homepage/hero-banner-block/image-1/image-1-tablet.jpg"
+          src-d="/images/homepage/hero-banner-block/image-1/image-1-desktop.jpg"
           cover
         />
       </SwiperSlide>
@@ -33,9 +33,9 @@
         <PictureImage
           alt="Imagem de um profissional de fisioterapia a ajudar o seu paciente com um problema de joelho"
           class="hero-banner__slideshow__slide__image"
-          src="/images/homepage/hero-banner/image-2/image-2-mobile.jpg"
-          src-t="/images/homepage/hero-banner/image-2/image-2-tablet.jpg"
-          src-d="/images/homepage/hero-banner/image-2/image-2-desktop.jpg"
+          src="/images/homepage/hero-banner-block/image-2/image-2-mobile.jpg"
+          src-t="/images/homepage/hero-banner-block/image-2/image-2-tablet.jpg"
+          src-d="/images/homepage/hero-banner-block/image-2/image-2-desktop.jpg"
           cover
         />
       </SwiperSlide>
@@ -44,9 +44,9 @@
         <PictureImage
           alt="Imagem de uma mulher a receber um tratamento de bem-estar por parte de uma profissional da fisioterapia"
           class="hero-banner__slideshow__slide__image"
-          src="/images/homepage/hero-banner/image-3/image-3-mobile.jpg"
-          src-t="/images/homepage/hero-banner/image-3/image-3-tablet.jpg"
-          src-d="/images/homepage/hero-banner/image-3/image-3-desktop.jpg"
+          src="/images/homepage/hero-banner-block/image-3/image-3-mobile.jpg"
+          src-t="/images/homepage/hero-banner-block/image-3/image-3-tablet.jpg"
+          src-d="/images/homepage/hero-banner-block/image-3/image-3-desktop.jpg"
           cover
         />
       </SwiperSlide>
