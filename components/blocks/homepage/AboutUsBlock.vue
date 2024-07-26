@@ -101,7 +101,7 @@
 
       p {
         font-weight: $font-weight-light;
-        line-height: 1.2;
+        line-height: 1.5;
 
         @include mq-mobile {
           font-size: 16px;
