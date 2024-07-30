@@ -46,14 +46,6 @@
   }
 
   &__gradient {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-
     @include mq-mobile {
       @include gradient-overlay('left-right', 92);
     }
