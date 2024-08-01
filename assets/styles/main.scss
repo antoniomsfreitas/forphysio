@@ -112,9 +112,15 @@ p {
       font-weight: 400;
       line-height: 1.2;
       color: $deep-grey;
-      border: none;
+      border: 1px solid transparent;
       border-radius: 35px;
       outline: none;
+      transition: 100ms ease-in-out (border-color, box-shadow);
+
+      &:focus {
+        border-color: rgb(24 168 187);
+        box-shadow: 0 0 0 0.2rem rgba(24, 168, 187, 0.25);
+      }
     }
   }
 
