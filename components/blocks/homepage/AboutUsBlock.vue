@@ -37,24 +37,13 @@
 <style scoped lang="scss">
 .about-us-block {
   @include mq-mobile {
-    margin-top: 90px;
-
-    > .layout-grid-row {
+    & > .layout-grid-row {
       grid-row-gap: 50px;
     }
   }
 
-  @include mq-tablet-desktop {
-    margin-top: 130px;
-  }
-
   @include mq-mobile-tablet {
     padding: 0;
-    margin-bottom: 80px;
-  }
-
-  @include mq-desktop {
-    margin-bottom: 100px;
   }
 
   &__content {
@@ -112,7 +101,7 @@
 
       p {
         font-weight: $font-weight-light;
-        line-height: 1.2;
+        line-height: 1.5;
 
         @include mq-mobile {
           font-size: 16px;

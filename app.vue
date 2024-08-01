@@ -1,5 +1,7 @@
 <template>
-  <NuxtLayout v-if="isViewportLoaded">
-    <NuxtPage />
-  </NuxtLayout>
+  <BalancerProvider>
+    <NuxtLayout v-if="isViewportLoaded">
+      <NuxtPage />
+    </NuxtLayout>
+  </BalancerProvider>
 </template>
