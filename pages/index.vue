@@ -3,6 +3,7 @@
     <HeroBannerBlock />
     <AboutUsBlock class="about-us-block" />
     <TwoImagesBlock class="two-images-block" />
+    <NewsletterBlock />
   </div>
 </template>
 
