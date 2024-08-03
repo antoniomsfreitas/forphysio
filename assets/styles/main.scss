@@ -6,6 +6,10 @@ body {
   font-family: $font-family;
   color: $white;
   background-color: $black;
+
+  @include mq-mobile-tablet {
+    padding-bottom: 60px;
+  }
 }
 
 h1,
