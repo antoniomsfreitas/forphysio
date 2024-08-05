@@ -21,7 +21,7 @@
     "@vueuse/core": "^10.11.0",
     "@vueuse/nuxt": "^10.11.0",
     "normalize.css": "^8.0.1",
-    "nuxt": "^3.12.2",
+    "nuxt": "^3.12.4",
     "nuxt-swiper": "^1.2.2",
     "vue": "latest",
     "vue-wrap-balancer": "^1.1.3"
