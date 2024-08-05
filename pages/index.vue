@@ -1,8 +1,9 @@
 <template>
-  <div class="content">
+  <div class="container">
     <HeroBannerBlock />
     <AboutUsBlock class="about-us-block" />
     <TwoImagesBlock class="two-images-block" />
+    <ServicesBlock class="services-block" />
     <NewsletterBlock />
   </div>
 </template>
@@ -34,6 +35,20 @@
 
   @include mq-desktop {
     margin-top: 100px;
+  }
+}
+
+.services-block {
+  @include mq-mobile {
+    margin-bottom: 130px;
+  }
+
+  @include mq-mobile-tablet {
+    margin-bottom: 175px;
+  }
+
+  @include mq-desktop {
+    margin-bottom: 160px;
   }
 }
 </style>

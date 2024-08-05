@@ -3,20 +3,10 @@
     <Swiper
       class="hero-banner__slideshow"
       :speed="1200"
-      :modules="[SwiperAutoplay, SwiperPagination, SwiperEffectCreative]"
+      :modules="[SwiperAutoplay, SwiperPagination]"
       :autoplay="{ delay: 4000, disableOnInteraction: false }"
       :slides-per-view="1"
       :pagination="{ clickable: true, type: 'progressbar', el: '.hero-banner__content__info__pagination' }"
-      :effect="'creative'"
-      :creative-effect="{
-        prev: {
-          shadow: false,
-          translate: ['-30%', 0, -1],
-        },
-        next: {
-          translate: ['100%', 0, 0],
-        },
-      }"
     >
       <SwiperSlide class="hero-banner__slideshow__slide">
         <PictureImage
