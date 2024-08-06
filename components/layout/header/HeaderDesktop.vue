@@ -2,14 +2,14 @@
 <template>
   <div class="header__inner">
     <div class="header__inner__left">
-      <NuxtLink to="/">
-        <NuxtImg src="/logo/logo-white.png" sizes="92px" />
+      <NuxtLink to="/" title="ForPhysio">
+        <NuxtImg src="/logo/logo-white.png" sizes="92px" alt="ForPhysio" />
       </NuxtLink>
       <LanguageSwitcher orientation="vertical" />
     </div>
     <div class="header__inner__right">
       <ul class="header__inner__right__menu">
-        <li v-for="(menu, index) in mainMenu" :key="index" class="header__inner__right__menu__item">
+        <li v-for="menu in mainMenu" :key="menu.name" class="header__inner__right__menu__item">
           <NuxtLink :to="menu.link">
             {{ menu.name }}
             <Icon v-if="menu.submenu.length" name="icon:arrow-down" />
@@ -30,14 +30,19 @@
         </li>
       </ul>
       <div class="header__inner__right__options">
-        <HeaderOptions />
+        <NuxtLink v-if="searchOption" :to="searchOption.link" :title="searchOption.name">
+          <Icon name="icon:search-white" />
+        </NuxtLink>
+        <NuxtLink v-if="buttonOption" :to="buttonOption.link" class="button button--secondary">
+          {{ buttonOption.name }}
+        </NuxtLink>
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-const { mainMenu } = useHeader();
+const { mainMenu, searchOption, buttonOption } = useHeader();
 </script>
 
 <style scoped lang="scss">
