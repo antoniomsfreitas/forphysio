@@ -1,5 +1,3 @@
-<script setup lang="ts"></script>
-
 <template>
   <div class="scrollbar-slideshow">
     <LayoutGrid>
@@ -10,14 +8,15 @@
           <Swiper
             class="scrollbar-slideshow__swiper-container"
             slides-per-view="auto"
-            :modules="[SwiperPagination]"
-            :pagination="{ clickable: true, type: 'progressbar', el: '.scrollbar-slideshow__pagination' }"
+            :speed="400"
+            :modules="[SwiperScrollbar]"
             :space-between="16"
+            :scrollbar="{ draggable: true, el: '.scrollbar-slideshow__swiper-container__scrollbar' }"
           >
             <slot />
           </Swiper>
 
-          <div class="scrollbar-slideshow__pagination" />
+          <div class="scrollbar-slideshow__swiper-container__scrollbar" />
         </LayoutGridCol>
       </LayoutGridRow>
     </LayoutGrid>
@@ -34,11 +33,8 @@ defineProps({
 </script>
 
 <style scoped lang="scss">
-$scroll-bar-height: 4px;
-
 .scrollbar-slideshow {
   position: relative;
-  padding-bottom: calc(40px + $scroll-bar-height);
   overflow: hidden;
 
   &__title {
@@ -46,31 +42,26 @@ $scroll-bar-height: 4px;
     margin-bottom: 40px;
     color: $white;
     text-align: center;
-
-    @include mq-desktop {
-      font-size: 32px;
-    }
   }
 
   &__swiper-container {
     overflow: visible;
-  }
 
-  &__pagination {
-    position: absolute;
-    top: auto;
-    bottom: 0;
-    left: 50%;
-    width: 250px;
-    height: calc($scroll-bar-height - 1px);
-    background-color: $deep-grey;
-    border-radius: 4px;
-    transform: translateX(-50%);
-
-    & > * {
-      height: $scroll-bar-height;
-      background-color: $white;
+    &__scrollbar {
+      width: 250px;
+      height: 3px;
+      margin: 40px auto 0;
+      background-color: $deep-grey;
       border-radius: 4px;
+
+      & > * {
+        position: relative;
+        top: -1px;
+        height: 4px;
+        cursor: pointer;
+        background-color: $white;
+        border-radius: 4px;
+      }
     }
   }
 }
