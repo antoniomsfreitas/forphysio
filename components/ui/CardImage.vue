@@ -1,7 +1,7 @@
 <template>
   <CardUI class="card-image">
     <NuxtLink :to="props.link" :target="linkTarget" class="card-image__link" :title="props.linkTitle">
-      <PictureImage :src="src" :src-m="srcM" :src-t="srcT" :src-d="srcD" :alt="alt" class="card-image__picture" />
+      <PictureImage v-bind="{ ...imageSrcAttributes }" class="card-image__picture" />
 
       <div class="card-image__content">
         <span class="card-image__content__title">{{ title }}</span>
@@ -55,6 +55,14 @@ const props = defineProps({
 });
 
 const linkTarget = computed(() => (props.external ? '_blank' : '_self'));
+
+const imageSrcAttributes = {
+  alt: props.alt,
+  src: props.src,
+  'src-m': props.srcM,
+  'src-t': props.srcM,
+  'src-d': props.srcD,
+};
 </script>
 
 <style scoped lang="scss">
@@ -96,7 +104,6 @@ const linkTarget = computed(() => (props.external ? '_blank' : '_self'));
     &__icon {
       flex: 0 0 44px;
       font-size: 44px;
-      border-radius: 50%;
       transition: box-shadow 0.2s ease-in-out;
     }
   }
