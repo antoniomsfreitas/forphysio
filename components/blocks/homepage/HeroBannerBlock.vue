@@ -3,10 +3,10 @@
     <Swiper
       class="hero-banner__slideshow"
       :speed="1200"
-      :modules="[SwiperAutoplay, SwiperPagination]"
+      :modules="[SwiperAutoplay, SwiperScrollbar]"
       :autoplay="{ delay: 4000, disableOnInteraction: false }"
       :slides-per-view="1"
-      :pagination="{ clickable: true, type: 'progressbar', el: '.hero-banner__content__info__pagination' }"
+      :scrollbar="{ draggable: true, el: '.hero-banner__content__info__scrollbar' }"
     >
       <SwiperSlide class="hero-banner__slideshow__slide">
         <PictureImage
@@ -48,7 +48,7 @@
           <LayoutGridCol m="4" t="12" class="hero-banner__content__info">
             <h2 class="hero-banner__content__info__title">Exercício • Fisioterapia • Bem-Estar</h2>
             <button class="hero-banner__content__info__button button button--tertiary">Marcar consulta</button>
-            <div class="hero-banner__content__info__pagination" />
+            <div class="swiper-custom-scrollbar hero-banner__content__info__scrollbar" />
           </LayoutGridCol>
         </LayoutGridRow>
       </LayoutGrid>
@@ -173,20 +173,6 @@
 
         @include mq-desktop {
           margin-bottom: 64px;
-        }
-      }
-
-      &__pagination {
-        position: relative;
-        width: 250px;
-        height: 3px;
-        background-color: $deep-grey;
-        border-radius: 4px;
-
-        & > * {
-          height: 4px;
-          background-color: $white;
-          border-radius: 4px;
         }
       }
     }

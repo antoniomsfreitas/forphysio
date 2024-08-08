@@ -16,7 +16,7 @@
             <slot />
           </Swiper>
 
-          <div class="scrollbar-slideshow__swiper-container__scrollbar" />
+          <div class="swiper-custom-scrollbar scrollbar-slideshow__swiper-container__scrollbar" />
         </LayoutGridCol>
       </LayoutGridRow>
     </LayoutGrid>
@@ -48,20 +48,7 @@ defineProps({
     overflow: visible;
 
     &__scrollbar {
-      width: 250px;
-      height: 3px;
       margin: 40px auto 0;
-      background-color: $deep-grey;
-      border-radius: 4px;
-
-      & > * {
-        position: relative;
-        top: -1px;
-        height: 4px;
-        cursor: pointer;
-        background-color: $white;
-        border-radius: 4px;
-      }
     }
   }
 }
