@@ -50,9 +50,9 @@ export default defineNuxtConfig({
   image: {
     dir: './assets/images',
     screens: {
-      m: 480,
-      t: 768,
-      d: 1280,
+      m: 479,
+      t: 767,
+      d: 1279,
     },
   },
 });
