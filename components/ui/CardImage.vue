@@ -1,10 +1,10 @@
 <template>
   <CardUI class="card-image">
-    <NuxtLink :to="props.link" :target="linkTarget" class="card-image__link">
+    <NuxtLink :to="props.link" :target="linkTarget" class="card-image__link" :title="props.linkTitle">
       <PictureImage :src="src" :src-m="srcM" :src-t="srcT" :src-d="srcD" :alt="alt" class="card-image__picture" />
 
       <div class="card-image__content">
-        <WrapBalancer class="card-image__content__title">{{ title }}</WrapBalancer>
+        <span class="card-image__content__title">{{ title }}</span>
         <Icon name="icon:link-arrow" class="card-image__content__icon" />
       </div>
 
@@ -14,8 +14,6 @@
 </template>
 
 <script setup lang="ts">
-import WrapBalancer from 'vue-wrap-balancer';
-
 const props = defineProps({
   title: {
     type: String,
@@ -42,6 +40,10 @@ const props = defineProps({
     required: true,
   },
   link: {
+    type: String,
+    required: true,
+  },
+  linkTitle: {
     type: String,
     required: true,
   },

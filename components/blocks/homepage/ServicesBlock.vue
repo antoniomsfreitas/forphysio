@@ -1,7 +1,13 @@
 <template>
   <ScrollBarSlideshow class="services-slideshow-container" title="Serviços">
     <SwiperSlide v-for="item in items" :key="item.id" class="services-slideshow-container__slide">
-      <CardImage :title="item.title" :src="item.src" :link="item.link" :alt="item.alt" />
+      <CardImage
+        :title="item.title"
+        :src="item.src"
+        :link="item.link"
+        :alt="item.alt"
+        :link-title="`Clique aqui para ver mais detalhes sobre: ${item.title}`"
+      />
     </SwiperSlide>
   </ScrollBarSlideshow>
 </template>
