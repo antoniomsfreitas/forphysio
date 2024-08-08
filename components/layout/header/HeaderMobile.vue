@@ -3,8 +3,12 @@
   <div class="header__inner">
     <div class="header__inner__bottom-bar">
       <Icon name="icon:hamburger-menu" size="29" @click="toggleMenuSidebar" />
-
-      <HeaderOptions />
+      <NuxtLink v-if="buttonOption" :to="buttonOption.link" class="button button--secondary">
+        {{ buttonOption.name }}
+      </NuxtLink>
+      <NuxtLink v-if="searchOption" :to="searchOption.link" :title="searchOption.name">
+        <Icon name="icon:search-white" />
+      </NuxtLink>
     </div>
 
     <div class="header__inner__sidebar" :class="{ 'header__inner__sidebar--opened': menuSidebarOpened }">
@@ -59,7 +63,7 @@
 </template>
 
 <script setup lang="ts">
-const { mainMenu } = useHeader();
+const { mainMenu, searchOption, buttonOption } = useHeader();
 
 const menuSidebarOpened = ref<boolean>(false);
 const submenuOpened = ref<number | null>(null);
