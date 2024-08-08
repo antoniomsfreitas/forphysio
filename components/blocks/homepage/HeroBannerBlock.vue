@@ -4,7 +4,7 @@
       class="hero-banner__slideshow"
       :speed="1200"
       :modules="[SwiperAutoplay, SwiperScrollbar]"
-      :autoplay="{ delay: 4000, disableOnInteraction: false }"
+      :autoplay="{ delay: 4000, disableOnInteraction: true }"
       :slides-per-view="1"
       :scrollbar="{ draggable: true, el: '.hero-banner__content__info__scrollbar' }"
     >
