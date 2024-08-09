@@ -32,10 +32,6 @@ defineProps({
     type: String,
     required: true,
   },
-  images: {
-    type: Array,
-    required: false,
-  },
 });
 </script>
 
@@ -93,6 +89,7 @@ defineProps({
 
     .layout-grid {
       padding-right: 0;
+
       .layout-grid-col {
         position: relative;
 

@@ -8,7 +8,7 @@
           src-t="/images/about-us/intro/image-tablet.jpg"
           src-m="/images/about-us/intro/image-mobile.jpg"
           :cover="true"
-        ></PictureImage>
+        />
       </template>
 
       <template v-slot:content>
