@@ -8,7 +8,7 @@
           </NuxtLink>
         </LayoutGridCol>
         <LayoutGridCol m="4" t="12" d="7" class="footer__inner__nav">
-          <ul class="footer__inner__nav__main-menu footer__inner__nav__main-menu--left" v-if="mainMenu.left.length">
+          <ul v-if="mainMenu.left.length" class="footer__inner__nav__main-menu footer__inner__nav__main-menu--left">
             <li v-for="menu in mainMenu.left" :key="menu.name" class="footer__inner__nav__main-menu__item">
               <NuxtLink :to="menu.link" :title="menu.name">
                 {{ menu.name }}
@@ -16,7 +16,7 @@
             </li>
           </ul>
 
-          <ul class="footer__inner__nav__main-menu footer__inner__nav__main-menu--right" v-if="mainMenu.right.length">
+          <ul v-if="mainMenu.right.length" class="footer__inner__nav__main-menu footer__inner__nav__main-menu--right">
             <li v-for="menu in mainMenu.right" :key="menu.name" class="footer__inner__nav__main-menu__item">
               <NuxtLink :to="menu.link" :title="menu.name">
                 {{ menu.name }}
@@ -24,7 +24,7 @@
             </li>
           </ul>
 
-          <ul class="footer__inner__nav__social-menu" v-if="socialMenu.length">
+          <ul v-if="socialMenu.length" class="footer__inner__nav__social-menu">
             <li v-for="menu in socialMenu" :key="menu.name" class="footer__inner__nav__social-menu__item">
               <NuxtLink :to="menu.link" :title="menu.name" target="__blank">
                 <Icon :name="'icon:' + menu.icon" />
@@ -32,7 +32,7 @@
             </li>
           </ul>
 
-          <ul class="footer__inner__nav__logos-menu" v-if="logosMenu.length">
+          <ul v-if="logosMenu.length" class="footer__inner__nav__logos-menu">
             <li v-for="menu in logosMenu" :key="menu.name" class="footer__inner__nav__social-menu__item">
               <NuxtLink :to="menu.link" :title="menu.name" target="__blank">
                 <NuxtImg :src="'/external-logos/' + menu.image" height="36px" />
@@ -43,7 +43,7 @@
       </LayoutGridRow>
     </LayoutGrid>
 
-    <p class="footer__copyright">ForPhysio Clinic 2024 © Todos os direitos reservados</p>
+    <p class="footer__copyright">ForPhysio Clinic 2024 © Todos os direitos reservados</p>
   </footer>
 </template>
 
@@ -79,15 +79,14 @@ const { mainMenu, socialMenu, logosMenu } = useFooter();
       width: max-content;
 
       @include mq-mobile {
-        width: 100%;
-        column-gap: 24px;
-        row-gap: 32px;
-        grid-template-columns: repeat(4, 1fr);
-
         grid-template-areas:
           'social-menu social-menu'
           'main-menu-left main-menu-right'
           'logos-menu logos-menu';
+        grid-template-columns: repeat(4, 1fr);
+        gap: 32px;
+        column-gap: 24px;
+        width: 100%;
       }
 
       @include mq-tablet {
@@ -104,6 +103,16 @@ const { mainMenu, socialMenu, logosMenu } = useFooter();
         column-gap: 64px;
       }
 
+      &__social-menu,
+      &__logos-menu {
+        display: flex;
+        gap: 24px;
+
+        a {
+          display: block;
+        }
+      }
+
       &__main-menu {
         &--left {
           grid-area: main-menu-left;
@@ -117,20 +126,20 @@ const { mainMenu, socialMenu, logosMenu } = useFooter();
           grid-area: main-menu-right;
 
           @include mq-mobile {
+            grid-column: span 4;
             grid-column-start: span 3;
-            grid-column-end: span 4;
           }
         }
 
         &__item a {
+          display: block;
+          padding-bottom: 4px;
           font-size: 14px;
           font-weight: $font-weight-regular;
           line-height: 1.2;
           color: $white;
           text-decoration-color: transparent;
           transition: $transition-duration ease-in-out text-decoration-color;
-          display: block;
-          padding-bottom: 4px;
 
           &:hover {
             text-decoration-color: $white;
@@ -147,26 +156,16 @@ const { mainMenu, socialMenu, logosMenu } = useFooter();
         grid-area: logos-menu;
         align-items: flex-end;
       }
-
-      &__social-menu,
-      &__logos-menu {
-        display: flex;
-        gap: 24px;
-
-        a {
-          display: block;
-        }
-      }
     }
   }
 
   &__copyright {
     padding: 12px 32px;
-    background-color: $black;
     font-size: 14px;
     font-weight: $font-weight-regular;
     line-height: 1.2;
     text-align: center;
+    background-color: $black;
   }
 }
 </style>
