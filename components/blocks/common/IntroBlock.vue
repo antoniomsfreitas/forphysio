@@ -5,7 +5,7 @@
         <LayoutGridRow>
           <LayoutGridCol m="4" t="7" d="5">
             <h1>{{ pageTitle }}</h1>
-            <slot name="content"></slot>
+            <slot name="content" />
           </LayoutGridCol>
         </LayoutGridRow>
       </LayoutGrid>
@@ -15,7 +15,7 @@
       <LayoutGrid>
         <LayoutGridRow>
           <LayoutGridCol m="4" start-col-t="4" t="9" start-col-d="5" d="8">
-            <slot name="image"></slot>
+            <slot name="image" />
             <div class="intro-block__image__gradient-left" />
             <div class="intro-block__image__gradient-right" />
             <div class="intro-block__image__gradient-bottom" />
@@ -54,7 +54,6 @@ defineProps({
   &__content {
     position: relative;
     z-index: 3;
-
     font-weight: $font-weight-light;
     line-height: 1.3;
 
@@ -83,8 +82,8 @@ defineProps({
 
   &__image {
     position: absolute;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
 
     .layout-grid {

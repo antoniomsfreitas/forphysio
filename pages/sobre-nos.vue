@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <IntroBlock page-title="Sobre nós" class="intro-block">
-      <template v-slot:image>
+      <template #image>
         <PictureImage
           alt="Sobre nós"
           src="/images/about-us/intro/image-desktop.jpg"
@@ -11,13 +11,12 @@
         />
       </template>
 
-      <template v-slot:content>
+      <template #content>
         <ul class="intro-block__topics">
           <li class="intro-block__topics__item">
             <p class="intro-block__topics__item__title">Missão</p>
             <p class="intro-block__topics__item__description">
-              Prevenir o risco de lesão. Reabilitar a função. <br />
-              Otimizar a performance.
+              Prevenir o risco de lesão. Reabilitar a função. &nbsp; Otimizar a performance.
             </p>
           </li>
           <li class="intro-block__topics__item">
@@ -67,9 +66,9 @@
 
     &__item {
       &__title {
+        padding-bottom: 4px;
         font-weight: $font-weight-semi-bold;
         text-transform: uppercase;
-        padding-bottom: 4px;
       }
     }
   }
