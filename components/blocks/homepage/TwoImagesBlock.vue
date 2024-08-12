@@ -96,6 +96,12 @@
         padding: 40px 90px;
       }
 
+      &__title {
+        @include mq-mobile {
+          font-size: 24px;
+        }
+      }
+
       &__text {
         font-weight: $font-weight-light;
         line-height: 1.2;
