@@ -191,8 +191,8 @@
   margin-bottom: 80px;
 
   h2 {
-    line-height: 1.3;
     margin-bottom: 40px;
+    line-height: 1.3;
 
     @include mq-desktop {
       font-size: 64px;
@@ -227,16 +227,16 @@
 
   &__image {
     &--right {
-      padding-left: 0;
       padding-right: 0;
+      padding-left: 0;
     }
   }
 
   @include mq-mobile {
     &--with-image {
       .layout-grid {
-        padding-left: 0;
         padding-right: 0;
+        padding-left: 0;
       }
     }
   }
