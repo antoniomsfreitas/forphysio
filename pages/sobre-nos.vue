@@ -38,12 +38,12 @@
     <div class="container-block">
       <LayoutGrid>
         <LayoutGridRow>
-          <LayoutGridCol d="12" t="12" m="4">
+          <LayoutGridCol m="4" t="12" d="12">
             <h2>O nosso conceito</h2>
           </LayoutGridCol>
         </LayoutGridRow>
         <LayoutGridRow>
-          <LayoutGridCol d="6" t="6" m="4">
+          <LayoutGridCol m="4" t="6" d="6">
             <p>
               As sessões individualizadas na ForPhysio Clinic, com 60 minutos de duração e sempre na presença do
               profissional de saúde, garantem melhores resultados, de forma mais rápida e segura.
@@ -56,7 +56,7 @@
               objetivos que permitem medir a evolução dos clientes e progredir com segurança.
             </p>
           </LayoutGridCol>
-          <LayoutGridCol d="6" t="6" m="4">
+          <LayoutGridCol m="4" t="6" d="6">
             <p>
               As nossas Unidades de Saúde integram um ambiente moderno e sofisticado, com tecnologia e equipamentos de
               excelência, a pensar na melhor experiência de cada cliente.
@@ -88,12 +88,12 @@
     <div class="container-block">
       <LayoutGrid>
         <LayoutGridRow>
-          <LayoutGridCol d="12" t="12" m="4">
+          <LayoutGridCol m="4" t="12" d="12">
             <h2>A nossa história</h2>
           </LayoutGridCol>
         </LayoutGridRow>
         <LayoutGridRow>
-          <LayoutGridCol d="6" t="6" m="4">
+          <LayoutGridCol m="4" t="6" d="6">
             <p>
               A ForPhysio Clinic é uma empresa portuguesa que presta serviços de fisioterapia desde Outubro de 2014.
               <br /><br />
@@ -102,7 +102,7 @@
               períodos de recuperação e melhorar os resultados após intervenção clínica.
             </p>
           </LayoutGridCol>
-          <LayoutGridCol d="6" t="6" m="4">
+          <LayoutGridCol m="4" t="6" d="6">
             <p>
               Desde esse momento que a ForPhysio Clinic tem evoluído consistentemente. Além do serviço de fisioterapia
               foram adicionados serviços complementares, de nutrição, performance e bem-estar. A coordenação do
@@ -117,7 +117,7 @@
     <div class="container-block container-block--with-image">
       <LayoutGrid>
         <LayoutGridRow>
-          <LayoutGridCol d="8" t="7" m="4" start-col-d="5" start-col-t="6">
+          <LayoutGridCol m="4" t="7" d="8" start-col-t="6" start-col-d="5">
             <PictureImage
               alt="Equipa"
               class="container-block__image"
@@ -133,7 +133,7 @@
     <div class="container-block">
       <LayoutGrid>
         <LayoutGridRow>
-          <LayoutGridCol d="7" t="7" m="4">
+          <LayoutGridCol m="4" t="7" d="7">
             <p>
               Aos dias de hoje, a ForPhysio conta com mais de dez parceiros em diversas áreas, e uma equipa de vinte
               profissionais que colaboram em 2 unidades próprias e 3 unidades parceiras, tornando possível o acesso a
