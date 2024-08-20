@@ -13,11 +13,9 @@
 
       <template #content>
         <p class="intro-block__text">
-          Acreditamos numa prática clínica idónea, responsável, centrada nas pessoas e suportada pela evidência
-          científica.
-          <br /><br />
-          Contamos com profissionais especializados e motivados, que todos os dias se dedicam à melhor e mais segura
-          prestação de serviços de saúde.
+          {{
+            'Acreditamos numa prática clínica idónea, responsável, centrada nas pessoas e suportada pela evidência científica.\n\nContamos com profissionais especializados e motivados, que todos os dias se dedicam à melhor e mais segura prestação de serviços de saúde.'
+          }}
         </p>
         <IconLink link="/contactos/" text="Marcar avaliação" />
       </template>
