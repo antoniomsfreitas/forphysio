@@ -56,6 +56,7 @@ defineProps({
     z-index: 3;
     font-weight: $font-weight-light;
     line-height: 1.3;
+    text-wrap: balance;
 
     @include mq-mobile {
       font-size: 18px;
