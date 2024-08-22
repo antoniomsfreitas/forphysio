@@ -19,7 +19,7 @@ export default defineNuxtConfig({
       '@nuxtjs/google-fonts',
       {
         families: {
-          Roboto: [300, 400, 500],
+          Roboto: [300, 400, 500, 700],
         },
         preload: true,
       },
