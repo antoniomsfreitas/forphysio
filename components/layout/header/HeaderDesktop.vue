@@ -3,7 +3,7 @@
   <div class="header__inner">
     <div class="header__inner__left">
       <NuxtLink to="/" title="ForPhysio">
-        <NuxtImg src="/logo/logo-white.png" sizes="92px" alt="ForPhysio" />
+        <NuxtImg src="/images/common/logo/logo-white.png" sizes="92px" alt="ForPhysio" />
       </NuxtLink>
       <LanguageSwitcher orientation="vertical" />
     </div>

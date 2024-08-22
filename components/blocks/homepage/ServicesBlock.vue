@@ -1,5 +1,5 @@
 <template>
-  <ScrollbarSlideshow class="services-slideshow-container" identifier="services" title="Serviços">
+  <ScrollbarSlideshow class="services-slideshow-container" title="Serviços">
     <SwiperSlide v-for="item in items" :key="item.id" class="services-slideshow-container__slide">
       <CardImage
         :title="item.title"

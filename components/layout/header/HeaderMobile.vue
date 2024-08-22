@@ -14,7 +14,7 @@
     <div class="header__inner__sidebar" :class="{ 'header__inner__sidebar--opened': menuSidebarOpened }">
       <div class="header__inner__sidebar__top">
         <NuxtLink to="/">
-          <NuxtImg src="/logo/logo-white.png" sizes="92px" />
+          <NuxtImg src="/images/common/logo/logo-white.png" sizes="92px" />
         </NuxtLink>
 
         <Icon name="icon:close" @click="toggleMenuSidebar" />

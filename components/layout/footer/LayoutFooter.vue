@@ -4,11 +4,11 @@
       <LayoutGridRow class="footer__inner">
         <LayoutGridCol m="4" t="12" d="3" class="footer__inner__logo" start-col-d="2">
           <NuxtLink to="/">
-            <NuxtImg src="/logo/logo-white.png" sizes="m:85px t:100px d:150px" />
+            <NuxtImg src="/images/common/logo/logo-white.png" sizes="m:85px t:100px d:150px" />
           </NuxtLink>
         </LayoutGridCol>
         <LayoutGridCol m="4" t="12" d="7" class="footer__inner__nav">
-          <ul class="footer__inner__nav__main-menu footer__inner__nav__main-menu--left" v-if="mainMenu.left.length">
+          <ul v-if="mainMenu.left.length" class="footer__inner__nav__main-menu footer__inner__nav__main-menu--left">
             <li v-for="menu in mainMenu.left" :key="menu.name" class="footer__inner__nav__main-menu__item">
               <NuxtLink :to="menu.link" :title="menu.name">
                 {{ menu.name }}
@@ -16,7 +16,7 @@
             </li>
           </ul>
 
-          <ul class="footer__inner__nav__main-menu footer__inner__nav__main-menu--right" v-if="mainMenu.right.length">
+          <ul v-if="mainMenu.right.length" class="footer__inner__nav__main-menu footer__inner__nav__main-menu--right">
             <li v-for="menu in mainMenu.right" :key="menu.name" class="footer__inner__nav__main-menu__item">
               <NuxtLink :to="menu.link" :title="menu.name">
                 {{ menu.name }}
@@ -24,7 +24,7 @@
             </li>
           </ul>
 
-          <ul class="footer__inner__nav__social-menu" v-if="socialMenu.length">
+          <ul v-if="socialMenu.length" class="footer__inner__nav__social-menu">
             <li v-for="menu in socialMenu" :key="menu.name" class="footer__inner__nav__social-menu__item">
               <NuxtLink :to="menu.link" :title="menu.name" target="__blank">
                 <Icon :name="'icon:' + menu.icon" />
@@ -32,10 +32,10 @@
             </li>
           </ul>
 
-          <ul class="footer__inner__nav__logos-menu" v-if="logosMenu.length">
+          <ul v-if="logosMenu.length" class="footer__inner__nav__logos-menu">
             <li v-for="menu in logosMenu" :key="menu.name" class="footer__inner__nav__social-menu__item">
               <NuxtLink :to="menu.link" :title="menu.name" target="__blank">
-                <NuxtImg :src="'/external-logos/' + menu.image" height="36px" />
+                <NuxtImg :src="'/images/common/external-logos/' + menu.image" height="36px" />
               </NuxtLink>
             </li>
           </ul>
@@ -43,7 +43,7 @@
       </LayoutGridRow>
     </LayoutGrid>
 
-    <p class="footer__copyright">ForPhysio Clinic 2024 © Todos os direitos reservados</p>
+    <p class="footer__copyright">ForPhysio Clinic 2024 © Todos os direitos reservados</p>
   </footer>
 </template>
 

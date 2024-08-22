@@ -9,8 +9,9 @@
       </LayoutGridRow>
     </LayoutGrid>
   </header>
+
   <NuxtLink v-if="!isDesktop" to="/" class="logo-mobile">
-    <NuxtImg src="/logo/logo-mini-white.png" sizes="56px" />
+    <NuxtImg src="/images/common/logo/logo-mini-white.png" sizes="56px" />
   </NuxtLink>
 </template>
 
