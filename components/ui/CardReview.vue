@@ -80,7 +80,7 @@ defineProps({
 
     &__name {
       font-size: 20px;
-      font-weight: $font-weight-bold;
+      font-weight: $font-weight-semi-bold;
       line-height: 24px;
       color: $deep-grey;
       white-space: pre-wrap;
