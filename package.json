@@ -15,13 +15,13 @@
   },
   "dependencies": {
     "@nuxt/eslint": "^0.3.13",
-    "@nuxt/icon": "^1.0.0",
+    "@nuxt/icon": "^1.4.5",
     "@nuxt/image": "^1.7.0",
     "@nuxtjs/google-fonts": "^3.2.0",
     "@vueuse/core": "^10.11.0",
     "@vueuse/nuxt": "^10.11.0",
     "normalize.css": "^8.0.1",
-    "nuxt": "^3.12.2",
+    "nuxt": "^3.13.0",
     "nuxt-swiper": "^1.2.2",
     "vue": "latest",
     "vue-wrap-balancer": "^1.1.3"

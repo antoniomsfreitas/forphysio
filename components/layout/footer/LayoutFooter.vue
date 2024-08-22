@@ -79,15 +79,14 @@ const { mainMenu, socialMenu, logosMenu } = useFooter();
       width: max-content;
 
       @include mq-mobile {
-        width: 100%;
-        column-gap: 24px;
-        row-gap: 32px;
-        grid-template-columns: repeat(4, 1fr);
-
         grid-template-areas:
           'social-menu social-menu'
           'main-menu-left main-menu-right'
           'logos-menu logos-menu';
+        grid-template-columns: repeat(4, 1fr);
+        gap: 32px;
+        column-gap: 24px;
+        width: 100%;
       }
 
       @include mq-tablet {
@@ -104,6 +103,16 @@ const { mainMenu, socialMenu, logosMenu } = useFooter();
         column-gap: 64px;
       }
 
+      &__social-menu,
+      &__logos-menu {
+        display: flex;
+        gap: 24px;
+
+        a {
+          display: block;
+        }
+      }
+
       &__main-menu {
         &--left {
           grid-area: main-menu-left;
@@ -117,20 +126,20 @@ const { mainMenu, socialMenu, logosMenu } = useFooter();
           grid-area: main-menu-right;
 
           @include mq-mobile {
+            grid-column: span 4;
             grid-column-start: span 3;
-            grid-column-end: span 4;
           }
         }
 
         &__item a {
+          display: block;
+          padding-bottom: 4px;
           font-size: 14px;
           font-weight: $font-weight-regular;
           line-height: 1.2;
           color: $white;
           text-decoration-color: transparent;
           transition: $transition-duration ease-in-out text-decoration-color;
-          display: block;
-          padding-bottom: 4px;
 
           &:hover {
             text-decoration-color: $white;
@@ -147,26 +156,16 @@ const { mainMenu, socialMenu, logosMenu } = useFooter();
         grid-area: logos-menu;
         align-items: flex-end;
       }
-
-      &__social-menu,
-      &__logos-menu {
-        display: flex;
-        gap: 24px;
-
-        a {
-          display: block;
-        }
-      }
     }
   }
 
   &__copyright {
     padding: 12px 32px;
-    background-color: $black;
     font-size: 14px;
     font-weight: $font-weight-regular;
     line-height: 1.2;
     text-align: center;
+    background-color: $black;
   }
 }
 </style>

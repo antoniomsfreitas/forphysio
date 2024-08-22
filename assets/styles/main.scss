@@ -5,6 +5,7 @@
 body {
   font-family: $font-family;
   color: $white;
+  white-space: pre-line;
   background-color: $black;
 
   @include mq-mobile-tablet {
