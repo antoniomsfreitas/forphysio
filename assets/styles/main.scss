@@ -139,10 +139,21 @@ p {
 }
 
 .swiper-custom-scrollbar {
-  width: 250px;
   height: 3px;
   background: $deep-grey;
   border-radius: 4px;
+
+  @include mq-mobile {
+    width: 250px;
+  }
+
+  @include mq-mobile-tablet {
+    width: 344px;
+  }
+
+  @include mq-desktop {
+    width: 344px;
+  }
 
   & > .swiper-scrollbar-drag {
     position: relative;
