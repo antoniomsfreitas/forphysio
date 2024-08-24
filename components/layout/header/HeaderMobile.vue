@@ -3,9 +3,11 @@
   <div class="header__inner">
     <div class="header__inner__bottom-bar">
       <Icon name="icon:hamburger-menu" size="29" @click="toggleMenuSidebar" />
+
       <NuxtLink v-if="buttonOption" :to="buttonOption.link" class="button button--secondary">
         {{ buttonOption.name }}
       </NuxtLink>
+
       <NuxtLink v-if="searchOption" :to="searchOption.link" :title="searchOption.name">
         <Icon name="icon:search-white" />
       </NuxtLink>
@@ -57,7 +59,8 @@
           </div>
         </li>
       </ul>
-      <LanguageSwitcher />
+
+      <LanguageSwitcher @language-changed="toggleMenuSidebar" />
     </div>
   </div>
 </template>

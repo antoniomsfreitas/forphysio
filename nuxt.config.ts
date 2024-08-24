@@ -29,6 +29,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'nuxt-swiper',
     '@nuxt/image',
+    '@nuxtjs/i18n',
   ],
   components: [
     {
@@ -53,5 +54,16 @@ export default defineNuxtConfig({
       t: 767,
       d: 1279,
     },
+  },
+  i18n: {
+    langDir: 'locales',
+    strategy: 'prefix',
+    defaultLocale: 'pt',
+    locales: [
+      { code: 'pt', iso: 'pt-PT', file: 'pt.json', name: 'Português' },
+      { code: 'en', iso: 'en-US', file: 'en.json', name: 'English' },
+      { code: 'es', iso: 'es-ES', file: 'es.json', name: 'Español' },
+      { code: 'zh-SG', iso: 'zh-SG', file: 'zh.json', name: '中文（繁體）' },
+    ],
   },
 });
