@@ -2,16 +2,18 @@
 <template>
   <div class="header__inner">
     <div class="header__inner__left">
-      <NuxtLink to="/" title="ForPhysio">
+      <NuxtLink :to="localePath('/')" title="ForPhysio">
         <NuxtImg src="/images/common/logo/logo-white.png" sizes="92px" alt="ForPhysio" />
       </NuxtLink>
+
       <LanguageSwitcher orientation="vertical" />
     </div>
+
     <div class="header__inner__right">
       <ul class="header__inner__right__menu">
         <li v-for="menu in mainMenu" :key="menu.name" class="header__inner__right__menu__item">
-          <NuxtLink :to="menu.link">
-            {{ menu.name }}
+          <NuxtLink :to="localePath(menu.route)">
+            <span>{{ $t(menu.name) }}</span>
             <Icon v-if="menu.submenu.length" name="icon:arrow-down" />
           </NuxtLink>
 
@@ -24,16 +26,18 @@
                 'header__inner__right__menu__item__submenu__item--view-all': submenu.viewAll,
               }"
             >
-              <NuxtLink :to="submenu.link">{{ submenu.name }}</NuxtLink>
+              <NuxtLink :to="localePath(submenu.route)">{{ submenu.name }}</NuxtLink>
             </li>
           </ul>
         </li>
       </ul>
+
       <div class="header__inner__right__options">
-        <NuxtLink v-if="searchOption" :to="searchOption.link" :title="searchOption.name">
+        <NuxtLink v-if="searchOption" :to="searchOption.route" :title="searchOption.name">
           <Icon name="icon:search-white" />
         </NuxtLink>
-        <NuxtLink v-if="buttonOption" :to="buttonOption.link" class="button button--secondary">
+
+        <NuxtLink v-if="buttonOption" :to="buttonOption.route" class="button button--secondary">
           {{ buttonOption.name }}
         </NuxtLink>
       </div>
@@ -42,6 +46,7 @@
 </template>
 
 <script setup lang="ts">
+const localePath = useLocalePath();
 const { mainMenu, searchOption, buttonOption } = useHeader();
 </script>
 

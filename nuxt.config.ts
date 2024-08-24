@@ -59,11 +59,20 @@ export default defineNuxtConfig({
     langDir: 'locales',
     strategy: 'prefix',
     defaultLocale: 'pt',
+    customRoutes: 'config',
     locales: [
       { code: 'pt', iso: 'pt-PT', file: 'pt.json', name: 'Português' },
       { code: 'en', iso: 'en-US', file: 'en.json', name: 'English' },
       { code: 'es', iso: 'es-ES', file: 'es.json', name: 'Español' },
-      { code: 'zh-SG', iso: 'zh-SG', file: 'zh.json', name: '中文（繁體）' },
+      { code: 'zh-sg', iso: 'zh-SG', file: 'zh.json', name: '中文 (繁體)' },
     ],
+    pages: {
+      about: {
+        en: '/about-us',
+        es: '/sobre-nos',
+        pt: '/sobre-nos',
+        'zh-SG': '/about-us',
+      },
+    },
   },
 });

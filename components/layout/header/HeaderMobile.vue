@@ -4,11 +4,11 @@
     <div class="header__inner__bottom-bar">
       <Icon name="icon:hamburger-menu" size="29" @click="toggleMenuSidebar" />
 
-      <NuxtLink v-if="buttonOption" :to="buttonOption.link" class="button button--secondary">
+      <NuxtLink v-if="buttonOption" :to="localePath(buttonOption.route)" class="button button--secondary">
         {{ buttonOption.name }}
       </NuxtLink>
 
-      <NuxtLink v-if="searchOption" :to="searchOption.link" :title="searchOption.name">
+      <NuxtLink v-if="searchOption" :to="localePath(searchOption.route)" :title="searchOption.name">
         <Icon name="icon:search-white" />
       </NuxtLink>
     </div>
@@ -24,8 +24,11 @@
 
       <ul class="header__inner__sidebar__menu">
         <li v-for="(menu, index) in mainMenu" :key="menu.name" class="header__inner__sidebar__menu__item">
-          <NuxtLink :to="menu.submenu.length ? undefined : menu.link" @click.prevent="toggleSubmenu(index)">
-            {{ menu.name }}
+          <NuxtLink
+            :to="menu.submenu.length ? undefined : localePath(menu.route)"
+            @click="menu.submenu.length ? toggleSubmenu(index) : toggleMenuSidebar()"
+          >
+            <span>{{ menu.name }}</span>
             <Icon v-if="menu.submenu.length" name="icon:arrow-right" />
           </NuxtLink>
 
@@ -53,7 +56,7 @@
                   'header__inner__sidebar__menu__item__submenu__item--view-all': submenu.viewAll,
                 }"
               >
-                <NuxtLink :to="submenu.link">{{ submenu.name }}</NuxtLink>
+                <NuxtLink :to="localePath(submenu.route)" @click="toggleMenuSidebar">{{ submenu.name }}</NuxtLink>
               </li>
             </ul>
           </div>
@@ -66,6 +69,7 @@
 </template>
 
 <script setup lang="ts">
+const localePath = useLocalePath();
 const { mainMenu, searchOption, buttonOption } = useHeader();
 
 const menuSidebarOpened = ref<boolean>(false);
