@@ -4,7 +4,7 @@
       <LayoutGridRow class="footer__inner">
         <LayoutGridCol m="4" t="12" d="3" class="footer__inner__logo" start-col-d="2">
           <NuxtLink to="/">
-            <NuxtImg src="/logo/logo-white.png" sizes="m:85px t:100px d:150px" />
+            <NuxtImg src="/images/common/logo/logo-white.png" sizes="m:85px t:100px d:150px" />
           </NuxtLink>
         </LayoutGridCol>
         <LayoutGridCol m="4" t="12" d="7" class="footer__inner__nav">
@@ -35,7 +35,7 @@
           <ul v-if="logosMenu.length" class="footer__inner__nav__logos-menu">
             <li v-for="menu in logosMenu" :key="menu.name" class="footer__inner__nav__social-menu__item">
               <NuxtLink :to="menu.link" :title="menu.name" target="__blank">
-                <NuxtImg :src="'/external-logos/' + menu.image" height="36px" />
+                <NuxtImg :src="'/images/common/external-logos/' + menu.image" height="36px" />
               </NuxtLink>
             </li>
           </ul>

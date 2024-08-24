@@ -6,17 +6,18 @@
           <h3 class="scrollbar-slideshow__title">{{ title }}</h3>
 
           <Swiper
+            v-if="swiperInitialized"
             class="scrollbar-slideshow__swiper-container"
             slides-per-view="auto"
             :speed="400"
             :modules="[SwiperScrollbar]"
             :space-between="16"
-            :scrollbar="{ draggable: true, el: '.scrollbar-slideshow__swiper-container__scrollbar' }"
+            :scrollbar="{ draggable: true, el: scrollbarRef }"
           >
             <slot />
           </Swiper>
 
-          <div class="swiper-custom-scrollbar scrollbar-slideshow__swiper-container__scrollbar" />
+          <div ref="scrollbarRef" class="scrollbar-slideshow__swiper-container__scrollbar swiper-custom-scrollbar" />
         </LayoutGridCol>
       </LayoutGridRow>
     </LayoutGrid>
@@ -24,11 +25,18 @@
 </template>
 
 <script setup lang="ts">
+const scrollbarRef = ref<HTMLElement>();
+const swiperInitialized = ref(false);
+
 defineProps({
   title: {
     type: String,
     required: true,
   },
+});
+
+onMounted(() => {
+  swiperInitialized.value = true;
 });
 </script>
 

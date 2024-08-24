@@ -4,6 +4,7 @@
     <AboutUsBlock class="about-us-block" />
     <TwoImagesBlock class="two-images-block" />
     <ServicesBlock class="services-block" />
+    <CustomersReviewsBlock class="customers-reviews-block" />
     <NewsletterBlock />
   </div>
 </template>
@@ -44,6 +45,20 @@
 
   @include mq-desktop {
     margin-bottom: 160px;
+  }
+}
+
+.customers-reviews-block {
+  @include mq-mobile {
+    margin-bottom: 130px;
+  }
+
+  @include mq-mobile-tablet {
+    margin-bottom: 100px;
+  }
+
+  @include mq-desktop {
+    margin-bottom: 110px;
   }
 }
 </style>

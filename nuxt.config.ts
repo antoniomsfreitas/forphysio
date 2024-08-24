@@ -19,7 +19,7 @@ export default defineNuxtConfig({
       '@nuxtjs/google-fonts',
       {
         families: {
-          Roboto: [300, 400, 500],
+          Roboto: [300, 400, 500, 700],
         },
         preload: true,
       },
@@ -43,12 +43,11 @@ export default defineNuxtConfig({
     customCollections: [
       {
         prefix: 'icon',
-        dir: './assets/icons',
+        dir: '~/assets/icons',
       },
     ],
   },
   image: {
-    dir: './assets/images',
     screens: {
       m: 479,
       t: 767,
