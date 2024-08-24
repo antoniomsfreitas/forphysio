@@ -148,11 +148,7 @@ p {
     width: 250px;
   }
 
-  @include mq-mobile-tablet {
-    width: 344px;
-  }
-
-  @include mq-desktop {
+  @include mq-tablet-desktop {
     width: 344px;
   }
 
