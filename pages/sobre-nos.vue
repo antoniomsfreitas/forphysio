@@ -79,6 +79,7 @@
         src-d="/images/about-us/content/image-1/image-1-desktop.jpg"
         src-d_2-k="/images/about-us/content/image-1/image-1-desktop-2k.jpg"
         src-d_4-k="/images/about-us/content/image-1/image-1-desktop-4k.jpg"
+        cover
       />
     </div>
 
