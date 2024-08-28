@@ -2,10 +2,11 @@
   <div class="hero-banner">
     <Swiper
       class="hero-banner__slideshow"
-      :speed="1200"
+      :speed="600"
+      :space-between="1"
+      :slides-per-view="1"
       :modules="[SwiperAutoplay, SwiperScrollbar]"
       :autoplay="{ delay: 4000, disableOnInteraction: true }"
-      :slides-per-view="1"
       :scrollbar="{ draggable: true, el: '.hero-banner__content__info__scrollbar' }"
     >
       <SwiperSlide class="hero-banner__slideshow__slide">

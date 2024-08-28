@@ -29,6 +29,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'nuxt-swiper',
     '@nuxt/image',
+    '@nuxtjs/i18n',
   ],
   components: [
     {
@@ -43,7 +44,7 @@ export default defineNuxtConfig({
     customCollections: [
       {
         prefix: 'icon',
-        dir: '~/assets/icons',
+        dir: './assets/icons',
       },
     ],
   },
@@ -52,6 +53,26 @@ export default defineNuxtConfig({
       m: 479,
       t: 767,
       d: 1279,
+    },
+  },
+  i18n: {
+    langDir: 'locales',
+    strategy: 'prefix',
+    defaultLocale: 'pt',
+    customRoutes: 'config',
+    locales: [
+      { code: 'pt', language: 'pt-PT', file: 'pt.json', name: 'Português' },
+      { code: 'en', language: 'en-US', file: 'en.json', name: 'English' },
+      { code: 'es', language: 'es-ES', file: 'es.json', name: 'Español' },
+      { code: 'zh-sg', language: 'zh-SG', file: 'zh.json', name: '中文 (繁體)' },
+    ],
+    pages: {
+      about: {
+        en: '/about-us',
+        es: '/sobre-nos',
+        pt: '/sobre-nos',
+        'zh-SG': '/about-us',
+      },
     },
   },
 });
