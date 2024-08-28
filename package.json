@@ -18,6 +18,7 @@
     "@nuxt/icon": "^1.4.5",
     "@nuxt/image": "^1.7.0",
     "@nuxtjs/google-fonts": "^3.2.0",
+    "@nuxtjs/i18n": "^8.5.0",
     "@vueuse/core": "^10.11.0",
     "@vueuse/nuxt": "^10.11.0",
     "normalize.css": "^8.0.1",

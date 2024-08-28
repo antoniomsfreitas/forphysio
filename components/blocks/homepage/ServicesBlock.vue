@@ -1,5 +1,5 @@
 <template>
-  <ScrollBarSlideshow class="services-slideshow-container" title="Serviços">
+  <ScrollbarSlideshow class="services-slideshow-container" title="Serviços">
     <SwiperSlide v-for="item in items" :key="item.id" class="services-slideshow-container__slide">
       <CardImage
         :title="item.title"
@@ -9,7 +9,7 @@
         :link-title="`Clique aqui para ver mais detalhes sobre: ${item.title}`"
       />
     </SwiperSlide>
-  </ScrollBarSlideshow>
+  </ScrollbarSlideshow>
 </template>
 
 <script setup lang="ts">
@@ -64,7 +64,6 @@ const items = [
   &__slide {
     width: 348px;
     max-width: 100%;
-    height: auto;
   }
 }
 </style>

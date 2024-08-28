@@ -1,5 +1,5 @@
 import { useWindowSize } from '@vueuse/core';
-import { Breakpoints } from '~/models/ui/ui.model';
+import { Breakpoints } from '~/models/ui.model';
 
 const { width } = useWindowSize();
 

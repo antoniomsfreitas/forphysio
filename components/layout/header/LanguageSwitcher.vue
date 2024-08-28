@@ -1,25 +1,31 @@
 <template>
   <div class="language-switcher" :class="'language-switcher--' + orientation" @mouseleave="toggleShowOptions(false)">
-    <span class="language-switcher__label" :title="getCurrentLang?.name" @mouseover="toggleShowOptions(true)">
-      {{ getCurrentLang?.code }}
+    <span class="language-switcher__label" @mouseover="toggleShowOptions(true)">
+      {{ locale }}
       <Icon v-if="orientation === 'vertical'" name="icon:arrow-down" />
     </span>
+
     <div class="language-switcher__select" :class="{ 'language-switcher__select--show': showOptions }">
-      <span
-        v-for="lang in langs"
-        :key="lang.code"
-        :title="lang.name"
+      <NuxtLink
+        v-for="option in locales"
+        :key="option.code"
+        :to="switchLocalePath(option.code)"
+        :title="option.name"
         class="language-switcher__select__option"
-        :class="{ 'language-switcher__select__option--current': isCurrentLang(lang.code) }"
-        @click="handleChangeLang(lang.code)"
+        :class="{ 'language-switcher__select__option--current': option.code === locale }"
+        @click="handleLanguageChange()"
       >
-        {{ lang.code }}
-      </span>
+        {{ option.code }}
+      </NuxtLink>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+const { locale, locales } = useI18n();
+const switchLocalePath = useSwitchLocalePath();
+const emit = defineEmits(['languageChanged']);
+
 defineProps({
   orientation: {
     type: String as PropType<'vertical' | 'horizontal'>,
@@ -28,14 +34,11 @@ defineProps({
   },
 });
 
-const { langs, getCurrentLang, isCurrentLang, changeLang } = useI18n();
 const showOptions = ref(false);
-
 const toggleShowOptions = (status: boolean) => (showOptions.value = status);
 
-const handleChangeLang = (code: string) => {
-  toggleShowOptions(false);
-  changeLang(code);
+const handleLanguageChange = () => {
+  emit('languageChanged');
 };
 </script>
 
@@ -76,6 +79,9 @@ const handleChangeLang = (code: string) => {
         align-items: center;
 
         &__option {
+          color: $white;
+          text-decoration: none;
+
           &--current {
             color: $blue;
             cursor: default;
@@ -110,6 +116,8 @@ const handleChangeLang = (code: string) => {
         &__option {
           display: block;
           padding: 10px 26px;
+          color: $white;
+          text-decoration: none;
           cursor: pointer;
           transition: $transition-duration ease-in-out color;
 

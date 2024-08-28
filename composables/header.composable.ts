@@ -1,56 +1,58 @@
+import { Routes } from '~/models/routes.model';
+
 export const useHeader = () => {
   const headerMenu = {
     mainMenu: [
       {
-        name: 'Sobre',
-        link: '/sobre-nos',
+        name: 'pages.about',
+        route: Routes.ABOUT,
         submenu: [],
       },
       {
         name: 'Equipa',
-        link: '/equipa',
+        route: Routes.TEAM,
         submenu: [],
       },
       {
         name: 'Serviços',
-        link: '/servicos',
+        route: Routes.SERVICES,
         submenu: [
-          { name: 'Ver todos', link: '/', viewAll: true },
-          { name: 'Fisioterapia músculo esquelética', link: '/' },
-          { name: 'Fisioterapia no desporto', link: '/blog' },
-          { name: 'Fisioterapia aquática e hidroterapia', link: '/' },
-          { name: 'Fisioterapia no envelhecimento', link: '/' },
-          { name: 'Fisioterapia online', link: '/' },
-          { name: 'Fisioterapia na saúde da mulher', link: '/' },
-          { name: 'Pilates clínico', link: '/' },
-          { name: 'Nutrição', link: '/' },
-          { name: 'Saúde e bem-estar', link: '/' },
-          { name: 'Consultas médicas', link: '/' },
+          { name: 'Ver todos', route: Routes.HOMEPAGE, viewAll: true },
+          { name: 'Fisioterapia músculo esquelética', route: Routes.HOMEPAGE },
+          { name: 'Fisioterapia no desporto', route: Routes.HOMEPAGE },
+          { name: 'Fisioterapia aquática e hidroterapia', route: Routes.HOMEPAGE },
+          { name: 'Fisioterapia no envelhecimento', route: Routes.HOMEPAGE },
+          { name: 'Fisioterapia online', route: Routes.HOMEPAGE },
+          { name: 'Fisioterapia na saúde da mulher', route: Routes.HOMEPAGE },
+          { name: 'Pilates clínico', route: Routes.HOMEPAGE },
+          { name: 'Nutrição', route: Routes.HOMEPAGE },
+          { name: 'Saúde e bem-estar', route: Routes.HOMEPAGE },
+          { name: 'Consultas médicas', route: Routes.HOMEPAGE },
         ],
       },
       {
         name: 'Acordos',
-        link: '/acordos',
+        route: Routes.PARTNERSHIPS,
         submenu: [],
       },
       {
         name: 'Blog',
-        link: '/blog',
+        route: Routes.BLOG,
         submenu: [],
       },
       {
         name: 'Contactos',
-        link: '/contactos',
+        route: Routes.CONTACTS,
         submenu: [],
       },
     ],
     searchOption: {
       name: 'Pesquisa',
-      link: '/pesquisa',
+      route: Routes.SEARCH,
     },
     buttonOption: {
       name: 'Marcar consulta',
-      link: '/contactos',
+      route: Routes.CONTACTS,
     },
   };
 

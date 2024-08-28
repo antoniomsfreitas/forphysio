@@ -1,17 +1,17 @@
 <template>
   <picture :class="cover ? 'cover' : 'default'">
-    <source v-if="srcM" :media="getImageMediaQuery(Breakpoints.MOBILE)" :srcset="srcM" />
-    <source v-if="srcT" :media="getImageMediaQuery(Breakpoints.TABLET)" :srcset="srcT" />
-    <source v-if="srcD" :media="getImageMediaQuery(Breakpoints.DESKTOP)" :srcset="srcD" />
-    <source v-if="srcD_2K" :media="getImageMediaQuery(Breakpoints.DESKTOP_2K)" :srcset="srcD_2K" />
-    <source v-if="srcD_4K" :media="getImageMediaQuery(Breakpoints.DESKTOP_4K)" :srcset="srcD_4K" />
+    <source v-if="srcM" :media="getImageMediaQuery(Breakpoints.MOBILE)" :srcset="srcM" >
+    <source v-if="srcT" :media="getImageMediaQuery(Breakpoints.TABLET)" :srcset="srcT" >
+    <source v-if="srcD" :media="getImageMediaQuery(Breakpoints.DESKTOP)" :srcset="srcD" >
+    <source v-if="srcD_2K" :media="getImageMediaQuery(Breakpoints.DESKTOP_2K)" :srcset="srcD_2K" >
+    <source v-if="srcD_4K" :media="getImageMediaQuery(Breakpoints.DESKTOP_4K)" :srcset="srcD_4K" >
 
-    <img :src="src" :alt="alt" />
+    <img :src="src" :alt="alt" >
   </picture>
 </template>
 
 <script setup lang="ts">
-import { Breakpoints } from '~/models/ui/ui.model';
+import { Breakpoints } from '~/models/ui.model';
 
 const getImageMediaQuery = (breakpoint: Breakpoints) => {
   switch (breakpoint) {
