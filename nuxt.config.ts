@@ -69,7 +69,7 @@ export default defineNuxtConfig({
     pages: {
       about: {
         en: '/about-us',
-        es: '/sobre-nos',
+        es: '/sobre-nosotros',
         pt: '/sobre-nos',
         'zh-SG': '/about-us',
       },
