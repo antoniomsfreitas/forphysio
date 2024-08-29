@@ -1,5 +1,10 @@
 <template>
   <LayoutGrid>
+    <LayoutGridRow class="team-list-title">
+      <LayoutGridCol m="4" t="12" d="12">
+        <h3>Encontre o seu profissional</h3>
+      </LayoutGridCol>
+    </LayoutGridRow>
     <LayoutGridRow class="team-filters">
       <LayoutGridCol m="4" t="4" d="4" start-col-d="2">
         <CustomSelect v-model="selectedLocationId" :options="teamLocations" defaultLabel="Localizações" />
@@ -9,7 +14,7 @@
         <CustomSelect v-model="selectedServiceId" :options="teamServices" defaultLabel="Serviços" />
       </LayoutGridCol>
 
-      <LayoutGridCol m="4" t="2" d="2">
+      <LayoutGridCol m="4" t="4" d="2">
         <Button class="team-filters__submit" @click="submitFilters()">Pesquisar</Button>
       </LayoutGridCol>
     </LayoutGridRow>
@@ -49,7 +54,7 @@
                 :subtitle="getService(member.service)?.title"
                 :src="member.image"
                 :alt="member.name"
-                link="#"
+                :link="localePath(Routes.TEAM) + '/' + member.slug"
                 link-title="#"
               ></CardTeam>
             </LayoutGridCol>
@@ -65,24 +70,24 @@
 </template>
 
 <script setup lang="ts">
-import type { teamMember } from '~/models/team.model';
+import { Routes } from '~/models/routes.model';
+import type { TeamLocation, TeamMember, TeamService } from '~/models/team.model';
 
 const { getTeamMembers, getService, getTeamServices, getTeamLocations, getDefaultLocationId } = useTeam();
+const localePath = useLocalePath();
 
 // Locations
 const currentLocationId = ref(getDefaultLocationId());
 const selectedLocationId = ref(currentLocationId.value);
-const teamLocations = getTeamLocations();
+const teamLocations: TeamLocation[] = getTeamLocations();
 
 // Services
 const currentServiceId = ref(0);
 const selectedServiceId = ref(currentServiceId.value);
-const teamServices = getTeamServices();
+const teamServices: TeamService[] = getTeamServices();
 
 // Members
-const teamMembers = computed((): teamMember[] => {
-  console.log(getTeamMembers(currentLocationId.value, currentServiceId.value));
-
+const teamMembers = computed((): TeamMember[] => {
   return getTeamMembers(currentLocationId.value, currentServiceId.value);
 });
 
@@ -101,13 +106,21 @@ const submitFilters = () => {
 
 const changeLocation = (locationId: number) => {
   currentLocationId.value = locationId;
-  selectedLocationId.value = locationId; // Atualizando o v-model
-  // currentLocationId.value = selectedLocationId.value = locationId;
+  selectedLocationId.value = locationId;
 };
 </script>
 
 <style scoped lang="scss">
+.team-list-title {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
 .team-filters {
+  @include mq-mobile-tablet {
+    margin-bottom: 100px;
+  }
+
   @include mq-desktop {
     margin-bottom: 200px;
   }
@@ -116,6 +129,7 @@ const changeLocation = (locationId: number) => {
     width: 100%;
   }
 }
+
 .team-list {
   &__locations {
     @include mq-mobile {

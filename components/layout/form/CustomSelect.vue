@@ -115,7 +115,7 @@ $border-radius: 22px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 16px;
+    padding: 11px 16px;
     background-color: $white;
     border-radius: $border-radius;
 

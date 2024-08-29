@@ -39,6 +39,7 @@ const props = defineProps({
   padding-right: 18px;
   line-height: 28px;
   text-align: center;
+  min-height: 0;
 
   &[button-type='primary'] {
     color: $white;
@@ -107,8 +108,8 @@ const props = defineProps({
   }
 
   &[button-size='medium'] {
-    padding-top: 9px;
-    padding-bottom: 9px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     font-size: 16px;
   }
 

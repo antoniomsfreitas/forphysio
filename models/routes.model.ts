@@ -7,4 +7,5 @@ export enum Routes {
   SERVICES = 'services',
   PARTNERSHIPS = 'partnerships',
   SEARCH = 'search',
+  NOT_FOUND = '404',
 }
