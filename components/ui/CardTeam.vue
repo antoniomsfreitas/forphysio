@@ -1,11 +1,11 @@
 <template>
   <CardUI class="card-team">
     <NuxtLink :to="props.link" class="card-team__link" :title="props.linkTitle">
-      <PictureImage v-bind="{ ...imageSrcAttributes }" class="card-team__picture" cover />
+      <img :src="imagePath" :alt="alt" />
 
       <div class="card-team__content">
         <span class="card-team__content__title">{{ title }}</span>
-        <span class="card-team__content__subtitle">{{ subtitle }}</span>
+        <span v-if="subtitle" class="card-team__content__subtitle">{{ subtitle }}</span>
       </div>
 
       <div class="card-team__gradient" />
@@ -21,7 +21,7 @@ const props = defineProps({
   },
   subtitle: {
     type: String,
-    required: true,
+    required: false,
   },
   src: {
     type: String,
@@ -41,12 +41,7 @@ const props = defineProps({
   },
 });
 
-const imageListPath = '/images/team/members/list/';
-
-const imageSrcAttributes = {
-  alt: props.alt,
-  src: imageListPath + props.src,
-};
+const imagePath = '/images/team/members/list/' + props.src;
 </script>
 
 <style scoped lang="scss">
@@ -54,14 +49,25 @@ const imageSrcAttributes = {
   position: relative;
   background-color: $deep-grey;
 
+  @include mq-tablet {
+    height: 165px;
+  }
+
+  @include mq-desktop {
+    height: 260px;
+  }
+
   &__link {
     display: block;
     height: 100%;
   }
 
-  &__picture {
+  img {
     position: relative;
     z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 
   &__content {
@@ -70,16 +76,26 @@ const imageSrcAttributes = {
     left: 0;
     z-index: 4;
     width: 100%;
-    padding: 14px;
-    font-size: 16px;
+
     line-height: 1.2;
     text-align: center;
     color: $white;
     text-decoration: none;
 
+    @include mq-mobile-tablet {
+      font-size: 14px;
+      padding: 12px;
+    }
+
+    @include mq-desktop {
+      font-size: 16px;
+      padding: 14px;
+    }
+
     &__title {
       display: block;
       font-weight: $font-weight-semi-bold;
+      padding-bottom: 2px;
     }
 
     &__subtitle {
@@ -89,7 +105,13 @@ const imageSrcAttributes = {
   }
 
   &__gradient {
-    @include gradient-overlay('bottom-top', 50);
+    @include mq-mobile-tablet {
+      @include gradient-overlay('bottom-top', 70);
+    }
+
+    @include mq-desktop {
+      @include gradient-overlay('bottom-top', 50);
+    }
   }
 }
 </style>

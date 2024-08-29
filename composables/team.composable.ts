@@ -1,5 +1,7 @@
+import type { teamMember, teamLocation, teamService } from '~/models/team.model';
+
 export const useTeam = () => {
-  const teamServices = [
+  const teamServices: teamService[] = [
     {
       id: 1,
       title: 'Fisioterapeuta',
@@ -14,7 +16,7 @@ export const useTeam = () => {
     },
   ];
 
-  const teamLocations = [
+  const teamLocations: teamLocation[] = [
     {
       id: 1,
       title: 'Marinha Grande',
@@ -37,7 +39,7 @@ export const useTeam = () => {
     },
   ];
 
-  const teamMembers = [
+  const teamMembers: teamMember[] = [
     {
       id: 1,
       name: 'Nuno Pina',
@@ -97,8 +99,8 @@ export const useTeam = () => {
       name: 'Margarida Saboga',
       description:
         'Margarida Saboga integra  a  equipa  ForPhysio desde  2021.  Atualmente, desempenha funções como fisioterapeuta e coordenadora da  unidade ForPhysio Marinha Grande, exercendo a sua intervenção clínica na  mesma unidade.<br>É licenciada em fisioterapia pela Escola Superior de Saúde de Leiria. Atualmente, colabora paralelamente com o Sporting Clube Marinhense, realizando o acompanhamento das equipas seniores de hóquei em patins.<br><br>Tendo especial interesse na área da fisioterapia desportiva, acompanha na unidade vários atletas de basquetebol, andebol, atletismo e muay thai.',
-      service: '1',
-      location: '1',
+      service: 1,
+      location: 1,
       image: 'margarida-saboga.png',
     },
     {
@@ -106,8 +108,8 @@ export const useTeam = () => {
       name: 'Joana Guimarães',
       description:
         'Joana Guimarães integra a equipa ForPhysio desde 2023.<br><br>Atualmente, desempenha funções como Profissional de Técnica de Massagem na  Unidade de Saúde Balance by ForPhysio Caldas da Rainha.',
-      service: '',
-      location: '',
+      service: 2,
+      location: 2,
       image: 'joana-guimaraes.png',
     },
     {
@@ -120,25 +122,44 @@ export const useTeam = () => {
     },
   ];
 
-  const getLocation = (id: number) => {
-    return teamLocations.find((location) => location.id === id);
-  };
-
-  const getService = (id: number) => {
+  const getService = (id?: number) => {
+    if (!id) return;
     return teamServices.find((service) => service.id === id);
   };
 
-  const getTeamLocations = () => {
+  const getTeamLocations = (): teamLocation[] => {
     return teamLocations.filter((location) => teamMembers.some((member) => member.location === location.id));
   };
 
-  const getTeamServices = () => {
+  const getTeamServices = (): teamService[] => {
     return teamServices.filter((service) => teamMembers.some((member) => member.service === service.id));
   };
 
+  const getDefaultLocationId = (): number => {
+    // return 0;
+    const teamLocations: teamLocation[] = getTeamLocations();
+    return teamLocations?.find((location) => location.selected == true)?.id ?? 0;
+  };
+
+  const getTeamMembers = (locationId?: number, serviceId?: number): teamMember[] => {
+    let filteredTeamMembers = teamMembers;
+
+    if (locationId) {
+      filteredTeamMembers = filteredTeamMembers.filter((member) => member.location === locationId);
+    }
+
+    if (serviceId) {
+      filteredTeamMembers = filteredTeamMembers.filter((member) => member.service === serviceId);
+    }
+
+    return filteredTeamMembers;
+  };
+
   return {
+    getTeamMembers,
     getTeamServices,
+    getService,
     getTeamLocations,
-    teamMembers,
+    getDefaultLocationId,
   };
 };

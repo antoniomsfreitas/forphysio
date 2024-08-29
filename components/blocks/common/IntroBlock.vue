@@ -43,11 +43,12 @@ defineProps({
     padding-top: 190px;
   }
 
-  @include mq-desktop {
-    padding-top: 150px;
+  @include mq-tablet {
+    min-height: 650px;
   }
 
   @include mq-desktop {
+    padding-top: 150px;
     min-height: 800px;
   }
 
