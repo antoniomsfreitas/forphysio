@@ -16,7 +16,7 @@
     <div class="header__inner__sidebar" :class="{ 'header__inner__sidebar--opened': menuSidebarOpened }">
       <div class="header__inner__sidebar__top">
         <NuxtLink to="/">
-          <NuxtImg src="/images/common/logo/logo-white.png" sizes="92px" />
+          <NuxtImg class="header__inner__sidebar__top__logo" src="/images/common/logo/logo-white.png" sizes="92px" />
         </NuxtLink>
 
         <Icon name="icon:close" @click="toggleMenuSidebar" />
@@ -28,7 +28,7 @@
             :to="menu.submenu.length ? undefined : localePath(menu.route)"
             @click="menu.submenu.length ? toggleSubmenu(index) : toggleMenuSidebar()"
           >
-            <span>{{ menu.name }}</span>
+            <span>{{ $t(menu.name) }}</span>
             <Icon v-if="menu.submenu.length" name="icon:arrow-right" />
           </NuxtLink>
 
@@ -44,9 +44,7 @@
 
             <ul>
               <li>
-                <span class="header__inner__sidebar__menu__item__submenu__parent">
-                  {{ menu.name }}
-                </span>
+                <span class="header__inner__sidebar__menu__item__submenu__parent"> {{ $t(menu.name) }} </span>
               </li>
               <li
                 v-for="submenu in menu.submenu"
@@ -126,6 +124,11 @@ const isSubmenuOpened = (index: number) => {
           display: flex;
           align-items: flex-start;
           justify-content: space-between;
+
+          &__logo {
+            object-fit: contain;
+            width: 92px;
+          }
         }
       }
 
