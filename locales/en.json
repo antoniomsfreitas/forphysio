@@ -1,4 +1,8 @@
 {
   "pages.about": "About us",
-  "pages.team": "Team"
+  "pages.team": "Team",
+  "pages.contacts": "Contacts",
+  "pages.services": "Services",
+  "pages.partnerships": "Partnerships",
+  "pages.blog": "Blog"
 }

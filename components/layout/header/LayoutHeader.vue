@@ -50,5 +50,10 @@
   top: 28px;
   left: 24px;
   z-index: 999;
+
+  img {
+    width: 56px;
+    object-fit: contain;
+  }
 }
 </style>
