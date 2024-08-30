@@ -20,6 +20,7 @@
         <IconLink link="/contactos/" text="Marcar avaliação" />
       </template>
     </IntroBlock>
+    <TeamList class="team-list-block"></TeamList>
   </div>
 </template>
 
@@ -47,6 +48,16 @@
     @include mq-desktop {
       margin-bottom: 60px;
     }
+  }
+}
+
+.team-list-block {
+  @include mq-mobile {
+    margin-bottom: 100px;
+  }
+
+  @include mq-tablet-desktop {
+    margin-bottom: 160px;
   }
 }
 </style>

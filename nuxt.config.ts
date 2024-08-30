@@ -19,7 +19,7 @@ export default defineNuxtConfig({
       '@nuxtjs/google-fonts',
       {
         families: {
-          Roboto: [300, 400, 500, 700],
+          Roboto: [100, 300, 400, 500, 700],
         },
         preload: true,
       },
@@ -69,9 +69,21 @@ export default defineNuxtConfig({
     pages: {
       about: {
         en: '/about-us',
-        es: '/sobre-nos',
+        es: '/sobre-nosotros',
         pt: '/sobre-nos',
         'zh-SG': '/about-us',
+      },
+      'team/index': {
+        en: '/team',
+        es: '/equipo',
+        pt: '/equipa',
+        'zh-SG': '/team',
+      },
+      'team/[slug]': {
+        en: '/team/[slug]',
+        es: '/equipo/[slug]',
+        pt: '/equipa/[slug]',
+        'zh-SG': '/team/[slug]',
       },
     },
   },

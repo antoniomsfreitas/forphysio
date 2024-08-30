@@ -9,7 +9,7 @@ export const useHeader = () => {
         submenu: [],
       },
       {
-        name: 'Equipa',
+        name: 'pages.team',
         route: Routes.TEAM,
         submenu: [],
       },
