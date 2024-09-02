@@ -1,3 +1,8 @@
 {
-  "page.about": "Sobre nós"
+  "pages.about": "Sobre nosotros",
+  "pages.team": "Equipo",
+  "pages.contacts": "Contactos",
+  "pages.services": "Servicios",
+  "pages.partnerships": "Alianzas",
+  "pages.blog": "Blog"
 }

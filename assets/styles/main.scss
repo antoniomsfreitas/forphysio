@@ -48,11 +48,15 @@ h2 {
 }
 
 h3 {
-  @include breakpoint-to('d') {
+  @include mq-mobile {
+    font-size: 24px;
+  }
+
+  @include mq-tablet {
     font-size: 32px;
   }
 
-  @include breakpoint-from('d') {
+  @include mq-desktop {
     font-size: 40px;
   }
 }

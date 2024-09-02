@@ -1,3 +1,8 @@
 {
-  "pages.about": "關於我們"
+  "pages.about": "關於我們",
+  "pages.team": "團隊",
+  "pages.contacts": "聯絡人",
+  "pages.services": "服務",
+  "pages.partnerships": "夥伴關係",
+  "pages.blog": "部落格"
 }

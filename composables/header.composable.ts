@@ -9,12 +9,12 @@ export const useHeader = () => {
         submenu: [],
       },
       {
-        name: 'Equipa',
+        name: 'pages.team',
         route: Routes.TEAM,
         submenu: [],
       },
       {
-        name: 'Serviços',
+        name: 'pages.services',
         route: Routes.SERVICES,
         submenu: [
           { name: 'Ver todos', route: Routes.HOMEPAGE, viewAll: true },
@@ -31,17 +31,17 @@ export const useHeader = () => {
         ],
       },
       {
-        name: 'Acordos',
+        name: 'pages.partnerships',
         route: Routes.PARTNERSHIPS,
         submenu: [],
       },
       {
-        name: 'Blog',
+        name: 'pages.blog',
         route: Routes.BLOG,
         submenu: [],
       },
       {
-        name: 'Contactos',
+        name: 'pages.contacts',
         route: Routes.CONTACTS,
         submenu: [],
       },
