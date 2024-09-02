@@ -3,7 +3,7 @@
     <div class="intro-block__content">
       <LayoutGrid>
         <LayoutGridRow>
-          <LayoutGridCol m="4" t="7" d="5">
+          <LayoutGridCol m="4" t="7" :d="props.contentColDesktop">
             <h1>{{ pageTitle }}</h1>
             <slot name="content" />
           </LayoutGridCol>
@@ -27,10 +27,17 @@
 </template>
 
 <script setup lang="ts">
-defineProps({
+import type { GridColumns } from '~/models/ui.model';
+
+const props = defineProps({
   pageTitle: {
     type: String,
     required: true,
+  },
+  contentColDesktop: {
+    type: String as PropType<GridColumns>,
+    required: false,
+    default: 5,
   },
 });
 </script>
@@ -72,13 +79,7 @@ defineProps({
     }
 
     h1 {
-      @include mq-mobile-tablet {
-        margin-bottom: 40px;
-      }
-
-      @include mq-desktop {
-        margin-bottom: 60px;
-      }
+      margin-bottom: 40px;
     }
   }
 

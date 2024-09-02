@@ -3,7 +3,12 @@
   <div class="header__inner">
     <div class="header__inner__left">
       <NuxtLink :to="localePath('/')" title="ForPhysio">
-        <NuxtImg src="/images/common/logo/logo-white.png" sizes="92px" alt="ForPhysio" />
+        <NuxtImg
+          class="header__inner__left__logo"
+          src="/images/common/logo/logo-white.png"
+          sizes="92px"
+          alt="ForPhysio"
+        />
       </NuxtLink>
 
       <LanguageSwitcher orientation="vertical" />
@@ -64,6 +69,11 @@ const { mainMenu, searchOption, buttonOption } = useHeader();
       gap: 24px;
       align-items: center;
       height: 100%;
+
+      &__logo {
+        width: 92px;
+        object-fit: contain;
+      }
     }
 
     &__right {
