@@ -89,7 +89,7 @@ export default defineNuxtConfig({
     },
   },
   basicAuth: {
-    enabled: true,
+    enabled: process.env.IS_PRODUCTION === 'false',
     users: [
       {
         username: 'forphysio',
