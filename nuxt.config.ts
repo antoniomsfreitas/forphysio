@@ -30,6 +30,7 @@ export default defineNuxtConfig({
     'nuxt-swiper',
     '@nuxt/image',
     '@nuxtjs/i18n',
+    '@kgierke/nuxt-basic-auth',
   ],
   components: [
     {
@@ -86,5 +87,15 @@ export default defineNuxtConfig({
         'zh-SG': '/team/[slug]',
       },
     },
+  },
+  basicAuth: {
+    enabled: process.env.IS_PRODUCTION === 'false',
+    users: [
+      {
+        username: 'forphysio',
+        password: 'website2024',
+      },
+    ],
+    allowedRoutes: ['/api/.*'],
   },
 });
