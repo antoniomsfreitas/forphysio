@@ -74,6 +74,18 @@ export default defineNuxtConfig({
         pt: '/sobre-nos',
         'zh-SG': '/about-us',
       },
+      contacts: {
+        en: '/contacts',
+        es: '/contactos',
+        pt: '/contactos',
+        'zh-SG': '/contacts',
+      },
+      partnerships: {
+        en: '/partnerships',
+        es: '/alianzas',
+        pt: '/acordos',
+        'zh-SG': '/partnerships',
+      },
       'team/index': {
         en: '/team',
         es: '/equipo',
@@ -85,6 +97,18 @@ export default defineNuxtConfig({
         es: '/equipo/[slug]',
         pt: '/equipa/[slug]',
         'zh-SG': '/team/[slug]',
+      },
+      'services/index': {
+        en: '/services',
+        es: '/servicios',
+        pt: '/servicos',
+        'zh-SG': '/services',
+      },
+      'blog/index': {
+        en: '/blog',
+        es: '/blog',
+        pt: '/blog',
+        'zh-SG': '/blog',
       },
     },
   },

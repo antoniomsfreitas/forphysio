@@ -33,7 +33,7 @@
           </ul>
 
           <ul v-if="logosMenu.length" class="footer__inner__nav__logos-menu">
-            <li v-for="menu in logosMenu" :key="menu.name" class="footer__inner__nav__social-menu__item">
+            <li v-for="menu in logosMenu" :key="menu.name">
               <NuxtLink :to="menu.link" :title="menu.name" target="__blank">
                 <NuxtImg :src="'/images/common/external-logos/' + menu.image" height="36px" />
               </NuxtLink>
@@ -72,6 +72,18 @@ const { mainMenu, socialMenu, logosMenu } = useFooter();
 
     &__logo a {
       display: block;
+
+      img {
+        object-fit: contain;
+
+        @include mq-mobile {
+          width: 85px;
+        }
+
+        @include mq-tablet-desktop {
+          width: 150px;
+        }
+      }
     }
 
     &__nav {
@@ -155,6 +167,11 @@ const { mainMenu, socialMenu, logosMenu } = useFooter();
       &__logos-menu {
         grid-area: logos-menu;
         align-items: flex-end;
+
+        img {
+          object-fit: contain;
+          height: 36px;
+        }
       }
     }
   }
