@@ -51,8 +51,13 @@
 </template>
 
 <script setup lang="ts">
-const localePath = useLocalePath();
-const { mainMenu, searchOption, buttonOption } = useHeader();
+const { data } = await useFetch('/api/header', {
+  watch: false,
+});
+
+const mainMenu = computed(() => data.value?.mainMenu);
+const searchOption = computed(() => data.value?.searchOption);
+const buttonOption = computed(() => data.value?.buttonOption);
 </script>
 
 <style scoped lang="scss">
