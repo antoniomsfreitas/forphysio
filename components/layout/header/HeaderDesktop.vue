@@ -51,9 +51,7 @@
 </template>
 
 <script setup lang="ts">
-const { data } = await useFetch('/api/header', {
-  watch: false,
-});
+const { data } = await useAsyncData('header', () => $fetch('/api/header'));
 
 const mainMenu = computed(() => data.value?.mainMenu);
 const searchOption = computed(() => data.value?.searchOption);

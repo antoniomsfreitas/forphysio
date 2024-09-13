@@ -15,6 +15,14 @@
   </NuxtLink>
 </template>
 
+<script setup lang="ts">
+defineProps({
+  data: {
+    required: true,
+  },
+});
+</script>
+
 <style scoped lang="scss">
 .header {
   --header-height: 60px;
