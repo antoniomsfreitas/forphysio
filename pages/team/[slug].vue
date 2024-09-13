@@ -1,6 +1,12 @@
 <template>
   <div v-if="member" class="team-member-detail">
     <IntroMember class="team-member-detail__intro" :member="member" :service="service" :location="location" />
+
+    <TeamSlider
+      class="team-member-detail__slider"
+      title="Profissionais da mesma unidade"
+      :team-list="getTeamMembers(member.location)"
+    ></TeamSlider>
   </div>
 </template>
 
@@ -13,6 +19,7 @@ definePageMeta({
 
 import { Routes } from '~/models/routes.model';
 import type { TeamMember } from '~/models/team.model';
+const { getTeamMembers } = useTeam();
 
 const route = useRoute();
 const localePath = useLocalePath();
@@ -47,6 +54,10 @@ const location = getLocation(member?.location);
     @include mq-desktop {
       margin-bottom: 250px;
     }
+  }
+
+  &__slider {
+    margin-bottom: 100px;
   }
 }
 </style>
