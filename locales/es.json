@@ -4,5 +4,9 @@
   "pages.contacts": "Contactos",
   "pages.services": "Servicios",
   "pages.partnerships": "Alianzas",
-  "pages.blog": "Blog"
+  "pages.blog": "Blog",
+
+  "recruitment-block.title": "¿Quieres ser parte de este equipo?",
+  "recruitment-block.subtitle": "Muéstranos tu potencial",
+  "recruitment-block.button": "Solicitud espontánea"
 }

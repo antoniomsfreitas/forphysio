@@ -4,5 +4,9 @@
   "pages.contacts": "聯絡人",
   "pages.services": "服務",
   "pages.partnerships": "夥伴關係",
-  "pages.blog": "部落格"
+  "pages.blog": "部落格",
+
+  "recruitment-block.title": "你想成為這個團隊的一員嗎？",
+  "recruitment-block.subtitle": "向我們展示你的潛力",
+  "recruitment-block.button": "自發性申請"
 }
