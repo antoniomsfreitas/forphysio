@@ -15,7 +15,7 @@
       marginheight="0"
       marginwidth="0"
       :src="googleMapsSrc"
-      ><a href="https://www.gps.ie/">gps trackers</a>
+    >
     </iframe>
   </div>
 </template>
