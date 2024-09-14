@@ -1,6 +1,6 @@
 <template>
   <CardUI class="card-team">
-    <NuxtLink :to="props.link" class="card-team__link" :title="props.linkTitle">
+    <NuxtLink :to="props.link" class="card-team__link" :title="$t('general.view') + ' ' + title">
       <img :src="imagePath" :alt="alt" />
 
       <div class="card-team__content">
@@ -32,10 +32,6 @@ const props = defineProps({
     required: true,
   },
   link: {
-    type: String,
-    required: true,
-  },
-  linkTitle: {
     type: String,
     required: true,
   },

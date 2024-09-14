@@ -62,16 +62,18 @@ onMounted(() => {
     margin-bottom: 40px;
     color: $white;
 
-    &--align-left {
-      text-align: left;
-    }
+    &--align {
+      &-left {
+        text-align: left;
+      }
 
-    &--align-right {
-      text-align: right;
-    }
+      &-right {
+        text-align: right;
+      }
 
-    &--align-center {
-      text-align: center;
+      &-center {
+        text-align: center;
+      }
     }
   }
 

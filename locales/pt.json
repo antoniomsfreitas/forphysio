@@ -4,5 +4,9 @@
   "pages.contacts": "Contactos",
   "pages.services": "Serviços",
   "pages.partnerships": "Acordos",
-  "pages.blog": "Blog"
+  "pages.blog": "Blog",
+
+  "general.view": "Ver",
+
+  "team.same-location-team": "Profissionais da mesma unidade"
 }

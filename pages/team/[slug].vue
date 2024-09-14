@@ -4,7 +4,7 @@
 
     <TeamSlider
       class="team-member-detail__slider"
-      title="Profissionais da mesma unidade"
+      :title="$t('team.same-location-team')"
       :team-list="getTeamMembers(member.location)"
     ></TeamSlider>
   </div>

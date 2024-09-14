@@ -2,14 +2,12 @@
   <ScrollbarSlideshow class="team-slider-container" :title="title" title-alignment="left" :space-between="24">
     <SwiperSlide v-for="member in teamList" :key="member.id" class="team-slider-container__slide">
       <CardTeam
-        v-if="member.name && member.image"
         :title="member.name"
         :subtitle="getService(member.service)?.title"
         :src="member.image"
         :alt="member.name"
         :link="localePath(Routes.TEAM) + '/' + member.slug"
-        :link-title="'Ver ' + member.name"
-      ></CardTeam>
+      />
     </SwiperSlide>
   </ScrollbarSlideshow>
 </template>
