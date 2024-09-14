@@ -2,7 +2,11 @@
   <div v-if="member" class="team-member-detail">
     <IntroMember class="team-member-detail__intro" :member="member" :service="service" :location="location" />
 
-    <LocationMap v-if="location?.googleMapsSrc" title="Como chegar" :google-maps-src="location.googleMapsSrc" />
+    <LocationMap
+      v-if="location?.googleMapsSrc"
+      :title="$t('team.how-to-arrive')"
+      :google-maps-src="location.googleMapsSrc"
+    />
   </div>
 </template>
 
