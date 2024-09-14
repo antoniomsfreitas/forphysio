@@ -4,5 +4,11 @@
   "pages.contacts": "Contactos",
   "pages.services": "Serviços",
   "pages.partnerships": "Acordos",
-  "pages.blog": "Blog"
+  "pages.blog": "Blog",
+
+  "general.book-evaluation": "Marcar avaliação",
+
+  "contacts.page-title": "Estamos aqui para o ajudar.",
+  "contacts.page-subtitle": "Preencha o formulário abaixo, ou contacte-nos através do e-mail ou Whatsapp.",
+  "contacts.available-units": "Unidades disponíveis"
 }

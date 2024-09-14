@@ -4,5 +4,11 @@
   "pages.contacts": "聯絡人",
   "pages.services": "服務",
   "pages.partnerships": "夥伴關係",
-  "pages.blog": "部落格"
+  "pages.blog": "部落格",
+
+  "general.book-evaluation": "預約評估",
+
+  "contacts.page-title": "我們來幫您",
+  "contacts.page-subtitle": "填寫下面的表格，或透過電子郵件或 Whatsapp 與我們聯繫。",
+  "contacts.available-units": "可用單位"
 }
