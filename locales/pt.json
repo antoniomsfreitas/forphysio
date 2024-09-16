@@ -3,8 +3,19 @@
   "pages.team": "Equipa",
   "pages.contacts": "Contactos",
   "pages.services": "Serviços",
+  "pages.services.musculoskeletalPhysiotherapy": "Fisioterapia músculo esquelética",
+  "pages.services.sportsPhysiotherapy": "Fisioterapia no desporto",
+  "pages.services.aquaticPhysiotherapyHydrotherapy": "Fisioterapia aquática e hidroterapia",
+  "pages.services.ageingPhysiotherapy": "Fisioterapia no envelhecimento",
+  "pages.services.onlinePhysioterapy": "Fisioterapia online",
+  "pages.services.womenHealthPhysiotherapy": "Fisioterapia na saúde da mulher",
+  "pages.services.clinicalPilates": "Pilates clínico",
+  "pages.services.nutrition": "Nutrição",
+  "pages.services.healthWellBeing": "Saúde e bem-estar",
+  "pages.services.medicalAppointments": "Consultas médicas",
   "pages.partnerships": "Acordos",
   "pages.blog": "Blog",
   "pages.search": "Pesquisa",
-  "common.book_appointment": "Marcar consulta"
+  "general.bookAppointment": "Marcar consulta",
+  "general.viewAll": "Ver todos"
 }

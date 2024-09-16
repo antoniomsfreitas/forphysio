@@ -3,8 +3,19 @@
   "pages.team": "Team",
   "pages.contacts": "Contacts",
   "pages.services": "Services",
+  "pages.services.musculoskeletalPhysiotherapy": "Musculoskeletal physiotherapy",
+  "pages.services.sportsPhysiotherapy": "Physiotherapy in sports",
+  "pages.services.aquaticPhysiotherapyHydrotherapy": "Aquatic physiotherapy and hydrotherapy",
+  "pages.services.ageingPhysiotherapy": "Physiotherapy in ageing",
+  "pages.services.onlinePhysioterapy": "Online physiotherapy",
+  "pages.services.womenHealthPhysiotherapy": "Women's health physiotherapy",
+  "pages.services.clinicalPilates": "Clinical Pilates",
+  "pages.services.nutrition": "Nutrition",
+  "pages.services.healthWellBeing": "Health and well-being",
+  "pages.services.medicalAppointments": "Medical Appointments",
   "pages.partnerships": "Partnerships",
   "pages.blog": "Blog",
   "pages.search": "Search",
-  "common.book_appointment": "Book an appointment"
+  "general.bookAppointment": "Book appointment",
+  "general.viewAll": "View all"
 }

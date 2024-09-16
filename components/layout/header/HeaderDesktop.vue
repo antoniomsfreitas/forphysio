@@ -31,7 +31,7 @@
                 'header__inner__right__menu__item__submenu__item--view-all': submenu.viewAll,
               }"
             >
-              <NuxtLink :to="localePath(submenu.route)">{{ submenu.name }}</NuxtLink>
+              <NuxtLink :to="localePath(submenu.route)">{{ $t(submenu.name) }}</NuxtLink>
             </li>
           </ul>
         </li>
@@ -117,6 +117,10 @@ defineProps({
             color: $white;
             text-decoration: none;
             transition: $transition-duration ease-in-out color;
+
+            &.router-link-active {
+              color: $blue;
+            }
 
             .icon {
               margin-left: 4px;

@@ -5,10 +5,10 @@
       <Icon name="icon:hamburger-menu" size="29" @click="toggleMenuSidebar" />
 
       <NuxtLink v-if="buttonOption" :to="localePath(buttonOption.route)" class="button button--secondary">
-        {{ buttonOption.name }}
+        {{ $t(buttonOption.name) }}
       </NuxtLink>
 
-      <NuxtLink v-if="searchOption" :to="localePath(searchOption.route)" :title="searchOption.name">
+      <NuxtLink v-if="searchOption" :to="localePath(searchOption.route)" :title="$t(searchOption.name)">
         <Icon name="icon:search-white" />
       </NuxtLink>
     </div>
@@ -54,14 +54,14 @@
                   'header__inner__sidebar__menu__item__submenu__item--view-all': submenu.viewAll,
                 }"
               >
-                <NuxtLink :to="localePath(submenu.route)" @click="toggleMenuSidebar">{{ submenu.name }}</NuxtLink>
+                <NuxtLink :to="localePath(submenu.route)" @click="toggleMenuSidebar">{{ $t(submenu.name) }}</NuxtLink>
               </li>
             </ul>
           </div>
         </li>
       </ul>
 
-      <LanguageSwitcher @language-changed="toggleMenuSidebar" />
+      <LanguageSwitcher />
     </div>
   </div>
 </template>
@@ -166,6 +166,10 @@ const isSubmenuOpened = (index: number) => {
             padding: 20px 8px;
             font-weight: $font-weight-light;
             border-bottom: 1px solid $border-grey;
+
+            &.router-link-active {
+              color: $blue;
+            }
           }
 
           &__submenu {
