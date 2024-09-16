@@ -37,7 +37,7 @@ const props = defineProps({
   contentColDesktop: {
     type: String as PropType<GridColumns>,
     required: false,
-    default: 5,
+    default: '5',
   },
 });
 </script>
@@ -55,8 +55,8 @@ const props = defineProps({
   }
 
   @include mq-desktop {
-    padding-top: 150px;
     min-height: 800px;
+    padding-top: 150px;
   }
 
   &__content {

@@ -25,15 +25,15 @@
       <ul class="header__inner__sidebar__menu">
         <li v-for="(menu, index) in mainMenu" :key="menu.name" class="header__inner__sidebar__menu__item">
           <NuxtLink
-            :to="menu.submenu.length ? undefined : localePath(menu.route)"
-            @click="menu.submenu.length ? toggleSubmenu(index) : toggleMenuSidebar()"
+            :to="menu.submenu?.length ? undefined : localePath(menu.route)"
+            @click="menu.submenu?.length ? toggleSubmenu(index) : toggleMenuSidebar()"
           >
             <span>{{ $t(menu.name) }}</span>
-            <Icon v-if="menu.submenu.length" name="icon:arrow-right" />
+            <Icon v-if="menu.submenu?.length" name="icon:arrow-right" />
           </NuxtLink>
 
           <div
-            v-if="menu.submenu.length"
+            v-if="menu.submenu?.length"
             class="header__inner__sidebar__menu__item__submenu"
             :class="{ 'header__inner__sidebar__menu__item__submenu--opened': isSubmenuOpened(index) }"
           >
@@ -67,8 +67,23 @@
 </template>
 
 <script setup lang="ts">
+import type { HeaderMenuOption } from '~/models/layout.model';
 const localePath = useLocalePath();
-const { mainMenu, searchOption, buttonOption } = useHeader();
+
+defineProps({
+  mainMenu: {
+    type: Object as PropType<HeaderMenuOption[]>,
+    required: true,
+  },
+  searchOption: {
+    type: Object as PropType<HeaderMenuOption>,
+    required: true,
+  },
+  buttonOption: {
+    type: Object as PropType<HeaderMenuOption>,
+    required: true,
+  },
+});
 
 const menuSidebarOpened = ref<boolean>(false);
 const submenuOpened = ref<number | null>(null);
@@ -126,8 +141,8 @@ const isSubmenuOpened = (index: number) => {
           justify-content: space-between;
 
           &__logo {
-            object-fit: contain;
             width: 92px;
+            object-fit: contain;
           }
         }
       }

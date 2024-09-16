@@ -1,6 +1,6 @@
 <template>
   <div class="container" :class="{ 'container--is-loaded': isLoaded }">
-    <LayoutHeader :data="headerData" />
+    <LayoutHeader v-if="headerData" :data="headerData" />
     <main>
       <slot />
     </main>
@@ -9,10 +9,11 @@
 </template>
 
 <script setup lang="ts">
-const { data: layoutData, status } = await useAsyncData('page-layout', () => $fetch('/api/layout'));
+const { getLayoutData } = useLayout();
+const { status, data } = await getLayoutData();
 
-const headerData = computed(() => layoutData.value?.header);
 const isLoaded = computed(() => status.value === 'success');
+const headerData = computed(() => data.value?.header);
 </script>
 
 <style scoped lang="scss">

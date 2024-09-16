@@ -48,11 +48,11 @@ export default defineEventHandler(() => {
         },
       ],
       searchOption: {
-        name: 'Pesquisa',
+        name: 'pages.search',
         route: Routes.SEARCH,
       },
       buttonOption: {
-        name: 'Marcar consulta',
+        name: 'common.book_appointment',
         route: Routes.CONTACTS,
       },
     },

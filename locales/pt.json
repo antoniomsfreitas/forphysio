@@ -4,5 +4,7 @@
   "pages.contacts": "Contactos",
   "pages.services": "Serviços",
   "pages.partnerships": "Acordos",
-  "pages.blog": "Blog"
+  "pages.blog": "Blog",
+  "pages.search": "Pesquisa",
+  "common.book_appointment": "Marcar consulta"
 }

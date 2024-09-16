@@ -20,14 +20,14 @@
           </div>
 
           <div class="intro-member__image">
-            <img :src="imagePath" :alt="member.name" />
+            <img :src="imagePath" :alt="member.name" >
             <div class="intro-member__image__gradient" />
           </div>
         </LayoutGridCol>
 
         <LayoutGridCol v-if="member.description?.length" m="4" t="7" d="5">
           <div class="intro-member__content">
-            <div class="intro-member__content__title" id="teleport-title"></div>
+            <div id="teleport-title" class="intro-member__content__title" />
             <p class="intro-member__content__description">{{ member.description }}</p>
             <Button class="intro-member__content__button" size="large" @click="navigateTo(localePath(Routes.CONTACTS))">
               Marcar consulta
@@ -76,8 +76,8 @@ const imagePath = '/images/team/members/detail/' + props.member.image;
   &__image {
     position: relative;
     display: flex;
-    justify-content: center;
     align-items: flex-start;
+    justify-content: center;
 
     img {
       display: block;
@@ -94,8 +94,8 @@ const imagePath = '/images/team/members/detail/' + props.member.image;
   &__content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     gap: 40px;
+    align-items: flex-start;
 
     &__description {
       font-size: 18px;

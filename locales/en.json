@@ -4,5 +4,7 @@
   "pages.contacts": "Contacts",
   "pages.services": "Services",
   "pages.partnerships": "Partnerships",
-  "pages.blog": "Blog"
+  "pages.blog": "Blog",
+  "pages.search": "Search",
+  "common.book_appointment": "Book an appointment"
 }

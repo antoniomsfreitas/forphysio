@@ -3,8 +3,13 @@
     <LayoutGrid>
       <LayoutGridRow>
         <LayoutGridCol m="4" t="12">
-          <HeaderDesktop v-if="isDesktop" />
-          <HeaderMobile v-else />
+          <HeaderDesktop
+            v-if="isDesktop"
+            :main-menu="mainMenu"
+            :search-option="searchOption"
+            :button-option="buttonOption"
+          />
+          <HeaderMobile v-else :main-menu="mainMenu" :search-option="searchOption" :button-option="buttonOption" />
         </LayoutGridCol>
       </LayoutGridRow>
     </LayoutGrid>
@@ -16,11 +21,18 @@
 </template>
 
 <script setup lang="ts">
-defineProps({
+import type { HeaderData } from '~/models/layout.model';
+
+const props = defineProps({
   data: {
+    type: Object as PropType<HeaderData>,
     required: true,
   },
 });
+
+const mainMenu = computed(() => props.data.mainMenu);
+const searchOption = computed(() => props.data.searchOption);
+const buttonOption = computed(() => props.data.buttonOption);
 </script>
 
 <style scoped lang="scss">

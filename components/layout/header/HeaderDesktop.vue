@@ -19,10 +19,10 @@
         <li v-for="menu in mainMenu" :key="menu.name" class="header__inner__right__menu__item">
           <NuxtLink :to="localePath(menu.route)">
             <span>{{ $t(menu.name) }}</span>
-            <Icon v-if="menu.submenu.length" name="icon:arrow-down" />
+            <Icon v-if="menu.submenu?.length" name="icon:arrow-down" />
           </NuxtLink>
 
-          <ul v-if="menu.submenu.length" class="header__inner__right__menu__item__submenu">
+          <ul v-if="menu.submenu?.length" class="header__inner__right__menu__item__submenu">
             <li
               v-for="submenu in menu.submenu"
               :key="submenu.name"
@@ -38,12 +38,12 @@
       </ul>
 
       <div class="header__inner__right__options">
-        <NuxtLink v-if="searchOption" :to="searchOption.route" :title="searchOption.name">
+        <NuxtLink :to="searchOption.route" :title="$t(searchOption.name)">
           <Icon name="icon:search-white" />
         </NuxtLink>
 
-        <NuxtLink v-if="buttonOption" :to="buttonOption.route" class="button button--secondary">
-          {{ buttonOption.name }}
+        <NuxtLink :to="buttonOption.route" class="button button--secondary">
+          {{ $t(buttonOption.name) }}
         </NuxtLink>
       </div>
     </div>
@@ -51,11 +51,23 @@
 </template>
 
 <script setup lang="ts">
-const { data } = await useAsyncData('header', () => $fetch('/api/header'));
+import type { HeaderMenuOption } from '~/models/layout.model';
+const localePath = useLocalePath();
 
-const mainMenu = computed(() => data.value?.mainMenu);
-const searchOption = computed(() => data.value?.searchOption);
-const buttonOption = computed(() => data.value?.buttonOption);
+defineProps({
+  mainMenu: {
+    type: Object as PropType<HeaderMenuOption[]>,
+    required: true,
+  },
+  searchOption: {
+    type: Object as PropType<HeaderMenuOption>,
+    required: true,
+  },
+  buttonOption: {
+    type: Object as PropType<HeaderMenuOption>,
+    required: true,
+  },
+});
 </script>
 
 <style scoped lang="scss">
