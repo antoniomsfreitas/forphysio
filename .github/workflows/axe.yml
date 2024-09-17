@@ -1,0 +1,19 @@
+name: Web Accessibility Evaluation
+
+on:
+  pull_request:
+    paths:
+      - '**/*.vue'
+      - '**/*.ts'
+      - '**/*.tsx'
+
+jobs:
+  a11ycheck:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run A11yWatch Check
+        uses: a11ywatch/github-action@v2.1.10
