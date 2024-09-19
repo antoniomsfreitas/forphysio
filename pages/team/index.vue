@@ -20,7 +20,10 @@
         <IconLink link="/contactos/" text="Marcar avaliação" />
       </template>
     </IntroBlock>
+
     <TeamList class="team-list-block"></TeamList>
+
+    <RecruitmentBlock />
   </div>
 </template>
 
