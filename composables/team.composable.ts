@@ -21,21 +21,29 @@ export const useTeam = () => {
       id: 1,
       title: 'Marinha Grande',
       selected: false,
+      googleMapsSrc:
+        'https://maps.google.com/maps?width=100%25&height=470&hl=en&q=Forphysio%20marinha%20grande+(Forphysio%20%7C%20Marinha%20Grande)&t=&z=14&ie=UTF8&iwloc=B&output=embed',
     },
     {
       id: 2,
       title: 'Caldas da Rainha',
       selected: true,
+      googleMapsSrc:
+        'https://maps.google.com/maps?width=100%25&height=470&hl=en&q=Forphysio%20caldas%20da%20rainha+(Forphysio%20%7C%20Caldas%20da%20Rainha)&t=&z=14&ie=UTF8&iwloc=B&output=embed',
     },
     {
       id: 3,
       title: 'Oeiras',
       selected: false,
+      googleMapsSrc:
+        'https://maps.google.com/maps?width=100%25&height=470&hl=en&q=Forphysio%20R.%20Sacadura%20Cabral%2065a,%201495-207%20Cruz%20Quebrada+(Forphysio%20%7C%20Oeiras)&t=&z=14&ie=UTF8&iwloc=B&output=embed',
     },
     {
       id: 4,
       title: 'Lisboa - Lumiar',
       selected: false,
+      googleMapsSrc:
+        'https://maps.google.com/maps?width=100%25&height=470&hl=en&q=Forphysio%20lumiar+(Forphysio%20%7C%20Lumiar)&t=&z=14&ie=UTF8&iwloc=B&output=embed',
     },
   ];
 
@@ -141,12 +149,12 @@ export const useTeam = () => {
     },
   ];
 
-  const getService = (id?: number) => {
+  const getService = (id?: number): TeamService | undefined => {
     if (!id) return;
     return teamServices.find((service) => service.id === id);
   };
 
-  const getLocation = (id?: number) => {
+  const getLocation = (id?: number): TeamLocation | undefined => {
     if (!id) return;
     return teamLocations.find((location) => location.id === id);
   };

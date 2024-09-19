@@ -55,7 +55,6 @@
                 :src="member.image"
                 :alt="member.name"
                 :link="localePath(Routes.TEAM) + '/' + member.slug"
-                link-title="#"
               ></CardTeam>
             </LayoutGridCol>
           </LayoutGridRow>

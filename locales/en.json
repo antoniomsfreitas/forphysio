@@ -8,6 +8,7 @@
 
   "general.book-evaluation": "Book evaluation",
   "general.send": "Send",
+  "general.view": "View",
 
   "contacts.page-title": "We're here to help you.",
   "contacts.page-subtitle": "Fill out the form below, or get in touch via email or Whatsapp.",
@@ -22,5 +23,12 @@
   "form-field.message": "Message",
   "form-field.terms": "I have read and accept the Privacy Policy",
   "form-field.validation.requiredField": "Required field.",
-  "form-field.validation.invalidEmail": "The email entered is not valid."
+  "form-field.validation.invalidEmail": "The email entered is not valid.",
+
+  "recruitment-block.title": "Do you want to be part of our team?",
+  "recruitment-block.subtitle": "Show us your potential",
+  "recruitment-block.button": "Spontaneous application",
+
+  "team.same-location-team": "Professionals from the same unit",
+  "team.how-to-arrive": "How to Arrive"
 }

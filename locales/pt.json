@@ -8,6 +8,7 @@
 
   "general.book-evaluation": "Marcar avaliação",
   "general.send": "Enviar",
+  "general.view": "Ver",
 
   "contacts.page-title": "Estamos aqui para o ajudar.",
   "contacts.page-subtitle": "Preencha o formulário abaixo, ou contacte-nos através do e-mail ou Whatsapp.",
@@ -22,5 +23,12 @@
   "form-field.message": "Mensagem",
   "form-field.terms": "Li e Aceito a Política de privacidade",
   "form-field.validation.requiredField": "Campo de preenchimento obrigatório.",
-  "form-field.validation.invalidEmail": "O e-mail inserido não é válido."
+  "form-field.validation.invalidEmail": "O e-mail inserido não é válido.",
+
+  "recruitment-block.title": "Queres fazer parte desta equipa?",
+  "recruitment-block.subtitle": "Mostra-nos o teu potencial",
+  "recruitment-block.button": "Candidatura espontânea",
+
+  "team.same-location-team": "Profissionais da mesma unidade",
+  "team.how-to-arrive": "Como chegar"
 }
