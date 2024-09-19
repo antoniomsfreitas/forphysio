@@ -17,15 +17,14 @@
 </template>
 
 <script setup lang="ts">
+import { Routes } from '~/models/routes.model';
+import type { TeamMember, TeamLocation, TeamService } from '~/models/team.model';
+
 definePageMeta({
   validate: async (route) => {
     return typeof route.params.slug === 'string';
   },
 });
-
-import { Routes } from '~/models/routes.model';
-import type { TeamMember } from '~/models/team.model';
-import type { TeamLocation, TeamMember, TeamService } from '~/models/team.model';
 
 const route = useRoute();
 const localePath = useLocalePath();

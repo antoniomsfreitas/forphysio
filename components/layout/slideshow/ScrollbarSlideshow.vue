@@ -12,8 +12,9 @@
             class="scrollbar-slideshow__swiper-container"
             slides-per-view="auto"
             :speed="400"
-            :modules="[SwiperScrollbar]"
+            :modules="[SwiperScrollbar, SwiperFreeMode]"
             :space-between="spaceBetween"
+            :free-mode="freeMode"
             :scrollbar="{ draggable: true, el: scrollbarRef }"
           >
             <slot />
@@ -44,6 +45,10 @@ defineProps({
     type: Number,
     required: false,
     default: 16,
+  },
+  freeMode: {
+    type: Boolean,
+    default: false,
   },
 });
 
