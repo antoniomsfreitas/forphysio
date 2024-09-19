@@ -2,6 +2,12 @@
   <div v-if="member" class="team-member-detail">
     <IntroMember class="team-member-detail__intro" :member="member" :service="service" :location="location" />
 
+    <TeamSlider
+      class="team-member-detail__slider"
+      :title="$t('team.same-location-team')"
+      :team-list="getTeamMembers(member.location)"
+    />
+
     <LocationMap
       v-if="location?.googleMapsSrc"
       :title="$t('team.how-to-arrive')"
@@ -11,18 +17,18 @@
 </template>
 
 <script setup lang="ts">
+import { Routes } from '~/models/routes.model';
+import type { TeamMember, TeamLocation, TeamService } from '~/models/team.model';
+
 definePageMeta({
   validate: async (route) => {
     return typeof route.params.slug === 'string';
   },
 });
 
-import { Routes } from '~/models/routes.model';
-import type { TeamLocation, TeamMember, TeamService } from '~/models/team.model';
-
 const route = useRoute();
 const localePath = useLocalePath();
-const { getTeamMemberBySlug, getService, getLocation } = useTeam();
+const { getTeamMembers, getTeamMemberBySlug, getService, getLocation } = useTeam();
 
 const slug = route.params.slug as string;
 const member: TeamMember | undefined = getTeamMemberBySlug(slug);
@@ -53,6 +59,10 @@ const location: TeamLocation | undefined = getLocation(member?.location);
     @include mq-desktop {
       margin-bottom: 250px;
     }
+  }
+
+  &__slider {
+    margin-bottom: 100px;
   }
 }
 </style>

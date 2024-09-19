@@ -2,10 +2,10 @@ export interface TeamMember {
   id: number;
   slug: string;
   name: string;
+  image: string;
   description?: string;
   service?: number;
   location?: number;
-  image?: string;
 }
 
 export interface TeamLocation {
