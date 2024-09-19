@@ -4,5 +4,14 @@
   "pages.contacts": "Contacts",
   "pages.services": "Services",
   "pages.partnerships": "Partnerships",
-  "pages.blog": "Blog"
+  "pages.blog": "Blog",
+
+  "recruitment-block.title": "Do you want to be part of our team?",
+  "recruitment-block.subtitle": "Show us your potential",
+  "recruitment-block.button": "Spontaneous application",
+  
+  "general.view": "View",
+
+  "team.same-location-team": "Professionals from the same unit",
+  "team.how-to-arrive": "How to Arrive"
 }
