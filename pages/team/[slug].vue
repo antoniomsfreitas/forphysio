@@ -1,6 +1,12 @@
 <template>
   <div v-if="member" class="team-member-detail">
     <IntroMember class="team-member-detail__intro" :member="member" :service="service" :location="location" />
+
+    <LocationMap
+      v-if="location?.googleMapsSrc"
+      :title="$t('team.how-to-arrive')"
+      :google-maps-src="location.googleMapsSrc"
+    />
   </div>
 </template>
 
@@ -12,7 +18,7 @@ definePageMeta({
 });
 
 import { Routes } from '~/models/routes.model';
-import type { TeamMember } from '~/models/team.model';
+import type { TeamLocation, TeamMember, TeamService } from '~/models/team.model';
 
 const route = useRoute();
 const localePath = useLocalePath();
@@ -25,8 +31,8 @@ if (!member) {
   navigateTo(localePath(Routes.NOT_FOUND));
 }
 
-const service = getService(member?.service);
-const location = getLocation(member?.location);
+const service: TeamService | undefined = getService(member?.service);
+const location: TeamLocation | undefined = getLocation(member?.location);
 </script>
 
 <style scoped lang="scss">
