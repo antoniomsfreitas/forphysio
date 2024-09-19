@@ -34,7 +34,7 @@
       </div>
     </div>
 
-    <span v-if="hasError" class="custom-select__error-message">
+    <span v-if="hasError" class="error-message">
       {{ errorMessage }}
     </span>
   </div>

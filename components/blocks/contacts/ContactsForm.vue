@@ -1,6 +1,6 @@
 <template>
   <div class="contacts-form" @submit.prevent="handleSubmit">
-    <h3>{{ $t('contacts.form-title') }}</h3>
+    <h3 v-t="'contacts.form-title'" />
 
     <form class="form">
       <CustomInput
@@ -51,7 +51,7 @@
         :errorMessage="formData.terms?.errorMessage"
       />
 
-      <Button size="large">{{ $t('general.send') }}</Button>
+      <Button size="large" v-t="'general.send'" />
     </form>
   </div>
 </template>
@@ -99,11 +99,8 @@ const formData: FormData = reactive({
 });
 
 const handleSubmit = () => {
-  console.log('DATA', formData);
-  if (!validateForm()) {
-    console.log('ERRO ERRO');
-  } else {
-    console.log('SUCESSO SUCESSO');
+  if (validateForm()) {
+    // TO DO - SEND MAIL
   }
 };
 
@@ -115,7 +112,7 @@ const validateForm = () => {
     field.errorMessage = '';
 
     // validate field
-    const error = validateField(field.value, field.required, field?.type);
+    const error = validateField(field.value, field.required, t, field?.type);
 
     if (error?.length) {
       field.errorMessage = error;

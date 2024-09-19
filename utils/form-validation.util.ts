@@ -1,13 +1,18 @@
-export const validateField = (value: any, required: boolean, type?: string): string | undefined => {
+export function validateField(
+  value: any,
+  required: boolean,
+  t: (key: string) => string,
+  type?: string,
+): string | undefined {
   if (required && (!value || !value?.length)) {
-    return 'Campo de preenchimento obrigatório.';
+    return translation('form-field.validation.requiredField');
   }
 
   if (type === 'email') {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!emailPattern.test(value)) {
-      return 'O e-mail inserido não é válido';
+      return translation('form-field.validation.invalidEmail');
     }
   }
-};
+}

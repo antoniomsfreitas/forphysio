@@ -15,5 +15,7 @@
   "form-field.service": "Servicio",
   "form-field.service.default-label": "Seleccionar servicio",
   "form-field.message": "Mensaje",
-  "form-field.terms": "He leído y acepto la Política de Privacidad"
+  "form-field.terms": "He leído y acepto la Política de Privacidad",
+  "form-field.validation.requiredField": "Campo obligatorio.",
+  "form-field.validation.invalidEmail": "El correo electrónico ingresado no es válido."
 }

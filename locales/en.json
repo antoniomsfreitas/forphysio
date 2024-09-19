@@ -20,5 +20,7 @@
   "form-field.service": "Service",
   "form-field.service.default-label": "Select Service",
   "form-field.message": "Message",
-  "form-field.terms": "I have read and accept the Privacy Policy"
+  "form-field.terms": "I have read and accept the Privacy Policy",
+  "form-field.validation.requiredField": "Required field.",
+  "form-field.validation.invalidEmail": "The email entered is not valid."
 }

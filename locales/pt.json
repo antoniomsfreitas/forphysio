@@ -20,5 +20,7 @@
   "form-field.service": "Serviço",
   "form-field.service.default-label": "Selecionar Serviço",
   "form-field.message": "Mensagem",
-  "form-field.terms": "Li e Aceito a Política de privacidade"
+  "form-field.terms": "Li e Aceito a Política de privacidade",
+  "form-field.validation.requiredField": "Campo de preenchimento obrigatório.",
+  "form-field.validation.invalidEmail": "O e-mail inserido não é válido."
 }

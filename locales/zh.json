@@ -20,5 +20,7 @@
   "form-field.service": "服務",
   "form-field.service.default-label": "選擇服務",
   "form-field.message": "訊息",
-  "form-field.terms": "我已閱讀並接受隱私權政策"
+  "form-field.terms": "我已閱讀並接受隱私權政策",
+  "form-field.validation.requiredField": "必填欄位。",
+  "form-field.validation.invalidEmail": "輸入的電子郵件無效。"
 }
