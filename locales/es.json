@@ -7,8 +7,13 @@
   "pages.blog": "Blog",
 
   "general.book-evaluation": "Solicitar evaluación",
+  "general.send": "Enviar",
 
-  "contacts.page-title": "Estamos aquí para ayudarle.",
-  "contacts.page-subtitle": "Rellene el siguiente formulario o póngase en contacto por correo electrónico o Whatsapp.",
-  "contacts.available-units": "Unidades disponibles"
+  "form-field.name": "Nombre",
+  "form-field.phone": "Contacto telefónico",
+  "form-field.email": "Correo electrónico",
+  "form-field.service": "Servicio",
+  "form-field.service.default-label": "Seleccionar servicio",
+  "form-field.message": "Mensaje",
+  "form-field.terms": "He leído y acepto la Política de Privacidad"
 }

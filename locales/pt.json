@@ -7,8 +7,18 @@
   "pages.blog": "Blog",
 
   "general.book-evaluation": "Marcar avaliação",
+  "general.send": "Enviar",
 
   "contacts.page-title": "Estamos aqui para o ajudar.",
   "contacts.page-subtitle": "Preencha o formulário abaixo, ou contacte-nos através do e-mail ou Whatsapp.",
-  "contacts.available-units": "Unidades disponíveis"
+  "contacts.available-units": "Unidades disponíveis",
+  "contacts.form-title": "Fale connosco.\nPreencha o formulário",
+
+  "form-field.name": "Nome",
+  "form-field.phone": "Contacto telefónico",
+  "form-field.email": "E-mail",
+  "form-field.service": "Serviço",
+  "form-field.service.default-label": "Selecionar Serviço",
+  "form-field.message": "Mensagem",
+  "form-field.terms": "Li e Aceito a Política de privacidade"
 }

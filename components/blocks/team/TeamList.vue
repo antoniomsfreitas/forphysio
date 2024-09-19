@@ -15,7 +15,7 @@
       </LayoutGridCol>
 
       <LayoutGridCol m="4" t="4" d="2">
-        <Button class="team-filters__submit" @click="submitFilters()">Pesquisar</Button>
+        <Button class="team-filters__submit" size="large" @click="submitFilters()">Pesquisar</Button>
       </LayoutGridCol>
     </LayoutGridRow>
 

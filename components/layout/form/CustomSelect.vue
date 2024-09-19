@@ -1,8 +1,13 @@
 <template>
-  <div class="custom-select">
+  <div class="custom-select" :class="{ 'custom-select--error': hasError }">
+    <label v-if="topLabel?.length">{{ topLabel }}</label>
+
     <div
       class="custom-select__selected-option"
-      :class="{ 'custom-select__selected-option--opened': isOpen }"
+      :class="{
+        'custom-select__selected-option--opened': isOpen,
+        'custom-select__selected-option--default': defaultOption,
+      }"
       @click="toggleDropdown"
       v-on-click-outside="closeDropdown"
     >
@@ -28,11 +33,16 @@
         {{ props.viewAllLabel }}
       </div>
     </div>
+
+    <span v-if="hasError" class="custom-select__error-message">
+      {{ errorMessage }}
+    </span>
   </div>
 </template>
 
 <script setup lang="ts">
 import { vOnClickOutside } from '@vueuse/components';
+import type { FormFieldValue } from '~/models/form.model';
 
 interface Option {
   id: number;
@@ -45,8 +55,12 @@ const props = defineProps({
     required: true,
   },
   modelValue: {
-    type: Number,
+    type: [String, Number] as PropType<FormFieldValue>,
     default: null,
+  },
+  topLabel: {
+    type: String,
+    required: false,
   },
   defaultLabel: {
     type: String,
@@ -62,11 +76,17 @@ const props = defineProps({
     required: false,
     default: 'Ver todos',
   },
+  errorMessage: {
+    type: String,
+    default: false,
+    required: false,
+  },
 });
 
 const emit = defineEmits(['update:modelValue']);
 
 const isOpen = ref(false);
+const defaultOption = ref(false);
 const selectedValue = ref(props.modelValue);
 
 const closeDropdown = () => {
@@ -75,6 +95,9 @@ const closeDropdown = () => {
 
 const toggleDropdown = () => {
   isOpen.value = !isOpen.value;
+
+  // clean errors
+  hasError.value = !isOpen.value && props.errorMessage.length && !selectedValue.value ? true : false;
 };
 
 const selectOption = (id: number) => {
@@ -86,7 +109,14 @@ const selectOption = (id: number) => {
 
 const selectedLabel = computed(() => {
   const selectedOption = props.options.find((option) => option.id === selectedValue.value);
-  return selectedOption ? selectedOption.title : props.defaultLabel;
+
+  if (selectedOption) {
+    defaultOption.value = false;
+    return selectedOption.title;
+  }
+
+  defaultOption.value = true;
+  return props.defaultLabel;
 });
 
 watch(
@@ -95,27 +125,47 @@ watch(
     selectedValue.value = newValue;
   },
 );
+
+// Error handling
+const hasError = ref<Boolean>(false);
+watch(
+  () => props.errorMessage,
+  (errorMessage) => {
+    if (errorMessage) {
+      hasError.value = true;
+    }
+  },
+);
 </script>
 
 <style scoped lang="scss">
-$border-radius: 22px;
+$border-radius: 28px;
 
 .custom-select {
   position: relative;
   width: 100%;
   cursor: pointer;
   user-select: none;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: $font-weight-light;
   line-height: 1.2;
   color: $black;
   cursor: pointer;
 
+  label {
+    display: block;
+    font-size: 18px;
+    font-weight: $font-weight-light;
+    line-height: 1.2;
+    padding-bottom: 10px;
+    color: $white;
+  }
+
   &__selected-option {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 11px 16px;
+    padding: 15px 32px;
     background-color: $white;
     border-radius: $border-radius;
 
@@ -131,6 +181,10 @@ $border-radius: 22px;
         transform: rotate(180deg);
       }
     }
+
+    &--default {
+      color: $medium-grey;
+    }
   }
 
   &__dropdown {
@@ -145,7 +199,7 @@ $border-radius: 22px;
     overflow: hidden;
 
     &__item {
-      padding: 12px 16px;
+      padding: 15px 32px;
       transition: $transition-duration ease-in-out background-color;
       border-top: 1px solid $light-grey;
 
@@ -157,6 +211,13 @@ $border-radius: 22px;
         background-color: $blue;
         color: $white;
       }
+    }
+  }
+
+  &--error {
+    .custom-select__selected-option {
+      background-color: $error-bg;
+      border-color: $error-color;
     }
   }
 }

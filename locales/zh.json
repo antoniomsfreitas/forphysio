@@ -7,8 +7,18 @@
   "pages.blog": "部落格",
 
   "general.book-evaluation": "預約評估",
+  "general.send": "發送",
 
   "contacts.page-title": "我們來幫您",
   "contacts.page-subtitle": "填寫下面的表格，或透過電子郵件或 Whatsapp 與我們聯繫。",
-  "contacts.available-units": "可用單位"
+  "contacts.available-units": "可用單位",
+  "contacts.form-title": "聯絡我們\n填寫表格",
+
+  "form-field.name": "名稱",
+  "form-field.phone": "聯絡電話",
+  "form-field.email": "電子郵件",
+  "form-field.service": "服務",
+  "form-field.service.default-label": "選擇服務",
+  "form-field.message": "訊息",
+  "form-field.terms": "我已閱讀並接受隱私權政策"
 }

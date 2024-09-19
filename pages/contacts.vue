@@ -67,6 +67,16 @@
         </LayoutGridCol>
       </LayoutGridRow>
     </LayoutGrid>
+
+    <div class="form-block">
+      <LayoutGrid>
+        <LayoutGridRow>
+          <LayoutGridCol m="4" t="8" d="6" start-col-t="3" start-col-d="4">
+            <ContactsForm />
+          </LayoutGridCol>
+        </LayoutGridRow>
+      </LayoutGrid>
+    </div>
   </div>
 </template>
 
@@ -214,6 +224,19 @@ const { locations, social } = useContacts();
         }
       }
     }
+  }
+}
+
+.form-block {
+  background-color: $deep-grey;
+  margin-bottom: 160px;
+
+  @include mq-mobile {
+    padding: 80px 0;
+  }
+
+  @include mq-tablet-desktop {
+    padding: 60px 0;
   }
 }
 </style>

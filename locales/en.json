@@ -7,8 +7,18 @@
   "pages.blog": "Blog",
 
   "general.book-evaluation": "Book evaluation",
+  "general.send": "Send",
 
   "contacts.page-title": "We're here to help you.",
   "contacts.page-subtitle": "Fill out the form below, or get in touch via email or Whatsapp.",
-  "contacts.available-units": "Available units"
+  "contacts.available-units": "Available units",
+  "contacts.form-title": "Contact us.\nFill out the form",
+
+  "form-field.name": "Name",
+  "form-field.phone": "Phone contact",
+  "form-field.email": "Email",
+  "form-field.service": "Service",
+  "form-field.service.default-label": "Select Service",
+  "form-field.message": "Message",
+  "form-field.terms": "I have read and accept the Privacy Policy"
 }
