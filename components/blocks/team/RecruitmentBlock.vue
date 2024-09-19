@@ -8,7 +8,9 @@
       src-d="/images/team/recruitment-block/image-desktop.jpg"
       cover
     />
+
     <div class="recruitment-block__gradient" />
+
     <div class="recruitment-block__content">
       <LayoutGrid>
         <LayoutGridRow>
@@ -17,15 +19,18 @@
               <h2 class="recruitment-block__content__intro__title">
                 {{ $t('recruitment-block.title') }}
               </h2>
+
               <p class="recruitment-block__content__intro__text">
                 {{ $t('recruitment-block.subtitle') }}
               </p>
+
               <Button
                 class="recruitment-block__content__intro__button"
                 type="outline"
                 @click="navigateTo(localePath(Routes.CONTACTS))"
-                >{{ $t('recruitment-block.button') }}</Button
               >
+                {{ $t('recruitment-block.button') }}
+              </Button>
             </div>
           </LayoutGridCol>
         </LayoutGridRow>
@@ -35,8 +40,8 @@
 </template>
 
 <script setup lang="ts">
-const localePath = useLocalePath();
 import { Routes } from '~/models/routes.model';
+const localePath = useLocalePath();
 </script>
 
 <style scoped lang="scss">
