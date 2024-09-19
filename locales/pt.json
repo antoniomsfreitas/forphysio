@@ -6,12 +6,28 @@
   "pages.partnerships": "Acordos",
   "pages.blog": "Blog",
 
+  "general.book-evaluation": "Marcar avaliação",
+  "general.send": "Enviar",
+  "general.view": "Ver",
+
+  "contacts.page-title": "Estamos aqui para o ajudar.",
+  "contacts.page-subtitle": "Preencha o formulário abaixo, ou contacte-nos através do e-mail ou Whatsapp.",
+  "contacts.available-units": "Unidades disponíveis",
+  "contacts.form-title": "Fale connosco.\nPreencha o formulário",
+
+  "form-field.name": "Nome",
+  "form-field.phone": "Contacto telefónico",
+  "form-field.email": "E-mail",
+  "form-field.service": "Serviço",
+  "form-field.service.default-label": "Selecionar Serviço",
+  "form-field.message": "Mensagem",
+  "form-field.terms": "Li e Aceito a Política de privacidade",
+  "form-field.validation.requiredField": "Campo de preenchimento obrigatório.",
+  "form-field.validation.invalidEmail": "O e-mail inserido não é válido.",
 
   "recruitment-block.title": "Queres fazer parte desta equipa?",
   "recruitment-block.subtitle": "Mostra-nos o teu potencial",
   "recruitment-block.button": "Candidatura espontânea",
-
-  "general.view": "Ver",
 
   "team.same-location-team": "Profissionais da mesma unidade",
   "team.how-to-arrive": "Como chegar"
