@@ -6,7 +6,13 @@
       class="team-member-detail__slider"
       :title="$t('team.same-location-team')"
       :team-list="getTeamMembers(member.location)"
-    ></TeamSlider>
+    />
+
+    <LocationMap
+      v-if="location?.googleMapsSrc"
+      :title="$t('team.how-to-arrive')"
+      :google-maps-src="location.googleMapsSrc"
+    />
   </div>
 </template>
 
@@ -19,11 +25,11 @@ definePageMeta({
 
 import { Routes } from '~/models/routes.model';
 import type { TeamMember } from '~/models/team.model';
-const { getTeamMembers } = useTeam();
+import type { TeamLocation, TeamMember, TeamService } from '~/models/team.model';
 
 const route = useRoute();
 const localePath = useLocalePath();
-const { getTeamMemberBySlug, getService, getLocation } = useTeam();
+const { getTeamMembers, getTeamMemberBySlug, getService, getLocation } = useTeam();
 
 const slug = route.params.slug as string;
 const member: TeamMember | undefined = getTeamMemberBySlug(slug);
@@ -32,8 +38,8 @@ if (!member) {
   navigateTo(localePath(Routes.NOT_FOUND));
 }
 
-const service = getService(member?.service);
-const location = getLocation(member?.location);
+const service: TeamService | undefined = getService(member?.service);
+const location: TeamLocation | undefined = getLocation(member?.location);
 </script>
 
 <style scoped lang="scss">

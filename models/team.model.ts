@@ -12,6 +12,7 @@ export interface TeamLocation {
   id: number;
   title: string;
   selected?: boolean;
+  googleMapsSrc?: string;
 }
 
 export interface TeamService {
