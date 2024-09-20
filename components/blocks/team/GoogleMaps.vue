@@ -1,6 +1,6 @@
 <template>
   <div class="location-map">
-    <LayoutGrid>
+    <LayoutGrid v-if="title">
       <LayoutGridRow>
         <LayoutGridCol m="4" t="12">
           <h3 class="location-map__title">{{ title }}</h3>
@@ -9,7 +9,7 @@
     </LayoutGrid>
     <iframe
       width="100%"
-      height="470"
+      :height="height"
       frameborder="0"
       scrolling="no"
       marginheight="0"
@@ -24,7 +24,12 @@
 defineProps({
   title: {
     type: String,
-    required: true,
+    required: false,
+  },
+  height: {
+    type: Number,
+    required: false,
+    default: 470,
   },
   googleMapsSrc: {
     type: String,

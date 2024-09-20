@@ -8,7 +8,7 @@
       :team-list="getTeamMembers(member.location)"
     />
 
-    <LocationMap
+    <GoogleMaps
       v-if="location?.googleMapsSrc"
       :title="$t('team.how-to-arrive')"
       :google-maps-src="location.googleMapsSrc"
