@@ -1,5 +1,5 @@
 <template>
-  <header ref="headerRef" class="header" :style="styles">
+  <header ref="headerRef" class="header" :style="isDesktop ? headerFixedStyles : null">
     <LayoutGrid>
       <LayoutGridRow>
         <LayoutGridCol m="4" t="12">
@@ -20,9 +20,7 @@ import { useFixedHeader } from 'vue-use-fixed-header';
 
 const headerRef = ref(null);
 
-const { styles } = useFixedHeader(headerRef, {
-  watch: isDesktop,
-});
+const { styles: headerFixedStyles } = useFixedHeader(headerRef);
 </script>
 
 <style scoped lang="scss">
