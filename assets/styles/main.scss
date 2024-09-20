@@ -3,6 +3,8 @@
 }
 
 body {
+  --header-height: 60px;
+
   font-family: $font-family;
   color: $white;
   white-space: pre-line;
@@ -10,6 +12,10 @@ body {
 
   @include mq-mobile-tablet {
     padding-bottom: 60px;
+  }
+
+  @include mq-desktop {
+    --header-height: 80px;
   }
 }
 
@@ -191,5 +197,15 @@ b {
     cursor: pointer;
     background: $white;
     border-radius: 4px;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }

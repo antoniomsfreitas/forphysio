@@ -129,7 +129,6 @@
       flex-direction: column;
       align-items: center;
       font-weight: $font-weight-semi-bold;
-      pointer-events: all;
 
       &__title {
         @include mq-mobile {
@@ -154,6 +153,7 @@
 
       &__button {
         min-height: 32px;
+        pointer-events: all;
 
         @include mq-mobile {
           padding: 7px 48px;
@@ -175,6 +175,10 @@
         @include mq-desktop {
           margin-bottom: 64px;
         }
+      }
+
+      &__scrollbar {
+        pointer-events: all;
       }
     }
   }

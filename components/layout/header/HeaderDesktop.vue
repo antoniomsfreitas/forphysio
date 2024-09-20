@@ -103,6 +103,10 @@ const { mainMenu, searchOption, buttonOption } = useHeader();
             text-decoration: none;
             transition: $transition-duration ease-in-out color;
 
+            &.router-link-active {
+              color: $blue;
+            }
+
             .icon {
               margin-left: 4px;
             }

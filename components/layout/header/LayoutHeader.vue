@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header ref="headerRef" class="header" :style="styles">
     <LayoutGrid>
       <LayoutGridRow>
         <LayoutGridCol m="4" t="12">
@@ -15,11 +15,18 @@
   </NuxtLink>
 </template>
 
+<script setup lang="ts">
+import { useFixedHeader } from 'vue-use-fixed-header';
+
+const headerRef = ref(null);
+
+const { styles } = useFixedHeader(headerRef, {
+  watch: isDesktop,
+});
+</script>
+
 <style scoped lang="scss">
 .header {
-  --header-height: 60px;
-
-  position: relative;
   z-index: 9999;
   display: flex;
   align-items: center;
@@ -34,7 +41,9 @@
   }
 
   @include mq-desktop {
-    --header-height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
   }
 
   :deep(.button) {

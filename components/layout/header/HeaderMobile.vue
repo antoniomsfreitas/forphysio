@@ -151,6 +151,10 @@ const isSubmenuOpened = (index: number) => {
             padding: 20px 8px;
             font-weight: $font-weight-light;
             border-bottom: 1px solid $border-grey;
+
+            &.router-link-active {
+              color: $blue;
+            }
           }
 
           &__submenu {
