@@ -38,9 +38,9 @@
         </LayoutGridRow>
       </LayoutGrid>
     </div>
-  </div>
 
-  <LocationsMap class="locations-map" />
+    <LocationsMap class="locations-map" />
+  </div>
 </template>
 
 <script setup lang="ts">

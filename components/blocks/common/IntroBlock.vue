@@ -37,7 +37,7 @@ const props = defineProps({
   contentColDesktop: {
     type: String as PropType<GridColumns>,
     required: false,
-    default: 5,
+    default: '5',
   },
 });
 </script>
