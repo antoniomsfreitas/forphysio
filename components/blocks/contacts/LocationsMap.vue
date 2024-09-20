@@ -29,7 +29,6 @@
           :key="currentLocation.id"
           :google-maps-src="currentLocation?.googleMapsSrc"
           :height="600"
-          @load="mapLoaded()"
         />
       </LayoutGridCol>
     </LayoutGridRow>
@@ -45,15 +44,12 @@ const loading = ref(false);
 const changeLocation = async (locationId: number) => {
   loading.value = true;
 
-  // Simula o carregamento
   await new Promise((resolve) => setTimeout(resolve, 500));
   currentLocationId.value = locationId;
 
   await new Promise((resolve) => setTimeout(resolve, 500));
   loading.value = false;
 };
-
-const mapLoaded = () => {};
 
 const currentLocationId = ref(2);
 const currentLocation = computed(() => locations.value.find((location) => location.id == currentLocationId.value));
@@ -119,17 +115,8 @@ const currentLocation = computed(() => locations.value.find((location) => locati
 
     &--loading {
       opacity: 0;
-      transform: translateY(10px); // Faz o mapa deslizar para baixo
+      transform: translateY(10px);
     }
-  }
-
-  &__google-maps {
-    // // transition: $transition-duration ease-in-out opacity;
-    // transition: 0.5s ease-in-out opacity;
-
-    // &--loading {
-    //   opacity: 0;
-    // }
 
     .layout-grid {
       padding: 0;
