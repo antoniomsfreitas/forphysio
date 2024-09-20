@@ -39,7 +39,7 @@
 <script setup lang="ts">
 const { getVisibleLocations } = useContacts();
 
-const locations = computed(() => getVisibleLocations());
+const locations = getVisibleLocations();
 const loading = ref(false);
 
 const changeLocation = async (locationId: number) => {
@@ -53,7 +53,7 @@ const changeLocation = async (locationId: number) => {
 };
 
 const currentLocationId = ref(2);
-const currentLocation = computed(() => locations.value.find((location) => location.id == currentLocationId.value));
+const currentLocation = computed(() => locations.find((location) => location.id == currentLocationId.value));
 </script>
 
 <style scoped lang="scss">
