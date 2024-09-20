@@ -21,8 +21,39 @@
         <IconLink link="/contactos/" text="Marcar avaliação" />
       </template>
     </IntroBlock>
+
+    <div class="services-grid">
+      <LayoutGrid>
+        <LayoutGridRow>
+          <LayoutGridCol m="2" t="4" d="3" v-for="service in services" :index="service.id">
+            <CardImage
+              :title="service.title"
+              :src="getImagePath(service.image)"
+              :link="localePath(Routes.TEAM) + '/' + service.slug"
+              :alt="$t('general.image') + ': ' + service.image"
+              :link-title="$t('general.vieDetail')"
+              size="small"
+            />
+          </LayoutGridCol>
+        </LayoutGridRow>
+      </LayoutGrid>
+    </div>
   </div>
+
+  <LocationsMap class="locations-map" />
 </template>
+
+<script setup lang="ts">
+import { Routes } from '~/models/routes.model';
+import { useServices } from '~/composables/services.composable';
+
+const localePath = useLocalePath();
+const { services } = useServices();
+
+const getImagePath = (image: string) => {
+  return '/images/homepage/services-block/' + image;
+};
+</script>
 
 <style scoped lang="scss">
 .intro-block {
@@ -40,6 +71,21 @@
 
   &__text {
     padding-bottom: 40px;
+  }
+}
+
+.services-grid,
+.locations-map {
+  @include mq-mobile {
+    margin-bottom: 100px;
+  }
+
+  @include mq-tablet {
+    margin-bottom: 140px;
+  }
+
+  @include mq-desktop {
+    margin-bottom: 160px;
   }
 }
 </style>
