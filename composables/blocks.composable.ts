@@ -1,9 +1,9 @@
 export const useBlocks = () => {
   const { locale } = useI18n();
 
-  const getHeroBannerData = async () => {
-    const { status, data } = await useAsyncData('hero-banner', () =>
-      $fetch('/api/homepage/hero-banner', {
+  const getHomepageBlocksData = async () => {
+    const { status, data } = await useAsyncData('homepage-blocks', () =>
+      $fetch('/api/homepage/blocks', {
         query: {
           locale: locale.value,
         },
@@ -17,6 +17,6 @@ export const useBlocks = () => {
   };
 
   return {
-    getHeroBannerData,
+    getHomepageBlocksData,
   };
 };

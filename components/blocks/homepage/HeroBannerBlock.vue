@@ -9,7 +9,7 @@
       :autoplay="{ delay: 4000, disableOnInteraction: true }"
       :scrollbar="{ draggable: true, el: '.hero-banner__content__info__scrollbar' }"
     >
-      <SwiperSlide v-for="slide in heroBannerSliders" :key="slide.id" class="hero-banner__slideshow__slide">
+      <SwiperSlide v-for="slide in sliders" :key="slide.id" class="hero-banner__slideshow__slide">
         <PictureImage
           class="hero-banner__slideshow__slide__image"
           :alt="slide.alt"
@@ -25,13 +25,15 @@
       <LayoutGrid>
         <LayoutGridRow>
           <LayoutGridCol m="4" t="12" class="hero-banner__content__info">
-            <h2 class="hero-banner__content__info__title">{{ heroBannerInfo?.title }}</h2>
+            <h2 class="hero-banner__content__info__title">{{ info.title }}</h2>
+
             <button
               class="hero-banner__content__info__button button button--tertiary"
               @click.prevent="handleClickButton"
             >
-              {{ heroBannerInfo?.btn.label }}
+              {{ info.cta.label }}
             </button>
+
             <div class="swiper-custom-scrollbar hero-banner__content__info__scrollbar" />
           </LayoutGridCol>
         </LayoutGridRow>
@@ -43,15 +45,21 @@
 </template>
 
 <script setup lang="ts">
+import type { HeroBannerData } from '~/models/blocks/hero-banner.model';
 const localePath = useLocalePath();
-const { getHeroBannerData } = useBlocks();
-const { data } = await getHeroBannerData();
 
-const heroBannerSliders = computed(() => data.value?.sliders);
-const heroBannerInfo = computed(() => data.value?.info);
+const props = defineProps({
+  data: {
+    type: Object as PropType<HeroBannerData>,
+    required: true,
+  },
+});
+
+const info = computed(() => props.data.info);
+const sliders = computed(() => props.data.sliders);
 
 const handleClickButton = () => {
-  navigateTo(localePath(heroBannerInfo.value?.btn.link));
+  navigateTo(localePath(info.value?.cta.link));
 };
 </script>
 

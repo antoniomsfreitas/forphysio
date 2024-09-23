@@ -3,36 +3,49 @@
     <LayoutGridRow>
       <LayoutGridCol m="4" t="6" d="5" start-col-d="2">
         <div class="about-us-block__content">
-          <h2 class="about-us-block__content__title">
-            Fisioterapia que realmente <span class="about-us-block__content__title--highlight">importa</span>.
-          </h2>
-          <div class="about-us-block__content__text">
-            <p>
-              Desde 2014, que o foco da ForPhysio Clinic reside na prestação dos melhores cuidados em fisioterapia aos
-              nossos clientes.
-              <br >
-              <br >
-              As sessões individualizadas, com 60 minutos de duração e sempre na presença do fisioterapeuta, garantem
-              melhores resultados, de forma mais rápida e segura.
-            </p>
+          <!-- eslint-disable-next-line vue/no-v-html -->
+          <h2 class="about-us-block__content__title" v-html="title" />
+
+          <div class="about-us-block__content__description">
+            <p>{{ data.description }}</p>
           </div>
-          <IconLink link="/sobre-nos/" text="Conheça-nos melhor" />
+
+          <IconLink :link="localePath(button.link)" :text="button.label" />
         </div>
       </LayoutGridCol>
+
       <LayoutGridCol m="4" t="6">
         <PictureImage
           class="about-us-block__image"
-          src="/images/homepage/about-us-block/image-1/image-1-mobile.jpg"
-          alt="Forphysio"
-          src-t="/images/homepage/about-us-block/image-1/image-1-tablet.jpg"
-          src-d="/images/homepage/about-us-block/image-1/image-1-desktop.jpg"
+          :alt="image.alt"
+          :src="image.mobile"
+          :src-t="image.tablet"
+          :src-d="image.desktop"
         />
       </LayoutGridCol>
     </LayoutGridRow>
   </LayoutGrid>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import type { AboutUsBlockData } from '~/models/blocks/about-us-block.model';
+const localePath = useLocalePath();
+
+const props = defineProps({
+  data: {
+    type: Object as PropType<AboutUsBlockData>,
+    required: true,
+  },
+});
+
+const title = computed(() =>
+  // replaces the regular title highlighted key with the highlighted title value
+  props.data.title.regular.replaceAll('{{ highlighted }}', `<span>${props.data.title.highlighted}</span>`),
+);
+
+const image = computed(() => props.data.image);
+const button = computed(() => props.data.cta);
+</script>
 
 <style scoped lang="scss">
 .about-us-block {
@@ -73,7 +86,7 @@
     &__title {
       color: $medium-grey;
 
-      &--highlight {
+      * {
         color: $white;
       }
 
@@ -90,7 +103,9 @@
       }
     }
 
-    &__text {
+    &__description {
+      white-space: pre-wrap;
+
       @include mq-tablet {
         padding-right: 30px;
       }

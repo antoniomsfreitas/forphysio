@@ -1,13 +1,24 @@
 <template>
   <div class="container">
-    <HeroBannerBlock class="hero-banner-block" />
-    <AboutUsBlock class="about-us-block" />
+    <HeroBannerBlock v-if="heroBannerData" class="hero-banner-block" :data="heroBannerData" />
+    <AboutUsBlock v-if="aboutUsBlockData" class="about-us-block" :data="aboutUsBlockData" />
     <TwoImagesBlock class="two-images-block" />
     <ServicesBlock class="services-block" />
     <CustomersReviewsBlock class="customers-reviews-block" />
     <NewsletterBlock />
   </div>
 </template>
+
+<script setup lang="ts">
+import type { AboutUsBlockData } from '~/models/blocks/about-us-block.model';
+import type { HeroBannerData } from '~/models/blocks/hero-banner.model';
+
+const { getHomepageBlocksData } = useBlocks();
+const { data } = await getHomepageBlocksData();
+
+const heroBannerData = computed<HeroBannerData>(() => data.value?.['hero-banner']);
+const aboutUsBlockData = computed<AboutUsBlockData>(() => data.value?.['about-us-block']);
+</script>
 
 <style scoped lang="scss">
 .hero-banner-block {
