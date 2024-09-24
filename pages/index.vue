@@ -2,7 +2,7 @@
   <div class="container">
     <HeroBannerBlock v-if="heroBannerData" class="hero-banner-block" :data="heroBannerData" />
     <AboutUsBlock v-if="aboutUsBlockData" class="about-us-block" :data="aboutUsBlockData" />
-    <TwoImagesBlock class="two-images-block" />
+    <TwoImagesBlock v-if="twoImagesBlockData" class="two-images-block" :data="twoImagesBlockData" />
     <ServicesBlock class="services-block" />
     <CustomersReviewsBlock class="customers-reviews-block" />
     <NewsletterBlock />
@@ -13,12 +13,14 @@
 import { useBlocks } from '~/composables/blocks.composable';
 import type { AboutUsBlock } from '~/models/blocks/about-us-block.model';
 import type { HeroBanner } from '~/models/blocks/hero-banner.model';
+import type { TwoImagesBlock } from '~/models/blocks/two-images-block.model';
 
 const { getHomepageBlocksData } = useBlocks();
 const { data } = await getHomepageBlocksData();
 
 const heroBannerData = computed<HeroBanner | undefined>(() => data.value?.['hero-banner']);
 const aboutUsBlockData = computed<AboutUsBlock | undefined>(() => data.value?.['about-us-block']);
+const twoImagesBlockData = computed<TwoImagesBlock | undefined>(() => data.value?.['two-images-block']);
 </script>
 
 <style scoped lang="scss">

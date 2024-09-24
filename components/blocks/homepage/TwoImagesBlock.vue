@@ -1,46 +1,25 @@
 <template>
   <LayoutGrid class="two-images-block">
     <LayoutGridRow>
-      <LayoutGridCol m="4" t="6">
+      <LayoutGridCol v-for="highlight in data.highlights" :key="highlight.id" m="4" t="6">
         <CardUI class="two-images-block__item">
-          <NuxtLink to="/equipa">
+          <NuxtLink :to="localePath(highlight.cta.link)">
             <div class="two-images-block__item__image">
               <PictureImage
-                src="/images/homepage/two-images-block/image-1/image-1-mobile.jpg"
-                alt="Forphysio"
-                src-t="/images/homepage/two-images-block/image-1/image-1-tablet.jpg"
-                src-d="/images/homepage/two-images-block/image-1/image-1-desktop.jpg"
+                :alt="highlight.image.alt"
+                :src="highlight.image.mobile"
+                :src-t="highlight.image.tablet"
+                :src-d="highlight.image.desktop"
               />
             </div>
-            <div class="two-images-block__item__content">
-              <h3 class="two-images-block__item__content__title">A nossa equipa</h3>
-              <p class="two-images-block__item__content__text">
-                Conheça os nossos profissionais especializados e motivados.
-              </p>
-              <span class="button button--tertiary">Saber mais</span>
-            </div>
-          </NuxtLink>
-          <div class="two-images-block__item__gradient" />
-        </CardUI>
-      </LayoutGridCol>
 
-      <LayoutGridCol m="4" t="6">
-        <CardUI class="two-images-block__item">
-          <NuxtLink to="/equipa">
-            <div class="two-images-block__item__image">
-              <PictureImage
-                src="/images/homepage/two-images-block/image-2/image-2-mobile.jpg"
-                alt="Forphysio"
-                src-t="/images/homepage/two-images-block/image-2/image-2-tablet.jpg"
-                src-d="/images/homepage/two-images-block/image-2/image-2-desktop.jpg"
-              />
-            </div>
             <div class="two-images-block__item__content">
-              <h3 class="two-images-block__item__content__title">Serviços de fisioterapia</h3>
-              <p class="two-images-block__item__content__text">Tratamento especializado e individualizado.</p>
-              <span class="button button--tertiary">Marcar Consulta</span>
+              <h3 class="two-images-block__item__content__title">{{ highlight.title }}</h3>
+              <p class="two-images-block__item__content__description">{{ highlight.description }}</p>
+              <span class="button button--tertiary">{{ highlight.cta.label }}</span>
             </div>
           </NuxtLink>
+
           <div class="two-images-block__item__gradient" />
         </CardUI>
       </LayoutGridCol>
@@ -48,7 +27,17 @@
   </LayoutGrid>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import type { TwoImagesBlock } from '~/models/blocks/two-images-block.model';
+const localePath = useLocalePath();
+
+defineProps({
+  data: {
+    type: Object as PropType<TwoImagesBlock>,
+    required: true,
+  },
+});
+</script>
 
 <style scoped lang="scss">
 .two-images-block {
@@ -102,7 +91,7 @@
         }
       }
 
-      &__text {
+      &__description {
         font-weight: $font-weight-light;
         line-height: 1.2;
 
