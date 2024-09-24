@@ -21,11 +21,11 @@
 </template>
 
 <script setup lang="ts">
-import type { HeaderData } from '~/models/layout.model';
+import type { HeaderMenu } from '~/models/layout.model';
 
 const props = defineProps({
   data: {
-    type: Object as PropType<HeaderData>,
+    type: Object as PropType<HeaderMenu>,
     required: true,
   },
 });

@@ -1,12 +1,14 @@
 interface HeroBannerSliders {
   id: number;
-  imageMobile: string;
-  imageTablet: string;
-  imageDesktop: string;
-  alt: string;
+  image: {
+    alt: string;
+    mobile: string;
+    tablet: string;
+    desktop: string;
+  };
 }
 
-export interface HeroBannerData {
+export interface HeroBanner {
   info: {
     title: string;
     cta: {

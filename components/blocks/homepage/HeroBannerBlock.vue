@@ -12,10 +12,10 @@
       <SwiperSlide v-for="slide in sliders" :key="slide.id" class="hero-banner__slideshow__slide">
         <PictureImage
           class="hero-banner__slideshow__slide__image"
-          :alt="slide.alt"
-          :src="slide.imageMobile"
-          :src-t="slide.imageTablet"
-          :src-d="slide.imageDesktop"
+          :alt="slide.image.alt"
+          :src="slide.image.mobile"
+          :src-t="slide.image.tablet"
+          :src-d="slide.image.desktop"
           cover
         />
       </SwiperSlide>
@@ -45,12 +45,12 @@
 </template>
 
 <script setup lang="ts">
-import type { HeroBannerData } from '~/models/blocks/hero-banner.model';
+import type { HeroBanner } from '~/models/blocks/hero-banner.model';
 const localePath = useLocalePath();
 
 const props = defineProps({
   data: {
-    type: Object as PropType<HeroBannerData>,
+    type: Object as PropType<HeroBanner>,
     required: true,
   },
 });

@@ -9,6 +9,8 @@
 </template>
 
 <script setup lang="ts">
+import { useLayout } from '~/composables/layouts.composable';
+
 const { getLayoutData } = useLayout();
 const { status, data } = await getLayoutData();
 

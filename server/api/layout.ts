@@ -1,6 +1,7 @@
+import type { Layout } from '~/models/layout.model';
 import { Routes } from '~/models/routes.model';
 
-export default defineEventHandler(() => {
+export default defineEventHandler((): Layout => {
   return {
     header: {
       mainMenu: [

@@ -10,14 +10,15 @@
 </template>
 
 <script setup lang="ts">
-import type { AboutUsBlockData } from '~/models/blocks/about-us-block.model';
-import type { HeroBannerData } from '~/models/blocks/hero-banner.model';
+import { useBlocks } from '~/composables/blocks.composable';
+import type { AboutUsBlock } from '~/models/blocks/about-us-block.model';
+import type { HeroBanner } from '~/models/blocks/hero-banner.model';
 
 const { getHomepageBlocksData } = useBlocks();
 const { data } = await getHomepageBlocksData();
 
-const heroBannerData = computed<HeroBannerData>(() => data.value?.['hero-banner']);
-const aboutUsBlockData = computed<AboutUsBlockData>(() => data.value?.['about-us-block']);
+const heroBannerData = computed<HeroBanner | undefined>(() => data.value?.['hero-banner']);
+const aboutUsBlockData = computed<AboutUsBlock | undefined>(() => data.value?.['about-us-block']);
 </script>
 
 <style scoped lang="scss">

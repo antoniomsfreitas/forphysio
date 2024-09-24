@@ -1,4 +1,4 @@
-export interface AboutUsBlockData {
+export interface AboutUsBlock {
   title: {
     regular: string;
     highlighted: string;

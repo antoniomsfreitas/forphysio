@@ -12,8 +12,12 @@ export interface HeaderMenuOption {
   submenu?: HeaderSubmenuOption[];
 }
 
-export interface HeaderData {
+export interface HeaderMenu {
   mainMenu: HeaderMenuOption[];
   searchOption: HeaderMenuOption;
   buttonOption: HeaderMenuOption;
+}
+
+export interface Layout {
+  header: HeaderMenu;
 }

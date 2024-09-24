@@ -28,12 +28,12 @@
 </template>
 
 <script setup lang="ts">
-import type { AboutUsBlockData } from '~/models/blocks/about-us-block.model';
+import type { AboutUsBlock } from '~/models/blocks/about-us-block.model';
 const localePath = useLocalePath();
 
 const props = defineProps({
   data: {
-    type: Object as PropType<AboutUsBlockData>,
+    type: Object as PropType<AboutUsBlock>,
     required: true,
   },
 });

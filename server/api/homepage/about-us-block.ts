@@ -1,5 +1,5 @@
 import { getFormattedDataByLocale } from '~/utils/api.util';
-import type { AboutUsBlockData } from '~/models/blocks/about-us-block.model';
+import type { AboutUsBlock } from '~/models/blocks/about-us-block.model';
 import { Routes } from '~/models/routes.model';
 
 export const data = {
@@ -55,7 +55,7 @@ export const data = {
   },
 };
 
-export default defineEventHandler((event): AboutUsBlockData => {
+export default defineEventHandler((event): AboutUsBlock => {
   const { locale } = getQuery(event);
 
   return getFormattedDataByLocale(data, locale as string);
