@@ -29,7 +29,7 @@
             <CardImage
               :title="service.title"
               :src="getImagePath(service.image)"
-              :link="localePath(Routes.TEAM) + '/' + service.slug"
+              :link="getDetailPage(service.slug)"
               :alt="$t('general.image') + ': ' + service.image"
               :link-title="$t('general.vieDetail')"
               size="small"
@@ -52,6 +52,10 @@ const { services } = useServices();
 
 const getImagePath = (image: string) => {
   return '/images/homepage/services-block/' + image;
+};
+
+const getDetailPage = (slug: string): string => {
+  return `${localePath(Routes.SERVICES)}/${slug}`;
 };
 </script>
 

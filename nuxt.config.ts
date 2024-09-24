@@ -107,6 +107,12 @@ export default defineNuxtConfig({
         pt: '/servicos',
         'zh-SG': '/services',
       },
+      'services/[slug]': {
+        en: '/services/[slug]',
+        es: '/servicios/[slug]',
+        pt: '/servicos/[slug]',
+        'zh-SG': '/services/[slug]',
+      },
       'blog/index': {
         en: '/blog',
         es: '/blog',
