@@ -1,34 +1,36 @@
 <template>
   <div class="service-detail">
-    <ServiceIntro class="intro-block" />
+    <ServiceIntro v-if="service?.blocks?.intro" :data="service?.blocks?.intro" class="intro-block" />
 
-    <SideImage class="side-image-block" />
+    <SideImage v-if="service?.blocks?.sideImage" :data="service?.blocks?.sideImage" class="side-image-block" />
 
-    <div class="full-width-image-block image-1">
-      <PictureImage
-        alt="Teste"
-        :src="`/images/services/detail/fullwidth-image/fisioterapia-musculo-esqueletica/image-1-mobile.jpg`"
-        :src-t="`/images/services/detail/fullwidth-image/fisioterapia-musculo-esqueletica/image-1-tablet.jpg`"
-        :src-d="`/images/services/detail/fullwidth-image/fisioterapia-musculo-esqueletica/image-1-desktop.jpg`"
-        cover
-      />
-    </div>
+    <ImageFullwidth
+      class="image-fullwidth-block"
+      v-if="service?.blocks?.imageFullwidth_1"
+      :data="service?.blocks?.imageFullwidth_1"
+      :height-mobile="469"
+      :height-tablet="469"
+      :height-desktop="700"
+    />
 
-    <ServiceTopics class="topics" />
+    <ServiceTopics v-if="service?.blocks?.topics_1" :data="service?.blocks?.topics_1" class="topics" />
 
-    <TwoImagesGrid class="two-images-grid-block" />
+    <TwoImagesGrid
+      v-if="service?.blocks?.twoImagesGrid"
+      :data="service?.blocks?.twoImagesGrid"
+      class="two-images-grid-block"
+    />
 
-    <ServiceTopics class="topics" />
+    <ServiceTopics v-if="service?.blocks?.topics_2" :data="service?.blocks?.topics_2" class="topics" />
 
-    <div class="full-width-image-block image-2">
-      <PictureImage
-        alt="Teste"
-        :src="`/images/services/detail/fullwidth-image/fisioterapia-musculo-esqueletica/image-2-mobile.jpg`"
-        :src-t="`/images/services/detail/fullwidth-image/fisioterapia-musculo-esqueletica/image-2-tablet.jpg`"
-        :src-d="`/images/services/detail/fullwidth-image/fisioterapia-musculo-esqueletica/image-2-desktop.jpg`"
-        cover
-      />
-    </div>
+    <ImageFullwidth
+      class="image-fullwidth-block"
+      v-if="service?.blocks?.imageFullwidth_2"
+      :data="service?.blocks?.imageFullwidth_2"
+      :height-mobile="575"
+      :height-tablet="580"
+      :height-desktop="850"
+    />
 
     <LayoutGrid class="locations-list-block">
       <LayoutGridRow>
@@ -38,7 +40,7 @@
       </LayoutGridRow>
     </LayoutGrid>
 
-    <AppointmentBanner />
+    <AppointmentBanner v-if="service?.blocks?.appointmentBanner" :data="service?.blocks?.appointmentBanner" />
   </div>
 </template>
 
@@ -49,6 +51,7 @@ definePageMeta({
   },
 });
 
+import ImageFullwidth from '~/components/blocks/common/ImageFullwidth.vue';
 import AppointmentBanner from '~/components/blocks/services/AppointmentBanner.vue';
 import { Routes } from '~/models/routes.model';
 
@@ -95,29 +98,13 @@ if (!service) {
     }
   }
 
-  .full-width-image-block {
+  .image-fullwidth-block {
     @include mq-mobile {
       margin-bottom: 80px;
     }
 
     @include mq-tablet-desktop {
       margin-bottom: 110px;
-    }
-
-    &.image-2 {
-      :deep(picture) img {
-        @include mq-mobile {
-          height: 575px;
-        }
-
-        @include mq-tablet {
-          height: 580px;
-        }
-
-        @include mq-desktop {
-          height: 850px;
-        }
-      }
     }
   }
 

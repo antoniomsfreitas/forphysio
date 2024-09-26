@@ -1,10 +1,10 @@
 <template>
   <div class="appointment-banner">
     <PictureImage
-      :alt="$t('appointment-banner.title')"
-      src="/images/services/detail/appointment-banner/fisioterapia-musculo-esqueletica/image-mobile.jpg"
-      src-t="/images/services/detail/appointment-banner/fisioterapia-musculo-esqueletica/image-tablet.jpg"
-      src-d="/images/services/detail/appointment-banner/fisioterapia-musculo-esqueletica/image-desktop.jpg"
+      :alt="data.image.alt"
+      :src="data.image.mobile"
+      :src-t="data.image.tablet"
+      :src-d="data.image.desktop"
       cover
     />
 
@@ -38,11 +38,20 @@
 </template>
 
 <script setup lang="ts">
+import type { BannerBlock } from '~/models/blocks.model';
 import { Routes } from '~/models/routes.model';
 const localePath = useLocalePath();
+
+defineProps({
+  data: {
+    type: Object as PropType<BannerBlock>,
+    required: true,
+  },
+});
 </script>
 
 <style scoped lang="scss">
+BannerBlock,
 .appointment-banner {
   position: relative;
 

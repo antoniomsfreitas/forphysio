@@ -4,10 +4,10 @@
       <LayoutGridCol m="4" t="6" d="6">
         <CardUI class="side-image__image">
           <PictureImage
-            :alt="$t('pages.contacts')"
-            :src="`/images/services/detail/side-image/fisioterapia-musculo-esqueletica/image-mobile.jpg`"
-            :src-t="`/images/services/detail/side-image/fisioterapia-musculo-esqueletica/image-tablet.jpg`"
-            :src-d="`/images/services/detail/side-image/fisioterapia-musculo-esqueletica/image-desktop.jpg`"
+            :alt="data.image.alt"
+            :src="data.image.mobile"
+            :src-t="data.image.tablet"
+            :src-d="data.image.desktop"
             cover
           />
         </CardUI>
@@ -15,16 +15,25 @@
 
       <LayoutGridCol m="4" t="6" d="5" start-col-d="8">
         <div class="side-image__content">
-          <h2>Para quem é indicada a fisioterapia músculo esquelética?</h2>
-          <p>
-            Para todas as pessoas, de <span class="highlight">todas as idades</span>, que tenham condições neuro musculo
-            esqueléticas.
-          </p>
+          <h2 v-t="data.title" />
+
+          <p v-html="data.text" />
         </div>
       </LayoutGridCol>
     </LayoutGridRow>
   </LayoutGrid>
 </template>
+
+<script setup lang="ts">
+import type { SideImageBlock } from '~/models/blocks.model';
+
+defineProps({
+  data: {
+    type: Object as PropType<SideImageBlock>,
+    required: true,
+  },
+});
+</script>
 
 <style scoped lang="scss">
 .side-image {
@@ -89,7 +98,7 @@
         font-size: 36px;
       }
 
-      .highlight {
+      * {
         color: $white;
       }
     }

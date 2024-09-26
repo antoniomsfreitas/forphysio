@@ -1,34 +1,59 @@
 <template>
-  <div class="service-intro">
-    <div class="service-intro__image">
-      <PictureImage
-        alt="Imagem: Fisioterapia músculo esquelética"
-        :src="`/images/services/detail/intro/fisioterapia-musculo-esqueletica/image-mobile.jpg`"
-        :src-t="`/images/services/detail/intro/fisioterapia-musculo-esqueletica/image-tablet.jpg`"
-        :src-d="`/images/services/detail/intro/fisioterapia-musculo-esqueletica/image-desktop.jpg`"
-        cover
-      />
+  <div class="service-intro__wrapper">
+    <div class="service-intro">
+      <div class="service-intro__image">
+        <PictureImage
+          :alt="data.image.alt"
+          :src="data.image.mobile"
+          :src-t="data.image.tablet"
+          :src-d="data.image.desktop"
+          cover
+        />
 
-      <div class="service-intro__gradient" />
+        <div class="service-intro__gradient" />
+      </div>
+
+      <div class="service-intro__content">
+        <LayoutGrid>
+          <LayoutGridRow>
+            <LayoutGridCol m="4" t="8" d="8" start-col-t="3" start-col-d="3">
+              <h1 v-text="data.title" />
+
+              <Button type="outline" v-t="'general.book-evaluation'" />
+            </LayoutGridCol>
+          </LayoutGridRow>
+
+          <LayoutGridRow v-if="version == '1'">
+            <LayoutGridCol m="4" t="8" d="10" start-col-t="3" start-col-d="2">
+              <p v-text="data.text" />
+            </LayoutGridCol>
+          </LayoutGridRow>
+        </LayoutGrid>
+      </div>
     </div>
 
-    <div class="service-intro__content">
-      <LayoutGrid>
-        <LayoutGridRow>
-          <LayoutGridCol m="4" t="8" d="8" start-col-t="3" start-col-d="3">
-            <h1>{{ 'Fisioterapia músculo esquelética' }}</h1>
-            <Button type="outline" v-t="'general.book-evaluation'" />
-            <p>
-              {{
-                'A Fisioterapia Musculo Esquelética é uma área que pretende ajudar a prevenir, reduzir ou a eliminar a dor, e as limitações funcionais.\n\nTal como em outras áreas da fisioterapia, carece de uma avaliação meticulosa, e a uma intervenção que recorre a técnicas manuais, exercício e educação.'
-              }}
-            </p>
-          </LayoutGridCol>
-        </LayoutGridRow>
-      </LayoutGrid>
-    </div>
+    <LayoutGridRow v-if="version == '2'" class="intro-text">
+      <LayoutGridCol m="4" t="8" d="8" start-col-t="2" start-col-d="3">
+        <p v-text="data.text" />
+      </LayoutGridCol>
+    </LayoutGridRow>
   </div>
 </template>
+
+<script setup lang="ts">
+import type { IntroBlock } from '~/models/blocks.model';
+
+defineProps({
+  data: {
+    type: Object as PropType<IntroBlock>,
+    required: true,
+  },
+});
+
+// TEMP - FOR TEST PURPOSES
+const route = useRoute();
+const version = route.query.version || '1';
+</script>
 
 <style scoped lang="scss">
 .service-intro {
@@ -51,14 +76,6 @@
     z-index: 3;
     text-align: center;
 
-    @include mq-mobile-tablet {
-      padding-top: 190px;
-    }
-
-    @include mq-desktop {
-      padding-top: 150px;
-    }
-
     h1 {
       margin-bottom: 40px;
 
@@ -73,7 +90,7 @@
       max-width: 350px;
 
       @include mq-tablet-desktop {
-        margin-bottom: 55px;
+        margin-bottom: 50px;
       }
     }
 
@@ -109,8 +126,23 @@
     }
 
     @include mq-desktop {
-      @include gradient-overlay('bottom-top', 83);
+      @include gradient-overlay('bottom-top', 100);
     }
+  }
+}
+
+.intro-text p {
+  font-weight: $font-weight-light;
+  line-height: 1.4;
+  text-align: center;
+  margin-top: 60px;
+
+  @include mq-mobile-tablet {
+    font-size: 18px;
+  }
+
+  @include mq-desktop {
+    font-size: 28px;
   }
 }
 </style>

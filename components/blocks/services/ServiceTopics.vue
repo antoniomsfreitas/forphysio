@@ -3,23 +3,26 @@
     <LayoutGrid>
       <LayoutGridRow>
         <LayoutGridCol m="4" t="10" d="6" start-col-t="2" start-col-d="2">
-          <h2>É indicada para que situações?</h2>
+          <h2 v-t="data.title" />
           <ul>
-            <li>Dor (costas, ombro, cotovelo, joelho, anca)</li>
-            <li>Hérnias</li>
-            <li>Entorse</li>
-            <li>Rotura (ligamentos, musculares)</li>
-            <li>Lesões meniscais</li>
-            <li>Tendinopatias</li>
-            <li>Condromalacia (lesões da cartilagem)</li>
-            <li>Fascite plantar</li>
-            <li>Síndrome do túnel cárpico</li>
+            <li v-for="topic in data.topics" :key="topic" v-t="topic" />
           </ul>
         </LayoutGridCol>
       </LayoutGridRow>
     </LayoutGrid>
   </div>
 </template>
+
+<script setup lang="ts">
+import type { TopicsBlock } from '~/models/blocks.model';
+
+defineProps({
+  data: {
+    type: Object as PropType<TopicsBlock>,
+    required: true,
+  },
+});
+</script>
 
 <style scoped lang="scss">
 .topics-list {

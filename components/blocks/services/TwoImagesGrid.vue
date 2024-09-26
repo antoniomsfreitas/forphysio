@@ -5,10 +5,10 @@
         <LayoutGridCol m="4" t="6" d="6" class="two-images-grid__left">
           <CardUI>
             <PictureImage
-              alt="Teste"
-              :src="`/images/services/detail/two-images-grid/fisioterapia-musculo-esqueletica/image-1-mobile.jpg`"
-              :src-t="`/images/services/detail/two-images-grid/fisioterapia-musculo-esqueletica/image-1-tablet.jpg`"
-              :src-d="`/images/services/detail/two-images-grid/fisioterapia-musculo-esqueletica/image-1-desktop.jpg`"
+              :alt="data.imageBig.alt"
+              :src="data.imageBig.mobile"
+              :src-t="data.imageBig.tablet"
+              :src-d="data.imageBig.desktop"
               cover
             />
           </CardUI>
@@ -16,25 +16,20 @@
         <LayoutGridCol m="4" t="6" d="5" start-col-d="8" class="two-images-grid__right">
           <CardUI>
             <PictureImage
-              class="two-images-grid__right__image"
-              alt="Teste"
-              :src="`/images/services/detail/two-images-grid/fisioterapia-musculo-esqueletica/image-2-mobile.jpg`"
-              :src-t="`/images/services/detail/two-images-grid/fisioterapia-musculo-esqueletica/image-2-tablet.jpg`"
-              :src-d="`/images/services/detail/two-images-grid/fisioterapia-musculo-esqueletica/image-2-desktop.jpg`"
+              class="image-fullwidth"
+              :alt="data.imageSmall.alt"
+              :src="data.imageSmall.mobile"
+              :src-t="data.imageSmall.tablet"
+              :src-d="data.imageSmall.desktop"
               cover
             />
           </CardUI>
           <div class="two-images-grid__right__content">
-            <h2>Quais os benefícios?</h2>
-            <ul>
-              <li>
-                <p><span class="highlight">Alívio</span> da dor</p>
-              </li>
-              <li>
-                <p>Estilo de vida <span class="highlight">ativo e saudável</span></p>
-              </li>
-              <li>
-                <p><span class="highlight">Capacitação</span> para atividades do dia a dia</p>
+            <h2 v-if="data?.title" v-t="data.title" />
+            <p v-if="data?.text" v-html="data.text" />
+            <ul v-if="data?.topics">
+              <li v-for="topic in data.topics" :key="topic">
+                <p v-html="topic"></p>
               </li>
             </ul>
           </div>
@@ -43,6 +38,17 @@
     </LayoutGrid>
   </div>
 </template>
+
+<script setup lang="ts">
+import type { TwoImagesGridBlock } from '~/models/blocks.model';
+
+defineProps({
+  data: {
+    type: Object as PropType<TwoImagesGridBlock>,
+    required: true,
+  },
+});
+</script>
 
 <style scoped lang="scss">
 .two-images-grid {
@@ -105,25 +111,29 @@
         }
       }
 
+      p,
+      ul li {
+        font-weight: $font-weight-light;
+        line-height: 1.2;
+        padding-bottom: 24px;
+        color: $medium-grey;
+
+        @include mq-mobile-tablet {
+          font-size: 24px;
+        }
+
+        @include mq-desktop {
+          font-size: 36px;
+        }
+
+        .highlight {
+          color: $white;
+        }
+      }
+
       ul {
         li {
           display: flex;
-          font-weight: $font-weight-light;
-          line-height: 1.2;
-          padding-bottom: 24px;
-          color: $medium-grey;
-
-          @include mq-mobile-tablet {
-            font-size: 24px;
-          }
-
-          @include mq-desktop {
-            font-size: 36px;
-          }
-
-          .highlight {
-            color: $white;
-          }
 
           &::before {
             content: '\2022';
