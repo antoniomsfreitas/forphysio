@@ -16,7 +16,7 @@
       <div class="service-intro__content">
         <LayoutGrid>
           <LayoutGridRow>
-            <LayoutGridCol m="4" t="8" d="8" start-col-t="3" start-col-d="3">
+            <LayoutGridCol m="4" t="8" d="10" start-col-t="3" start-col-d="2">
               <h1 v-text="data.title" />
 
               <Button type="outline" v-t="'general.book-evaluation'" />
@@ -24,7 +24,7 @@
           </LayoutGridRow>
 
           <LayoutGridRow v-if="version == '1'">
-            <LayoutGridCol m="4" t="8" d="10" start-col-t="3" start-col-d="2">
+            <LayoutGridCol m="4" t="8" d="8" start-col-t="3" start-col-d="3">
               <p v-text="data.text" />
             </LayoutGridCol>
           </LayoutGridRow>
@@ -32,11 +32,13 @@
       </div>
     </div>
 
-    <LayoutGridRow v-if="version == '2'" class="intro-text">
-      <LayoutGridCol m="4" t="8" d="8" start-col-t="2" start-col-d="3">
-        <p v-text="data.text" />
-      </LayoutGridCol>
-    </LayoutGridRow>
+    <LayoutGrid>
+      <LayoutGridRow v-if="version == '2'" class="intro-text">
+        <LayoutGridCol m="4" t="8" d="8" start-col-t="3" start-col-d="3">
+          <p v-text="data.text" />
+        </LayoutGridCol>
+      </LayoutGridRow>
+    </LayoutGrid>
   </div>
 </template>
 
@@ -114,6 +116,16 @@ const version = route.query.version || '1';
     top: 0;
     left: 0;
     width: 100%;
+
+    :deep(img) {
+      @include mq-mobile-tablet {
+        height: 650px;
+      }
+
+      @include mq-desktop {
+        height: 800px;
+      }
+    }
   }
 
   &__gradient {
@@ -126,7 +138,7 @@ const version = route.query.version || '1';
     }
 
     @include mq-desktop {
-      @include gradient-overlay('bottom-top', 100);
+      @include gradient-overlay('bottom-top', 80);
     }
   }
 }
@@ -139,6 +151,7 @@ const version = route.query.version || '1';
 
   @include mq-mobile-tablet {
     font-size: 18px;
+    margin-top: 40px;
   }
 
   @include mq-desktop {

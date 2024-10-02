@@ -54,14 +54,25 @@ defineProps({
 BannerBlock,
 .appointment-banner {
   position: relative;
+  @include mq-mobile-tablet {
+    min-height: 650px;
+  }
 
-  :deep(picture) img {
-    @include mq-mobile-tablet {
-      height: 650px;
+  @include mq-desktop {
+    min-height: 850px;
+  }
+
+  :deep(img) {
+    @include mq-mobile {
+      max-width: 767px;
+    }
+
+    @include mq-tablet {
+      max-width: 1279px;
     }
 
     @include mq-desktop {
-      height: 850px;
+      max-width: 1920px;
     }
   }
 

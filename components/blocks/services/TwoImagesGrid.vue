@@ -26,7 +26,7 @@
           </CardUI>
           <div class="two-images-grid__right__content">
             <h2 v-if="data?.title" v-t="data.title" />
-            <p v-if="data?.text" v-html="data.text" />
+            <p v-if="data?.text" class="two-images-grid__right__content__text" v-html="data.text" />
             <ul v-if="data?.topics">
               <li v-for="topic in data.topics" :key="topic">
                 <p v-html="topic"></p>
@@ -67,6 +67,20 @@ defineProps({
       @include mq-mobile {
         border-radius: 0;
       }
+
+      :deep(img) {
+        @include mq-desktop {
+          max-width: 767px;
+        }
+
+        @include mq-tablet {
+          max-width: 596px;
+        }
+
+        @include mq-desktop {
+          max-width: 708px;
+        }
+      }
     }
   }
 
@@ -99,6 +113,10 @@ defineProps({
     }
 
     &__content {
+      &__text {
+        padding-bottom: 24px;
+      }
+
       h2 {
         margin-bottom: 40px;
 
@@ -115,7 +133,6 @@ defineProps({
       ul li {
         font-weight: $font-weight-light;
         line-height: 1.2;
-        padding-bottom: 24px;
         color: $medium-grey;
 
         @include mq-mobile-tablet {
@@ -123,17 +140,18 @@ defineProps({
         }
 
         @include mq-desktop {
-          font-size: 36px;
+          font-size: 32px;
         }
+      }
 
-        .highlight {
-          color: $white;
-        }
+      p * {
+        color: $white;
       }
 
       ul {
         li {
           display: flex;
+          padding-bottom: 24px;
 
           &::before {
             content: '\2022';

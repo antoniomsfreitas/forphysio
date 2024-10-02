@@ -5,12 +5,9 @@
     <SideImage v-if="service?.blocks?.sideImage" :data="service?.blocks?.sideImage" class="side-image-block" />
 
     <ImageFullwidth
-      class="image-fullwidth-block"
       v-if="service?.blocks?.imageFullwidth_1"
       :data="service?.blocks?.imageFullwidth_1"
-      :height-mobile="469"
-      :height-tablet="469"
-      :height-desktop="700"
+      class="image-fullwidth-block"
     />
 
     <ServiceTopics v-if="service?.blocks?.topics_1" :data="service?.blocks?.topics_1" class="topics" />
@@ -27,12 +24,9 @@
       class="image-fullwidth-block"
       v-if="service?.blocks?.imageFullwidth_2"
       :data="service?.blocks?.imageFullwidth_2"
-      :height-mobile="575"
-      :height-tablet="580"
-      :height-desktop="850"
     />
 
-    <LayoutGrid class="locations-list-block">
+    <LayoutGrid v-if="false" class="locations-list-block">
       <LayoutGridRow>
         <LayoutGridCol m="4" t="8" d="5" start-col-t="2" start-col-d="2">
           <LocationsList />

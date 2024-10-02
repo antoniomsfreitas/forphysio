@@ -50,8 +50,18 @@ defineProps({
       border-radius: 0;
     }
 
-    picture img {
-      width: 100%;
+    :deep(img) {
+      @include mq-desktop {
+        max-width: 767px;
+      }
+
+      @include mq-tablet {
+        max-width: 596px;
+      }
+
+      @include mq-desktop {
+        max-width: 708px;
+      }
     }
   }
 

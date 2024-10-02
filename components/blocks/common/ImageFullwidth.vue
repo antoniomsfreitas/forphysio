@@ -17,18 +17,6 @@ defineProps({
     type: Object as PropType<ImageFullwidthBlock>,
     required: true,
   },
-  heightMobile: {
-    type: Number,
-    required: true,
-  },
-  heightTablet: {
-    type: Number,
-    required: true,
-  },
-  heightDesktop: {
-    type: Number,
-    required: true,
-  },
 });
 </script>
 
@@ -36,15 +24,15 @@ defineProps({
 .image-fullwidth {
   :deep(img) {
     @include mq-mobile {
-      height: v-bind('`${heightMobile}px`');
+      max-width: 767px;
     }
 
     @include mq-tablet {
-      height: v-bind('`${heightTablet}px`');
+      max-width: 1279px;
     }
 
     @include mq-desktop {
-      height: v-bind('`${heightDesktop}px`');
+      max-width: 1920px;
     }
   }
 }
