@@ -16,7 +16,18 @@
 </template>
 
 <script setup lang="ts">
-const { locations } = useContacts();
+import type { PropType } from 'vue';
+
+const props = defineProps({
+  locationsId: {
+    type: Array as PropType<number[]>,
+    required: false,
+  },
+});
+
+const { getLocations } = useContacts();
+
+const locations = getLocations(props?.locationsId);
 </script>
 
 <style scoped lang="scss">

@@ -12,6 +12,14 @@
 
     <ServiceTopics v-if="service?.blocks?.topics_1" :data="service?.blocks?.topics_1" class="topics" />
 
+    <LayoutGrid v-if="service?.blocks?.text" class="text-block">
+      <LayoutGridRow>
+        <LayoutGridCol m="4" t="9" d="6" start-col-t="2" start-col-d="2">
+          <p v-t="service?.blocks?.text" />
+        </LayoutGridCol>
+      </LayoutGridRow>
+    </LayoutGrid>
+
     <TwoImagesGrid
       v-if="service?.blocks?.twoImagesGrid"
       :data="service?.blocks?.twoImagesGrid"
@@ -26,10 +34,10 @@
       :data="service?.blocks?.imageFullwidth_2"
     />
 
-    <LayoutGrid v-if="false" class="locations-list-block">
+    <LayoutGrid v-if="service?.locations" class="locations-list-block">
       <LayoutGridRow>
         <LayoutGridCol m="4" t="8" d="5" start-col-t="2" start-col-d="2">
-          <LocationsList />
+          <LocationsList :locations-id="service.locations" />
         </LayoutGridCol>
       </LayoutGridRow>
     </LayoutGrid>
@@ -148,6 +156,29 @@ if (!service) {
         @include mq-tablet {
           grid-template-columns: 1fr 1fr;
         }
+      }
+    }
+  }
+
+  .text-block {
+    @include mq-mobile-tablet {
+      margin-bottom: 80px;
+    }
+
+    @include mq-desktop {
+      margin-bottom: 160px;
+    }
+
+    p {
+      font-weight: $font-weight-light;
+      line-height: 1.2;
+
+      @include mq-mobile-tablet {
+        font-size: 18px;
+      }
+
+      @include mq-desktop {
+        font-size: 28px;
       }
     }
   }

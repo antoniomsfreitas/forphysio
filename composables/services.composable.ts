@@ -6,7 +6,8 @@ export const useServices = () => {
       id: 1,
       slug: 'fisioterapia-musculo-esqueletica',
       title: 'Fisioterapia Músculo Esquelética',
-      image: 'service-1.jpg',
+      image: 'fisioterapia-musculo-esqueletica.jpg',
+      locations: [1, 2, 3, 4, 5],
       blocks: {
         intro: {
           title: 'Fisioterapia\nmúsculo esquelética',
@@ -102,7 +103,8 @@ export const useServices = () => {
       id: 2,
       slug: 'fisioterapia-no-desporto',
       title: 'Fisioterapia no Desporto',
-      image: 'service-4.jpg',
+      image: 'fisioterapia-no-desporto.jpg',
+      locations: [1, 2, 3, 4, 5],
       blocks: {
         intro: {
           title: 'Fisioterapia no Desporto',
@@ -212,7 +214,8 @@ export const useServices = () => {
       id: 3,
       slug: 'fisioterapia-aquatica-e-hidroterapia',
       title: 'Fisioterapia Aquática e Hidroterapia',
-      image: 'service-2.jpg',
+      image: 'fisioterapia-aquatica-e-hidroterapia.jpg',
+      locations: [2, 4],
       blocks: {
         intro: {
           title: 'Fisioterapia\nAquática e Hidroterapia',
@@ -311,7 +314,8 @@ export const useServices = () => {
       id: 4,
       slug: 'fisioterapia-no-envelhecimento',
       title: 'Fisioterapia no Envelhecimento',
-      image: 'service-3.jpg',
+      image: 'fisioterapia-no-envelhecimento.jpg',
+      locations: [1, 2, 3, 4, 5],
       blocks: {
         intro: {
           title: 'Fisioterapia no envelhecimento ativo',
@@ -410,7 +414,7 @@ export const useServices = () => {
       id: 5,
       slug: 'fisioterapia-online',
       title: 'Fisioterapia Online',
-      image: 'service-5.jpg',
+      image: 'fisioterapia-online.jpg',
       blocks: {
         intro: {
           title: 'Fisioterapia Online',
@@ -519,7 +523,7 @@ export const useServices = () => {
       id: 6,
       slug: 'fisioterapia-na-saude-da-mulher',
       title: 'Fisioterapia na Saúde da Mulher',
-      image: 'service-5.jpg',
+      image: 'fisioterapia-na-saude-da-mulher.jpg',
       blocks: {
         intro: {
           title: 'Fisioterapia na\nsaúde da mulher',
@@ -618,7 +622,8 @@ export const useServices = () => {
       id: 7,
       slug: 'pilates-clinico',
       title: 'Pilates Clínico',
-      image: 'service-5.jpg',
+      image: 'pilates-clinico.jpg',
+      locations: [1],
       blocks: {
         intro: {
           title: 'Pilates Clínico',
@@ -714,7 +719,8 @@ export const useServices = () => {
       id: 8,
       slug: 'nutricao',
       title: 'Nutrição',
-      image: 'service-5.jpg',
+      image: 'nutricao.jpg',
+      locations: [1, 2, 3, 5],
       blocks: {
         intro: {
           title: 'Nutrição',
@@ -774,7 +780,8 @@ export const useServices = () => {
       id: 9,
       slug: 'saude-e-bem-estar',
       title: 'Saúde e Bem-estar',
-      image: 'service-5.jpg',
+      image: 'saude-e-bem-estar.jpg',
+      locations: [1, 2, 3, 5],
       blocks: {
         intro: {
           title: 'Saúde e Bem-estar',
@@ -851,7 +858,8 @@ export const useServices = () => {
       id: 10,
       slug: 'consultas-medicas',
       title: 'Consultas Médicas',
-      image: 'service-5.jpg',
+      image: 'consultas-medicas.jpg',
+      locations: [1, 2, 3, 4, 5],
       blocks: {
         intro: {
           title: 'Consultas Médicas',

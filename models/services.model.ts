@@ -12,6 +12,7 @@ export interface Service {
   slug: string;
   title: string;
   image: string;
+  locations?: number[];
   blocks?: {
     intro?: IntroBlock;
     sideImage?: SideImageBlock;
