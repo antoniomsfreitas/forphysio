@@ -2,7 +2,7 @@
   <div class="container">
     <IntroRecruitment class="intro-block" />
 
-    <LayoutGrid>
+    <LayoutGrid class="form-block">
       <LayoutGridRow>
         <LayoutGridCol m="4" t="8" d="6" start-col-t="3" start-col-d="4">
           <ContactsForm :show-cv="true" />
@@ -19,5 +19,15 @@ import ContactsForm from '~/components/blocks/contacts/ContactsForm.vue';
 <style scoped lang="scss">
 .intro-block {
   margin-bottom: 20px;
+}
+
+.form-block {
+  @include mq-mobile {
+    margin-bottom: 100px;
+  }
+
+  @include mq-tablet-desktop {
+    margin-bottom: 160px;
+  }
 }
 </style>

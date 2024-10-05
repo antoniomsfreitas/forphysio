@@ -1,14 +1,16 @@
 <template>
   <div class="input-container">
-    <p class="input-label">{{ label }}</p>
+    <div class="input-label">
+      <span>{{ label }}</span>
+      <span class="extensions">( .pdf )</span>
+    </div>
 
     <div class="input-container__input" :class="{ 'input-container--error': hasError }">
-      <label for="input-file">
-        <span>{{ currentLabel }}</span>
+      <label for="input-file" :class="{ 'input-filled': currentValue.length }">
+        <span v-t="currentValue.length ? currentValue : $t('form-field.cv.default-label')" />
         <Icon name="icon:arrow-up" />
       </label>
-      <input type="file" id="input-file" @change="uploadFile" />
-      <Icon v-if="hasError" name="icon:error" />
+      <input type="file" id="input-file" accept=".pdf" @change="uploadFile" />
     </div>
 
     <span v-if="hasError" class="error-message">
@@ -18,8 +20,6 @@
 </template>
 
 <script setup lang="ts">
-import type { FormFieldValue } from '~/models/form.model';
-
 const props = defineProps({
   label: {
     type: String,
@@ -38,12 +38,10 @@ const props = defineProps({
 });
 
 const emit = defineEmits(['uploadFile']);
-
-const defaultLabel = 'Anexar ficheiro';
-const currentLabel = ref(defaultLabel);
+const currentValue = ref<string>('');
+const hasError = ref(false);
 
 // Error handling
-const hasError = ref(false);
 watch(
   () => props.errorMessage,
   (errorMessage) => {
@@ -60,9 +58,10 @@ const uploadFile = (event: Event) => {
 
   if (file) {
     emit('uploadFile', file);
-    currentLabel.value = file.name;
+    currentValue.value = file.name;
+    hasError.value = false;
   } else {
-    currentLabel.value = defaultLabel;
+    currentValue.value = '';
 
     if (props.errorMessage) {
       hasError.value = true;
@@ -79,6 +78,12 @@ const uploadFile = (event: Event) => {
     font-weight: $font-weight-light;
     line-height: 1.2;
     padding-bottom: 10px;
+
+    .extensions {
+      font-size: 14px;
+      margin-left: 8px;
+      color: #a1a2a4;
+    }
   }
 
   input {
@@ -91,7 +96,7 @@ const uploadFile = (event: Event) => {
     font-size: 14px;
     font-weight: $font-weight-light;
     line-height: 1.2;
-    color: $deep-grey;
+    color: $medium-grey;
     border: 1px solid transparent;
     border-radius: 35px;
     outline: none;
@@ -102,6 +107,10 @@ const uploadFile = (event: Event) => {
     &:focus {
       border-color: rgb(24 168 187);
       box-shadow: 0 0 0 3px rgba(24 168 187 / 25%);
+    }
+
+    &.input-filled {
+      color: $deep-grey;
     }
   }
 
@@ -117,8 +126,7 @@ const uploadFile = (event: Event) => {
   }
 
   &--error {
-    input,
-    textarea {
+    label {
       background: $error-bg;
 
       &:focus {

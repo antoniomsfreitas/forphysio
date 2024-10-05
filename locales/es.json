@@ -18,8 +18,11 @@
   "form-field.service.default-label": "Seleccionar servicio",
   "form-field.message": "Mensaje",
   "form-field.terms": "He leído y acepto la Política de Privacidad",
+  "form-field.cv": "Agregar CV",
+  "form-field.cv.default-label": "Adjuntar archivo",
   "form-field.validation.requiredField": "Campo obligatorio.",
   "form-field.validation.invalidEmail": "El correo electrónico ingresado no es válido.",
+  "form-field.validation.invalidFormat": "El formato de archivo que intentaste ingresar no es válido.",
 
   "recruitment-block.title": "¿Quieres ser parte de este equipo?",
   "recruitment-block.subtitle": "Muéstranos tu potencial",

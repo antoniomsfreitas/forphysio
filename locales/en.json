@@ -23,8 +23,11 @@
   "form-field.service.default-label": "Select Service",
   "form-field.message": "Message",
   "form-field.terms": "I have read and accept the Privacy Policy",
+  "form-field.cv": "Add Resume",
+  "form-field.cv.default-label": "Attach file",
   "form-field.validation.requiredField": "Required field.",
   "form-field.validation.invalidEmail": "The email entered is not valid.",
+  "form-field.validation.invalidFormat": "The file format you tried to insert is invalid.",
 
   "recruitment-block.title": "Do you want to be part of our team?",
   "recruitment-block.subtitle": "Show us your potential",

@@ -23,8 +23,11 @@
   "form-field.service.default-label": "選擇服務",
   "form-field.message": "訊息",
   "form-field.terms": "我已閱讀並接受隱私權政策",
+  "form-field.cv": "新增履歷",
+  "form-field.cv.default-label": "附加檔案",
   "form-field.validation.requiredField": "必填欄位。",
   "form-field.validation.invalidEmail": "輸入的電子郵件無效。",
+  "form-field.validation.invalidFormat": "您嘗試輸入的檔案格式無效。",
 
   "recruitment-block.title": "你想成為這個團隊的一員嗎？",
   "recruitment-block.subtitle": "向我們展示你的潛力",
