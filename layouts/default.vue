@@ -30,3 +30,11 @@ watch(
   { immediate: true },
 );
 </script>
+
+<style scoped lang="scss">
+@include mq-desktop {
+  main {
+    padding-top: var(--header-height);
+  }
+}
+</style>

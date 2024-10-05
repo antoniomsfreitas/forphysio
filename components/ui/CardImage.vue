@@ -1,5 +1,5 @@
 <template>
-  <CardUI class="card-image">
+  <CardUI class="card-image" :card-size="props.size">
     <NuxtLink :to="props.link" :target="linkTarget" class="card-image__link" :title="props.linkTitle">
       <PictureImage v-bind="{ ...imageSrcAttributes }" class="card-image__picture" />
 
@@ -51,6 +51,11 @@ const props = defineProps({
     type: Boolean,
     default: false,
     required: false,
+  },
+  size: {
+    type: String as PropType<'large' | 'small'>,
+    required: false,
+    default: 'large',
   },
 });
 
@@ -110,6 +115,37 @@ const imageSrcAttributes = {
 
   &__gradient {
     @include gradient-overlay('bottom-top', 50);
+  }
+
+  @include mq-mobile {
+    &[card-size='small'] .card-image__content {
+      padding: 0 8px 40px;
+      gap: 12px;
+
+      &__title {
+        font-size: 12px;
+      }
+
+      &__icon {
+        flex: 0 0 20px;
+        font-size: 20px;
+      }
+    }
+  }
+
+  @include mq-tablet {
+    &[card-size='small'] .card-image__content {
+      padding: 0 16px 40px;
+
+      &__title {
+        font-size: 16px;
+      }
+
+      &__icon {
+        flex: 0 0 35px;
+        font-size: 35px;
+      }
+    }
   }
 
   @include mq-desktop {

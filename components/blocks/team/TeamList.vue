@@ -7,15 +7,15 @@
     </LayoutGridRow>
     <LayoutGridRow class="team-filters">
       <LayoutGridCol m="4" t="4" d="4" start-col-d="2">
-        <CustomSelect v-model="selectedLocationId" :options="teamLocations" defaultLabel="Localizações" />
+        <CustomSelect v-model="selectedLocationId" :options="teamLocations" default-label="Localizações" />
       </LayoutGridCol>
 
       <LayoutGridCol m="4" t="4" d="4">
-        <CustomSelect v-model="selectedServiceId" :options="teamServices" defaultLabel="Serviços" />
+        <CustomSelect v-model="selectedServiceId" :options="teamServices" default-label="Serviços" />
       </LayoutGridCol>
 
       <LayoutGridCol m="4" t="4" d="2">
-        <Button class="team-filters__submit" @click="submitFilters()">Pesquisar</Button>
+        <Button class="team-filters__submit" size="large" @click="submitFilters()">Pesquisar</Button>
       </LayoutGridCol>
     </LayoutGridRow>
 
@@ -55,8 +55,7 @@
                 :src="member.image"
                 :alt="member.name"
                 :link="localePath(Routes.TEAM) + '/' + member.slug"
-                link-title="#"
-              ></CardTeam>
+              />
             </LayoutGridCol>
           </LayoutGridRow>
 

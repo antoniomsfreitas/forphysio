@@ -16,7 +16,33 @@
   "pages.partnerships": "夥伴關係",
   "pages.blog": "部落格",
   "pages.search": "搜尋網站",
+  
   "general.bookAppointment": "預約",
   "general.viewAll": "檢視全部",
   "general.subscribe": "訂閱電子報"
+  "general.book-evaluation": "預約評估",
+  "general.send": "發送",
+  "general.view": "見努諾",
+
+  "contacts.page-title": "我們來幫您",
+  "contacts.page-subtitle": "填寫下面的表格，或透過電子郵件或 Whatsapp 與我們聯繫。",
+  "contacts.available-units": "可用單位",
+  "contacts.form-title": "聯絡我們\n填寫表格",
+
+  "form-field.name": "名稱",
+  "form-field.phone": "聯絡電話",
+  "form-field.email": "電子郵件",
+  "form-field.service": "服務",
+  "form-field.service.default-label": "選擇服務",
+  "form-field.message": "訊息",
+  "form-field.terms": "我已閱讀並接受隱私權政策",
+  "form-field.validation.requiredField": "必填欄位。",
+  "form-field.validation.invalidEmail": "輸入的電子郵件無效。",
+
+  "recruitment-block.title": "你想成為這個團隊的一員嗎？",
+  "recruitment-block.subtitle": "向我們展示你的潛力",
+  "recruitment-block.button": "自發性申請",
+
+  "team.same-location-team": "同一单位的专业人员",
+  "team.how-to-arrive": "如何前往"
 }

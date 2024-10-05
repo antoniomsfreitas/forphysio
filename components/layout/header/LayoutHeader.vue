@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header ref="headerRef" class="header" :style="isDesktop ? headerFixedStyles : null">
     <LayoutGrid>
       <LayoutGridRow>
         <LayoutGridCol m="4" t="12">
@@ -26,6 +26,7 @@
 
 <script setup lang="ts">
 import type { HeaderMenu } from '~/models/layout.model';
+import { useFixedHeader } from 'vue-use-fixed-header';
 
 defineProps({
   data: {
@@ -33,13 +34,14 @@ defineProps({
     required: true,
   },
 });
+
+const headerRef = ref(null);
+
+const { styles: headerFixedStyles } = useFixedHeader(headerRef);
 </script>
 
 <style scoped lang="scss">
 .header {
-  --header-height: 60px;
-
-  position: relative;
   z-index: 9999;
   display: flex;
   align-items: center;
@@ -58,7 +60,9 @@ defineProps({
   }
 
   @include mq-desktop {
-    --header-height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
 
     &__logo-mobile {
       display: none;
