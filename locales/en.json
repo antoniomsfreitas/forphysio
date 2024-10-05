@@ -17,6 +17,7 @@
   "pages.blog": "Blog",
   "pages.search": "Search",
   "pages.recruitment": "Recruitment",
+  "pages.faqs": "Frequently Asked Questions",
 
   "general.bookAppointment": "Book appointment",
   "general.viewAll": "View all",
@@ -56,5 +57,7 @@
   "recruitment-block.text": "Show us your potential",
 
   "team.same-location-team": "Professionals from the same unit",
-  "team.how-to-arrive": "How to Arrive"
+  "team.how-to-arrive": "How to Arrive",
+
+  "faqs.title": "How can we help?"
 }
