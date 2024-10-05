@@ -1,4 +1,4 @@
-export type FormFieldValue = string | number | boolean;
+export type FormFieldValue = string | number | boolean | File | null;
 
 export interface FormField {
   value?: FormFieldValue;
