@@ -27,7 +27,17 @@
         :errorMessage="formData.email?.errorMessage"
       />
 
+      <CustomInputFile
+        v-if="showCV || true"
+        :label="t('form-field.add-cv')"
+        v-model="formData.cv.value"
+        :required="formData.cv.required"
+        :errorMessage="formData.cv?.errorMessage"
+        @upload-file="handleUploadCV"
+      />
+
       <CustomSelect
+        v-if="showServices"
         :options="services"
         :top-label="t('form-field.service')"
         :default-label="'-- ' + t('form-field.service.default-label') + ' --'"
@@ -57,6 +67,19 @@
 </template>
 
 <script setup lang="ts">
+const props = defineProps({
+  showCV: {
+    type: Boolean,
+    required: false,
+    default: false,
+  },
+  showServices: {
+    type: Boolean,
+    required: false,
+    default: false,
+  },
+});
+
 import CustomInput from '~/components/layout/form/CustomInput.vue';
 import type { FormData } from '~/models/form.model';
 
@@ -83,7 +106,12 @@ const formData: FormData = reactive({
   },
   service: {
     value: 0,
-    required: true,
+    required: props.showServices ? true : false,
+    errorMessage: '',
+  },
+  cv: {
+    value: null,
+    required: props.showCV ? true : false,
     errorMessage: '',
   },
   message: {
@@ -102,6 +130,11 @@ const handleSubmit = () => {
   if (validateForm()) {
     // TO DO - SEND MAIL
   }
+};
+
+const handleUploadCV = (file: File) => {
+  formData.cv.value = file;
+  console.log(formData);
 };
 
 const validateForm = () => {

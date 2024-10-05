@@ -5,6 +5,7 @@
   "pages.services": "Serviços",
   "pages.partnerships": "Acordos",
   "pages.blog": "Blog",
+  "pages.recruitment": "Recrutamento",
 
   "general.book-evaluation": "Marcar avaliação",
   "general.send": "Enviar",
@@ -28,6 +29,8 @@
   "recruitment-block.title": "Queres fazer parte desta equipa?",
   "recruitment-block.subtitle": "Mostra-nos o teu potencial",
   "recruitment-block.button": "Candidatura espontânea",
+  "recruitment-page.title": "Queres fazer parte desta equipa?",
+  "recruitment-page.text": "Mostra-nos o teu potencial",
 
   "team.same-location-team": "Profissionais da mesma unidade",
   "team.how-to-arrive": "Como chegar"
