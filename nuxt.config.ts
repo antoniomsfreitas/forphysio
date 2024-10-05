@@ -89,6 +89,12 @@ export default defineNuxtConfig({
         pt: '/acordos',
         'zh-SG': '/partnerships',
       },
+      recruitment: {
+        en: '/recruitment',
+        es: '/reclutamiento',
+        pt: '/recrutamento',
+        'zh-SG': '/recruitment',
+      },
       'team/index': {
         en: '/team',
         es: '/equipo',

@@ -1,11 +1,10 @@
-export function validateField(
-  value: any,
-  required: boolean,
-  t: (key: string) => string,
-  type?: string,
-): string | undefined {
-  if (required && (!value || !value?.length)) {
+export function validateField(value: any, required: boolean, type?: string): string | undefined {
+  if (required && (!value || value == null)) {
     return translation('form-field.validation.requiredField');
+  }
+
+  if (type == 'file' && value.type !== 'application/pdf') {
+    return translation('form-field.validation.invalidFormat');
   }
 
   if (type === 'email') {
