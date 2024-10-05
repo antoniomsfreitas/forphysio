@@ -27,7 +27,7 @@
               <Button
                 class="recruitment-block__content__intro__button"
                 type="outline"
-                @click="navigateTo(localePath(Routes.CONTACTS))"
+                @click="navigateTo(localePath(Routes.RECRUITMENT))"
               >
                 {{ $t('recruitment-block.button') }}
               </Button>
