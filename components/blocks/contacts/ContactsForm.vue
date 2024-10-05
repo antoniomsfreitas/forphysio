@@ -27,7 +27,17 @@
         :errorMessage="formData.email?.errorMessage"
       />
 
+      <CustomInputFile
+        v-if="showCv"
+        :label="t('form-field.cv')"
+        v-model="formData.cv.value"
+        :required="formData.cv.required"
+        :errorMessage="formData.cv?.errorMessage"
+        @upload-file="handleUploadCV"
+      />
+
       <CustomSelect
+        v-if="showServices"
         :options="services"
         :top-label="t('form-field.service')"
         :default-label="'-- ' + t('form-field.service.default-label') + ' --'"
@@ -57,6 +67,19 @@
 </template>
 
 <script setup lang="ts">
+const props = defineProps({
+  showCv: {
+    type: Boolean,
+    required: false,
+    default: false,
+  },
+  showServices: {
+    type: Boolean,
+    required: false,
+    default: false,
+  },
+});
+
 import CustomInput from '~/components/layout/form/CustomInput.vue';
 import type { FormData } from '~/models/form.model';
 
@@ -83,7 +106,13 @@ const formData: FormData = reactive({
   },
   service: {
     value: 0,
-    required: true,
+    required: props.showServices ? true : false,
+    errorMessage: '',
+  },
+  cv: {
+    value: null,
+    required: props.showCv ? true : false,
+    type: 'file',
     errorMessage: '',
   },
   message: {
@@ -104,6 +133,10 @@ const handleSubmit = () => {
   }
 };
 
+const handleUploadCV = (file: File) => {
+  formData.cv.value = file;
+};
+
 const validateForm = () => {
   let success: boolean = true;
 
@@ -112,7 +145,7 @@ const validateForm = () => {
     field.errorMessage = '';
 
     // validate field
-    const error = validateField(field.value, field.required, t, field?.type);
+    const error = validateField(field.value, field.required, field?.type);
 
     if (error?.length) {
       field.errorMessage = error;

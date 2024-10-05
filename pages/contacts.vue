@@ -72,7 +72,7 @@
       <LayoutGrid>
         <LayoutGridRow>
           <LayoutGridCol m="4" t="8" d="6" start-col-t="3" start-col-d="4">
-            <ContactsForm />
+            <ContactsForm show-services />
           </LayoutGridCol>
         </LayoutGridRow>
       </LayoutGrid>

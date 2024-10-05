@@ -5,6 +5,7 @@
   "pages.services": "Serviços",
   "pages.partnerships": "Acordos",
   "pages.blog": "Blog",
+  "pages.recruitment": "Recrutamento",
 
   "general.book-evaluation": "Marcar avaliação",
   "general.send": "Enviar",
@@ -22,12 +23,17 @@
   "form-field.service.default-label": "Selecionar Serviço",
   "form-field.message": "Mensagem",
   "form-field.terms": "Li e Aceito a Política de privacidade",
+  "form-field.cv": "Adicionar CV",
+  "form-field.cv.default-label": "Anexar ficheiro",
   "form-field.validation.requiredField": "Campo de preenchimento obrigatório.",
   "form-field.validation.invalidEmail": "O e-mail inserido não é válido.",
+  "form-field.validation.invalidFormat": "O formato do ficheiro que tentou inserir é inválido.",
 
   "recruitment-block.title": "Queres fazer parte desta equipa?",
   "recruitment-block.subtitle": "Mostra-nos o teu potencial",
   "recruitment-block.button": "Candidatura espontânea",
+  "recruitment-page.title": "Queres fazer parte desta equipa?",
+  "recruitment-page.text": "Mostra-nos o teu potencial",
 
   "team.same-location-team": "Profissionais da mesma unidade",
   "team.how-to-arrive": "Como chegar"
