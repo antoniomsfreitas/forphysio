@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <IntroBlock :page-title="$t('contacts.page-title')" contentColDesktop="6" class="intro-block">
+    <IntroBlock :page-title="$t('contacts.page-title')" content-col-desktop="6" class="intro-block">
       <template #image>
         <PictureImage
           :alt="$t('pages.contacts')"
@@ -32,7 +32,7 @@
           </a>
         </div>
 
-        <Button type="outline" size="medium">{{ $t('general.book-evaluation') }}</Button>
+        <Button type="outline" size="medium">{{ $t('general.bookAppointment') }}</Button>
       </template>
     </IntroBlock>
 
@@ -54,14 +54,16 @@
         <LayoutGridCol m="4" t="12" d="5" start-col-d="8">
           <h3 class="locations-block__title">{{ $t('contacts.available-units') }}:</h3>
           <ul class="locations-block__list">
-            <li v-for="location in locations" class="locations-block__list__item">
+            <li v-for="location in locations" :key="location.name" class="locations-block__list__item">
               <p class="title">{{ location.name }}</p>
               <p class="address">{{ location.address }}</p>
               <p class="phone">
                 <Icon name="icon:phone" />
                 <span>{{ location.phone }}</span>
               </p>
-              <p class="hours" v-html="location.hours"></p>
+
+              <!-- eslint-disable-next-line vue/no-v-html -->
+              <p class="hours" v-html="location.hours" />
             </li>
           </ul>
         </LayoutGridCol>
@@ -99,8 +101,8 @@ const { locations, social } = useContacts();
   }
 
   &__text {
-    color: $medium-grey;
     padding-bottom: 40px;
+    color: $medium-grey;
   }
 
   &__contacts {
@@ -111,8 +113,8 @@ const { locations, social } = useContacts();
 
     &__item {
       display: flex;
-      align-items: center;
       gap: 24px;
+      align-items: center;
       color: $white;
       text-decoration: none;
 
@@ -202,12 +204,12 @@ const { locations, social } = useContacts();
     }
 
     &__item {
-      font-size: 18px;
-      line-height: 1.2;
-      font-weight: $font-weight-light;
       display: flex;
       flex-direction: column;
       gap: 8px;
+      font-size: 18px;
+      font-weight: $font-weight-light;
+      line-height: 1.2;
 
       .title {
         font-size: 20px;
@@ -216,8 +218,8 @@ const { locations, social } = useContacts();
 
       .phone {
         display: flex;
-        align-items: center;
         gap: 4px;
+        align-items: center;
 
         span {
           display: block;
@@ -228,8 +230,8 @@ const { locations, social } = useContacts();
 }
 
 .form-block {
-  background-color: $deep-grey;
   margin-bottom: 160px;
+  background-color: $deep-grey;
 
   @include mq-mobile {
     padding: 80px 0;
