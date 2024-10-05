@@ -8,6 +8,7 @@ export const useServices = () => {
       title: 'Fisioterapia Músculo Esquelética',
       image: 'fisioterapia-musculo-esqueletica.jpg',
       locations: [1, 2, 3, 4, 5],
+      homepage: true,
       blocks: {
         intro: {
           title: 'Fisioterapia\nmúsculo esquelética',
@@ -105,6 +106,7 @@ export const useServices = () => {
       title: 'Fisioterapia no Desporto',
       image: 'fisioterapia-no-desporto.jpg',
       locations: [1, 2, 3, 4, 5],
+      homepage: true,
       blocks: {
         intro: {
           title: 'Fisioterapia no Desporto',
@@ -216,6 +218,7 @@ export const useServices = () => {
       title: 'Fisioterapia Aquática e Hidroterapia',
       image: 'fisioterapia-aquatica-e-hidroterapia.jpg',
       locations: [2, 4],
+      homepage: true,
       blocks: {
         intro: {
           title: 'Fisioterapia\nAquática e Hidroterapia',
@@ -316,6 +319,7 @@ export const useServices = () => {
       title: 'Fisioterapia no Envelhecimento',
       image: 'fisioterapia-no-envelhecimento.jpg',
       locations: [1, 2, 3, 4, 5],
+      homepage: true,
       blocks: {
         intro: {
           title: 'Fisioterapia no envelhecimento ativo',
@@ -415,6 +419,7 @@ export const useServices = () => {
       slug: 'fisioterapia-online',
       title: 'Fisioterapia Online',
       image: 'fisioterapia-online.jpg',
+      homepage: false,
       blocks: {
         intro: {
           title: 'Fisioterapia Online',
@@ -524,6 +529,7 @@ export const useServices = () => {
       slug: 'fisioterapia-na-saude-da-mulher',
       title: 'Fisioterapia na Saúde da Mulher',
       image: 'fisioterapia-na-saude-da-mulher.jpg',
+      homepage: true,
       blocks: {
         intro: {
           title: 'Fisioterapia na\nsaúde da mulher',
@@ -624,6 +630,7 @@ export const useServices = () => {
       title: 'Pilates Clínico',
       image: 'pilates-clinico.jpg',
       locations: [1],
+      homepage: false,
       blocks: {
         intro: {
           title: 'Pilates Clínico',
@@ -721,6 +728,7 @@ export const useServices = () => {
       title: 'Nutrição',
       image: 'nutricao.jpg',
       locations: [1, 2, 3, 5],
+      homepage: false,
       blocks: {
         intro: {
           title: 'Nutrição',
@@ -782,6 +790,7 @@ export const useServices = () => {
       title: 'Saúde e Bem-estar',
       image: 'saude-e-bem-estar.jpg',
       locations: [1, 2, 3, 5],
+      homepage: false,
       blocks: {
         intro: {
           title: 'Saúde e Bem-estar',
@@ -860,6 +869,7 @@ export const useServices = () => {
       title: 'Consultas Médicas',
       image: 'consultas-medicas.jpg',
       locations: [1, 2, 3, 4, 5],
+      homepage: false,
       blocks: {
         intro: {
           title: 'Consultas Médicas',
@@ -905,8 +915,13 @@ export const useServices = () => {
     return services.find((service) => service.slug === slug);
   };
 
+  const getHomepageServices = (): Service[] | undefined => {
+    return services.filter((service) => service.homepage === true);
+  };
+
   return {
     services,
+    getHomepageServices,
     getServiceBySlug,
   };
 };

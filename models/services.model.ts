@@ -13,6 +13,7 @@ export interface Service {
   title: string;
   image: string;
   locations?: number[];
+  homepage: boolean;
   blocks?: {
     intro?: IntroBlock;
     sideImage?: SideImageBlock;

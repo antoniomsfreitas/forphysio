@@ -12,6 +12,7 @@
   "general.appointment-cancellation.legal-note": "Cancelar una cita con menos de 24 horas de antelación a la fecha y hora de su inicio, implica el pago del importe íntegro.\nEn el caso de cancelación de sesión incluida en los Paquetes ForPhysio o Programas, esta sesión será descontada del Paquete o Programa \n(Información válida, salvo presentación de certificado médico vigente a la fecha de la sesión.)",
   "general.send": "Enviar",
   "general.view": "Ver",
+  "general.view-all": "Ver todo",
   "general.ourUnits": "Nuestras clínicas",
   "general.selectUnit": "Seleccionar clínica",
 
