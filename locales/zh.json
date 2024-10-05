@@ -8,8 +8,14 @@
   "pages.recruitment": "招募",
 
   "general.book-evaluation": "預約評估",
+  "general.book-appointment": "預約",
+  "general.schedule-your-appointment": "安排您的預約",
+  "general.appointment-cancellation.legal-note": "在開始日期和時間前 24 小時內取消預約，意味著支付全部金額。\n如果取消 ForPhysio 套餐中包含的課程或課程，本次課程將從套餐或課程扣除\n資訊有效，除非出示課程當日有效的醫療證明。",
   "general.send": "發送",
   "general.view": "見努諾",
+  "general.view-all": "看全部",
+  "general.ourUnits": "我們的診所",
+  "general.selectUnit": "選擇診所",
 
   "contacts.page-title": "我們來幫您",
   "contacts.page-subtitle": "填寫下面的表格，或透過電子郵件或 Whatsapp 與我們聯繫。",

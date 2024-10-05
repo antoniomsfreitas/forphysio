@@ -2,9 +2,9 @@
   <LayoutGrid>
     <LayoutGridRow class="locations-map">
       <LayoutGridCol m="4" t="5" d="3" class="locations-map__locations">
-        <h2>As nossas unidades</h2>
+        <h2 v-t="'general.ourUnits'" />
         <div class="locations-map__locations__list">
-          <span class="locations-map__locations__list__title">Selecione a Unidade</span>
+          <span class="locations-map__locations__list__title" v-t="'general.selectUnit'" />
           <ul>
             <li
               v-for="location in locations"

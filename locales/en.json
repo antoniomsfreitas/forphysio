@@ -8,8 +8,14 @@
   "pages.recruitment": "Recruitment",
 
   "general.book-evaluation": "Book evaluation",
+  "general.book-appointment": "Book Appointment",
+  "general.schedule-your-appointment": "Schedule your appointment",
+  "general.appointment-cancellation.legal-note": "Canceling an appointment less than 24 hours before the date and time of its start, implies payment of the entire amount.\nIn the case of cancellation of session included in the ForPhysio Packages or Programs, this session will be deducted from the Package or Program \n(Information valid, except on presentation of a medical certificate in force on the date of the session.)",
   "general.send": "Send",
   "general.view": "View",
+  "general.view-all": "View all",
+  "general.ourUnits": "Our clinics",
+  "general.selectUnit": "Select clinic",
 
   "contacts.page-title": "We're here to help you.",
   "contacts.page-subtitle": "Fill out the form below, or get in touch via email or Whatsapp.",

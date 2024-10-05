@@ -1,62 +1,47 @@
 <template>
   <ScrollbarSlideshow class="services-slideshow-container" title="Serviços">
-    <SwiperSlide v-for="item in items" :key="item.id" class="services-slideshow-container__slide">
+    <SwiperSlide v-for="service in services" :key="service.id" class="services-slideshow-container__slide">
       <CardImage
-        :title="item.title"
-        :src="item.src"
-        :link="item.link"
-        :alt="item.alt"
-        :link-title="`Clique aqui para ver mais detalhes sobre: ${item.title}`"
+        :title="service.title"
+        :src="getImagePath(service.image)"
+        :link="getServicesPage(service.slug)"
+        :alt="$t('general.image') + ': ' + service.image"
+        :link-title="$t('general.viewDetail')"
+      />
+    </SwiperSlide>
+
+    <SwiperSlide class="services-slideshow-container__slide">
+      <CardImage
+        :title="$t('general.view-all')"
+        :src="getImagePath('view-all.jpg')"
+        :link="getServicesPage()"
+        :alt="$t('general.view-all')"
+        :link-title="$t('general.view-all')"
       />
     </SwiperSlide>
   </ScrollbarSlideshow>
 </template>
 
 <script setup lang="ts">
-const items = [
-  {
-    id: 1,
-    title: 'Fisioterapia músculo esquelética',
-    src: '/images/homepage/services-block/service-1.jpg',
-    alt: 'A definir',
-    link: '#',
-  },
-  {
-    id: 2,
-    title: 'Fisioterapia aquática e hidroterapia',
-    src: '/images/homepage/services-block/service-2.jpg',
-    alt: 'A definir',
-    link: '#',
-  },
-  {
-    id: 3,
-    title: 'Fisioterapia no envelhecimento',
-    src: '/images/homepage/services-block/service-3.jpg',
-    alt: 'A definir',
-    link: '#',
-  },
-  {
-    id: 4,
-    title: 'Fisioterapia no desporto',
-    src: '/images/homepage/services-block/service-4.jpg',
-    alt: 'A definir',
-    link: '#',
-  },
-  {
-    id: 5,
-    title: 'Fisioterapia na saúde da mulher',
-    src: '/images/homepage/services-block/service-5.jpg',
-    alt: 'A definir',
-    link: '#',
-  },
-  {
-    id: 6,
-    title: 'Ver todos',
-    src: '/images/homepage/services-block/service-6.jpg',
-    alt: 'A definir',
-    link: '#',
-  },
-];
+import { Routes } from '~/models/routes.model';
+import { useServices } from '~/composables/services.composable';
+
+const localePath = useLocalePath();
+const { getHomepageServices } = useServices();
+
+const services = getHomepageServices();
+
+const getImagePath = (image: string) => {
+  return '/images/services/list/' + image;
+};
+
+const getServicesPage = (slug?: string): string => {
+  if (slug) {
+    return `${localePath(Routes.SERVICES)}/${slug}`;
+  }
+
+  return `${localePath(Routes.SERVICES)}`;
+};
 </script>
 
 <style scoped lang="scss">

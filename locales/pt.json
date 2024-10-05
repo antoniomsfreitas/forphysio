@@ -8,8 +8,14 @@
   "pages.recruitment": "Recrutamento",
 
   "general.book-evaluation": "Marcar avaliação",
+  "general.book-appointment": "Marcar consulta",
+  "general.schedule-your-appointment": "Agende a sua consulta",
+  "general.appointment-cancellation.legal-note": "O cancelamento de consulta com menos de 24h de antecedência da data e hora do seu início, implica o pagamento da totalidade do valor da mesma.\nNo caso de se tratar do cancelamento de sessão incluída nos Packs ou Programas ForPhysio, será descontada essa sessão do Pack ou do Programa.\n(Informação válida, exceto na apresentação de um atestado médico em vigor à data da sessão.)",
   "general.send": "Enviar",
   "general.view": "Ver",
+  "general.view-all": "Ver todos",
+  "general.ourUnits": "As nossas unidades",
+  "general.selectUnit": "Selecione a Unidade",
 
   "contacts.page-title": "Estamos aqui para o ajudar.",
   "contacts.page-subtitle": "Preencha o formulário abaixo, ou contacte-nos através do e-mail ou Whatsapp.",

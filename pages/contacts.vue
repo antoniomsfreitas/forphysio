@@ -52,18 +52,7 @@
         </LayoutGridCol>
 
         <LayoutGridCol m="4" t="12" d="5" start-col-d="8">
-          <h3 class="locations-block__title">{{ $t('contacts.available-units') }}:</h3>
-          <ul class="locations-block__list">
-            <li v-for="location in locations" class="locations-block__list__item">
-              <p class="title">{{ location.name }}</p>
-              <p class="address">{{ location.address }}</p>
-              <p class="phone">
-                <Icon name="icon:phone" />
-                <span>{{ location.phone }}</span>
-              </p>
-              <p class="hours" v-html="location.hours"></p>
-            </li>
-          </ul>
+          <LocationsList />
         </LayoutGridCol>
       </LayoutGridRow>
     </LayoutGrid>
@@ -81,7 +70,7 @@
 </template>
 
 <script setup lang="ts">
-const { locations, social } = useContacts();
+const { social } = useContacts();
 </script>
 
 <style scoped lang="scss">
@@ -171,58 +160,6 @@ const { locations, social } = useContacts();
   &__image {
     img {
       max-width: 100%;
-    }
-  }
-
-  &__title {
-    @include mq-mobile-tablet {
-      padding-bottom: 24px;
-    }
-
-    @include mq-desktop {
-      padding-bottom: 60px;
-    }
-  }
-
-  &__list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-
-    @include mq-mobile {
-      grid-template-columns: 1fr;
-    }
-
-    @include mq-tablet {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    @include mq-desktop {
-      grid-template-columns: 1fr 1fr;
-    }
-
-    &__item {
-      font-size: 18px;
-      line-height: 1.2;
-      font-weight: $font-weight-light;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-
-      .title {
-        font-size: 20px;
-        font-weight: $font-weight-semi-bold;
-      }
-
-      .phone {
-        display: flex;
-        align-items: center;
-        gap: 4px;
-
-        span {
-          display: block;
-        }
-      }
     }
   }
 }
