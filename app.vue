@@ -25,7 +25,7 @@ const handlePageDataLoaded = () => {
   opacity: 0;
 
   &--is-loaded {
-    animation: 250ms forwards fadeIn;
+    animation: 250ms forwards fade-in;
   }
 }
 </style>

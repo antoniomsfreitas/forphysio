@@ -71,7 +71,7 @@ defineProps({
     left: 24px;
     z-index: 999;
     opacity: 0;
-    animation: 250ms forwards fadeIn;
+    animation: 250ms forwards fade-in;
 
     img {
       width: 56px;
