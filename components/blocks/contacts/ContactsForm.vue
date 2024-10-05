@@ -80,8 +80,6 @@ const props = defineProps({
   },
 });
 
-console.log(props);
-
 import CustomInput from '~/components/layout/form/CustomInput.vue';
 import type { FormData } from '~/models/form.model';
 
