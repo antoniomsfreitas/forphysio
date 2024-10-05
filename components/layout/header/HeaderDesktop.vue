@@ -1,4 +1,3 @@
-<!-- components/layout/header/LayoutHeader.vue -->
 <template>
   <div class="header__inner">
     <div class="header__inner__left">
@@ -19,10 +18,10 @@
         <li v-for="menu in mainMenu" :key="menu.name" class="header__inner__right__menu__item">
           <NuxtLink :to="localePath(menu.route)">
             <span>{{ $t(menu.name) }}</span>
-            <Icon v-if="menu.submenu.length" name="icon:arrow-down" />
+            <Icon v-if="menu.submenu?.length" name="icon:arrow-down" />
           </NuxtLink>
 
-          <ul v-if="menu.submenu.length" class="header__inner__right__menu__item__submenu">
+          <ul v-if="menu.submenu?.length" class="header__inner__right__menu__item__submenu">
             <li
               v-for="submenu in menu.submenu"
               :key="submenu.name"
@@ -31,19 +30,19 @@
                 'header__inner__right__menu__item__submenu__item--view-all': submenu.viewAll,
               }"
             >
-              <NuxtLink :to="localePath(submenu.route)">{{ submenu.name }}</NuxtLink>
+              <NuxtLink :to="localePath(submenu.route)">{{ $t(submenu.name) }}</NuxtLink>
             </li>
           </ul>
         </li>
       </ul>
 
       <div class="header__inner__right__options">
-        <NuxtLink v-if="searchOption" :to="searchOption.route" :title="searchOption.name">
+        <NuxtLink :to="searchOption.route" :title="$t(searchOption.name)">
           <Icon name="icon:search-white" />
         </NuxtLink>
 
-        <NuxtLink v-if="buttonOption" :to="buttonOption.route" class="button button--secondary">
-          {{ buttonOption.name }}
+        <NuxtLink :to="buttonOption.route" class="button button--secondary">
+          {{ $t(buttonOption.name) }}
         </NuxtLink>
       </div>
     </div>
@@ -51,18 +50,39 @@
 </template>
 
 <script setup lang="ts">
+import type { HeaderMenuOption } from '~/models/layout.model';
 const localePath = useLocalePath();
-const { mainMenu, searchOption, buttonOption } = useHeader();
+
+defineProps({
+  mainMenu: {
+    type: Object as PropType<HeaderMenuOption[]>,
+    required: true,
+  },
+  searchOption: {
+    type: Object as PropType<HeaderMenuOption>,
+    required: true,
+  },
+  buttonOption: {
+    type: Object as PropType<HeaderMenuOption>,
+    required: true,
+  },
+});
 </script>
 
 <style scoped lang="scss">
 .header {
   &__inner {
-    display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 100%;
     height: var(--header-height);
+
+    @include mq-desktop {
+      display: flex;
+    }
+
+    @include mq-mobile-tablet {
+      display: none;
+    }
 
     &__left {
       display: flex;

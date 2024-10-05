@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <IntroBlock :page-title="$t('contacts.page-title')" contentColDesktop="6" class="intro-block">
+    <IntroBlock :page-title="$t('contacts.page-title')" content-col-desktop="6" class="intro-block">
       <template #image>
         <PictureImage
           :alt="$t('pages.contacts')"
@@ -32,7 +32,7 @@
           </a>
         </div>
 
-        <Button type="outline" size="medium">{{ $t('general.book-evaluation') }}</Button>
+        <Button type="outline" size="medium">{{ $t('general.bookAppointment') }}</Button>
       </template>
     </IntroBlock>
 
@@ -88,8 +88,8 @@ const { social } = useContacts();
   }
 
   &__text {
-    color: $medium-grey;
     padding-bottom: 40px;
+    color: $medium-grey;
   }
 
   &__contacts {
@@ -100,8 +100,8 @@ const { social } = useContacts();
 
     &__item {
       display: flex;
-      align-items: center;
       gap: 24px;
+      align-items: center;
       color: $white;
       text-decoration: none;
 
@@ -165,8 +165,8 @@ const { social } = useContacts();
 }
 
 .form-block {
-  background-color: $deep-grey;
   margin-bottom: 160px;
+  background-color: $deep-grey;
 
   @include mq-mobile {
     padding: 80px 0;

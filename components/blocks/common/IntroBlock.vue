@@ -55,8 +55,8 @@ const props = defineProps({
   }
 
   @include mq-desktop {
-    padding-top: 150px;
     min-height: 800px;
+    padding-top: 150px;
   }
 
   &__content {

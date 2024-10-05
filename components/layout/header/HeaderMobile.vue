@@ -1,21 +1,20 @@
-<!-- components/layout/header/LayoutHeader.vue -->
 <template>
   <div class="header__inner">
     <div class="header__inner__bottom-bar">
       <Icon name="icon:hamburger-menu" size="29" @click="toggleMenuSidebar" />
 
       <NuxtLink v-if="buttonOption" :to="localePath(buttonOption.route)" class="button button--secondary">
-        {{ buttonOption.name }}
+        {{ $t(buttonOption.name) }}
       </NuxtLink>
 
-      <NuxtLink v-if="searchOption" :to="localePath(searchOption.route)" :title="searchOption.name">
+      <NuxtLink v-if="searchOption" :to="localePath(searchOption.route)" :title="$t(searchOption.name)">
         <Icon name="icon:search-white" />
       </NuxtLink>
     </div>
 
     <div class="header__inner__sidebar" :class="{ 'header__inner__sidebar--opened': menuSidebarOpened }">
       <div class="header__inner__sidebar__top">
-        <NuxtLink to="/">
+        <NuxtLink to="/" @click="toggleMenuSidebar">
           <NuxtImg class="header__inner__sidebar__top__logo" src="/images/common/logo/logo-white.png" sizes="92px" />
         </NuxtLink>
 
@@ -25,15 +24,15 @@
       <ul class="header__inner__sidebar__menu">
         <li v-for="(menu, index) in mainMenu" :key="menu.name" class="header__inner__sidebar__menu__item">
           <NuxtLink
-            :to="menu.submenu.length ? undefined : localePath(menu.route)"
-            @click="menu.submenu.length ? toggleSubmenu(index) : toggleMenuSidebar()"
+            :to="menu.submenu?.length ? undefined : localePath(menu.route)"
+            @click="menu.submenu?.length ? toggleSubmenu(index) : toggleMenuSidebar()"
           >
             <span>{{ $t(menu.name) }}</span>
-            <Icon v-if="menu.submenu.length" name="icon:arrow-right" />
+            <Icon v-if="menu.submenu?.length" name="icon:arrow-right" />
           </NuxtLink>
 
           <div
-            v-if="menu.submenu.length"
+            v-if="menu.submenu?.length"
             class="header__inner__sidebar__menu__item__submenu"
             :class="{ 'header__inner__sidebar__menu__item__submenu--opened': isSubmenuOpened(index) }"
           >
@@ -54,21 +53,36 @@
                   'header__inner__sidebar__menu__item__submenu__item--view-all': submenu.viewAll,
                 }"
               >
-                <NuxtLink :to="localePath(submenu.route)" @click="toggleMenuSidebar">{{ submenu.name }}</NuxtLink>
+                <NuxtLink :to="localePath(submenu.route)" @click="toggleMenuSidebar">{{ $t(submenu.name) }}</NuxtLink>
               </li>
             </ul>
           </div>
         </li>
       </ul>
 
-      <LanguageSwitcher @language-changed="toggleMenuSidebar" />
+      <LanguageSwitcher />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import type { HeaderMenuOption } from '~/models/layout.model';
 const localePath = useLocalePath();
-const { mainMenu, searchOption, buttonOption } = useHeader();
+
+defineProps({
+  mainMenu: {
+    type: Object as PropType<HeaderMenuOption[]>,
+    required: true,
+  },
+  searchOption: {
+    type: Object as PropType<HeaderMenuOption>,
+    required: true,
+  },
+  buttonOption: {
+    type: Object as PropType<HeaderMenuOption>,
+    required: true,
+  },
+});
 
 const menuSidebarOpened = ref<boolean>(false);
 const submenuOpened = ref<number | null>(null);
@@ -91,6 +105,14 @@ const isSubmenuOpened = (index: number) => {
 .header {
   &__inner {
     height: var(--header-height);
+
+    @include mq-desktop {
+      display: none;
+    }
+
+    @include mq-mobile-tablet {
+      display: block;
+    }
 
     &__bottom-bar {
       display: flex;
@@ -126,8 +148,8 @@ const isSubmenuOpened = (index: number) => {
           justify-content: space-between;
 
           &__logo {
-            object-fit: contain;
             width: 92px;
+            object-fit: contain;
           }
         }
       }

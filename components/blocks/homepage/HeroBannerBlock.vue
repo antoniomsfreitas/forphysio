@@ -9,35 +9,13 @@
       :autoplay="{ delay: 4000, disableOnInteraction: true }"
       :scrollbar="{ draggable: true, el: '.hero-banner__content__info__scrollbar' }"
     >
-      <SwiperSlide class="hero-banner__slideshow__slide">
+      <SwiperSlide v-for="slide in sliders" :key="slide.id" class="hero-banner__slideshow__slide">
         <PictureImage
-          alt="Imagem de um profissional de fisioterapia a ajudar o seu paciente no exercício supino com barra"
           class="hero-banner__slideshow__slide__image"
-          src="/images/homepage/hero-banner-block/image-1/image-1-mobile.jpg"
-          src-t="/images/homepage/hero-banner-block/image-1/image-1-tablet.jpg"
-          src-d="/images/homepage/hero-banner-block/image-1/image-1-desktop.jpg"
-          cover
-        />
-      </SwiperSlide>
-
-      <SwiperSlide class="hero-banner__slideshow__slide">
-        <PictureImage
-          alt="Imagem de um profissional de fisioterapia a ajudar o seu paciente com um problema de joelho"
-          class="hero-banner__slideshow__slide__image"
-          src="/images/homepage/hero-banner-block/image-2/image-2-mobile.jpg"
-          src-t="/images/homepage/hero-banner-block/image-2/image-2-tablet.jpg"
-          src-d="/images/homepage/hero-banner-block/image-2/image-2-desktop.jpg"
-          cover
-        />
-      </SwiperSlide>
-
-      <SwiperSlide class="hero-banner__slideshow__slide">
-        <PictureImage
-          alt="Imagem de uma mulher a receber um tratamento de bem-estar por parte de uma profissional da fisioterapia"
-          class="hero-banner__slideshow__slide__image"
-          src="/images/homepage/hero-banner-block/image-3/image-3-mobile.jpg"
-          src-t="/images/homepage/hero-banner-block/image-3/image-3-tablet.jpg"
-          src-d="/images/homepage/hero-banner-block/image-3/image-3-desktop.jpg"
+          :alt="slide.image.alt"
+          :src="slide.image.mobile"
+          :src-t="slide.image.tablet"
+          :src-d="slide.image.desktop"
           cover
         />
       </SwiperSlide>
@@ -47,8 +25,15 @@
       <LayoutGrid>
         <LayoutGridRow>
           <LayoutGridCol m="4" t="12" class="hero-banner__content__info">
-            <h2 class="hero-banner__content__info__title">Exercício • Fisioterapia • Bem-Estar</h2>
-            <button class="hero-banner__content__info__button button button--tertiary">Marcar consulta</button>
+            <h2 class="hero-banner__content__info__title">{{ info.title }}</h2>
+
+            <button
+              class="hero-banner__content__info__button button button--tertiary"
+              @click.prevent="handleClickButton"
+            >
+              {{ info.cta.label }}
+            </button>
+
             <div class="swiper-custom-scrollbar hero-banner__content__info__scrollbar" />
           </LayoutGridCol>
         </LayoutGridRow>
@@ -58,6 +43,25 @@
     <div class="hero-banner__gradient" />
   </div>
 </template>
+
+<script setup lang="ts">
+import type { HeroBannerBlock } from '~/models/blocks/hero-banner.model';
+const localePath = useLocalePath();
+
+const props = defineProps({
+  data: {
+    type: Object as PropType<HeroBannerBlock>,
+    required: true,
+  },
+});
+
+const info = computed(() => props.data.info);
+const sliders = computed(() => props.data.sliders);
+
+const handleClickButton = () => {
+  navigateTo(localePath(info.value?.cta.link));
+};
+</script>
 
 <style scoped lang="scss">
 .hero-banner {

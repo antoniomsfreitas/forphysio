@@ -1,31 +1,31 @@
 <template>
   <div class="newsletter-block">
     <PictureImage
-      alt="Newsletter"
       class="newsletter-block__image"
-      src="/images/common/newsletter-block/image-mobile.jpg"
-      src-t="/images/common/newsletter-block/image-tablet.jpg"
-      src-d="/images/common/newsletter-block/image-desktop.jpg"
+      :alt="data.image.alt"
+      :src="data.image.mobile"
+      :src-t="data.image.tablet"
+      :src-d="data.image.desktop"
       cover
     />
+
     <div class="newsletter-block__gradient" />
+
     <div class="newsletter-block__content">
       <LayoutGrid>
         <LayoutGridRow>
           <LayoutGridCol m="4" d="10" t="12" start-col-d="2">
             <div class="newsletter-block__content__intro">
-              <h3 class="newsletter-block__content__intro__title">
-                Subscreva a
-                <br >
-                nossa newsletter
-              </h3>
-              <p class="newsletter-block__content__intro__text">Receba as novidades da ForPhysio Clinic</p>
+              <h3 class="newsletter-block__content__intro__title">{{ data.title }}</h3>
+              <p class="newsletter-block__content__intro__text">{{ data.intro }}</p>
             </div>
+
             <div class="newsletter-block__content__form form">
               <div class="input-container">
                 <input type="text" placeholder="exemplo@email.com" >
               </div>
-              <button type="submit" class="button button--primary">Subscrever</button>
+
+              <button v-t="'general.subscribe'" type="submit" class="button button--primary" />
             </div>
           </LayoutGridCol>
         </LayoutGridRow>
@@ -34,7 +34,16 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import type { NewsletterBlock } from '~/models/blocks/newsletter-block';
+
+defineProps({
+  data: {
+    type: Object as PropType<NewsletterBlock>,
+    required: true,
+  },
+});
+</script>
 
 <style scoped lang="scss">
 .newsletter-block {
