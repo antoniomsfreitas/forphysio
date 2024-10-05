@@ -1,4 +1,3 @@
-<!-- components/layout/header/LayoutHeader.vue -->
 <template>
   <div class="header__inner">
     <div class="header__inner__left">
@@ -73,11 +72,17 @@ defineProps({
 <style scoped lang="scss">
 .header {
   &__inner {
-    display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 100%;
     height: var(--header-height);
+
+    @include mq-desktop {
+      display: flex;
+    }
+
+    @include mq-mobile-tablet {
+      display: none;
+    }
 
     &__left {
       display: flex;

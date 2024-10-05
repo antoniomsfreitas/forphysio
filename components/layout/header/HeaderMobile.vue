@@ -1,4 +1,3 @@
-<!-- components/layout/header/LayoutHeader.vue -->
 <template>
   <div class="header__inner">
     <div class="header__inner__bottom-bar">
@@ -15,7 +14,7 @@
 
     <div class="header__inner__sidebar" :class="{ 'header__inner__sidebar--opened': menuSidebarOpened }">
       <div class="header__inner__sidebar__top">
-        <NuxtLink to="/">
+        <NuxtLink to="/" @click="toggleMenuSidebar">
           <NuxtImg class="header__inner__sidebar__top__logo" src="/images/common/logo/logo-white.png" sizes="92px" />
         </NuxtLink>
 
@@ -106,6 +105,14 @@ const isSubmenuOpened = (index: number) => {
 .header {
   &__inner {
     height: var(--header-height);
+
+    @include mq-desktop {
+      display: none;
+    }
+
+    @include mq-mobile-tablet {
+      display: block;
+    }
 
     &__bottom-bar {
       display: flex;

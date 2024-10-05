@@ -8,7 +8,7 @@ interface HeroBannerSliders {
   };
 }
 
-export interface HeroBanner {
+export interface HeroBannerBlock {
   info: {
     title: string;
     cta: {

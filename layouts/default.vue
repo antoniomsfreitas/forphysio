@@ -1,9 +1,11 @@
 <template>
-  <div class="container" :class="{ 'container--is-loaded': isLoaded }">
+  <div class="container">
     <LayoutHeader v-if="headerData" :data="headerData" />
+
     <main>
       <slot />
     </main>
+
     <LayoutFooter />
   </div>
 </template>
@@ -12,8 +14,19 @@
 import { useLayout } from '~/composables/layouts.composable';
 
 const { getLayoutData } = useLayout();
-const { status, data } = await getLayoutData();
+const { data, status } = await getLayoutData();
 
-const isLoaded = computed(() => status.value === 'success');
 const headerData = computed(() => data.value?.header);
+
+const emit = defineEmits(['onDataLoaded']);
+
+watch(
+  status,
+  (newStatus) => {
+    if (newStatus === 'success') {
+      emit('onDataLoaded');
+    }
+  },
+  { immediate: true },
+);
 </script>

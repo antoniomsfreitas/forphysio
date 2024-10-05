@@ -4,18 +4,22 @@
       <LayoutGridRow>
         <LayoutGridCol m="4" t="12">
           <HeaderDesktop
-            v-if="isDesktop"
-            :main-menu="mainMenu"
-            :search-option="searchOption"
-            :button-option="buttonOption"
+            :main-menu="data.mainMenu"
+            :search-option="data.searchOption"
+            :button-option="data.buttonOption"
           />
-          <HeaderMobile v-else :main-menu="mainMenu" :search-option="searchOption" :button-option="buttonOption" />
+
+          <HeaderMobile
+            :main-menu="data.mainMenu"
+            :search-option="data.searchOption"
+            :button-option="data.buttonOption"
+          />
         </LayoutGridCol>
       </LayoutGridRow>
     </LayoutGrid>
   </header>
 
-  <NuxtLink v-if="!isDesktop" to="/" class="logo-mobile">
+  <NuxtLink to="/" class="header__logo-mobile">
     <NuxtImg src="/images/common/logo/logo-mini-white.png" sizes="56px" />
   </NuxtLink>
 </template>
@@ -23,16 +27,12 @@
 <script setup lang="ts">
 import type { HeaderMenu } from '~/models/layout.model';
 
-const props = defineProps({
+defineProps({
   data: {
     type: Object as PropType<HeaderMenu>,
     required: true,
   },
 });
-
-const mainMenu = computed(() => props.data.mainMenu);
-const searchOption = computed(() => props.data.searchOption);
-const buttonOption = computed(() => props.data.buttonOption);
 </script>
 
 <style scoped lang="scss">
@@ -51,10 +51,32 @@ const buttonOption = computed(() => props.data.buttonOption);
     position: fixed;
     bottom: 0;
     left: 0;
+
+    &__logo-mobile {
+      display: block;
+    }
   }
 
   @include mq-desktop {
     --header-height: 80px;
+
+    &__logo-mobile {
+      display: none;
+    }
+  }
+
+  &__logo-mobile {
+    position: absolute;
+    top: 28px;
+    left: 24px;
+    z-index: 999;
+    opacity: 0;
+    animation: 250ms forwards fadeIn;
+
+    img {
+      width: 56px;
+      object-fit: contain;
+    }
   }
 
   :deep(.button) {
@@ -62,18 +84,6 @@ const buttonOption = computed(() => props.data.buttonOption);
     padding: 8px 36px;
     font-size: 12px;
     line-height: 1.5;
-  }
-}
-
-.logo-mobile {
-  position: absolute;
-  top: 28px;
-  left: 24px;
-  z-index: 999;
-
-  img {
-    width: 56px;
-    object-fit: contain;
   }
 }
 </style>

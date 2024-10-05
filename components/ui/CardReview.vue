@@ -40,7 +40,7 @@ defineProps({
 });
 </script>
 
-<style setup lang="scss">
+<style scoped lang="scss">
 .card-customer-review {
   position: relative;
   display: flex;

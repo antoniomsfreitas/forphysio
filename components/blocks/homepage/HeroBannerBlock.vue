@@ -45,12 +45,12 @@
 </template>
 
 <script setup lang="ts">
-import type { HeroBanner } from '~/models/blocks/hero-banner.model';
+import type { HeroBannerBlock } from '~/models/blocks/hero-banner.model';
 const localePath = useLocalePath();
 
 const props = defineProps({
   data: {
-    type: Object as PropType<HeroBanner>,
+    type: Object as PropType<HeroBannerBlock>,
     required: true,
   },
 });
