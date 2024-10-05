@@ -16,12 +16,20 @@
   "pages.partnerships": "夥伴關係",
   "pages.blog": "部落格",
   "pages.search": "搜尋網站",
+  "pages.recruitment": "招募",
 
   "general.bookAppointment": "預約",
   "general.viewAll": "檢視全部",
   "general.subscribe": "訂閱電子報",
+  "general.book-evaluation": "預約評估",
+  "general.book-appointment": "預約",
+  "general.schedule-your-appointment": "安排您的預約",
+  "general.appointment-cancellation.legal-note": "在開始日期和時間前 24 小時內取消預約，意味著支付全部金額。\n如果取消 ForPhysio 套餐中包含的課程或課程，本次課程將從套餐或課程扣除\n資訊有效，除非出示課程當日有效的醫療證明。",
   "general.send": "發送",
   "general.view": "見努諾",
+  "general.view-all": "看全部",
+  "general.ourUnits": "我們的診所",
+  "general.selectUnit": "選擇診所",
 
   "contacts.page-title": "我們來幫您",
   "contacts.page-subtitle": "填寫下面的表格，或透過電子郵件或 Whatsapp 與我們聯繫。",
@@ -35,12 +43,17 @@
   "form-field.service.default-label": "選擇服務",
   "form-field.message": "訊息",
   "form-field.terms": "我已閱讀並接受隱私權政策",
+  "form-field.cv": "新增履歷",
+  "form-field.cv.default-label": "附加檔案",
   "form-field.validation.requiredField": "必填欄位。",
   "form-field.validation.invalidEmail": "輸入的電子郵件無效。",
+  "form-field.validation.invalidFormat": "您嘗試輸入的檔案格式無效。",
 
   "recruitment-block.title": "你想成為這個團隊的一員嗎？",
   "recruitment-block.subtitle": "向我們展示你的潛力",
   "recruitment-block.button": "自發性申請",
+  "recruitment-page.title": "你想成為這個團隊的一員嗎？",
+  "recruitment-block.text": "向我們展示你的潛力",
 
   "team.same-location-team": "同一单位的专业人员",
   "team.how-to-arrive": "如何前往"

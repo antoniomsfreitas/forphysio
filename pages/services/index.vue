@@ -29,9 +29,9 @@
             <CardImage
               :title="service.title"
               :src="getImagePath(service.image)"
-              :link="localePath(Routes.TEAM) + '/' + service.slug"
+              :link="getDetailPage(service.slug)"
               :alt="$t('general.image') + ': ' + service.image"
-              :link-title="$t('general.vieDetail')"
+              :link-title="$t('general.viewDetail')"
               size="small"
             />
           </LayoutGridCol>
@@ -51,7 +51,11 @@ const localePath = useLocalePath();
 const { services } = useServices();
 
 const getImagePath = (image: string) => {
-  return '/images/homepage/services-block/' + image;
+  return '/images/services/list/' + image;
+};
+
+const getDetailPage = (slug: string): string => {
+  return `${localePath(Routes.SERVICES)}/${slug}`;
 };
 </script>
 

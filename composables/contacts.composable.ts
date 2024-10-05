@@ -82,9 +82,9 @@ export const useContacts = () => {
     },
   };
 
-  const getLocations = (id?: number): ClinicLocation | ClinicLocation[] | undefined => {
-    if (id) {
-      return locations.find((location) => location.id == id);
+  const getLocations = (locationsId?: number[]): ClinicLocation[] | undefined => {
+    if (locationsId?.length) {
+      return locations.filter((location) => locationsId.includes(location.id));
     }
 
     return locations;

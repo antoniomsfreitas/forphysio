@@ -15,13 +15,21 @@
   "pages.services.medicalAppointments": "Citas médicas",
   "pages.partnerships": "Alianzas",
   "pages.blog": "Blog",
-
+  "pages.recruitment": "Reclutamiento",
   "pages.search": "Buscar",
+  
   "general.bookAppointment": "Marcar consulta",
   "general.viewAll": "Ver todos",
   "general.subscribe": "Suscribirse",
+  "general.book-evaluation": "Solicitar evaluación",
+  "general.book-appointment": "Reservar cita",
+  "general.schedule-your-appointment": "Programa tu cita",
+  "general.appointment-cancellation.legal-note": "Cancelar una cita con menos de 24 horas de antelación a la fecha y hora de su inicio, implica el pago del importe íntegro.\nEn el caso de cancelación de sesión incluida en los Paquetes ForPhysio o Programas, esta sesión será descontada del Paquete o Programa \n(Información válida, salvo presentación de certificado médico vigente a la fecha de la sesión.)",
   "general.send": "Enviar",
   "general.view": "Ver",
+  "general.view-all": "Ver todo",
+  "general.ourUnits": "Nuestras clínicas",
+  "general.selectUnit": "Seleccionar clínica",
 
   "form-field.name": "Nombre",
   "form-field.phone": "Contacto telefónico",
@@ -30,12 +38,17 @@
   "form-field.service.default-label": "Seleccionar servicio",
   "form-field.message": "Mensaje",
   "form-field.terms": "He leído y acepto la Política de Privacidad",
+  "form-field.cv": "Agregar CV",
+  "form-field.cv.default-label": "Adjuntar archivo",
   "form-field.validation.requiredField": "Campo obligatorio.",
   "form-field.validation.invalidEmail": "El correo electrónico ingresado no es válido.",
+  "form-field.validation.invalidFormat": "El formato de archivo que intentaste ingresar no es válido.",
 
   "recruitment-block.title": "¿Quieres ser parte de este equipo?",
   "recruitment-block.subtitle": "Muéstranos tu potencial",
   "recruitment-block.button": "Solicitud espontánea",
+  "recruitment-page.title": "¿Quieres ser parte de este equipo?",
+  "recruitment-block.text": "Muéstranos tu potencial",
 
   "team.same-location-team": "Profesionales de la misma unidad",
   "team.how-to-arrive": "Cómo Llegar"

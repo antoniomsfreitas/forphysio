@@ -16,12 +16,20 @@
   "pages.partnerships": "Partnerships",
   "pages.blog": "Blog",
   "pages.search": "Search",
+  "pages.recruitment": "Recruitment",
 
   "general.bookAppointment": "Book appointment",
   "general.viewAll": "View all",
   "general.subscribe": "Subscribe",
+  "general.book-evaluation": "Book evaluation",
+  "general.book-appointment": "Book Appointment",
+  "general.schedule-your-appointment": "Schedule your appointment",
+  "general.appointment-cancellation.legal-note": "Canceling an appointment less than 24 hours before the date and time of its start, implies payment of the entire amount.\nIn the case of cancellation of session included in the ForPhysio Packages or Programs, this session will be deducted from the Package or Program \n(Information valid, except on presentation of a medical certificate in force on the date of the session.)",
   "general.send": "Send",
   "general.view": "View",
+  "general.view-all": "View all",
+  "general.ourUnits": "Our clinics",
+  "general.selectUnit": "Select clinic",
 
   "contacts.page-title": "We're here to help you.",
   "contacts.page-subtitle": "Fill out the form below, or get in touch via email or Whatsapp.",
@@ -35,12 +43,17 @@
   "form-field.service.default-label": "Select Service",
   "form-field.message": "Message",
   "form-field.terms": "I have read and accept the Privacy Policy",
+  "form-field.cv": "Add Resume",
+  "form-field.cv.default-label": "Attach file",
   "form-field.validation.requiredField": "Required field.",
   "form-field.validation.invalidEmail": "The email entered is not valid.",
+  "form-field.validation.invalidFormat": "The file format you tried to insert is invalid.",
 
   "recruitment-block.title": "Do you want to be part of our team?",
   "recruitment-block.subtitle": "Show us your potential",
   "recruitment-block.button": "Spontaneous application",
+  "recruitment-page.title": "Do you want to be part of this team?",
+  "recruitment-block.text": "Show us your potential",
 
   "team.same-location-team": "Professionals from the same unit",
   "team.how-to-arrive": "How to Arrive"
