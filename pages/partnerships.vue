@@ -36,7 +36,7 @@
       </template>
     </IntroBlock>
 
-    <LayoutGrid v-if="pageBlocks">
+    <LayoutGrid v-if="pageBlocks" class="page-blocks">
       <LayoutGridRow v-for="block in pageBlocks" :key="block.title" class="title-text-block">
         <LayoutGridCol m="4" t="8" d="7">
           <h3>{{ block.title }}</h3>
@@ -140,36 +140,34 @@ watch(
   }
 }
 
-.title-text-block {
-  @include mq-mobile {
-    margin-bottom: 80px;
-  }
+.page-blocks {
+  margin-bottom: 80px;
 
-  @include mq-tablet-desktop {
-    margin-bottom: 120px;
-  }
+  .title-text-block {
+    margin-bottom: 65px;
 
-  h3 {
-    @include mq-mobile-tablet {
-      margin-bottom: 24px;
+    h3 {
+      @include mq-mobile-tablet {
+        margin-bottom: 24px;
+      }
+
+      @include mq-desktop {
+        margin-bottom: 40px;
+      }
     }
 
-    @include mq-desktop {
-      margin-bottom: 40px;
-    }
-  }
+    p {
+      font-weight: $font-weight-light;
+      line-height: 1.3;
+      color: $medium-grey;
 
-  p {
-    font-weight: $font-weight-light;
-    line-height: 1.3;
-    color: $medium-grey;
+      @include mq-mobile-tablet {
+        font-size: 20px;
+      }
 
-    @include mq-mobile-tablet {
-      font-size: 20px;
-    }
-
-    @include mq-desktop {
-      font-size: 24px;
+      @include mq-desktop {
+        font-size: 24px;
+      }
     }
   }
 }
