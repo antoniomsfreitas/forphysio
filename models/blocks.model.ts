@@ -62,3 +62,8 @@ export interface TwoImagesGridBlock {
     alt: string;
   };
 }
+
+export interface TitleTextBlock {
+  title?: string;
+  text?: string;
+}

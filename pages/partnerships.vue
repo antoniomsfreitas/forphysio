@@ -13,42 +13,77 @@
 
       <template #content>
         <p class="intro-block__text">
-          {{
-            'A ForPhysio Clinic dispõe de acordos que permitem ao cliente com as características descritas em baixo, ter acesso a preçários e condições exclusivas.'
-          }}
+          {{ $t('partnerships.introduction') }}
         </p>
 
         <div class="intro-block__contacts">
-          <div class="intro-block__contacts__item">
+          <a
+            v-if="social.whatsapp"
+            :href="'https://wa.me/' + social.whatsapp.value"
+            class="intro-block__contacts__item"
+          >
             <Icon name="icon:whatsapp" />
-            <span>+351 917 730 222</span>
-          </div>
+            <span>{{ social.whatsapp.value }}</span>
+          </a>
 
-          <div class="intro-block__contacts__item">
+          <a v-if="social.email" :href="'mailto:' + social.email.value" class="intro-block__contacts__item">
             <Icon name="icon:email" />
-            <span>geral@forphysio.pt</span>
-          </div>
+            <span>{{ social.email.value }}</span>
+          </a>
         </div>
 
-        <Button type="outline" size="medium">Marcar avaliação</Button>
+        <Button type="outline" size="medium">{{ $t('general.book-evaluation') }}</Button>
       </template>
     </IntroBlock>
+
+    <LayoutGrid v-if="pageBlocks">
+      <LayoutGridRow v-for="block in pageBlocks" :key="block.title" class="title-text-block">
+        <LayoutGridCol m="4" t="8" d="7">
+          <h3>{{ block.title }}</h3>
+          <p>{{ block.text }}</p>
+        </LayoutGridCol>
+      </LayoutGridRow>
+    </LayoutGrid>
+
+    <PartnersBlock v-if="partners" :partners="partners" class="partners-block" />
+
+    <div class="form-block">
+      <LayoutGrid>
+        <LayoutGridRow>
+          <LayoutGridCol m="4" t="8" d="6" start-col-t="3" start-col-d="4">
+            <ContactsForm />
+          </LayoutGridCol>
+        </LayoutGridRow>
+      </LayoutGrid>
+    </div>
   </div>
 </template>
 
+<script setup lang="ts">
+const { social } = useContacts();
+const { getPage } = usePartnerships();
+const { data, status } = await getPage();
+
+const pageBlocks = computed(() => data.value?.pageBlocks);
+const partners = computed(() => data.value?.partners);
+console.log(data);
+
+const emit = defineEmits(['onDataLoaded']);
+
+watch(
+  status,
+  (newStatus) => {
+    if (newStatus === 'success') {
+      emit('onDataLoaded');
+    }
+  },
+  { immediate: true },
+);
+</script>
+
 <style scoped lang="scss">
 .intro-block {
-  @include mq-mobile {
-    margin-bottom: 100px;
-  }
-
-  @include mq-tablet {
-    margin-bottom: 140px;
-  }
-
-  @include mq-desktop {
-    margin-bottom: 160px;
-  }
+  margin-bottom: 100px;
 
   &__text {
     padding-bottom: 40px;
@@ -57,14 +92,16 @@
   &__contacts {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     gap: 30px;
+    align-items: flex-start;
     margin-bottom: 40px;
 
     &__item {
       display: flex;
-      align-items: center;
       gap: 24px;
+      align-items: center;
+      color: $white;
+      text-decoration: none;
 
       .icon {
         @include mq-mobile {
@@ -101,5 +138,53 @@
       min-width: 0;
     }
   }
+}
+
+.title-text-block {
+  @include mq-mobile {
+    margin-bottom: 80px;
+  }
+
+  @include mq-tablet-desktop {
+    margin-bottom: 120px;
+  }
+
+  h3 {
+    @include mq-mobile-tablet {
+      margin-bottom: 24px;
+    }
+
+    @include mq-desktop {
+      margin-bottom: 40px;
+    }
+  }
+
+  p {
+    font-weight: $font-weight-light;
+    line-height: 1.3;
+    color: $medium-grey;
+
+    @include mq-mobile-tablet {
+      font-size: 20px;
+    }
+
+    @include mq-desktop {
+      font-size: 24px;
+    }
+  }
+}
+
+.partners-block {
+  @include mq-mobile {
+    margin-bottom: 80px;
+  }
+
+  @include mq-tablet-desktop {
+    margin-bottom: 120px;
+  }
+}
+
+.form-block {
+  margin-bottom: 120px;
 }
 </style>
