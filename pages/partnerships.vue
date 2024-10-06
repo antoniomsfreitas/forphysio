@@ -66,7 +66,6 @@ const { data, status } = await getPage();
 
 const pageBlocks = computed(() => data.value?.pageBlocks);
 const partners = computed(() => data.value?.partners);
-console.log(data);
 
 const emit = defineEmits(['onDataLoaded']);
 
