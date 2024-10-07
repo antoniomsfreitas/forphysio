@@ -19,7 +19,7 @@ export default defineEventHandler((): Layout => {
           name: 'pages.services',
           route: Routes.SERVICES,
           submenu: [
-            { name: 'general.viewAll', route: Routes.HOMEPAGE, viewAll: true },
+            { name: 'general.viewAll', route: Routes.SERVICES, viewAll: true },
             { name: 'pages.services.musculoskeletalPhysiotherapy', route: Routes.HOMEPAGE },
             { name: 'pages.services.sportsPhysiotherapy', route: Routes.HOMEPAGE },
             { name: 'pages.services.aquaticPhysiotherapyHydrotherapy', route: Routes.HOMEPAGE },

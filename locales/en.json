@@ -2,7 +2,10 @@
   "pages.about": "About us",
   "pages.team": "Team",
   "pages.contacts": "Contacts",
+
   "pages.services": "Services",
+  "pages.services.landingPage.intro": "We have been providing specialized physiotherapy services since 2014.\n\nDuring our evolution, we added complementary services such as nutrition, Pilates, wellness, and medical consultations.",
+
   "pages.services.musculoskeletalPhysiotherapy": "Musculoskeletal physiotherapy",
   "pages.services.sportsPhysiotherapy": "Physiotherapy in sports",
   "pages.services.aquaticPhysiotherapyHydrotherapy": "Aquatic physiotherapy and hydrotherapy",

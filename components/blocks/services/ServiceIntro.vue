@@ -19,7 +19,7 @@
             <LayoutGridCol m="4" t="8" d="10" start-col-t="3" start-col-d="2">
               <h1 v-text="data.title" />
 
-              <Button type="outline" v-t="'general.book-evaluation'" />
+              <Button type="outline">{{ $t('general.book-evaluation') }}</Button>
             </LayoutGridCol>
           </LayoutGridRow>
 

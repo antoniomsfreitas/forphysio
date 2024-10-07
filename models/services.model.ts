@@ -1,18 +1,21 @@
 import type {
+  BannerBlock,
   ImageFullwidthBlock,
   IntroBlock,
-  TopicsBlock,
-  BannerBlock,
   SideImageBlock,
+  TopicsBlock,
   TwoImagesGridBlock,
 } from './blocks.model';
 
-export interface Service {
+export interface ServiceList {
   id: number;
   slug: string;
   title: string;
   image: string;
   locations?: number[];
+}
+
+export interface Service extends ServiceList {
   homepage: boolean;
   blocks?: {
     intro?: IntroBlock;

@@ -4,10 +4,11 @@
       <LayoutGridCol m="4" t="5" d="3" class="locations-map__locations">
         <h2 v-t="'general.ourUnits'" />
         <div class="locations-map__locations__list">
-          <span class="locations-map__locations__list__title" v-t="'general.selectUnit'" />
+          <span v-t="'general.selectUnit'" class="locations-map__locations__list__title" />
           <ul>
             <li
               v-for="location in locations"
+              :key="location.id"
               :class="{ '--selected': location.id == currentLocationId }"
               @click="changeLocation(location.id)"
             >

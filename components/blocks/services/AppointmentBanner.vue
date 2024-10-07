@@ -15,20 +15,19 @@
         <LayoutGridRow>
           <LayoutGridCol m="4" t="6" d="6" start-col-t="4" start-col-d="4">
             <div class="appointment-banner__content__top">
-              <h2 v-t="'general.schedule-your-appointment'" />
+              <h2>{{ $t('general.schedule-your-appointment') }}</h2>
 
-              <Button
-                type="secondary"
-                @click="navigateTo(localePath(Routes.CONTACTS))"
-                v-t="'general.book-appointment'"
-              />
+              <Button type="secondary" @click="navigateTo(localePath(Routes.CONTACTS))">
+                {{ $t('general.book-appointment') }}
+              </Button>
             </div>
           </LayoutGridCol>
         </LayoutGridRow>
+
         <LayoutGridRow>
           <LayoutGridCol m="4" t="10" d="8" start-col-t="2" start-col-d="3">
             <div class="appointment-banner__content__bottom">
-              <p v-t="'general.appointment-cancellation.legal-note'" />
+              <p>{{ $t('general.appointment-cancellation.legal-note') }}</p>
             </div>
           </LayoutGridCol>
         </LayoutGridRow>

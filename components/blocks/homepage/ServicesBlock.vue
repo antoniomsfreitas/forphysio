@@ -23,8 +23,8 @@
 </template>
 
 <script setup lang="ts">
-import { Routes } from '~/models/routes.model';
 import { useServices } from '~/composables/services.composable';
+import { Routes } from '~/models/routes.model';
 
 const localePath = useLocalePath();
 const { getHomepageServices } = useServices();
