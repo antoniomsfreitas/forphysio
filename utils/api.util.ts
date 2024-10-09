@@ -33,3 +33,16 @@ export const getFormattedDataByLocale = (data: any, locale: string): any => {
   // starts processing the main object
   return processNodeData(data);
 };
+
+export const getDataOrderedByDate = (data: any) => {
+  const parseData = (date: string): Date => {
+    const [day, month, year] = date.split('-').map(Number);
+    return new Date(year, month - 1, day);
+  };
+
+  return data.sort((a: any, b: any) => {
+    const dataA = parseData(a.date.date);
+    const dataB = parseData(b.date.date);
+    return dataB.getTime() - dataA.getTime(); // Compara os timestamps das duas datas
+  });
+};

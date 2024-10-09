@@ -126,6 +126,24 @@ export default defineNuxtConfig({
         pt: '/blog',
         'zh-SG': '/blog',
       },
+      'blog/[slug]': {
+        en: '/blog/[slug]',
+        es: '/blog/[slug]',
+        pt: '/blog/[slug]',
+        'zh-SG': '/blog/[slug]',
+      },
+      'blog/categories/index': {
+        en: '/blog/categories',
+        es: '/blog/categorias',
+        pt: '/blog/categorias',
+        'zh-SG': '/blog/categories',
+      },
+      'blog/categories/[slug]': {
+        en: '/blog/categories/[slug]',
+        es: '/blog/categorias/[slug]',
+        pt: '/blog/categorias/[slug]',
+        'zh-SG': '/blog/categories/[slug]',
+      },
     },
   },
   basicAuth: {

@@ -1,3 +1,6 @@
 {
   "extends": ["@nuxtjs", "plugin:vue/vue3-recommended"],
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "off",
+  },
 }
