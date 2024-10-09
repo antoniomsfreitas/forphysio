@@ -34,12 +34,14 @@ export const getFormattedDataByLocale = (data: any, locale: string): any => {
   return processNodeData(data);
 };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const getDataOrderedByDate = (data: any) => {
   const parseData = (date: string): Date => {
     const [day, month, year] = date.split('-').map(Number);
     return new Date(year, month - 1, day);
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   return data.sort((a: any, b: any) => {
     const dataA = parseData(a.date.date);
     const dataB = parseData(b.date.date);

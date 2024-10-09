@@ -3,6 +3,7 @@ import { getFormattedDataByLocale, getDataOrderedByDate } from '~/utils/api.util
 import { data as categoriesData } from '../../data/blog/categories';
 import { data as articlesData } from '../../data/blog/articles';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function getTranslation(category: any, field: any, locale: string): string | undefined {
   return category?.[field]?.translations[locale as keyof typeof category.title.translations];
 }

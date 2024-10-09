@@ -21,6 +21,7 @@ export default defineEventHandler((event): Article[] => {
 
   const data = category ? getArticlesByCategory(category as number) : getArticles();
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const articles: any = data.map((article: any) => ({
     ...article,
     categories: getCategories(article.categories),
