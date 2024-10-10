@@ -1,11 +1,4 @@
-import type {
-  ImageFullwidthBlock,
-  IntroBlock,
-  TopicsBlock,
-  BannerBlock,
-  SideImageBlock,
-  TwoImagesGridBlock,
-} from './blocks.model';
+import type { Image, IntroBlock, TopicsBlock, BannerBlock, SideImageBlock, TwoImagesGridBlock } from './blocks.model';
 
 export interface Service {
   id: number;
@@ -17,11 +10,11 @@ export interface Service {
   blocks?: {
     intro?: IntroBlock;
     sideImage?: SideImageBlock;
-    imageFullwidth_1?: ImageFullwidthBlock;
+    imageFullwidth_1?: Image;
     topics_1?: TopicsBlock;
     twoImagesGrid?: TwoImagesGridBlock;
     topics_2?: TopicsBlock;
-    imageFullwidth_2?: ImageFullwidthBlock;
+    imageFullwidth_2?: Image;
     text?: string;
     appointmentBanner?: BannerBlock;
   };

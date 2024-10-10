@@ -1,15 +1,20 @@
 <template>
   <div class="input-container">
-    <label>{{ label }}</label>
+    <label v-if="label">{{ label }}</label>
 
-    <div class="input-container__input" :class="{ 'input-container--error': hasError }">
+    <div
+      class="input-container__input"
+      :class="{ 'input-container--error': hasError, 'input-container--search': search }"
+    >
       <component
         :is="component"
         :value="props.modelValue"
         :placeholder="placeholder"
+        :size="size"
         @input="updateValue($event.target.value)"
       />
-      <Icon v-if="hasError" name="icon:error" />
+      <Icon v-if="search" name="icon:search" class="icon-search" />
+      <Icon v-if="hasError" name="icon:error" class="icon-error" />
     </div>
 
     <span v-if="hasError" class="error-message">
@@ -24,7 +29,7 @@ import type { FormFieldValue } from '~/models/form.model';
 const props = defineProps({
   label: {
     type: String,
-    required: true,
+    required: false,
   },
   placeholder: {
     type: String,
@@ -33,6 +38,16 @@ const props = defineProps({
   type: {
     type: String as PropType<'text' | 'email' | 'textarea'>,
     default: 'text',
+    required: false,
+  },
+  size: {
+    type: String as PropType<'small' | 'large'>,
+    default: 'large',
+    required: false,
+  },
+  search: {
+    type: Boolean,
+    default: false,
     required: false,
   },
   modelValue: {
@@ -106,6 +121,12 @@ const updateValue = (value: String | Number | Boolean) => {
     }
   }
 
+  input[size='small'] {
+    padding: 8px 18px;
+    font-size: 16px;
+    line-height: 28px;
+  }
+
   textarea {
     min-width: 100%;
     max-width: 100%;
@@ -118,9 +139,17 @@ const updateValue = (value: String | Number | Boolean) => {
 
     .icon {
       position: absolute;
-      position: absolute;
-      right: 32px;
-      top: 15px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+
+      &.icon-error {
+        right: 32px;
+      }
+
+      &.icon-search {
+        left: 16px;
+      }
     }
   }
 
@@ -132,6 +161,12 @@ const updateValue = (value: String | Number | Boolean) => {
       &:focus {
         border-color: $error-color;
       }
+    }
+  }
+
+  &--search {
+    input {
+      padding-left: 48px;
     }
   }
 }

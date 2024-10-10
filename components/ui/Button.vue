@@ -66,7 +66,7 @@ const props = defineProps({
     &:hover {
       color: $white;
       background-color: $black;
-      border-color: $black;
+      border-color: $white;
     }
 
     &:active {

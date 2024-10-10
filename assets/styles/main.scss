@@ -185,7 +185,7 @@ b {
 }
 
 .swiper-custom-scrollbar {
-  height: 3px;
+  height: 6px;
   background: $deep-grey;
   border-radius: 4px;
 
@@ -200,7 +200,7 @@ b {
   & > .swiper-scrollbar-drag {
     position: relative;
     top: -1px;
-    height: 4px;
+    height: 6px;
     cursor: pointer;
     background: $white;
     border-radius: 4px;

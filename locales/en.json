@@ -31,6 +31,7 @@
   "general.view-all": "View all",
   "general.ourUnits": "Our clinics",
   "general.selectUnit": "Select clinic",
+  "general.readMore": "Read more",
 
   "contacts.page-title": "We're here to help you.",
   "contacts.page-subtitle": "Fill out the form below, or get in touch via email or Whatsapp.",
@@ -58,6 +59,13 @@
 
   "team.same-location-team": "Professionals from the same unit",
   "team.how-to-arrive": "How to Arrive",
+
+  "search.label": "Search",
+  "search.label.category": "Search by category",
+
+  "blog.highlightedArticles": "Highlighted Articles",
+  "blog.categories": "Categorias",
+  "blog.author": "Author",
 
   "partnerships.introduction": "ForPhysio Clinic has agreements that allow customers with the characteristics described below to have access to exclusive prices and conditions.",
   "partnerships.partners.title": "Partnerships",
