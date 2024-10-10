@@ -73,11 +73,11 @@ definePageMeta({
 });
 
 const route = useRoute();
-const { getArticleData } = useBlog();
+const { getArticlesData } = useBlog();
 
 const slug = route.params.slug as string;
 const localePath = useLocalePath();
-const { data, status } = await getArticleData(slug);
+const { data, status } = await getArticlesData({ slug: slug });
 
 const article = computed(() => data.value?.[0]);
 
@@ -85,11 +85,11 @@ const emit = defineEmits(['onDataLoaded']);
 watch(
   status,
   (newStatus) => {
-    if (newStatus === 'success') {
-      emit('onDataLoaded');
-    } else {
+    if (newStatus !== 'success' || !data.value?.length) {
       // error
       navigateTo(localePath(Routes.NOT_FOUND));
+    } else {
+      emit('onDataLoaded');
     }
   },
   { immediate: true },

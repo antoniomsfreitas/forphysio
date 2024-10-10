@@ -11,7 +11,9 @@ export const useBlog = () => {
     highlighted?: boolean;
     landingPage?: boolean;
   }) => {
-    const { status, data } = await useAsyncData<Article[]>('articles', () =>
+    const key = `articles-${JSON.stringify(options)}`;
+
+    const { status, data } = await useAsyncData<Article[]>(key, () =>
       $fetch('/api/blog/articles', {
         query: {
           locale: locale.value,
@@ -19,6 +21,34 @@ export const useBlog = () => {
           categoryId: options?.categoryId,
           highlighted: options?.highlighted,
           landingPage: options?.landingPage,
+        },
+      }),
+    );
+
+    return {
+      status,
+      data,
+    };
+  };
+
+  const getCategoriesData = async (options?: {
+    slug?: string;
+    includeArticles?: boolean;
+    slideshow?: boolean;
+    landingPage?: boolean;
+    searchQuery?: string;
+  }) => {
+    const key = `categories-${JSON.stringify(options)}`;
+
+    const { status, data } = await useAsyncData<ArticleCategory[]>(key, () =>
+      $fetch('/api/blog/categories', {
+        query: {
+          locale: locale.value,
+          slug: options?.slug,
+          includeArticles: options?.includeArticles,
+          slideshow: options?.slideshow,
+          landingPage: options?.landingPage,
+          searchQuery: options?.searchQuery,
         },
       }),
     );
@@ -50,48 +80,6 @@ export const useBlog = () => {
     }
   };
 
-  const getArticleData = async (slug: string) => {
-    const { status, data } = await useAsyncData<Article[]>('articles', () =>
-      $fetch('/api/blog/articles', {
-        query: {
-          locale: locale.value,
-          slug: slug,
-        },
-      }),
-    );
-
-    return {
-      status,
-      data,
-    };
-  };
-
-  const getCategoriesData = async (options?: {
-    slug?: string;
-    includeArticles?: boolean;
-    slideshow?: boolean;
-    landingPage?: boolean;
-    searchQuery?: string;
-  }) => {
-    const { status, data } = await useAsyncData<ArticleCategory[]>('blog-categories', () =>
-      $fetch('/api/blog/categories', {
-        query: {
-          locale: locale.value,
-          slug: options?.slug,
-          includeArticles: options?.includeArticles,
-          slideshow: options?.slideshow,
-          landingPage: options?.landingPage,
-          searchQuery: options?.searchQuery,
-        },
-      }),
-    );
-
-    return {
-      status,
-      data,
-    };
-  };
-
   const getCategoryLink = (slug: string) => {
     return localePath({ name: Routes.BLOG_CATEGORIES_SLUG, params: { slug } });
   };
@@ -102,7 +90,6 @@ export const useBlog = () => {
 
   return {
     getArticlesData,
-    getArticleData,
     buildBlogPage,
     getCategoriesData,
     getCategoryLink,

@@ -1,7 +1,7 @@
 export const data = [
   {
     id: 1,
-    landingPage: true,
+    landingPage: false,
     slideshow: true,
     slug: {
       translations: {

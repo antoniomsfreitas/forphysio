@@ -37,7 +37,7 @@ export const data = [
       },
     },
     imageList: {
-      image: '/images/blog/articles/exercicios-mobilidade/list/image.jpg',
+      image: '/images/blog/articles/ombro-exercicios-mobilidade/list/image.jpg',
       alt: {
         translations: {
           pt: 'imagem',
@@ -61,9 +61,9 @@ export const data = [
             'zh-sg': '用球进行活动练习的图片。',
           },
         },
-        mobile: '/images/blog/articles/exercicios-mobilidade/detail/highlight-image/image-mobile.jpg',
-        tablet: '/images/blog/articles/exercicios-mobilidade/detail/highlight-image/image-tablet.jpg',
-        desktop: '/images/blog/articles/exercicios-mobilidade/detail/highlight-image/image-desktop.jpg',
+        mobile: '/images/blog/articles/ombro-exercicios-mobilidade/detail/highlight-image/image-mobile.jpg',
+        tablet: '/images/blog/articles/ombro-exercicios-mobilidade/detail/highlight-image/image-tablet.jpg',
+        desktop: '/images/blog/articles/ombro-exercicios-mobilidade/detail/highlight-image/image-desktop.jpg',
       },
       intro: {
         translations: {
@@ -76,9 +76,9 @@ export const data = [
     },
     blocks: {
       image_1: {
-        mobile: '/images/blog/articles/exercicios-mobilidade/detail/image-1/image-mobile.jpg',
-        tablet: '/images/blog/articles/exercicios-mobilidade/detail/image-1/image-tablet.jpg',
-        desktop: '/images/blog/articles/exercicios-mobilidade/detail/image-1/image-desktop.jpg',
+        mobile: '/images/blog/articles/ombro-exercicios-mobilidade/detail/image-1/image-mobile.jpg',
+        tablet: '/images/blog/articles/ombro-exercicios-mobilidade/detail/image-1/image-tablet.jpg',
+        desktop: '/images/blog/articles/ombro-exercicios-mobilidade/detail/image-1/image-desktop.jpg',
         alt: {
           translations: {
             pt: 'Imagem de exercicios de mobilidade com bola.',
@@ -89,9 +89,9 @@ export const data = [
         },
       },
       image_2: {
-        mobile: '/images/blog/articles/exercicios-mobilidade/detail/image-2/image-mobile.jpg',
-        tablet: '/images/blog/articles/exercicios-mobilidade/detail/image-2/image-tablet.jpg',
-        desktop: '/images/blog/articles/exercicios-mobilidade/detail/image-2/image-desktop.jpg',
+        mobile: '/images/blog/articles/ombro-exercicios-mobilidade/detail/image-2/image-mobile.jpg',
+        tablet: '/images/blog/articles/ombro-exercicios-mobilidade/detail/image-2/image-tablet.jpg',
+        desktop: '/images/blog/articles/ombro-exercicios-mobilidade/detail/image-2/image-desktop.jpg',
         alt: {
           translations: {
             pt: 'Imagem de exercicios de mobilidade com bola.',
@@ -126,17 +126,17 @@ export const data = [
     slug: {
       translations: {
         pt: 'anca-exercicios-de-mobilidade',
-        en: 'shoulder-mobility-exercises',
-        es: 'hombro-ejercicios-de-movilidad',
-        'zh-sg': 'shoulder-mobility-exercises',
+        en: 'hip-mobility-exercises',
+        es: 'ejercicios-de-movilidad-de-la-cadera',
+        'zh-sg': '髋关节活动练习',
       },
     },
     title: {
       translations: {
         pt: 'Anca',
-        en: 'Shoulder',
-        es: 'Hombro',
-        'zh-sg': '肩部',
+        en: 'Hip',
+        es: 'Cadera',
+        'zh-sg': '髋关节',
       },
     },
     subtitle: {
@@ -162,15 +162,47 @@ export const data = [
       image: '/images/blog/articles/anca-exercicios-mobilidade/list/image.jpg',
       alt: {
         translations: {
-          pt: 'imagem',
-          en: '',
-          es: '',
-          'zh-sg': '',
+          pt: 'Imagem de exercicios de mobilidade para a anca.',
+          en: 'Image of mobility exercises for the hip.',
+          es: 'Imagen de ejercicios de movilidad para la cadera.',
+          'zh-sg': '髋关节活动练习的图片。',
         },
       },
     },
     categories: [2],
     author: 1,
     landingPage: true,
+    blocks: {
+      image_1: {
+        mobile: '/images/blog/articles/anca-exercicios-mobilidade/detail/image-1/image-mobile.jpg',
+        tablet: '/images/blog/articles/anca-exercicios-mobilidade/detail/image-1/image-tablet.jpg',
+        desktop: '/images/blog/articles/anca-exercicios-mobilidade/detail/image-1/image-desktop.jpg',
+        alt: {
+          translations: {
+            pt: 'Imagem de exercicios de mobilidade com bola.',
+            en: 'Image of mobility exercises with a ball.',
+            es: 'Imagen de ejercicios de movilidad con pelota.',
+            'zh-sg': '用球进行活动练习的图片。',
+          },
+        },
+      },
+      text_1: {
+        translations: {
+          pt: 'Ao nível da tibiotársica (tornozelo) o movimento mais comumente restringido é o de dorsiflexão (trazer a ponta do pé para cima ou, em carga, levar o joelho para a frente).',
+          en: 'At the tibio-tarsal level (ankle), the most commonly restricted movement is dorsiflexion (bringing the tip of the foot upwards or, under load, moving the knee forward).',
+          es: 'A nivel tibio-tarsal (tobillo), el movimiento más comúnmente restringido es la dorsiflexión (llevar la punta del pie hacia arriba o, en carga, mover la rodilla hacia adelante).',
+          'zh-sg': '在胫距关节（脚踝）处，最常见的受限运动是背屈（将脚尖向上拉或在负重时将膝盖向前移动）。',
+        },
+      },
+      text_2: {
+        translations: {
+          pt: 'Deixamos aqui alguns exemplos de exercícios para ganho de mobilidade. Durante estes exercícios é normal sentir um alongamento no tendão de Aquiles (parte de trás do tornozelo) ou um ligeiro desconforto na região anterior da tibiotársica devido ao contacto ósseo.\n\nExercícios:\n1 - Banded Joint Mobilization\n2-Weighted Box Ankle Mobilization\n3 - Multidirecional Ankle Mobility\n4 - Deficit Heel Raises (unilateral)\n5 - Full ROM Split Squat',
+          en: 'Here are some examples of exercises for mobility gain. During these exercises, it is normal to feel a stretch in the Achilles tendon (back of the ankle) or slight discomfort in the anterior tibio-tarsal region due to bone contact.\n\nExercises:\n1 - Banded Joint Mobilization\n2-Weighted Box Ankle Mobilization\n3 - Multidirectional Ankle Mobility\n4 - Deficit Heel Raises (unilateral)\n5 - Full ROM Split Squat',
+          es: 'Aquí hay algunos ejemplos de ejercicios para mejorar la movilidad. Durante estos ejercicios, es normal sentir un estiramiento en el tendón de Aquiles (parte posterior del tobillo) o una ligera incomodidad en la región anterior tibio-tarsal debido al contacto óseo.\n\nEjercicios:\n1 - Movilización articular con banda\n2-Movilización del tobillo con caja con peso\n3 - Movilidad multidireccional del tobillo\n4 - Elevaciones de talón en déficit (unilateral)\n5 - Sentadilla dividida con rango completo de movimiento',
+          'zh-sg':
+            '这里有一些提高活动能力的练习示例。在这些练习中，感觉到跟腱（脚踝后部）拉伸或由于骨骼接触而在胫距关节前部区域感到轻微不适是正常的。\n\n练习：\n1 - 带状关节活动\n2-负重箱脚踝活动\n3 - 多方向脚踝活动\n4 - 赤字脚跟抬起（单侧）\n5 - 全范围运动分腿蹲',
+        },
+      },
+    },
   },
 ];
