@@ -5,7 +5,7 @@
     <LayoutGrid class="form-block">
       <LayoutGridRow>
         <LayoutGridCol m="4" t="8" d="6" start-col-t="3" start-col-d="4">
-          <ContactsForm :show-cv="true" />
+          <ContactsForm type="recruitment" />
         </LayoutGridCol>
       </LayoutGridRow>
     </LayoutGrid>
