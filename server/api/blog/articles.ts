@@ -59,8 +59,6 @@ export default defineEventHandler((event): Article[] => {
     categories: getCategories(article.categories),
     // teamMembers: getTeamMembersByIds(item.teamMembers), // Substitui os IDs pelos membros da equipa
   }));
-  if (highlighted) {
-    console.log('novo3', getFormattedDataByLocale(articles, locale as string));
-  }
+
   return getFormattedDataByLocale(articles, locale as string);
 });
