@@ -96,6 +96,12 @@ export default defineNuxtConfig({
         pt: '/recrutamento',
         'zh-SG': '/recruitment',
       },
+      faq: {
+        en: '/frequently-asked-questions',
+        es: '/preguntas-frecuentes',
+        pt: '/perguntas-frequentes',
+        'zh-SG': '/frequently-asked-questions',
+      },
       'team/index': {
         en: '/team',
         es: '/equipo',

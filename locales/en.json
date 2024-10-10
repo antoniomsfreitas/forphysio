@@ -17,6 +17,7 @@
   "pages.blog": "Blog",
   "pages.search": "Search",
   "pages.recruitment": "Recruitment",
+  "pages.faqs": "Frequently Asked Questions",
 
   "general.bookAppointment": "Book appointment",
   "general.viewAll": "View all",
@@ -64,5 +65,11 @@
 
   "blog.highlightedArticles": "Highlighted Articles",
   "blog.categories": "Categorias",
-  "blog.author": "Author"
+  "blog.author": "Author",
+
+  "partnerships.introduction": "ForPhysio Clinic has agreements that allow customers with the characteristics described below to have access to exclusive prices and conditions.",
+  "partnerships.partners.title": "Partnerships",
+  "partnerships.partners.subtitle": "Currently active partners are listed below.",
+
+  "faqs.title": "How can we help?"
 }

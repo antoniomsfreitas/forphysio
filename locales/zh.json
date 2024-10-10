@@ -17,6 +17,7 @@
   "pages.blog": "部落格",
   "pages.search": "搜尋網站",
   "pages.recruitment": "招募",
+  "pages.faqs": "常見問題",
 
   "general.bookAppointment": "預約",
   "general.viewAll": "檢視全部",
@@ -64,5 +65,11 @@
 
   "blog.highlightedArticles": "突出顯示的文章",
   "blog.categories": "類別",
-  "blog.author": "作者"
+  "blog.author": "作者",
+
+  "partnerships.introduction": "ForPhysio Clinic 已簽訂協議，允許具有下述特徵的客戶獲得獨家價格和條件。",
+  "partnerships.partners.title": "合作夥伴",
+  "partnerships.partners.subtitle": "下面列出了當前活躍的合作夥伴。",
+
+  "faqs.title": "我們能提供什麼幫助嗎？"
 }

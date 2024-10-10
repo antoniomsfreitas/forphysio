@@ -31,39 +31,46 @@ h3 {
 h1 {
   @include breakpoint-to('d') {
     font-size: 60px;
+    letter-spacing: 1.3px;
   }
 
   @include breakpoint-from('d') {
     font-size: 96px;
-    letter-spacing: 2px;
+    letter-spacing: 1.9px;
   }
 }
 
 h2 {
   @include breakpoint-to('t') {
     font-size: 40px;
+    letter-spacing: 0.8px;
   }
 
   @include breakpoint-between('t', 'd') {
     font-size: 54px;
+    letter-spacing: 1.3px;
   }
 
   @include breakpoint-from('d') {
     font-size: 60px;
+    letter-spacing: 1.3px;
   }
 }
 
 h3 {
   @include mq-mobile {
     font-size: 24px;
+    letter-spacing: 0.5px;
   }
 
   @include mq-tablet {
     font-size: 32px;
+    letter-spacing: 0.6px;
   }
 
   @include mq-desktop {
     font-size: 40px;
+    letter-spacing: 0.8px;
   }
 }
 
