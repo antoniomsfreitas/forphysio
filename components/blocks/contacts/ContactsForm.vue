@@ -1,6 +1,6 @@
 <template>
   <div class="contacts-form" @submit.prevent="handleSubmit">
-    <h3 v-t="'contacts.form-title'" />
+    <h3>{{ $t('contacts.form-title') }}</h3>
 
     <form class="form">
       <CustomInput
@@ -61,7 +61,7 @@
         :errorMessage="formData.terms?.errorMessage"
       />
 
-      <Button size="large" v-t="'general.send'" />
+      <Button size="large">{{ $t('general.send') }}</Button>
     </form>
   </div>
 </template>

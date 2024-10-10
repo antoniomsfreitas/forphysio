@@ -1,5 +1,3 @@
-import { Partner } from '~/models/partnerships.model';
-
 export const data = [
   {
     title: 'SCM',
@@ -62,7 +60,3 @@ export const data = [
     image: '/images/partnerships/partners/fitness_factory.png',
   },
 ];
-
-export default defineEventHandler((): Partner[] => {
-  return data;
-});

@@ -1,6 +1,3 @@
-import { getFormattedDataByLocale } from '~/utils/api.util';
-import { TitleTextBlock } from '~/models/blocks.model';
-
 export const data = [
   {
     title: {
@@ -40,9 +37,3 @@ export const data = [
     },
   },
 ];
-
-export default defineEventHandler((event): TitleTextBlock[] => {
-  const { locale } = getQuery(event);
-
-  return getFormattedDataByLocale(data, locale as string);
-});
