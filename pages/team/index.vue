@@ -27,6 +27,12 @@
   </div>
 </template>
 
+<script setup lang="ts">
+// @TODO :: API request
+const emit = defineEmits(['onDataLoaded']);
+emit('onDataLoaded');
+</script>
+
 <style scoped lang="scss">
 .intro-block {
   @include mq-mobile {

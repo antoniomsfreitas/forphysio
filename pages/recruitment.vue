@@ -14,6 +14,10 @@
 
 <script setup lang="ts">
 import ContactsForm from '~/components/blocks/contacts/ContactsForm.vue';
+
+// @TODO :: API request
+const emit = defineEmits(['onDataLoaded']);
+emit('onDataLoaded');
 </script>
 
 <style scoped lang="scss">

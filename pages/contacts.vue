@@ -71,6 +71,10 @@
 
 <script setup lang="ts">
 const { social } = useContacts();
+
+// @TODO :: API request
+const emit = defineEmits(['onDataLoaded']);
+emit('onDataLoaded');
 </script>
 
 <style scoped lang="scss">
