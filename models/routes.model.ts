@@ -5,6 +5,7 @@ export enum Routes {
   CONTACTS = 'contacts',
   BLOG = 'blog',
   SERVICES = 'services',
+  SERVICES_SLUG = 'services-slug',
   PARTNERSHIPS = 'partnerships',
   RECRUITMENT = 'recruitment',
   SEARCH = 'search',

@@ -3,11 +3,11 @@
     <div class="header__inner__bottom-bar">
       <Icon name="icon:hamburger-menu" size="29" @click="toggleMenuSidebar" />
 
-      <NuxtLink v-if="buttonOption" :to="localePath(buttonOption.route)" class="button button--secondary">
+      <NuxtLink v-if="buttonOption" :to="localePath(buttonOption.route.name)" class="button button--secondary">
         {{ $t(buttonOption.name) }}
       </NuxtLink>
 
-      <NuxtLink v-if="searchOption" :to="localePath(searchOption.route)" :title="$t(searchOption.name)">
+      <NuxtLink v-if="searchOption" :to="localePath(searchOption.route.name)" :title="$t(searchOption.name)">
         <Icon name="icon:search-white" />
       </NuxtLink>
     </div>
@@ -24,7 +24,7 @@
       <ul class="header__inner__sidebar__menu">
         <li v-for="(menu, index) in mainMenu" :key="menu.name" class="header__inner__sidebar__menu__item">
           <NuxtLink
-            :to="menu.submenu?.length ? undefined : localePath(menu.route)"
+            :to="menu.submenu?.length ? undefined : localePath(menu.route.name)"
             @click="menu.submenu?.length ? toggleSubmenu(index) : toggleMenuSidebar()"
           >
             <span>{{ $t(menu.name) }}</span>
@@ -53,7 +53,12 @@
                   'header__inner__sidebar__menu__item__submenu__item--view-all': submenu.viewAll,
                 }"
               >
-                <NuxtLink :to="localePath(submenu.route)" @click="toggleMenuSidebar">{{ $t(submenu.name) }}</NuxtLink>
+                <NuxtLink
+                  :to="localePath({ name: submenu.route.name, params: { slug: submenu.route?.slug } })"
+                  @click="toggleMenuSidebar"
+                >
+                  {{ $t(submenu.name) }}
+                </NuxtLink>
               </li>
             </ul>
           </div>

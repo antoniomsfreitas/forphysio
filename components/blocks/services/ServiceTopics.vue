@@ -4,9 +4,8 @@
       <LayoutGridRow>
         <LayoutGridCol m="4" t="10" d="6" start-col-t="2" start-col-d="2">
           <h2 v-t="data.title" />
-          <ul>
-            <li v-for="topic in data.topics" :key="topic" v-t="topic" />
-          </ul>
+
+          <div class="topics-list--topics" v-html="data.topics"></div>
         </LayoutGridCol>
       </LayoutGridRow>
     </LayoutGrid>
@@ -39,7 +38,7 @@ defineProps({
     }
   }
 
-  ul {
+  :deep(ul) {
     li {
       display: flex;
       color: $medium-grey;

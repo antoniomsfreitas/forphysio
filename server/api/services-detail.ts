@@ -2,7 +2,7 @@ import type { Service } from '~/models/services.model';
 import { getFormattedDataByLocale } from '~/utils/api.util';
 import { data as servicesData } from '../data/services';
 
-const getServiceDetailBySlug = (serviceSlug: string, locale: string): Service | undefined => {
+const getServiceDetailBySlug = (serviceSlug: string, locale: string) => {
   return servicesData.find((service) => {
     const translatedServiceSlug = getFormattedDataByLocale(service.slug, locale);
 

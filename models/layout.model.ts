@@ -2,13 +2,20 @@ import type { Routes } from './routes.model';
 
 interface HeaderSubmenuOption {
   name: string;
-  route: Routes;
+  route: {
+    name: Routes;
+    slug?: string;
+  };
+
   viewAll?: boolean;
 }
 
 export interface HeaderMenuOption {
   name: string;
-  route: Routes;
+  route: {
+    name: Routes;
+    params?: Object;
+  };
   submenu?: HeaderSubmenuOption[];
 }
 

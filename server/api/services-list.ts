@@ -1,11 +1,11 @@
-import type { Service, ServiceList } from '~/models/services.model';
+import type { ServiceList } from '~/models/services.model';
 import { getFormattedDataByLocale } from '~/utils/api.util';
 import { data as servicesData } from '../data/services';
 
-const buildServiceListItem = (service: Service): ServiceList => {
+const buildServiceListItem = (service: any): ServiceList => {
   return {
-    id: service.id,
-    slug: service.slug,
+    id: service?.id,
+    slug: service?.slug,
     title: service.title,
     image: service.image,
     locations: service.locations,
@@ -15,7 +15,7 @@ const buildServiceListItem = (service: Service): ServiceList => {
 const getServicesList = (isHomepageHighlight: boolean): ServiceList[] => {
   const data = isHomepageHighlight ? servicesData.filter((service) => service.homepage) : servicesData;
 
-  return data.map((service: Service) => buildServiceListItem(service));
+  return data.map((service) => buildServiceListItem(service));
 };
 
 export default defineEventHandler((event): ServiceList[] => {
