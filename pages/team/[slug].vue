@@ -39,6 +39,10 @@ if (!member) {
 
 const service: TeamService | undefined = getService(member?.service);
 const location: TeamLocation | undefined = getLocation(member?.location);
+
+// @TODO :: API request
+const emit = defineEmits(['onDataLoaded']);
+emit('onDataLoaded');
 </script>
 
 <style scoped lang="scss">
