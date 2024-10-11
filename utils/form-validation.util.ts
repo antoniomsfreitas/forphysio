@@ -3,7 +3,7 @@ export function validateField(value: any, required: boolean, type?: string): str
     return translation('form-field.validation.requiredField');
   }
 
-  if (type == 'file' && value.type !== 'application/pdf') {
+  if (type == 'file' && value !== 'application/pdf') {
     return translation('form-field.validation.invalidFormat');
   }
 

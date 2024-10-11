@@ -1,6 +1,6 @@
 <template>
   <div class="contacts-form" @submit.prevent="handleSubmit">
-    <h3 v-t="'contacts.form-title'" />
+    <h3>{{ $t('contacts.form-title') }}</h3>
 
     <form class="form">
       <CustomInput
@@ -28,7 +28,7 @@
       />
 
       <CustomInputFile
-        v-if="showCv"
+        v-if="isRecruitmentForm"
         :label="t('form-field.cv')"
         v-model="formData.cv.value"
         :required="formData.cv.required"
@@ -37,7 +37,7 @@
       />
 
       <CustomSelect
-        v-if="showServices"
+        v-if="isContactsForm"
         :options="services"
         :top-label="t('form-field.service')"
         :default-label="'-- ' + t('form-field.service.default-label') + ' --'"
@@ -61,31 +61,30 @@
         :errorMessage="formData.terms?.errorMessage"
       />
 
-      <Button size="large" v-t="'general.send'" />
+      <Button size="large">{{ $t('general.send') }}</Button>
     </form>
   </div>
 </template>
 
 <script setup lang="ts">
 const props = defineProps({
-  showCv: {
-    type: Boolean,
+  type: {
+    type: String as PropType<'contacts' | 'recruitment'>,
     required: false,
-    default: false,
-  },
-  showServices: {
-    type: Boolean,
-    required: false,
-    default: false,
+    default: 'contacts',
   },
 });
 
+import type { PropType } from 'vue';
 import CustomInput from '~/components/layout/form/CustomInput.vue';
 import type { FormData } from '~/models/form.model';
 
 const { t } = useI18n();
 
 const { services } = useServices();
+
+const isContactsForm = computed(() => props.type == 'contacts');
+const isRecruitmentForm = computed(() => props.type == 'recruitment');
 
 const formData: FormData = reactive({
   name: {
@@ -106,12 +105,12 @@ const formData: FormData = reactive({
   },
   service: {
     value: 0,
-    required: props.showServices ? true : false,
+    required: isContactsForm,
     errorMessage: '',
   },
   cv: {
     value: null,
-    required: props.showCv ? true : false,
+    required: isRecruitmentForm,
     type: 'file',
     errorMessage: '',
   },

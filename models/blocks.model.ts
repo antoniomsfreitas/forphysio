@@ -1,10 +1,13 @@
-export interface ImageFullwidthBlock {
-  image: {
-    mobile: string;
-    tablet: string;
-    desktop: string;
-    alt: string;
-  };
+export interface Image {
+  mobile: string;
+  tablet: string;
+  desktop: string;
+  alt: string;
+}
+
+export interface SingleImage {
+  image: string;
+  alt: string;
 }
 
 export interface IntroBlock {
@@ -61,4 +64,9 @@ export interface TwoImagesGridBlock {
     desktop: string;
     alt: string;
   };
+}
+
+export interface TitleTextBlock {
+  title?: string;
+  text?: string;
 }

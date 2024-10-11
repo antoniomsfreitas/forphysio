@@ -21,6 +21,7 @@
   "pages.blog": "Blog",
   "pages.recruitment": "Reclutamiento",
   "pages.search": "Buscar",
+  "pages.faqs": "Preguntas frecuentes",
 
   "general.bookAppointment": "Marcar consulta",
   "general.viewAll": "Ver todos",
@@ -34,6 +35,12 @@
   "general.view-all": "Ver todo",
   "general.ourUnits": "Nuestras clínicas",
   "general.selectUnit": "Seleccionar clínica",
+  "general.readMore": "Leer más",
+
+  "contacts.page-title": "Estamos aquí para ayudarte.",
+  "contacts.page-subtitle": "Completa el formulario a continuación, o contáctanos por correo electrónico o WhatsApp.",
+  "contacts.available-units": "Unidades disponibles",
+  "contacts.form-title": "Contáctanos.\nCompleta el formulario",
 
   "form-field.name": "Nombre",
   "form-field.phone": "Contacto telefónico",
@@ -55,5 +62,18 @@
   "recruitment-block.text": "Muéstranos tu potencial",
 
   "team.same-location-team": "Profesionales de la misma unidad",
-  "team.how-to-arrive": "Cómo Llegar"
+  "team.how-to-arrive": "Cómo Llegar",
+
+  "search.label": "Buscar",
+  "search.label.category": "Buscar por categoría",
+
+  "blog.highlightedArticles": "Artículos destacados",
+  "blog.categories": "Categorías",
+  "blog.author": "Autor",
+
+  "partnerships.introduction": "ForPhysio Clinic tiene acuerdos que permiten a los clientes con las características descritas a continuación tener acceso a precios y condiciones exclusivas.",
+  "partnerships.partners.title": "Asociaciones",
+  "partnerships.partners.subtitle": "Los socios actualmente activos se enumeran a continuación.",
+
+  "faqs.title": "¿Cómo podemos ayudar?"
 }

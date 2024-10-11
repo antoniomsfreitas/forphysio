@@ -1,20 +1,20 @@
 <template>
   <PictureImage
     class="image-fullwidth"
-    :alt="data.image.alt"
-    :src="data.image.mobile"
-    :src-t="data.image.tablet"
-    :src-d="data.image.desktop"
+    :alt="data.alt"
+    :src="data.mobile"
+    :src-t="data.tablet"
+    :src-d="data.desktop"
     cover
   />
 </template>
 
 <script setup lang="ts">
-import type { ImageFullwidthBlock } from '~/models/blocks.model';
+import type { Image } from '~/models/blocks.model';
 
 defineProps({
   data: {
-    type: Object as PropType<ImageFullwidthBlock>,
+    type: Object as PropType<Image>,
     required: true,
   },
 });

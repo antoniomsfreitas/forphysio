@@ -96,6 +96,12 @@ export default defineNuxtConfig({
         pt: '/recrutamento',
         'zh-sg': '/recruitment',
       },
+      faq: {
+        en: '/frequently-asked-questions',
+        es: '/preguntas-frecuentes',
+        pt: '/perguntas-frequentes',
+        'zh-SG': '/frequently-asked-questions',
+      },
       'team/index': {
         en: '/team',
         es: '/equipo',
@@ -125,6 +131,24 @@ export default defineNuxtConfig({
         es: '/blog',
         pt: '/blog',
         'zh-sg': '/blog',
+      },
+      'blog/[slug]': {
+        en: '/blog/[slug]',
+        es: '/blog/[slug]',
+        pt: '/blog/[slug]',
+        'zh-SG': '/blog/[slug]',
+      },
+      'blog/categories/index': {
+        en: '/blog/categories',
+        es: '/blog/categorias',
+        pt: '/blog/categorias',
+        'zh-SG': '/blog/categories',
+      },
+      'blog/categories/[slug]': {
+        en: '/blog/categories/[slug]',
+        es: '/blog/categorias/[slug]',
+        pt: '/blog/categorias/[slug]',
+        'zh-SG': '/blog/categories/[slug]',
       },
     },
   },

@@ -20,6 +20,7 @@
   "pages.blog": "部落格",
   "pages.search": "搜尋網站",
   "pages.recruitment": "招募",
+  "pages.faqs": "常見問題",
 
   "general.bookAppointment": "預約",
   "general.viewAll": "檢視全部",
@@ -33,6 +34,7 @@
   "general.view-all": "看全部",
   "general.ourUnits": "我們的診所",
   "general.selectUnit": "選擇診所",
+  "general.readMore": "閱讀更多",
 
   "contacts.page-title": "我們來幫您",
   "contacts.page-subtitle": "填寫下面的表格，或透過電子郵件或 Whatsapp 與我們聯繫。",
@@ -59,5 +61,18 @@
   "recruitment-block.text": "向我們展示你的潛力",
 
   "team.same-location-team": "同一单位的专业人员",
-  "team.how-to-arrive": "如何前往"
+  "team.how-to-arrive": "如何前往",
+
+  "search.label": "搜尋",
+  "search.label.category": "依類別搜尋",
+
+  "blog.highlightedArticles": "突出顯示的文章",
+  "blog.categories": "類別",
+  "blog.author": "作者",
+
+  "partnerships.introduction": "ForPhysio Clinic 已簽訂協議，允許具有下述特徵的客戶獲得獨家價格和條件。",
+  "partnerships.partners.title": "合作夥伴",
+  "partnerships.partners.subtitle": "下面列出了當前活躍的合作夥伴。",
+
+  "faqs.title": "我們能提供什麼幫助嗎？"
 }

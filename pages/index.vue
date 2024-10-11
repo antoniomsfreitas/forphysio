@@ -24,7 +24,6 @@ const customersReviewsBlockData = computed(() => data.value?.customersReviewsBlo
 const newsletterBlockData = computed(() => data.value?.newsletterBlock);
 
 const emit = defineEmits(['onDataLoaded']);
-
 watch(
   status,
   (newStatus) => {
