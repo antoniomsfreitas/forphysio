@@ -16,7 +16,6 @@
       <LayoutGridRow>
         <LayoutGridCol m="4" t="9" d="6" start-col-t="2" start-col-d="2">
           <p>{{ $t('service.blocks.text') }}</p>
-          <p>{{ $t('service.blocks.text') }}</p>
         </LayoutGridCol>
       </LayoutGridRow>
     </LayoutGrid>
