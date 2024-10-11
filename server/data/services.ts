@@ -87,17 +87,15 @@ export const data = [
         },
       },
       imageFullwidth_1: {
-        image: {
-          mobile: '/images/services/detail/fisioterapia-musculo-esqueletica/fullwidth-image/image-1-mobile.jpg',
-          tablet: '/images/services/detail/fisioterapia-musculo-esqueletica/fullwidth-image/image-1-tablet.jpg',
-          desktop: '/images/services/detail/fisioterapia-musculo-esqueletica/fullwidth-image/image-1-desktop.jpg',
-          alt: {
-            translations: {
-              pt: 'Imagem de exercícios de fisioterapia musculo esquelética.',
-              en: 'Image of musculoskeletal physiotherapy exercises.',
-              es: 'Imagen de ejercicios de fisioterapia musculoesquelética.',
-              'zh-sg': '肌肉骨骼物理治疗练习的图片。',
-            },
+        mobile: '/images/services/detail/fisioterapia-musculo-esqueletica/fullwidth-image/image-1-mobile.jpg',
+        tablet: '/images/services/detail/fisioterapia-musculo-esqueletica/fullwidth-image/image-1-tablet.jpg',
+        desktop: '/images/services/detail/fisioterapia-musculo-esqueletica/fullwidth-image/image-1-desktop.jpg',
+        alt: {
+          translations: {
+            pt: 'Imagem de exercícios de fisioterapia musculo esquelética.',
+            en: 'Image of musculoskeletal physiotherapy exercises.',
+            es: 'Imagen de ejercicios de fisioterapia musculoesquelética.',
+            'zh-sg': '肌肉骨骼物理治疗练习的图片。',
           },
         },
       },
@@ -185,17 +183,15 @@ export const data = [
         },
       },
       imageFullwidth_2: {
-        image: {
-          mobile: '/images/services/detail/fisioterapia-musculo-esqueletica/fullwidth-image/image-2-mobile.jpg',
-          tablet: '/images/services/detail/fisioterapia-musculo-esqueletica/fullwidth-image/image-2-tablet.jpg',
-          desktop: '/images/services/detail/fisioterapia-musculo-esqueletica/fullwidth-image/image-2-desktop.jpg',
-          alt: {
-            translations: {
-              pt: 'Imagem de exercícios de fisioterapia músculo-esquelética.',
-              en: 'Image of musculoskeletal physiotherapy exercises.',
-              es: 'Imagen de ejercicios de fisioterapia musculoesquelética.',
-              'zh-sg': '肌肉骨骼物理治疗练习的图片。',
-            },
+        mobile: '/images/services/detail/fisioterapia-musculo-esqueletica/fullwidth-image/image-2-mobile.jpg',
+        tablet: '/images/services/detail/fisioterapia-musculo-esqueletica/fullwidth-image/image-2-tablet.jpg',
+        desktop: '/images/services/detail/fisioterapia-musculo-esqueletica/fullwidth-image/image-2-desktop.jpg',
+        alt: {
+          translations: {
+            pt: 'Imagem de exercícios de fisioterapia músculo-esquelética.',
+            en: 'Image of musculoskeletal physiotherapy exercises.',
+            es: 'Imagen de ejercicios de fisioterapia musculoesquelética.',
+            'zh-sg': '肌肉骨骼物理治疗练习的图片。',
           },
         },
       },
@@ -304,17 +300,15 @@ export const data = [
         },
       },
       imageFullwidth_1: {
-        image: {
-          mobile: '/images/services/detail/fisioterapia-desporto/fullwidth-image/image-1-mobile.jpg',
-          tablet: '/images/services/detail/fisioterapia-desporto/fullwidth-image/image-1-tablet.jpg',
-          desktop: '/images/services/detail/fisioterapia-desporto/fullwidth-image/image-1-desktop.jpg',
-          alt: {
-            translations: {
-              pt: 'Fisioterapia no Desporto',
-              en: 'Sports Physiotherapy',
-              es: 'Fisioterapia en el Deporte',
-              'zh-sg': '運動物理治療',
-            },
+        mobile: '/images/services/detail/fisioterapia-desporto/fullwidth-image/image-1-mobile.jpg',
+        tablet: '/images/services/detail/fisioterapia-desporto/fullwidth-image/image-1-tablet.jpg',
+        desktop: '/images/services/detail/fisioterapia-desporto/fullwidth-image/image-1-desktop.jpg',
+        alt: {
+          translations: {
+            pt: 'Fisioterapia no Desporto',
+            en: 'Sports Physiotherapy',
+            es: 'Fisioterapia en el Deporte',
+            'zh-sg': '運動物理治療',
           },
         },
       },
@@ -402,17 +396,15 @@ export const data = [
         },
       },
       imageFullwidth_2: {
-        image: {
-          mobile: '/images/services/detail/fisioterapia-desporto/fullwidth-image/image-2-mobile.jpg',
-          tablet: '/images/services/detail/fisioterapia-desporto/fullwidth-image/image-2-tablet.jpg',
-          desktop: '/images/services/detail/fisioterapia-desporto/fullwidth-image/image-2-desktop.jpg',
-          alt: {
-            translations: {
-              pt: 'Fisioterapia no Desporto',
-              en: 'Sports Physiotherapy',
-              es: 'Fisioterapia en el Deporte',
-              'zh-sg': '運動物理治療',
-            },
+        mobile: '/images/services/detail/fisioterapia-desporto/fullwidth-image/image-2-mobile.jpg',
+        tablet: '/images/services/detail/fisioterapia-desporto/fullwidth-image/image-2-tablet.jpg',
+        desktop: '/images/services/detail/fisioterapia-desporto/fullwidth-image/image-2-desktop.jpg',
+        alt: {
+          translations: {
+            pt: 'Fisioterapia no Desporto',
+            en: 'Sports Physiotherapy',
+            es: 'Fisioterapia en el Deporte',
+            'zh-sg': '運動物理治療',
           },
         },
       },
@@ -513,17 +505,15 @@ export const data = [
         },
       },
       imageFullwidth_1: {
-        image: {
-          mobile: '/images/services/detail/fisioterapia-aquatica-hidroterapia/fullwidth-image/image-1-mobile.jpg',
-          tablet: '/images/services/detail/fisioterapia-aquatica-hidroterapia/fullwidth-image/image-1-tablet.jpg',
-          desktop: '/images/services/detail/fisioterapia-aquatica-hidroterapia/fullwidth-image/image-1-desktop.jpg',
-          alt: {
-            translations: {
-              pt: 'Fisioterapia Aquática e Hidroterapia',
-              en: 'Aquatic Physiotherapy and Hydrotherapy',
-              es: 'Fisioterapia Acuática y Hidroterapia',
-              'zh-sg': '水疗和水疗理疗',
-            },
+        mobile: '/images/services/detail/fisioterapia-aquatica-hidroterapia/fullwidth-image/image-1-mobile.jpg',
+        tablet: '/images/services/detail/fisioterapia-aquatica-hidroterapia/fullwidth-image/image-1-tablet.jpg',
+        desktop: '/images/services/detail/fisioterapia-aquatica-hidroterapia/fullwidth-image/image-1-desktop.jpg',
+        alt: {
+          translations: {
+            pt: 'Fisioterapia Aquática e Hidroterapia',
+            en: 'Aquatic Physiotherapy and Hydrotherapy',
+            es: 'Fisioterapia Acuática y Hidroterapia',
+            'zh-sg': '水疗和水疗理疗',
           },
         },
       },
@@ -619,17 +609,15 @@ export const data = [
         },
       },
       imageFullwidth_2: {
-        image: {
-          mobile: '/images/services/detail/fisioterapia-aquatica-hidroterapia/fullwidth-image/image-2-mobile.jpg',
-          tablet: '/images/services/detail/fisioterapia-aquatica-hidroterapia/fullwidth-image/image-2-tablet.jpg',
-          desktop: '/images/services/detail/fisioterapia-aquatica-hidroterapia/fullwidth-image/image-2-desktop.jpg',
-          alt: {
-            translations: {
-              pt: 'Fisioterapia Aquática e Hidroterapia',
-              en: 'Aquatic Physiotherapy and Hydrotherapy',
-              es: 'Fisioterapia Acuática y Hidroterapia',
-              'zh-sg': '水疗和水疗理疗',
-            },
+        mobile: '/images/services/detail/fisioterapia-aquatica-hidroterapia/fullwidth-image/image-2-mobile.jpg',
+        tablet: '/images/services/detail/fisioterapia-aquatica-hidroterapia/fullwidth-image/image-2-tablet.jpg',
+        desktop: '/images/services/detail/fisioterapia-aquatica-hidroterapia/fullwidth-image/image-2-desktop.jpg',
+        alt: {
+          translations: {
+            pt: 'Fisioterapia Aquática e Hidroterapia',
+            en: 'Aquatic Physiotherapy and Hydrotherapy',
+            es: 'Fisioterapia Acuática y Hidroterapia',
+            'zh-sg': '水疗和水疗理疗',
           },
         },
       },
@@ -729,17 +717,15 @@ export const data = [
         },
       },
       imageFullwidth_1: {
-        image: {
-          mobile: '/images/services/detail/fisioterapia-envelhecimento-ativo/fullwidth-image/image-1-mobile.jpg',
-          tablet: '/images/services/detail/fisioterapia-envelhecimento-ativo/fullwidth-image/image-1-tablet.jpg',
-          desktop: '/images/services/detail/fisioterapia-envelhecimento-ativo/fullwidth-image/image-1-desktop.jpg',
-          alt: {
-            translations: {
-              pt: 'Fisioterapia no envelhecimento ativo',
-              en: 'Physiotherapy in Active Aging',
-              es: 'Fisioterapia en el envejecimiento activo',
-              'zh-sg': '活跃老龄化中的物理治疗',
-            },
+        mobile: '/images/services/detail/fisioterapia-envelhecimento-ativo/fullwidth-image/image-1-mobile.jpg',
+        tablet: '/images/services/detail/fisioterapia-envelhecimento-ativo/fullwidth-image/image-1-tablet.jpg',
+        desktop: '/images/services/detail/fisioterapia-envelhecimento-ativo/fullwidth-image/image-1-desktop.jpg',
+        alt: {
+          translations: {
+            pt: 'Fisioterapia no envelhecimento ativo',
+            en: 'Physiotherapy in Active Aging',
+            es: 'Fisioterapia en el envejecimiento activo',
+            'zh-sg': '活跃老龄化中的物理治疗',
           },
         },
       },
@@ -835,17 +821,15 @@ export const data = [
         },
       },
       imageFullwidth_2: {
-        image: {
-          mobile: '/images/services/detail/fisioterapia-envelhecimento-ativo/fullwidth-image/image-2-mobile.jpg',
-          tablet: '/images/services/detail/fisioterapia-envelhecimento-ativo/fullwidth-image/image-2-tablet.jpg',
-          desktop: '/images/services/detail/fisioterapia-envelhecimento-ativo/fullwidth-image/image-2-desktop.jpg',
-          alt: {
-            translations: {
-              pt: 'Fisioterapia no envelhecimento ativo',
-              en: 'Physiotherapy in Active Aging',
-              es: 'Fisioterapia en el envejecimiento activo',
-              'zh-sg': '活跃老龄化中的物理治疗',
-            },
+        mobile: '/images/services/detail/fisioterapia-envelhecimento-ativo/fullwidth-image/image-2-mobile.jpg',
+        tablet: '/images/services/detail/fisioterapia-envelhecimento-ativo/fullwidth-image/image-2-tablet.jpg',
+        desktop: '/images/services/detail/fisioterapia-envelhecimento-ativo/fullwidth-image/image-2-desktop.jpg',
+        alt: {
+          translations: {
+            pt: 'Fisioterapia no envelhecimento ativo',
+            en: 'Physiotherapy in Active Aging',
+            es: 'Fisioterapia en el envejecimiento activo',
+            'zh-sg': '活跃老龄化中的物理治疗',
           },
         },
       },
@@ -952,17 +936,15 @@ export const data = [
         },
       },
       imageFullwidth_1: {
-        image: {
-          mobile: '/images/services/detail/fisioterapia-online/fullwidth-image/image-1-mobile.jpg',
-          tablet: '/images/services/detail/fisioterapia-online/fullwidth-image/image-1-tablet.jpg',
-          desktop: '/images/services/detail/fisioterapia-online/fullwidth-image/image-1-desktop.jpg',
-          alt: {
-            translations: {
-              pt: 'Fisioterapia Online',
-              en: 'Online Physiotherapy',
-              es: 'Fisioterapia en línea',
-              'zh-sg': '在线物理治疗',
-            },
+        mobile: '/images/services/detail/fisioterapia-online/fullwidth-image/image-1-mobile.jpg',
+        tablet: '/images/services/detail/fisioterapia-online/fullwidth-image/image-1-tablet.jpg',
+        desktop: '/images/services/detail/fisioterapia-online/fullwidth-image/image-1-desktop.jpg',
+        alt: {
+          translations: {
+            pt: 'Fisioterapia Online',
+            en: 'Online Physiotherapy',
+            es: 'Fisioterapia en línea',
+            'zh-sg': '在线物理治疗',
           },
         },
       },
@@ -1147,17 +1129,15 @@ export const data = [
         },
       },
       imageFullwidth_1: {
-        image: {
-          mobile: '/images/services/detail/fisioterapia-saude-da-mulher/fullwidth-image/image-1-mobile.jpg',
-          tablet: '/images/services/detail/fisioterapia-saude-da-mulher/fullwidth-image/image-1-tablet.jpg',
-          desktop: '/images/services/detail/fisioterapia-saude-da-mulher/fullwidth-image/image-1-desktop.jpg',
-          alt: {
-            translations: {
-              pt: 'Fisioterapia na saúde da mulher',
-              en: "Physiotherapy in women's health",
-              es: 'Fisioterapia en la salud de la mujer',
-              'zh-sg': '女性健康的物理治疗',
-            },
+        mobile: '/images/services/detail/fisioterapia-saude-da-mulher/fullwidth-image/image-1-mobile.jpg',
+        tablet: '/images/services/detail/fisioterapia-saude-da-mulher/fullwidth-image/image-1-tablet.jpg',
+        desktop: '/images/services/detail/fisioterapia-saude-da-mulher/fullwidth-image/image-1-desktop.jpg',
+        alt: {
+          translations: {
+            pt: 'Fisioterapia na saúde da mulher',
+            en: "Physiotherapy in women's health",
+            es: 'Fisioterapia en la salud de la mujer',
+            'zh-sg': '女性健康的物理治疗',
           },
         },
       },
@@ -1245,17 +1225,15 @@ export const data = [
         },
       },
       imageFullwidth_2: {
-        image: {
-          mobile: '/images/services/detail/fisioterapia-saude-da-mulher/fullwidth-image/image-2-mobile.jpg',
-          tablet: '/images/services/detail/fisioterapia-saude-da-mulher/fullwidth-image/image-2-tablet.jpg',
-          desktop: '/images/services/detail/fisioterapia-saude-da-mulher/fullwidth-image/image-2-desktop.jpg',
-          alt: {
-            translations: {
-              pt: 'Fisioterapia na saúde da mulher',
-              en: "Physiotherapy in women's health",
-              es: 'Fisioterapia en la salud de la mujer',
-              'zh-sg': '女性健康的物理治疗',
-            },
+        mobile: '/images/services/detail/fisioterapia-saude-da-mulher/fullwidth-image/image-2-mobile.jpg',
+        tablet: '/images/services/detail/fisioterapia-saude-da-mulher/fullwidth-image/image-2-tablet.jpg',
+        desktop: '/images/services/detail/fisioterapia-saude-da-mulher/fullwidth-image/image-2-desktop.jpg',
+        alt: {
+          translations: {
+            pt: 'Fisioterapia na saúde da mulher',
+            en: "Physiotherapy in women's health",
+            es: 'Fisioterapia en la salud de la mujer',
+            'zh-sg': '女性健康的物理治疗',
           },
         },
       },
@@ -1346,16 +1324,14 @@ export const data = [
         },
       },
       imageFullwidth_1: {
-        image: {
-          mobile: '/images/services/detail/pilates-clinico/fullwidth-image/image-1-mobile.jpg',
-          tablet: '/images/services/detail/pilates-clinico/fullwidth-image/image-1-tablet.jpg',
-          desktop: '/images/services/detail/pilates-clinico/fullwidth-image/image-1-desktop.jpg',
-          alt: {
-            pt: 'Pilates Clínico',
-            en: 'Clinical Pilates',
-            es: 'Pilates Clínico',
-            'zh-sg': '临床普拉提',
-          },
+        mobile: '/images/services/detail/pilates-clinico/fullwidth-image/image-1-mobile.jpg',
+        tablet: '/images/services/detail/pilates-clinico/fullwidth-image/image-1-tablet.jpg',
+        desktop: '/images/services/detail/pilates-clinico/fullwidth-image/image-1-desktop.jpg',
+        alt: {
+          pt: 'Pilates Clínico',
+          en: 'Clinical Pilates',
+          es: 'Pilates Clínico',
+          'zh-sg': '临床普拉提',
         },
       },
       topics_1: {
@@ -1426,16 +1402,14 @@ export const data = [
         },
       },
       imageFullwidth_2: {
-        image: {
-          mobile: '/images/services/detail/pilates-clinico/fullwidth-image/image-2-mobile.jpg',
-          tablet: '/images/services/detail/pilates-clinico/fullwidth-image/image-2-tablet.jpg',
-          desktop: '/images/services/detail/pilates-clinico/fullwidth-image/image-2-desktop.jpg',
-          alt: {
-            pt: 'Pilates Clínico',
-            en: 'Clinical Pilates',
-            es: 'Pilates Clínico',
-            'zh-sg': '临床普拉提',
-          },
+        mobile: '/images/services/detail/pilates-clinico/fullwidth-image/image-2-mobile.jpg',
+        tablet: '/images/services/detail/pilates-clinico/fullwidth-image/image-2-tablet.jpg',
+        desktop: '/images/services/detail/pilates-clinico/fullwidth-image/image-2-desktop.jpg',
+        alt: {
+          pt: 'Pilates Clínico',
+          en: 'Clinical Pilates',
+          es: 'Pilates Clínico',
+          'zh-sg': '临床普拉提',
         },
       },
       appointmentBanner: {
@@ -1524,16 +1498,14 @@ export const data = [
         },
       },
       imageFullwidth_1: {
-        image: {
-          mobile: '/images/services/detail/nutricao/fullwidth-image/image-1-mobile.jpg',
-          tablet: '/images/services/detail/nutricao/fullwidth-image/image-1-tablet.jpg',
-          desktop: '/images/services/detail/nutricao/fullwidth-image/image-1-desktop.jpg',
-          alt: {
-            pt: 'Nutrição',
-            en: 'Nutrition',
-            es: 'Nutrición',
-            'zh-sg': '营养',
-          },
+        mobile: '/images/services/detail/nutricao/fullwidth-image/image-1-mobile.jpg',
+        tablet: '/images/services/detail/nutricao/fullwidth-image/image-1-tablet.jpg',
+        desktop: '/images/services/detail/nutricao/fullwidth-image/image-1-desktop.jpg',
+        alt: {
+          pt: 'Nutrição',
+          en: 'Nutrition',
+          es: 'Nutrición',
+          'zh-sg': '营养',
         },
       },
       text: {
@@ -1658,16 +1630,14 @@ export const data = [
         },
       },
       imageFullwidth_1: {
-        image: {
-          mobile: '/images/services/detail/saude-bem-estar/fullwidth-image/image-1-mobile.jpg',
-          tablet: '/images/services/detail/saude-bem-estar/fullwidth-image/image-1-tablet.jpg',
-          desktop: '/images/services/detail/saude-bem-estar/fullwidth-image/image-1-desktop.jpg',
-          alt: {
-            pt: 'Teste',
-            en: 'Test',
-            es: 'Prueba',
-            'zh-sg': '测试',
-          },
+        mobile: '/images/services/detail/saude-bem-estar/fullwidth-image/image-1-mobile.jpg',
+        tablet: '/images/services/detail/saude-bem-estar/fullwidth-image/image-1-tablet.jpg',
+        desktop: '/images/services/detail/saude-bem-estar/fullwidth-image/image-1-desktop.jpg',
+        alt: {
+          pt: 'Teste',
+          en: 'Test',
+          es: 'Prueba',
+          'zh-sg': '测试',
         },
       },
       topics_1: {
@@ -1786,16 +1756,14 @@ export const data = [
         },
       },
       imageFullwidth_1: {
-        image: {
-          mobile: '/images/services/detail/consultas-medicas/fullwidth-image/image-1-mobile.jpg',
-          tablet: '/images/services/detail/consultas-medicas/fullwidth-image/image-1-tablet.jpg',
-          desktop: '/images/services/detail/consultas-medicas/fullwidth-image/image-1-desktop.jpg',
-          alt: {
-            pt: 'Teste',
-            en: 'Test',
-            es: 'Prueba',
-            'zh-sg': '测试',
-          },
+        mobile: '/images/services/detail/consultas-medicas/fullwidth-image/image-1-mobile.jpg',
+        tablet: '/images/services/detail/consultas-medicas/fullwidth-image/image-1-tablet.jpg',
+        desktop: '/images/services/detail/consultas-medicas/fullwidth-image/image-1-desktop.jpg',
+        alt: {
+          pt: 'Teste',
+          en: 'Test',
+          es: 'Prueba',
+          'zh-sg': '测试',
         },
       },
       topics: {

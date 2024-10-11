@@ -17,7 +17,6 @@ const { getLayoutData } = useLayout();
 const { data, status } = await getLayoutData();
 
 const headerData = computed(() => data.value?.header);
-console.log(headerData);
 
 const emit = defineEmits(['onDataLoaded']);
 
