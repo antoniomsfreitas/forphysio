@@ -23,7 +23,7 @@ export interface IntroBlock {
 
 export interface TopicsBlock {
   title: string;
-  topics: string[];
+  topics: string;
 }
 
 export interface BannerBlock {

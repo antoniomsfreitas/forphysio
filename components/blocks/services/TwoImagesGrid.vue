@@ -27,11 +27,8 @@
           <div class="two-images-grid__right__content">
             <h2 v-if="data?.title" v-t="data.title" />
             <p v-if="data?.text" class="two-images-grid__right__content__text" v-html="data.text" />
-            <ul v-if="data?.topics">
-              <li v-for="topic in data.topics" :key="topic">
-                <p v-html="topic"></p>
-              </li>
-            </ul>
+
+            <div class="two-images-grid__right__content__topics" v-html="data?.topics"></div>
           </div>
         </LayoutGridCol>
       </LayoutGridRow>
@@ -130,7 +127,7 @@ defineProps({
       }
 
       p,
-      ul li {
+      :deep(ul) li {
         font-weight: $font-weight-light;
         line-height: 1.2;
         color: $medium-grey;
@@ -148,14 +145,21 @@ defineProps({
         color: $white;
       }
 
-      ul {
+      :deep(ul) {
         li {
-          display: flex;
+          position: relative;
+          padding-left: 31px;
           padding-bottom: 24px;
 
           &::before {
             content: '\2022';
             padding: 0 10px;
+            position: absolute;
+            left: 0;
+          }
+
+          * {
+            color: $white;
           }
         }
       }

@@ -2,7 +2,10 @@
   "pages.about": "關於我們",
   "pages.team": "團隊",
   "pages.contacts": "聯絡人",
+
   "pages.services": "服務",
+  "pages.services.landingPage.intro": "自 2014 年以來，我們一直提供專業的物理治療服務。\n\n在我們的發展過程中, 我們增加了營養、普拉提、健康和醫療諮詢等輔助服務。",
+
   "pages.services.musculoskeletalPhysiotherapy": "肌肉骨骼物理治療",
   "pages.services.sportsPhysiotherapy": "運動中的物理治療",
   "pages.services.aquaticPhysiotherapyHydrotherapy": "水中物理治療和水療",

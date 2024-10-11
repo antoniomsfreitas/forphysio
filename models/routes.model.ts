@@ -8,6 +8,7 @@ export enum Routes {
   BLOG_CATEGORIES = 'blog-categories',
   BLOG_CATEGORIES_SLUG = 'blog-categories-slug',
   SERVICES = 'services',
+  SERVICES_SLUG = 'services-slug',
   PARTNERSHIPS = 'partnerships',
   RECRUITMENT = 'recruitment',
   FAQ = 'faq',
