@@ -22,18 +22,12 @@
               <Button type="outline">{{ $t('general.book-evaluation') }}</Button>
             </LayoutGridCol>
           </LayoutGridRow>
-
-          <LayoutGridRow v-if="version == '1'">
-            <LayoutGridCol m="4" t="8" d="8" start-col-t="3" start-col-d="3">
-              <p v-text="data.text" />
-            </LayoutGridCol>
-          </LayoutGridRow>
         </LayoutGrid>
       </div>
     </div>
 
     <LayoutGrid>
-      <LayoutGridRow v-if="version == '2'" class="intro-text">
+      <LayoutGridRow class="intro-text">
         <LayoutGridCol m="4" t="8" d="8" start-col-t="3" start-col-d="3">
           <p v-text="data.text" />
         </LayoutGridCol>
@@ -51,10 +45,6 @@ defineProps({
     required: true,
   },
 });
-
-// TEMP - FOR TEST PURPOSES
-const route = useRoute();
-const version = route.query.version || '1';
 </script>
 
 <style scoped lang="scss">
@@ -93,20 +83,6 @@ const version = route.query.version || '1';
 
       @include mq-tablet-desktop {
         margin-bottom: 50px;
-      }
-    }
-
-    p {
-      font-weight: $font-weight-light;
-      line-height: 1.2;
-      text-align: center;
-
-      @include mq-mobile-tablet {
-        font-size: 18px;
-      }
-
-      @include mq-desktop {
-        font-size: 28px;
       }
     }
   }

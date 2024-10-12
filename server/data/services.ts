@@ -1,5 +1,3 @@
-import type { Service } from '~/models/services.model';
-
 export const data = [
   {
     id: 1,
@@ -15,7 +13,7 @@ export const data = [
       translations: {
         pt: 'Fisioterapia Músculo Esquelética',
         en: 'Musculoskeletal Physiotherapy',
-        es: 'Fisioterapia Músculo Esquelética',
+        es: 'Fisioterapia Musculoesquelética',
         'zh-sg': '肌肉骨骼物理治疗',
       },
     },
@@ -28,13 +26,13 @@ export const data = [
           translations: {
             pt: 'Fisioterapia\nmúsculo esquelética',
             en: 'Musculoskeletal\nPhysiotherapy',
-            es: 'Fisioterapia\nmúsculo esquelética',
+            es: 'Fisioterapia\nmusculoesquelética',
             'zh-sg': '肌肉骨骼\n物理治疗',
           },
         },
         text: {
           translations: {
-            pt: 'A Fisioterapia Musculo Esquelética é uma área que pretende ajudar a prevenir, reduzir ou a eliminar a dor, e as limitações funcionais.\n\nTal como em outras áreas da fisioterapia, carece de uma avaliação meticulosa, e a uma intervenção que recorre a técnicas manuais, exercício e educação.',
+            pt: 'A Fisioterapia Músculo Esquelética é uma área que pretende ajudar a prevenir, reduzir ou a eliminar a dor, e as limitações funcionais.\n\nTal como em outras áreas da fisioterapia, carece de uma avaliação meticulosa, e a uma intervenção que recorre a técnicas manuais, exercício e educação.',
             en: 'Musculoskeletal Physiotherapy aims to help prevent, reduce, or eliminate pain and functional limitations.\n\nAs in other areas of physiotherapy, it requires meticulous assessment and an intervention that relies on manual techniques, exercise, and education.',
             es: 'La fisioterapia musculoesquelética tiene como objetivo prevenir, reducir o eliminar el dolor y las limitaciones funcionales.\n\nAl igual que en otras áreas de la fisioterapia, requiere una evaluación meticulosa e intervenciones basadas en técnicas manuales, ejercicio y educación.',
             'zh-sg':
@@ -47,7 +45,7 @@ export const data = [
           desktop: '/images/services/detail/fisioterapia-musculo-esqueletica/intro/image-desktop.jpg',
           alt: {
             translations: {
-              pt: 'Imagem de exercícios de fisioterapia musculo esquelética.',
+              pt: 'Imagem de exercícios de fisioterapia musculo-esquelética.',
               en: 'Image of musculoskeletal physiotherapy exercises.',
               es: 'Imagen de ejercicios de fisioterapia musculoesquelética.',
               'zh-sg': '肌肉骨骼物理治疗练习的图片。',
@@ -78,7 +76,7 @@ export const data = [
           desktop: '/images/services/detail/fisioterapia-musculo-esqueletica/side-image/image-desktop.jpg',
           alt: {
             translations: {
-              pt: 'Imagem de exercícios de fisioterapia musculo esquelética.',
+              pt: 'Imagem de exercícios de fisioterapia musculo-esquelética.',
               en: 'Image of musculoskeletal physiotherapy exercises.',
               es: 'Imagen de ejercicios de fisioterapia musculoesquelética.',
               'zh-sg': '肌肉骨骼物理治疗练习的图片。',
@@ -92,7 +90,7 @@ export const data = [
         desktop: '/images/services/detail/fisioterapia-musculo-esqueletica/fullwidth-image/image-1-desktop.jpg',
         alt: {
           translations: {
-            pt: 'Imagem de exercícios de fisioterapia musculo esquelética.',
+            pt: 'Imagem de exercícios de fisioterapia musculo-esquelética.',
             en: 'Image of musculoskeletal physiotherapy exercises.',
             es: 'Imagen de ejercicios de fisioterapia musculoesquelética.',
             'zh-sg': '肌肉骨骼物理治疗练习的图片。',
@@ -220,7 +218,7 @@ export const data = [
         pt: 'fisioterapia-no-desporto',
         en: 'sports-physiotherapy',
         es: 'fisioterapia-en-deporte',
-        'zh-sg': '運動物理治療',
+        'zh-sg': 'sports-physiotherapy',
       },
     },
     title: {
@@ -858,7 +856,7 @@ export const data = [
         pt: 'fisioterapia-online',
         en: 'online-physiotherapy',
         es: 'fisioterapia-en-linea',
-        'zh-sg': '在线物理治疗',
+        'zh-sg': 'online-physiotherapy',
       },
     },
     title: {
@@ -958,11 +956,13 @@ export const data = [
           },
         },
         topics: {
-          pt: '<ul><li>Dor (costas, ombro, cotovelo, joelho, anca)</li><li>Hérnias</li><li>Ombro congelado</li><li>Entorse do tornozelo ou punho</li><li>Rotura de ligamentos</li><li>Conflito subacromial</li><li>Roturas musculares</li><li>Lesões meniscais</li><li>Tendinopatias</li><li>Conflito femoro-acetabular</li><li>Condromalacia (lesões da cartilagem)</li><li>Fascíte plantar</li><li>Síndrome do túnel cárpico</li><li>Reabilitação pós cirúrgica</li><li>Reabilitação pós fratura e imobilização</li><li>Luxações</li><li>Preparação para o nascimento</li><li>Recuperação pós-parto</li><li>Diástase abdominal</li><li>Disfunções sexuais (dor durante a relação, vaginismo)</li><li>Dor pélvica</li><li>Endometriose</li><li>Obstipação</li><li>Prolapso de órgãos pélvicos (descida dos órgãos)</li><li>Menopausa</li><li>Incontinência (perda) urinária, fecal ou de gases</li></ul>',
-          en: '<ul><li>Pain (back, shoulder, elbow, knee, hip)</li><li>Hernias</li><li>Frozen shoulder</li><li>Ankle or wrist sprains</li><li>Ligament tears</li><li>Subacromial conflict</li><li>Muscle tears</li><li>Meniscus injuries</li><li>Tendinopathies</li><li>Femoroacetabular conflict</li><li>Chondromalacia (cartilage injuries)</li><li>Plantar fasciitis</li><li>Carpal tunnel syndrome</li><li>Post-surgical rehabilitation</li><li>Post-fracture and immobilization rehabilitation</li><li>Dislocations</li><li>Preparation for childbirth</li><li>Postpartum recovery</li><li>Abdominal diastasis</li><li>Sexual dysfunctions (pain during intercourse, vaginismus)</li><li>Pelvic pain</li><li>Endometriosis</li><li>Constipation</li><li>Pelvic organ prolapse (descent of organs)</li><li>Menopause</li><li>Urinary, fecal or gas incontinence (leakage)</li></ul>',
-          es: '<ul><li>Dolor (espalda, hombro, codo, rodilla, cadera)</li><li>Hernias</li><li>Hombro congelado</li><li>Esguinces de tobillo o muñeca</li><li>Desgarros de ligamentos</li><li>Conflicto subacromial</li><li>Desgarros musculares</li><li>Lesiones meniscales</li><li>Tendinopatías</li><li>Conflicto femoro-acetabular</li><li>Condromalacia (lesiones del cartílago)</li><li>Fascitis plantar</li><li>Síndrome del túnel carpiano</li><li>Rehabilitación postquirúrgica</li><li>Rehabilitación post-fractura e inmovilización</li><li>Luxaciones</li><li>Preparación para el parto</li><li>Recuperación postparto</li><li>Diástasis abdominal</li><li>Disfunciones sexuales (dolor durante la relación, vaginismo)</li><li>Dolor pélvico</li><li>Endometriosis</li><li>Estreñimiento</li><li>Prolapso de órganos pélvicos (descenso de órganos)</li><li>Menopausia</li><li>Incontinencia (pérdida) urinaria, fecal o de gases</li></ul>',
-          'zh-sg':
-            '<ul><li>疼痛（背部、肩部、肘部、膝盖、臀部）</li><li>疝气</li><li>冻结肩</li><li>脚踝或手腕扭伤</li><li>韧带撕裂</li><li>肩胛下冲突</li><li>肌肉撕裂</li><li>半月板损伤</li><li>肌腱病</li><li>股骨与髋臼冲突</li><li>软骨软化（软骨损伤）</li><li>足底筋膜炎</li><li>腕管综合症</li><li>手术后康复</li><li>骨折和固定后的康复</li><li>脱位</li><li>分娩准备</li><li>产后恢复</li><li>腹部分离</li><li>性功能障碍（性交疼痛、阴道痉挛）</li><li>盆腔疼痛</li><li>子宫内膜异位症</li><li>便秘</li><li>盆腔器官脱垂（器官下垂）</li><li>更年期</li><li>尿失禁、粪便失禁或气体失禁（泄漏）</li></ul>',
+          translations: {
+            pt: '<ul><li>Dor (costas, ombro, cotovelo, joelho, anca)</li><li>Hérnias</li><li>Ombro congelado</li><li>Entorse do tornozelo ou punho</li><li>Rotura de ligamentos</li><li>Conflito subacromial</li><li>Roturas musculares</li><li>Lesões meniscais</li><li>Tendinopatias</li><li>Conflito femoro-acetabular</li><li>Condromalacia (lesões da cartilagem)</li><li>Fascíte plantar</li><li>Síndrome do túnel cárpico</li></ul><ul><li>Reabilitação pós cirúrgica</li><li>Reabilitação pós fratura e imobilização</li><li>Luxações</li><li>Preparação para o nascimento</li><li>Recuperação pós-parto</li><li>Diástase abdominal</li><li>Disfunções sexuais (dor durante a relação, vaginismo)</li><li>Dor pélvica</li><li>Endometriose</li><li>Obstipação</li><li>Prolapso de órgãos pélvicos (descida dos órgãos)</li><li>Menopausa</li><li>Incontinência (perda) urinária, fecal ou de gases</li></ul>',
+            en: '<ul><li>Pain (back, shoulder, elbow, knee, hip)</li><li>Hernias</li><li>Frozen shoulder</li><li>Ankle or wrist sprains</li><li>Ligament tears</li><li>Subacromial conflict</li><li>Muscle tears</li><li>Meniscus injuries</li><li>Tendinopathies</li><li>Femoroacetabular conflict</li><li>Chondromalacia (cartilage injuries)</li><li>Plantar fasciitis</li><li>Carpal tunnel syndrome</li><li>Post-surgical rehabilitation</li><li>Post-fracture and immobilization rehabilitation</li><li>Dislocations</li><li>Preparation for childbirth</li><li>Postpartum recovery</li><li>Abdominal diastasis</li><li>Sexual dysfunctions (pain during intercourse, vaginismus)</li><li>Pelvic pain</li><li>Endometriosis</li><li>Constipation</li><li>Pelvic organ prolapse (descent of organs)</li><li>Menopause</li><li>Urinary, fecal or gas incontinence (leakage)</li></ul>',
+            es: '<ul><li>Dolor (espalda, hombro, codo, rodilla, cadera)</li><li>Hernias</li><li>Hombro congelado</li><li>Esguinces de tobillo o muñeca</li><li>Desgarros de ligamentos</li><li>Conflicto subacromial</li><li>Desgarros musculares</li><li>Lesiones meniscales</li><li>Tendinopatías</li><li>Conflicto femoro-acetabular</li><li>Condromalacia (lesiones del cartílago)</li><li>Fascitis plantar</li><li>Síndrome del túnel carpiano</li><li>Rehabilitación postquirúrgica</li><li>Rehabilitación post-fractura e inmovilización</li><li>Luxaciones</li><li>Preparación para el parto</li><li>Recuperación postparto</li><li>Diástasis abdominal</li><li>Disfunciones sexuales (dolor durante la relación, vaginismo)</li><li>Dolor pélvico</li><li>Endometriosis</li><li>Estreñimiento</li><li>Prolapso de órganos pélvicos (descenso de órganos)</li><li>Menopausia</li><li>Incontinencia (pérdida) urinaria, fecal o de gases</li></ul>',
+            'zh-sg':
+              '<ul><li>疼痛（背部、肩部、肘部、膝盖、臀部）</li><li>疝气</li><li>冻结肩</li><li>脚踝或手腕扭伤</li><li>韧带撕裂</li><li>肩胛下冲突</li><li>肌肉撕裂</li><li>半月板损伤</li><li>肌腱病</li><li>股骨与髋臼冲突</li><li>软骨软化（软骨损伤）</li><li>足底筋膜炎</li><li>腕管综合症</li><li>手术后康复</li><li>骨折和固定后的康复</li><li>脱位</li><li>分娩准备</li><li>产后恢复</li><li>腹部分离</li><li>性功能障碍（性交疼痛、阴道痉挛）</li><li>盆腔疼痛</li><li>子宫内膜异位症</li><li>便秘</li><li>盆腔器官脱垂（器官下垂）</li><li>更年期</li><li>尿失禁、粪便失禁或气体失禁（泄漏）</li></ul>',
+          },
         },
       },
       twoImagesGrid: {
@@ -975,11 +975,13 @@ export const data = [
           },
         },
         topics: {
-          pt: '<ul><li><span class="highlight">Alívio</span> da dor</li><li><span class="highlight">Melhoria</span> das amplitudes articulares</li><li><span class="highlight">Fortalecimento</span> muscular (sem carga total)</li><li><span class="highlight">Melhoria da qualidade</span> do movimento e controlo motor</li><li>Retorno à <span class="highlight">funcionalidade</span></li><li><span class="highlight">Qualidade</span> de vida</li></ul>',
-          en: '<ul><li><span class="highlight">Relief</span> from pain</li><li><span class="highlight">Improvement</span> of joint ranges</li><li><span class="highlight">Muscle strengthening</span> (without full load)</li><li><span class="highlight">Improvement of quality</span> of movement and motor control</li><li>Return to <span class="highlight">functionality</span></li><li><span class="highlight">Quality</span> of life</li></ul>',
-          es: '<ul><li><span class="highlight">Alivio</span> del dolor</li><li><span class="highlight">Mejora</span> de las amplitudes articulares</li><li><span class="highlight">Fortalecimiento</span> muscular (sin carga total)</li><li><span class="highlight">Mejora de la calidad</span> del movimiento y control motor</li><li>Retorno a la <span class="highlight">funcionalidad</span></li><li><span class="highlight">Calidad</span> de vida</li></ul>',
-          'zh-sg':
-            '<ul><li><span class="highlight">缓解</span>疼痛</li><li><span class="highlight">改善</span>关节活动范围</li><li><span class="highlight">肌肉增强</span>（不完全负载）</li><li><span class="highlight">提高</span>运动质量和运动控制</li><li>恢复<span class="highlight">功能</span></li><li><span class="highlight">生活质量</span></li></ul>',
+          translations: {
+            pt: '<ul><li><span class="highlight">Alívio</span> da dor</li><li><span class="highlight">Melhoria</span> das amplitudes articulares</li><li><span class="highlight">Fortalecimento</span> muscular (sem carga total)</li><li><span class="highlight">Melhoria da qualidade</span> do movimento e controlo motor</li><li>Retorno à <span class="highlight">funcionalidade</span></li><li><span class="highlight">Qualidade</span> de vida</li></ul>',
+            en: '<ul><li><span class="highlight">Relief</span> from pain</li><li><span class="highlight">Improvement</span> of joint ranges</li><li><span class="highlight">Muscle strengthening</span> (without full load)</li><li><span class="highlight">Improvement of quality</span> of movement and motor control</li><li>Return to <span class="highlight">functionality</span></li><li><span class="highlight">Quality</span> of life</li></ul>',
+            es: '<ul><li><span class="highlight">Alivio</span> del dolor</li><li><span class="highlight">Mejora</span> de las amplitudes articulares</li><li><span class="highlight">Fortalecimiento</span> muscular (sin carga total)</li><li><span class="highlight">Mejora de la calidad</span> del movimiento y control motor</li><li>Retorno a la <span class="highlight">funcionalidad</span></li><li><span class="highlight">Calidad</span> de vida</li></ul>',
+            'zh-sg':
+              '<ul><li><span class="highlight">缓解</span>疼痛</li><li><span class="highlight">改善</span>关节活动范围</li><li><span class="highlight">肌肉增强</span>（不完全负载）</li><li><span class="highlight">提高</span>运动质量和运动控制</li><li>恢复<span class="highlight">功能</span></li><li><span class="highlight">生活质量</span></li></ul>',
+          },
         },
         imageBig: {
           mobile: '/images/services/detail/fisioterapia-online/two-images-grid/image-1-mobile.jpg',
@@ -1018,11 +1020,13 @@ export const data = [
           },
         },
         topics: {
-          pt: '<ul><li>Avaliação individualizada</li><li>Monitorização constante da evolução</li><li>60 minutos dedicados ao cliente</li><li>Relatório em fisioterapia (se necessário)</li><li>Conforto da sua casa</li><li>Sem necessidade de deslocação</li></ul>',
-          en: '<ul><li>Individualized assessment</li><li>Constant monitoring of progress</li><li>60 minutes dedicated to the client</li><li>Physiotherapy report (if necessary)</li><li>Comfort of your home</li><li>No need to travel</li></ul>',
-          es: '<ul><li>Evaluación individualizada</li><li>Monitoreo constante de la evolución</li><li>60 minutos dedicados al cliente</li><li>Informe en fisioterapia (si es necesario)</li><li>Comodidad de su hogar</li><li>Sin necesidad de desplazarse</li></ul>',
-          'zh-sg':
-            '<ul><li>个性化评估</li><li>持续监测进展</li><li>为客户提供60分钟的服务</li><li>物理治疗报告（如有必要）</li><li>在家里的舒适</li><li>无需旅行</li></ul>',
+          translations: {
+            pt: '<ul><li>Avaliação individualizada</li><li>Monitorização constante da evolução</li><li>60 minutos dedicados ao cliente</li><li>Relatório em fisioterapia (se necessário)</li><li>Conforto da sua casa</li><li>Sem necessidade de deslocação</li></ul>',
+            en: '<ul><li>Individualized assessment</li><li>Constant monitoring of progress</li><li>60 minutes dedicated to the client</li><li>Physiotherapy report (if necessary)</li><li>Comfort of your home</li><li>No need to travel</li></ul>',
+            es: '<ul><li>Evaluación individualizada</li><li>Monitoreo constante de la evolución</li><li>60 minutos dedicados al cliente</li><li>Informe en fisioterapia (si es necesario)</li><li>Comodidad de su hogar</li><li>Sin necesidad de desplazarse</li></ul>',
+            'zh-sg':
+              '<ul><li>个性化评估</li><li>持续监测进展</li><li>为客户提供60分钟的服务</li><li>物理治疗报告（如有必要）</li><li>在家里的舒适</li><li>无需旅行</li></ul>',
+          },
         },
       },
       appointmentBanner: {
@@ -1050,7 +1054,7 @@ export const data = [
         pt: 'fisioterapia-na-saude-da-mulher',
         en: 'physiotherapy-in-womens-health',
         es: 'fisioterapia-en-la-salud-de-la-mujer',
-        'zh-sg': 'fisioterapia-na-saude-da-mulher',
+        'zh-sg': 'physiotherapy-in-womens-health',
       },
     },
     title: {
@@ -1258,16 +1262,20 @@ export const data = [
   {
     id: 7,
     slug: {
-      pt: 'pilates-clinico',
-      en: 'clinical-pilates',
-      es: 'pilates-clinico',
-      'zh-sg': 'clinical-pilates',
+      translations: {
+        pt: 'pilates-clinico',
+        en: 'clinical-pilates',
+        es: 'pilates-clinico',
+        'zh-sg': 'clinical-pilates',
+      },
     },
     title: {
-      pt: 'Pilates Clínico',
-      en: 'Clinical Pilates',
-      es: 'Pilates Clínico',
-      'zh-sg': '临床普拉提',
+      translations: {
+        pt: 'Pilates Clínico',
+        en: 'Clinical Pilates',
+        es: 'Pilates Clínico',
+        'zh-sg': '临床普拉提',
+      },
     },
     image: '/images/services/list/pilates-clinico.jpg',
     locations: [1],
@@ -1275,51 +1283,63 @@ export const data = [
     blocks: {
       intro: {
         title: {
-          pt: 'Pilates Clínico',
-          en: 'Clinical Pilates',
-          es: 'Pilates Clínico',
-          'zh-sg': '临床普拉提',
-        },
-        text: {
-          pt: 'O Pilates Clínico é um método de controlo muscular desenvolvido por Joseph Pilates na década de 1920.\nPode ser realizado individualmente ou em grupo.',
-          en: 'Clinical Pilates is a muscle control method developed by Joseph Pilates in the 1920s.\nIt can be performed individually or in groups.',
-          es: 'El Pilates Clínico es un método de control muscular desarrollado por Joseph Pilates en la década de 1920.\nSe puede realizar de forma individual o en grupo.',
-          'zh-sg': '临床普拉提是由约瑟夫·普拉提在20世纪20年代开发的一种肌肉控制方法。\n可以单独或以小组形式进行。',
-        },
-        image: {
-          mobile: '/images/services/detail/pilates-clinico/intro/image-mobile.jpg',
-          tablet: '/images/services/detail/pilates-clinico/intro/image-tablet.jpg',
-          desktop: '/images/services/detail/pilates-clinico/intro/image-desktop.jpg',
-          alt: {
+          translations: {
             pt: 'Pilates Clínico',
             en: 'Clinical Pilates',
             es: 'Pilates Clínico',
             'zh-sg': '临床普拉提',
           },
         },
+        text: {
+          translations: {
+            pt: 'O Pilates Clínico é um método de controlo muscular desenvolvido por Joseph Pilates na década de 1920.\nPode ser realizado individualmente ou em grupo.',
+            en: 'Clinical Pilates is a muscle control method developed by Joseph Pilates in the 1920s.\nIt can be performed individually or in groups.',
+            es: 'El Pilates Clínico es un método de control muscular desarrollado por Joseph Pilates en la década de 1920.\nSe puede realizar de forma individual o en grupo.',
+            'zh-sg': '临床普拉提是由约瑟夫·普拉提在20世纪20年代开发的一种肌肉控制方法。\n可以单独或以小组形式进行。',
+          },
+        },
+        image: {
+          mobile: '/images/services/detail/pilates-clinico/intro/image-mobile.jpg',
+          tablet: '/images/services/detail/pilates-clinico/intro/image-tablet.jpg',
+          desktop: '/images/services/detail/pilates-clinico/intro/image-desktop.jpg',
+          alt: {
+            translations: {
+              pt: 'Pilates Clínico',
+              en: 'Clinical Pilates',
+              es: 'Pilates Clínico',
+              'zh-sg': '临床普拉提',
+            },
+          },
+        },
       },
       sideImage: {
         title: {
-          pt: 'Para quem é indicada o pilates clínico?',
-          en: 'Who is clinical Pilates indicated for?',
-          es: '¿Para quién está indicado el pilates clínico?',
-          'zh-sg': '临床普拉提适合谁？',
+          translations: {
+            pt: 'Para quem é indicada o pilates clínico?',
+            en: 'Who is clinical Pilates indicated for?',
+            es: '¿Para quién está indicado el pilates clínico?',
+            'zh-sg': '临床普拉提适合谁？',
+          },
         },
         text: {
-          pt: 'Para todas as pessoas, de <span class="highlight">todas as idades e géneros</span>, com ou sem condição clínica associada.',
-          en: 'For all people, of <span class="highlight">all ages and genders</span>, with or without associated clinical conditions.',
-          es: 'Para todas las personas, de <span class="highlight">todas las edades y géneros</span>, con o sin condiciones clínicas asociadas.',
-          'zh-sg': '适合所有人，<span class="highlight">所有年龄和性别</span>，无论是否有相关的临床状况。',
+          translations: {
+            pt: 'Para todas as pessoas, de <span class="highlight">todas as idades e géneros</span>, com ou sem condição clínica associada.',
+            en: 'For all people, of <span class="highlight">all ages and genders</span>, with or without associated clinical conditions.',
+            es: 'Para todas las personas, de <span class="highlight">todas las edades y géneros</span>, con o sin condiciones clínicas asociadas.',
+            'zh-sg': '适合所有人，<span class="highlight">所有年龄和性别</span>，无论是否有相关的临床状况。',
+          },
         },
         image: {
           mobile: '/images/services/detail/pilates-clinico/side-image/image-mobile.jpg',
           tablet: '/images/services/detail/pilates-clinico/side-image/image-tablet.jpg',
           desktop: '/images/services/detail/pilates-clinico/side-image/image-desktop.jpg',
           alt: {
-            pt: 'Pilates Clínico',
-            en: 'Clinical Pilates',
-            es: 'Pilates Clínico',
-            'zh-sg': '临床普拉提',
+            translations: {
+              pt: 'Pilates Clínico',
+              en: 'Clinical Pilates',
+              es: 'Pilates Clínico',
+              'zh-sg': '临床普拉提',
+            },
           },
         },
       },
@@ -1328,50 +1348,62 @@ export const data = [
         tablet: '/images/services/detail/pilates-clinico/fullwidth-image/image-1-tablet.jpg',
         desktop: '/images/services/detail/pilates-clinico/fullwidth-image/image-1-desktop.jpg',
         alt: {
-          pt: 'Pilates Clínico',
-          en: 'Clinical Pilates',
-          es: 'Pilates Clínico',
-          'zh-sg': '临床普拉提',
+          translations: {
+            pt: 'Pilates Clínico',
+            en: 'Clinical Pilates',
+            es: 'Pilates Clínico',
+            'zh-sg': '临床普拉提',
+          },
         },
       },
       topics_1: {
         title: {
-          pt: 'É indicada para que situações?',
-          en: 'What situations is it indicated for?',
-          es: '¿Para qué situaciones está indicada?',
-          'zh-sg': '适用于哪些情况？',
+          translations: {
+            pt: 'É indicada para que situações?',
+            en: 'What situations is it indicated for?',
+            es: '¿Para qué situaciones está indicada?',
+            'zh-sg': '适用于哪些情况？',
+          },
         },
         topics: {
-          pt: '<ul><li>Perda de força</li><li>Limitações na postura</li><li>Dificuldades na marcha</li><li>Alterações no equilíbrio</li><li>Limitações funcionais</li><li>Redução de precisão de movimentos</li></ul>',
-          en: '<ul><li>Loss of strength</li><li>Postural limitations</li><li>Walking difficulties</li><li>Balance changes</li><li>Functional limitations</li><li>Reduced movement accuracy</li></ul>',
-          es: '<ul><li>Pérdida de fuerza</li><li>Limitaciones en la postura</li><li>Dificultades en la marcha</li><li>Cambios en el equilibrio</li><li>Limitaciones funcionales</li><li>Reducción de la precisión de los movimientos</li></ul>',
-          'zh-sg':
-            '<ul><li>力量下降</li><li>姿势限制</li><li>步态困难</li><li>平衡变化</li><li>功能性限制</li><li>动作准确性降低</li></ul>',
+          translations: {
+            pt: '<ul><li>Perda de força</li><li>Limitações na postura</li><li>Dificuldades na marcha</li><li>Alterações no equilíbrio</li><li>Limitações funcionais</li><li>Redução de precisão de movimentos</li></ul>',
+            en: '<ul><li>Loss of strength</li><li>Postural limitations</li><li>Walking difficulties</li><li>Balance changes</li><li>Functional limitations</li><li>Reduced movement accuracy</li></ul>',
+            es: '<ul><li>Pérdida de fuerza</li><li>Limitaciones en la postura</li><li>Dificultades en la marcha</li><li>Cambios en el equilibrio</li><li>Limitaciones funcionales</li><li>Reducción de la precisión de los movimientos</li></ul>',
+            'zh-sg':
+              '<ul><li>力量下降</li><li>姿势限制</li><li>步态困难</li><li>平衡变化</li><li>功能性限制</li><li>动作准确性降低</li></ul>',
+          },
         },
       },
       twoImagesGrid: {
         title: {
-          pt: 'Quais os benefícios?',
-          en: 'What are the benefits?',
-          es: '¿Cuáles son los beneficios?',
-          'zh-sg': '有什么好处？',
+          translations: {
+            pt: 'Quais os benefícios?',
+            en: 'What are the benefits?',
+            es: '¿Cuáles son los beneficios?',
+            'zh-sg': '有什么好处？',
+          },
         },
         topics: {
-          pt: '<ul><li>Aumento da <span class="highlight">estabilidade articular</span></li><li><span class="highlight">Aumento</span> de força muscular</li><li>Melhoria da <span class="highlight">flexibilidade</span></li><li>Melhoria da <span class="highlight">coordenação</span> motora</li><li><span class="highlight">Melhoria</span> do controlo postural e respiratório</li><li>Aumento da <span class="highlight">capacidade</span> funcional</li><li>Promoção da <span class="highlight">independência</span></li><li><span class="highlight">Melhoria</span> da qualidade de vida</li></ul>',
-          en: '<ul><li>Increased <span class="highlight">joint stability</span></li><li><span class="highlight">Increased</span> muscle strength</li><li>Improved <span class="highlight">flexibility</span></li><li>Improved <span class="highlight">motor coordination</span></li><li><span class="highlight">Improved</span> postural and respiratory control</li><li>Increased <span class="highlight">functional capacity</span></li><li>Promotion of <span class="highlight">independence</span></li><li><span class="highlight">Improved</span> quality of life</li></ul>',
-          es: '<ul><li>Aumento de la <span class="highlight">estabilidad articular</span></li><li><span class="highlight">Aumento</span> de la fuerza muscular</li><li>Mejora de la <span class="highlight">flexibilidad</span></li><li>Mejora de la <span class="highlight">coordinación</span> motora</li><li><span class="highlight">Mejora</span> del control postural y respiratorio</li><li>Aumento de la <span class="highlight">capacidad</span> funcional</li><li>Promoción de la <span class="highlight">independencia</span></li><li><span class="highlight">Mejora</span> de la calidad de vida</li></ul>',
-          'zh-sg':
-            '<ul><li>提高<span class="highlight">关节稳定性</span></li><li><span class="highlight">提高</span>肌肉力量</li><li>改善<span class="highlight">柔韧性</span></li><li>改善<span class="highlight">运动协调能力</span></li><li><span class="highlight">改善</span>姿势和呼吸控制</li><li>提高<span class="highlight">功能能力</span></li><li>促进<span class="highlight">独立性</span></li><li><span class="highlight">改善</span>生活质量</li></ul>',
+          translations: {
+            pt: '<ul><li>Aumento da <span class="highlight">estabilidade articular</span></li><li><span class="highlight">Aumento</span> de força muscular</li><li>Melhoria da <span class="highlight">flexibilidade</span></li><li>Melhoria da <span class="highlight">coordenação</span> motora</li><li><span class="highlight">Melhoria</span> do controlo postural e respiratório</li><li>Aumento da <span class="highlight">capacidade</span> funcional</li><li>Promoção da <span class="highlight">independência</span></li><li><span class="highlight">Melhoria</span> da qualidade de vida</li></ul>',
+            en: '<ul><li>Increased <span class="highlight">joint stability</span></li><li><span class="highlight">Increased</span> muscle strength</li><li>Improved <span class="highlight">flexibility</span></li><li>Improved <span class="highlight">motor coordination</span></li><li><span class="highlight">Improved</span> postural and respiratory control</li><li>Increased <span class="highlight">functional capacity</span></li><li>Promotion of <span class="highlight">independence</span></li><li><span class="highlight">Improved</span> quality of life</li></ul>',
+            es: '<ul><li>Aumento de la <span class="highlight">estabilidad articular</span></li><li><span class="highlight">Aumento</span> de la fuerza muscular</li><li>Mejora de la <span class="highlight">flexibilidad</span></li><li>Mejora de la <span class="highlight">coordinación</span> motora</li><li><span class="highlight">Mejora</span> del control postural y respiratorio</li><li>Aumento de la <span class="highlight">capacidad</span> funcional</li><li>Promoción de la <span class="highlight">independencia</span></li><li><span class="highlight">Mejora</span> de la calidad de vida</li></ul>',
+            'zh-sg':
+              '<ul><li>提高<span class="highlight">关节稳定性</span></li><li><span class="highlight">提高</span>肌肉力量</li><li>改善<span class="highlight">柔韧性</span></li><li>改善<span class="highlight">运动协调能力</span></li><li><span class="highlight">改善</span>姿势和呼吸控制</li><li>提高<span class="highlight">功能能力</span></li><li>促进<span class="highlight">独立性</span></li><li><span class="highlight">改善</span>生活质量</li></ul>',
+          },
         },
         imageBig: {
           mobile: '/images/services/detail/pilates-clinico/two-images-grid/image-1-mobile.jpg',
           tablet: '/images/services/detail/pilates-clinico/two-images-grid/image-1-tablet.jpg',
           desktop: '/images/services/detail/pilates-clinico/two-images-grid/image-1-desktop.jpg',
           alt: {
-            pt: 'Pilates Clínico',
-            en: 'Clinical Pilates',
-            es: 'Pilates Clínico',
-            'zh-sg': '临床普拉提',
+            translations: {
+              pt: 'Pilates Clínico',
+              en: 'Clinical Pilates',
+              es: 'Pilates Clínico',
+              'zh-sg': '临床普拉提',
+            },
           },
         },
         imageSmall: {
@@ -1379,26 +1411,32 @@ export const data = [
           tablet: '/images/services/detail/pilates-clinico/two-images-grid/image-2-tablet.jpg',
           desktop: '/images/services/detail/pilates-clinico/two-images-grid/image-2-desktop.jpg',
           alt: {
-            pt: 'Pilates Clínico',
-            en: 'Clinical Pilates',
-            es: 'Pilates Clínico',
-            'zh-sg': '临床普拉提',
+            translations: {
+              pt: 'Pilates Clínico',
+              en: 'Clinical Pilates',
+              es: 'Pilates Clínico',
+              'zh-sg': '临床普拉提',
+            },
           },
         },
       },
       topics_2: {
         title: {
-          pt: 'Porquê optar pela ForPhysio?',
-          en: 'Why choose ForPhysio?',
-          es: '¿Por qué optar por ForPhysio?',
-          'zh-sg': '为什么选择ForPhysio？',
+          translations: {
+            pt: 'Porquê optar pela ForPhysio?',
+            en: 'Why choose ForPhysio?',
+            es: '¿Por qué optar por ForPhysio?',
+            'zh-sg': '为什么选择ForPhysio？',
+          },
         },
         topics: {
-          pt: '<ul><li>Orientado por um(a) fisioterapeuta, com conhecimento e capacidade de adaptação dos exercícios a cada pessoa e condição.</li><li>Vida saudável e ativa, de forma segura</li><li>Tem também a possibilidade de obter reembolso de parte do valor investido através dos subsistemas de saúde e seguros de saúde.</li></ul>',
-          en: '<ul><li>Guided by a physiotherapist, with knowledge and ability to adapt exercises to each person and condition.</li><li>Healthy and active life, in a safe way</li><li>There is also the possibility of obtaining reimbursement for part of the amount invested through health subsystems and health insurance.</li></ul>',
-          es: '<ul><li>Guiado por un(a) fisioterapeuta, con conocimiento y capacidad de adaptación de los ejercicios a cada persona y condición.</li><li>Vida sana y activa, de manera segura</li><li>También existe la posibilidad de obtener el reembolso de parte del importe invertido a través de subsistemas de salud y seguros de salud.</li></ul>',
-          'zh-sg':
-            '<ul><li>由物理治疗师指导，具有将练习适应于每个人和每种情况的知识和能力。</li><li>以安全的方式过上健康和积极的生活</li><li>也可以通过健康子系统和健康保险获得部分投资金额的报销。</li></ul>',
+          translations: {
+            pt: '<ul><li>Orientado por um(a) fisioterapeuta, com conhecimento e capacidade de adaptação dos exercícios a cada pessoa e condição.</li><li>Vida saudável e ativa, de forma segura</li><li>Tem também a possibilidade de obter reembolso de parte do valor investido através dos subsistemas de saúde e seguros de saúde.</li></ul>',
+            en: '<ul><li>Guided by a physiotherapist, with knowledge and ability to adapt exercises to each person and condition.</li><li>Healthy and active life, in a safe way</li><li>There is also the possibility of obtaining reimbursement for part of the amount invested through health subsystems and health insurance.</li></ul>',
+            es: '<ul><li>Guiado por un(a) fisioterapeuta, con conocimiento y capacidad de adaptación de los ejercicios a cada persona y condición.</li><li>Vida sana y activa, de manera segura</li><li>También existe la posibilidad de obtener el reembolso de parte del importe invertido a través de subsistemas de salud y seguros de salud.</li></ul>',
+            'zh-sg':
+              '<ul><li>由物理治疗师指导，具有将练习适应于每个人和每种情况的知识和能力。</li><li>以安全的方式过上健康和积极的生活</li><li>也可以通过健康子系统和健康保险获得部分投资金额的报销。</li></ul>',
+          },
         },
       },
       imageFullwidth_2: {
@@ -1406,10 +1444,12 @@ export const data = [
         tablet: '/images/services/detail/pilates-clinico/fullwidth-image/image-2-tablet.jpg',
         desktop: '/images/services/detail/pilates-clinico/fullwidth-image/image-2-desktop.jpg',
         alt: {
-          pt: 'Pilates Clínico',
-          en: 'Clinical Pilates',
-          es: 'Pilates Clínico',
-          'zh-sg': '临床普拉提',
+          translations: {
+            pt: 'Pilates Clínico',
+            en: 'Clinical Pilates',
+            es: 'Pilates Clínico',
+            'zh-sg': '临床普拉提',
+          },
         },
       },
       appointmentBanner: {
@@ -1418,10 +1458,12 @@ export const data = [
           tablet: '/images/services/detail/pilates-clinico/appointment-banner/image-tablet.jpg',
           desktop: '/images/services/detail/pilates-clinico/appointment-banner/image-desktop.jpg',
           alt: {
-            pt: 'Pilates Clínico',
-            en: 'Clinical Pilates',
-            es: 'Pilates Clínico',
-            'zh-sg': '临床普拉提',
+            translations: {
+              pt: 'Pilates Clínico',
+              en: 'Clinical Pilates',
+              es: 'Pilates Clínico',
+              'zh-sg': '临床普拉提',
+            },
           },
         },
       },
@@ -1431,16 +1473,20 @@ export const data = [
   {
     id: 8,
     slug: {
-      pt: 'nutricao',
-      en: 'nutrition',
-      es: 'nutrición',
-      'zh-sg': 'nutrition',
+      translations: {
+        pt: 'nutricao',
+        en: 'nutrition',
+        es: 'nutrición',
+        'zh-sg': 'nutrition',
+      },
     },
     title: {
-      pt: 'Nutrição',
-      en: 'Nutrition',
-      es: 'Nutrición',
-      'zh-sg': '营养',
+      translations: {
+        pt: 'Nutrição',
+        en: 'Nutrition',
+        es: 'Nutrición',
+        'zh-sg': '营养',
+      },
     },
     image: '/images/services/list/nutricao.jpg',
     locations: [1, 2, 3, 5],
@@ -1448,52 +1494,64 @@ export const data = [
     blocks: {
       intro: {
         title: {
-          pt: 'Nutrição',
-          en: 'Nutrition',
-          es: 'Nutrición',
-          'zh-sg': '营养',
-        },
-        text: {
-          pt: 'A Nutrição assume um papel importante na manutenção das capacidades físicas e na resposta ao exercício, sendo por isso um fator a ter em conta no retorno às normais atividades do dia-a-dia e retorno à atividade desportiva.',
-          en: 'Nutrition plays an important role in maintaining physical abilities and responding to exercise, making it a factor to consider when returning to normal daily activities and sports activities.',
-          es: 'La nutrición desempeña un papel importante en el mantenimiento de las capacidades físicas y en la respuesta al ejercicio, por lo que es un factor a tener en cuenta al regresar a las actividades diarias normales y a la actividad deportiva.',
-          'zh-sg':
-            '营养在维持身体能力和应对运动方面发挥着重要作用，因此在恢复正常日常活动和体育活动时是一个需要考虑的因素。',
-        },
-        image: {
-          mobile: '/images/services/detail/nutricao/intro/image-mobile.jpg',
-          tablet: '/images/services/detail/nutricao/intro/image-tablet.jpg',
-          desktop: '/images/services/detail/nutricao/intro/image-desktop.jpg',
-          alt: {
+          translations: {
             pt: 'Nutrição',
             en: 'Nutrition',
             es: 'Nutrición',
             'zh-sg': '营养',
           },
         },
+        text: {
+          translations: {
+            pt: 'A Nutrição assume um papel importante na manutenção das capacidades físicas e na resposta ao exercício, sendo por isso um fator a ter em conta no retorno às normais atividades do dia-a-dia e retorno à atividade desportiva.',
+            en: 'Nutrition plays an important role in maintaining physical abilities and responding to exercise, making it a factor to consider when returning to normal daily activities and sports activities.',
+            es: 'La nutrición desempeña un papel importante en el mantenimiento de las capacidades físicas y en la respuesta al ejercicio, por lo que es un factor a tener en cuenta al regresar a las actividades diarias normales y a la actividad deportiva.',
+            'zh-sg':
+              '营养在维持身体能力和应对运动方面发挥着重要作用，因此在恢复正常日常活动和体育活动时是一个需要考虑的因素。',
+          },
+        },
+        image: {
+          mobile: '/images/services/detail/nutricao/intro/image-mobile.jpg',
+          tablet: '/images/services/detail/nutricao/intro/image-tablet.jpg',
+          desktop: '/images/services/detail/nutricao/intro/image-desktop.jpg',
+          alt: {
+            translations: {
+              pt: 'Nutrição',
+              en: 'Nutrition',
+              es: 'Nutrición',
+              'zh-sg': '营养',
+            },
+          },
+        },
       },
       sideImage: {
         title: {
-          pt: 'Para quem é indicada a nutrição?',
-          en: 'Who is nutrition indicated for?',
-          es: '¿Para quién está indicada la nutrición?',
-          'zh-sg': '营养适合谁？',
+          translations: {
+            pt: 'Para quem é indicada a nutrição?',
+            en: 'Who is nutrition indicated for?',
+            es: '¿Para quién está indicada la nutrición?',
+            'zh-sg': '营养适合谁？',
+          },
         },
         text: {
-          pt: 'Para todas as pessoas, de <span class="highlight">todas as idades</span>.',
-          en: 'For all people, of <span class="highlight">all ages</span>.',
-          es: 'Para todas las personas, de <span class="highlight">todas las edades</span>.',
-          'zh-sg': '适合所有人，<span class="highlight">所有年龄</span>。',
+          translations: {
+            pt: 'Para todas as pessoas, de <span class="highlight">todas as idades</span>.',
+            en: 'For all people, of <span class="highlight">all ages</span>.',
+            es: 'Para todas las personas, de <span class="highlight">todas las edades</span>.',
+            'zh-sg': '适合所有人，<span class="highlight">所有年龄</span>。',
+          },
         },
         image: {
           mobile: '/images/services/detail/nutricao/side-image/image-mobile.jpg',
           tablet: '/images/services/detail/nutricao/side-image/image-tablet.jpg',
           desktop: '/images/services/detail/nutricao/side-image/image-desktop.jpg',
           alt: {
-            pt: 'Nutrição',
-            en: 'Nutrition',
-            es: 'Nutrición',
-            'zh-sg': '营养',
+            translations: {
+              pt: 'Nutrição',
+              en: 'Nutrition',
+              es: 'Nutrición',
+              'zh-sg': '营养',
+            },
           },
         },
       },
@@ -1502,35 +1560,43 @@ export const data = [
         tablet: '/images/services/detail/nutricao/fullwidth-image/image-1-tablet.jpg',
         desktop: '/images/services/detail/nutricao/fullwidth-image/image-1-desktop.jpg',
         alt: {
-          pt: 'Nutrição',
-          en: 'Nutrition',
-          es: 'Nutrición',
-          'zh-sg': '营养',
+          translations: {
+            pt: 'Nutrição',
+            en: 'Nutrition',
+            es: 'Nutrición',
+            'zh-sg': '营养',
+          },
         },
       },
       text: {
-        pt: 'Desde 2016 foram muitos os atletas de recreação e competição que confiaram no nosso serviço de nutrição.',
-        en: 'Since 2016, many recreational and competitive athletes have relied on our nutrition service.',
-        es: 'Desde 2016, muchos atletas recreativos y de competición han confiado en nuestro servicio de nutrición.',
-        'zh-sg': '自2016年以来，许多休闲和竞技运动员信任我们的营养服务。',
+        translations: {
+          pt: 'Desde 2016 foram muitos os atletas de recreação e competição que confiaram no nosso serviço de nutrição.',
+          en: 'Since 2016, many recreational and competitive athletes have relied on our nutrition service.',
+          es: 'Desde 2016, muchos atletas recreativos y de competición han confiado en nuestro servicio de nutrición.',
+          'zh-sg': '自2016年以来，许多休闲和竞技运动员信任我们的营养服务。',
+        },
       },
       twoImagesGrid: {
         text: {
-          pt: 'Contamos com uma <span class="highlight">equipa de profissionais</span> dedicada e preparada para esclarecer as suas dúvidas e ajudar a atingir os seus <span class="highlight">objetivos</span>!',
-          en: 'We have a dedicated <span class="highlight">team of professionals</span> ready to answer your questions and help you achieve your <span class="highlight">goals</span>!',
-          es: '¡Contamos con un <span class="highlight">equipo de profesionales</span> dedicado y preparado para aclarar sus dudas y ayudarle a alcanzar sus <span class="highlight">objetivos</span>!',
-          'zh-sg':
-            '我们拥有一支专门的<span class="highlight">专业团队</span>，随时准备解答您的问题并帮助您实现您的<span class="highlight">目标</span>！',
+          translations: {
+            pt: 'Contamos com uma <span class="highlight">equipa de profissionais</span> dedicada e preparada para esclarecer as suas dúvidas e ajudar a atingir os seus <span class="highlight">objetivos</span>!',
+            en: 'We have a dedicated <span class="highlight">team of professionals</span> ready to answer your questions and help you achieve your <span class="highlight">goals</span>!',
+            es: '¡Contamos con un <span class="highlight">equipo de profesionales</span> dedicado y preparado para aclarar sus dudas y ayudarle a alcanzar sus <span class="highlight">objetivos</span>!',
+            'zh-sg':
+              '我们拥有一支专门的<span class="highlight">专业团队</span>，随时准备解答您的问题并帮助您实现您的<span class="highlight">目标</span>！',
+          },
         },
         imageBig: {
           mobile: '/images/services/detail/nutricao/two-images-grid/image-1-mobile.jpg',
           tablet: '/images/services/detail/nutricao/two-images-grid/image-1-tablet.jpg',
           desktop: '/images/services/detail/nutricao/two-images-grid/image-1-desktop.jpg',
           alt: {
-            pt: 'Nutrição',
-            en: 'Nutrition',
-            es: 'Nutrición',
-            'zh-sg': '营养',
+            translations: {
+              pt: 'Nutrição',
+              en: 'Nutrition',
+              es: 'Nutrición',
+              'zh-sg': '营养',
+            },
           },
         },
         imageSmall: {
@@ -1538,10 +1604,12 @@ export const data = [
           tablet: '/images/services/detail/nutricao/two-images-grid/image-2-tablet.jpg',
           desktop: '/images/services/detail/nutricao/two-images-grid/image-2-desktop.jpg',
           alt: {
-            pt: 'Nutrição',
-            en: 'Nutrition',
-            es: 'Nutrición',
-            'zh-sg': '营养',
+            translations: {
+              pt: 'Nutrição',
+              en: 'Nutrition',
+              es: 'Nutrición',
+              'zh-sg': '营养',
+            },
           },
         },
       },
@@ -1551,10 +1619,12 @@ export const data = [
           tablet: '/images/services/detail/nutricao/appointment-banner/image-tablet.jpg',
           desktop: '/images/services/detail/nutricao/appointment-banner/image-desktop.jpg',
           alt: {
-            pt: 'Nutrição',
-            en: 'Nutrition',
-            es: 'Nutrición',
-            'zh-sg': '营养',
+            translations: {
+              pt: 'Nutrição',
+              en: 'Nutrition',
+              es: 'Nutrición',
+              'zh-sg': '营养',
+            },
           },
         },
       },
@@ -1564,16 +1634,20 @@ export const data = [
   {
     id: 9,
     slug: {
-      pt: 'saude-e-bem-estar',
-      en: 'health-and-wellbeing',
-      es: 'salud-y-bienestar',
-      'zh-sg': '健康与幸福',
+      translations: {
+        pt: 'saude-e-bem-estar',
+        en: 'health-and-wellbeing',
+        es: 'salud-y-bienestar',
+        'zh-sg': 'health-and-wellbeing',
+      },
     },
     title: {
-      pt: 'Saúde e Bem-estar',
-      en: 'Health and Well-being',
-      es: 'Salud y Bienestar',
-      'zh-sg': '健康与幸福',
+      translations: {
+        pt: 'Saúde e Bem-estar',
+        en: 'Health and Well-being',
+        es: 'Salud y Bienestar',
+        'zh-sg': '健康与幸福',
+      },
     },
     image: '/images/services/list/saude-e-bem-estar.jpg',
     locations: [1, 2, 3, 5],
@@ -1581,51 +1655,63 @@ export const data = [
     blocks: {
       intro: {
         title: {
-          pt: 'Saúde e Bem-estar',
-          en: 'Health and Well-being',
-          es: 'Salud y Bienestar',
-          'zh-sg': '健康与幸福',
-        },
-        text: {
-          pt: 'A área da Saúde e Bem-Estar encontra-se representada na ForPhysio através dos seus serviços especializados de massagem: terapêutica, desportiva e modeladora.',
-          en: 'The area of Health and Well-being is represented at ForPhysio through its specialized massage services: therapeutic, sports, and modeling.',
-          es: 'El área de Salud y Bienestar está representada en ForPhysio a través de sus servicios de masaje especializados: terapéutico, deportivo y modelador.',
-          'zh-sg': '健康与幸福领域在ForPhysio通过其专业的按摩服务得到体现：治疗性、运动性和塑形性按摩。',
-        },
-        image: {
-          mobile: '/images/services/detail/saude-bem-estar/intro/image-mobile.jpg',
-          tablet: '/images/services/detail/saude-bem-estar/intro/image-tablet.jpg',
-          desktop: '/images/services/detail/saude-bem-estar/intro/image-desktop.jpg',
-          alt: {
+          translations: {
             pt: 'Saúde e Bem-estar',
             en: 'Health and Well-being',
             es: 'Salud y Bienestar',
             'zh-sg': '健康与幸福',
           },
         },
+        text: {
+          translations: {
+            pt: 'A área da Saúde e Bem-Estar encontra-se representada na ForPhysio através dos seus serviços especializados de massagem: terapêutica, desportiva e modeladora.',
+            en: 'The area of Health and Well-being is represented at ForPhysio through its specialized massage services: therapeutic, sports, and modeling.',
+            es: 'El área de Salud y Bienestar está representada en ForPhysio a través de sus servicios de masaje especializados: terapéutico, deportivo y modelador.',
+            'zh-sg': '健康与幸福领域在ForPhysio通过其专业的按摩服务得到体现：治疗性、运动性和塑形性按摩。',
+          },
+        },
+        image: {
+          mobile: '/images/services/detail/saude-bem-estar/intro/image-mobile.jpg',
+          tablet: '/images/services/detail/saude-bem-estar/intro/image-tablet.jpg',
+          desktop: '/images/services/detail/saude-bem-estar/intro/image-desktop.jpg',
+          alt: {
+            translations: {
+              pt: 'Saúde e Bem-estar',
+              en: 'Health and Well-being',
+              es: 'Salud y Bienestar',
+              'zh-sg': '健康与幸福',
+            },
+          },
+        },
       },
       sideImage: {
         title: {
-          pt: 'Para quem é indicada a massagem?',
-          en: 'Who is massage indicated for?',
-          es: '¿Para quién está indicada la masajística?',
-          'zh-sg': '按摩适合谁？',
+          translations: {
+            pt: 'Para quem é indicada a massagem?',
+            en: 'Who is massage indicated for?',
+            es: '¿Para quién está indicada la masajística?',
+            'zh-sg': '按摩适合谁？',
+          },
         },
         text: {
-          pt: 'Para todas as pessoas, de <span class="highlight">todas as idades e géneros</span>.',
-          en: 'For all people, of <span class="highlight">all ages and genders</span>.',
-          es: 'Para todas las personas, de <span class="highlight">todas las edades e géneros</span>.',
-          'zh-sg': '适合所有人，<span class="highlight">所有年龄和性别</span>。',
+          translations: {
+            pt: 'Para todas as pessoas, de <span class="highlight">todas as idades e géneros</span>.',
+            en: 'For all people, of <span class="highlight">all ages and genders</span>.',
+            es: 'Para todas las personas, de <span class="highlight">todas las edades e géneros</span>.',
+            'zh-sg': '适合所有人，<span class="highlight">所有年龄和性别</span>。',
+          },
         },
         image: {
           mobile: '/images/services/detail/saude-bem-estar/side-image/image-mobile.jpg',
           tablet: '/images/services/detail/saude-bem-estar/side-image/image-tablet.jpg',
           desktop: '/images/services/detail/saude-bem-estar/side-image/image-desktop.jpg',
           alt: {
-            pt: 'Saúde e Bem-estar',
-            en: 'Health and Well-being',
-            es: 'Salud y Bienestar',
-            'zh-sg': '健康与幸福',
+            translations: {
+              pt: 'Saúde e Bem-estar',
+              en: 'Health and Well-being',
+              es: 'Salud y Bienestar',
+              'zh-sg': '健康与幸福',
+            },
           },
         },
       },
@@ -1634,40 +1720,76 @@ export const data = [
         tablet: '/images/services/detail/saude-bem-estar/fullwidth-image/image-1-tablet.jpg',
         desktop: '/images/services/detail/saude-bem-estar/fullwidth-image/image-1-desktop.jpg',
         alt: {
-          pt: 'Teste',
-          en: 'Test',
-          es: 'Prueba',
-          'zh-sg': '测试',
+          translations: {
+            pt: 'Saúde e Bem-estar',
+            en: 'Health and Well-being',
+            es: 'Salud y Bienestar',
+            'zh-sg': '健康与幸福',
+          },
         },
       },
       topics_1: {
         title: {
-          pt: 'É indicada para que situações?',
-          en: 'Is it indicated for which situations?',
-          es: '¿Está indicada para qué situaciones?',
-          'zh-sg': '适合于哪些情况？',
+          translations: {
+            pt: 'É indicada para que situações?',
+            en: 'Is it indicated for which situations?',
+            es: '¿Está indicada para qué situaciones?',
+            'zh-sg': '适合于哪些情况？',
+          },
         },
         topics: {
-          pt: '<ul><li>Perda de força</li><li>Limitações na postura</li><li>Dificuldades na marcha</li><li>Alterações no equilíbrio</li><li>Limitações funcionais</li><li>Redução de precisão de movimentos</li></ul>',
-          en: '<ul><li>Loss of strength</li><li>Postural limitations</li><li>Difficulties in walking</li><li>Changes in balance</li><li>Functional limitations</li><li>Reduced movement accuracy</li></ul>',
-          es: '<ul><li>Pérdida de fuerza</li><li>Limitaciones en la postura</li><li>Dificultades en la marcha</li><li>Cambios en el equilibrio</li><li>Limitaciones funcionales</li><li>Reducción de la precisión de los movimientos</li></ul>',
-          'zh-sg':
-            '<ul><li>力量下降</li><li>姿势限制</li><li>行走困难</li><li>平衡变化</li><li>功能限制</li><li>运动精度降低</li></ul>',
+          translations: {
+            pt: '<ul><li>Perda de força</li><li>Limitações na postura</li><li>Dificuldades na marcha</li><li>Alterações no equilíbrio</li><li>Limitações funcionais</li><li>Redução de precisão de movimentos</li></ul>',
+            en: '<ul><li>Loss of strength</li><li>Postural limitations</li><li>Difficulties in walking</li><li>Changes in balance</li><li>Functional limitations</li><li>Reduced movement accuracy</li></ul>',
+            es: '<ul><li>Pérdida de fuerza</li><li>Limitaciones en la postura</li><li>Dificultades en la marcha</li><li>Cambios en el equilibrio</li><li>Limitaciones funcionales</li><li>Reducción de la precisión de los movimientos</li></ul>',
+            'zh-sg':
+              '<ul><li>力量下降</li><li>姿势限制</li><li>行走困难</li><li>平衡变化</li><li>功能限制</li><li>运动精度降低</li></ul>',
+          },
         },
       },
       twoImagesGrid: {
         title: {
-          pt: 'Quais os benefícios?',
-          en: 'What are the benefits?',
-          es: '¿Cuáles son los beneficios?',
-          'zh-sg': '有哪些好处？',
+          translations: {
+            pt: 'Quais os benefícios?',
+            en: 'What are the benefits?',
+            es: '¿Cuáles son los beneficios?',
+            'zh-sg': '有哪些好处？',
+          },
         },
         topics: {
-          pt: '<ul><li><span class="highlight">Relaxamento</span> do corpo e mente</li><li><span class="highlight">Alívio</span> de stress</li><li><span class="highlight">Diminuição da tensão</span> muscular</li><li><span class="highlight">Equilíbrio</span> mental e físico</li><li>Promoção do <span class="highlight">bem-estar geral</span></li></ul>',
-          en: '<ul><li><span class="highlight">Relaxation</span> of body and mind</li><li><span class="highlight">Relief</span> from stress</li><li><span class="highlight">Reduction</span> of muscle tension</li><li><span class="highlight">Mental</span> and physical balance</li><li>Promotion of <span class="highlight">overall well-being</span></li></ul>',
-          es: '<ul><li><span class="highlight">Relajación</span> del cuerpo y la mente</li><li><span class="highlight">Alivio</span> del estrés</li><li><span class="highlight">Reducción</span> de la tensión muscular</li><li><span class="highlight">Equilibrio</span> mental y físico</li><li>Promoción del <span class="highlight">bienestar general</span></li></ul>',
-          'zh-sg':
-            '<ul><li><span class="highlight">放松</span> 身体和心灵</li><li><span class="highlight">缓解</span> 压力</li><li><span class="highlight">减少</span> 肌肉紧张</li><li><span class="highlight">心理</span> 和身体的平衡</li><li>促进<span class="highlight">整体幸福</span></li></ul>',
+          translations: {
+            pt: '<ul><li><span class="highlight">Relaxamento</span> do corpo e mente</li><li><span class="highlight">Alívio</span> de stress</li><li><span class="highlight">Diminuição da tensão</span> muscular</li><li><span class="highlight">Equilíbrio</span> mental e físico</li><li>Promoção do <span class="highlight">bem-estar geral</span></li></ul>',
+            en: '<ul><li><span class="highlight">Relaxation</span> of body and mind</li><li><span class="highlight">Relief</span> from stress</li><li><span class="highlight">Reduction</span> of muscle tension</li><li><span class="highlight">Mental</span> and physical balance</li><li>Promotion of <span class="highlight">overall well-being</span></li></ul>',
+            es: '<ul><li><span class="highlight">Relajación</span> del cuerpo y la mente</li><li><span class="highlight">Alivio</span> del estrés</li><li><span class="highlight">Reducción</span> de la tensión muscular</li><li><span class="highlight">Equilibrio</span> mental y físico</li><li>Promoción del <span class="highlight">bienestar general</span></li></ul>',
+            'zh-sg':
+              '<ul><li><span class="highlight">放松</span> 身体和心灵</li><li><span class="highlight">缓解</span> 压力</li><li><span class="highlight">减少</span> 肌肉紧张</li><li><span class="highlight">心理</span> 和身体的平衡</li><li>促进<span class="highlight">整体幸福</span></li></ul>',
+          },
+        },
+        imageBig: {
+          mobile: '/images/services/detail/saude-bem-estar/two-images-grid/image-1-mobile.jpg',
+          tablet: '/images/services/detail/saude-bem-estar/two-images-grid/image-1-tablet.jpg',
+          desktop: '/images/services/detail/saude-bem-estar/two-images-grid/image-1-desktop.jpg',
+          alt: {
+            translations: {
+              pt: 'Saúde e Bem-estar',
+              en: 'Health and Well-being',
+              es: 'Salud y Bienestar',
+              'zh-sg': '健康与幸福',
+            },
+          },
+        },
+        imageSmall: {
+          mobile: '/images/services/detail/saude-bem-estar/two-images-grid/image-2-mobile.jpg',
+          tablet: '/images/services/detail/saude-bem-estar/two-images-grid/image-2-tablet.jpg',
+          desktop: '/images/services/detail/saude-bem-estar/two-images-grid/image-2-desktop.jpg',
+          alt: {
+            translations: {
+              pt: 'Saúde e Bem-estar',
+              en: 'Health and Well-being',
+              es: 'Salud y Bienestar',
+              'zh-sg': '健康与幸福',
+            },
+          },
         },
       },
       appointmentBanner: {
@@ -1676,10 +1798,12 @@ export const data = [
           tablet: '/images/services/detail/saude-bem-estar/appointment-banner/image-tablet.jpg',
           desktop: '/images/services/detail/saude-bem-estar/appointment-banner/image-desktop.jpg',
           alt: {
-            pt: 'Teste',
-            en: 'Test',
-            es: 'Prueba',
-            'zh-sg': '测试',
+            translations: {
+              pt: 'Saúde e Bem-estar',
+              en: 'Health and Well-being',
+              es: 'Salud y Bienestar',
+              'zh-sg': '健康与幸福',
+            },
           },
         },
       },
@@ -1689,16 +1813,20 @@ export const data = [
   {
     id: 10,
     slug: {
-      pt: 'consultas-medicas',
-      en: 'medical-consultations',
-      es: 'consultas-médicas',
-      'zh-sg': '医疗咨询',
+      translations: {
+        pt: 'consultas-medicas',
+        en: 'medical-appointments',
+        es: 'consultas-médicas',
+        'zh-sg': '医疗咨询',
+      },
     },
     title: {
-      pt: 'Consultas Médicas',
-      en: 'Medical Consultations',
-      es: 'Consultas Médicas',
-      'zh-sg': '医疗咨询',
+      translations: {
+        pt: 'Consultas Médicas',
+        en: 'Medical Appointments',
+        es: 'Consultas Médicas',
+        'zh-sg': '医疗咨询',
+      },
     },
     image: '/images/services/list/consultas-medicas.jpg',
     locations: [1, 2, 3, 4, 5],
@@ -1706,52 +1834,64 @@ export const data = [
     blocks: {
       intro: {
         title: {
-          pt: 'Consultas Médicas',
-          en: 'Medical Consultations',
-          es: 'Consultas Médicas',
-          'zh-sg': '医疗咨询',
+          translations: {
+            pt: 'Consultas Médicas',
+            en: 'Medical appointments',
+            es: 'Consultas Médicas',
+            'zh-sg': '医疗咨询',
+          },
         },
         text: {
-          pt: 'Consultas médicas são encontros entre pacientes e médicos que permitem a avaliação, o diagnóstico e o tratamento de condições de saúde.',
-          en: 'Medical consultations are meetings between patients and doctors that allow for the evaluation, diagnosis, and treatment of health conditions.',
-          es: 'Las consultas médicas son encuentros entre pacientes y médicos que permiten la evaluación, el diagnóstico y el tratamiento de condiciones de salud.',
-          'zh-sg': '医疗咨询是患者和医生之间的会议，允许评估、诊断和治疗健康状况。',
+          translations: {
+            pt: 'Consultas médicas são encontros entre pacientes e médicos que permitem a avaliação, o diagnóstico e o tratamento de condições de saúde.',
+            en: 'Medical appointments are meetings between patients and doctors that allow for the evaluation, diagnosis, and treatment of health conditions.',
+            es: 'Las consultas médicas son encuentros entre pacientes y médicos que permiten la evaluación, el diagnóstico y el tratamiento de condiciones de salud.',
+            'zh-sg': '医疗咨询是患者和医生之间的会议，允许评估、诊断和治疗健康状况。',
+          },
         },
         image: {
           mobile: '/images/services/detail/consultas-medicas/intro/image-mobile.jpg',
           tablet: '/images/services/detail/consultas-medicas/intro/image-tablet.jpg',
           desktop: '/images/services/detail/consultas-medicas/intro/image-desktop.jpg',
           alt: {
-            pt: 'Consultas Médicas',
-            en: 'Medical Consultations',
-            es: 'Consultas Médicas',
-            'zh-sg': '医疗咨询',
+            translations: {
+              pt: 'Consultas Médicas',
+              en: 'Medical appointments',
+              es: 'Consultas Médicas',
+              'zh-sg': '医疗咨询',
+            },
           },
         },
       },
       sideImage: {
         title: {
-          pt: 'Para quem são indicadas as consultas médicas?',
-          en: 'Who are medical consultations indicated for?',
-          es: '¿Para quiénes están indicadas las consultas médicas?',
-          'zh-sg': '医疗咨询适合谁？',
+          translations: {
+            pt: 'Para quem são indicadas as consultas médicas?',
+            en: 'Who are medical appointments indicated for?',
+            es: '¿Para quiénes están indicadas las consultas médicas?',
+            'zh-sg': '医疗咨询适合谁？',
+          },
         },
         text: {
-          pt: 'As consultas médicas são indicadas para <span class="highlight">qualquer pessoa</span> que tenha uma condição de <span class="highlight">saúde</span>. Também são importantes para a <span class="highlight">prevenção de doenças</span>, orientações sobre um estilo de <span class="highlight">vida saudável</span> e para garantir a <span class="highlight">manutenção do bem-estar</span> geral.',
-          en: 'Medical consultations are indicated for <span class="highlight">anyone</span> who has a <span class="highlight">health</span> condition. They are also important for <span class="highlight">disease prevention</span>, guidance on a <span class="highlight">healthy lifestyle</span>, and to ensure the <span class="highlight">maintenance of general well-being</span>.',
-          es: 'Las consultas médicas están indicadas para <span class="highlight">cualquier persona</span> que tenga una <span class="highlight">condición de salud</span>. También son importantes para la <span class="highlight">prevención de enfermedades</span>, orientaciones sobre un <span class="highlight">estilo de vida saludable</span> y para garantizar el <span class="highlight">mantenimiento del bienestar</span> general.',
-          'zh-sg':
-            '医疗咨询适合<span class="highlight">任何人</span>，只要他们有<span class="highlight">健康</span>问题。它们对于<span class="highlight">疾病预防</span>、关于<span class="highlight">健康生活方式</span>的指导以及确保<span class="highlight">整体福祉的维护</span>也很重要。',
+          translations: {
+            pt: 'As consultas médicas são indicadas para <span class="highlight">qualquer pessoa</span> que tenha uma condição de <span class="highlight">saúde</span>. Também são importantes para a <span class="highlight">prevenção de doenças</span>, orientações sobre um estilo de <span class="highlight">vida saudável</span> e para garantir a <span class="highlight">manutenção do bem-estar</span> geral.',
+            en: 'Medical appointments are indicated for <span class="highlight">anyone</span> who has a <span class="highlight">health</span> condition. They are also important for <span class="highlight">disease prevention</span>, guidance on a <span class="highlight">healthy lifestyle</span>, and to ensure the <span class="highlight">maintenance of general well-being</span>.',
+            es: 'Las consultas médicas están indicadas para <span class="highlight">cualquier persona</span> que tenga una <span class="highlight">condición de salud</span>. También son importantes para la <span class="highlight">prevención de enfermedades</span>, orientaciones sobre un <span class="highlight">estilo de vida saludable</span> y para garantizar el <span class="highlight">mantenimiento del bienestar</span> general.',
+            'zh-sg':
+              '医疗咨询适合<span class="highlight">任何人</span>，只要他们有<span class="highlight">健康</span>问题。它们对于<span class="highlight">疾病预防</span>、关于<span class="highlight">健康生活方式</span>的指导以及确保<span class="highlight">整体福祉的维护</span>也很重要。',
+          },
         },
         image: {
           mobile: '/images/services/detail/consultas-medicas/side-image/image-mobile.jpg',
           tablet: '/images/services/detail/consultas-medicas/side-image/image-tablet.jpg',
           desktop: '/images/services/detail/consultas-medicas/side-image/image-desktop.jpg',
           alt: {
-            pt: 'Consultas Médicas',
-            en: 'Medical Consultations',
-            es: 'Consultas Médicas',
-            'zh-sg': '医疗咨询',
+            translations: {
+              pt: 'Consultas Médicas',
+              en: 'Medical appointments',
+              es: 'Consultas Médicas',
+              'zh-sg': '医疗咨询',
+            },
           },
         },
       },
@@ -1760,25 +1900,31 @@ export const data = [
         tablet: '/images/services/detail/consultas-medicas/fullwidth-image/image-1-tablet.jpg',
         desktop: '/images/services/detail/consultas-medicas/fullwidth-image/image-1-desktop.jpg',
         alt: {
-          pt: 'Teste',
-          en: 'Test',
-          es: 'Prueba',
-          'zh-sg': '测试',
+          translations: {
+            pt: 'Teste',
+            en: 'Test',
+            es: 'Prueba',
+            'zh-sg': '测试',
+          },
         },
       },
       topics: {
         title: {
-          pt: 'Quais são as situações que necessitam de consultas médicas?',
-          en: 'What situations require medical consultations?',
-          es: '¿Qué situaciones requieren consultas médicas?',
-          'zh-sg': '哪些情况需要医疗咨询？',
+          translations: {
+            pt: 'Quais são as situações que necessitam de consultas médicas?',
+            en: 'What situations require medical appointments?',
+            es: '¿Qué situaciones requieren consultas médicas?',
+            'zh-sg': '哪些情况需要医疗咨询？',
+          },
         },
         topics: {
-          pt: '<ul><li>Doenças crônicas</li><li>Problemas respiratórios</li><li>Dores persistentes</li><li>Sintomas incomuns</li><li>Exames de rotina</li><li>Orientações de saúde</li></ul>',
-          en: '<ul><li>Chronic illnesses</li><li>Respiratory problems</li><li>Persistent pain</li><li>Unusual symptoms</li><li>Routine examinations</li><li>Health guidance</li></ul>',
-          es: '<ul><li>Enfermedades crónicas</li><li>Problemas respiratorios</li><li>Dolores persistentes</li><li>Síntomas inusuales</li><li>Exámenes de rutina</li><li>Orientaciones de salud</li></ul>',
-          'zh-sg':
-            '<ul><li>慢性疾病</li><li>呼吸问题</li><li>持续疼痛</li><li>异常症状</li><li>常规检查</li><li>健康指导</li></ul>',
+          translations: {
+            pt: '<ul><li>Doenças crônicas</li><li>Problemas respiratórios</li><li>Dores persistentes</li><li>Sintomas incomuns</li><li>Exames de rotina</li><li>Orientações de saúde</li></ul>',
+            en: '<ul><li>Chronic illnesses</li><li>Respiratory problems</li><li>Persistent pain</li><li>Unusual symptoms</li><li>Routine examinations</li><li>Health guidance</li></ul>',
+            es: '<ul><li>Enfermedades crónicas</li><li>Problemas respiratorios</li><li>Dolores persistentes</li><li>Síntomas inusuales</li><li>Exámenes de rutina</li><li>Orientaciones de salud</li></ul>',
+            'zh-sg':
+              '<ul><li>慢性疾病</li><li>呼吸问题</li><li>持续疼痛</li><li>异常症状</li><li>常规检查</li><li>健康指导</li></ul>',
+          },
         },
       },
       appointmentBanner: {
@@ -1787,10 +1933,12 @@ export const data = [
           tablet: '/images/services/detail/consultas-medicas/appointment-banner/image-tablet.jpg',
           desktop: '/images/services/detail/consultas-medicas/appointment-banner/image-desktop.jpg',
           alt: {
-            pt: 'Teste',
-            en: 'Test',
-            es: 'Prueba',
-            'zh-sg': '测试',
+            translations: {
+              pt: 'Teste',
+              en: 'Test',
+              es: 'Prueba',
+              'zh-sg': '测试',
+            },
           },
         },
       },
