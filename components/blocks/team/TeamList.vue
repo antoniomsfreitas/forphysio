@@ -1,37 +1,25 @@
 <template>
   <LayoutGrid>
-    <LayoutGridRow class="team-list-title">
-      <LayoutGridCol m="4" t="12" d="12">
-        <h3>Encontre o seu profissional</h3>
-      </LayoutGridCol>
-    </LayoutGridRow>
-    <LayoutGridRow class="team-filters">
-      <LayoutGridCol m="4" t="4" d="4" start-col-d="2">
-        <CustomSelect v-model="selectedLocationId" :options="teamLocations" default-label="Localizações" />
-      </LayoutGridCol>
-
-      <LayoutGridCol m="4" t="4" d="4">
-        <CustomSelect v-model="selectedServiceId" :options="teamServices" default-label="Serviços" />
-      </LayoutGridCol>
-
-      <LayoutGridCol m="4" t="4" d="2">
-        <Button class="team-filters__submit" size="large" @click="submitFilters()">Pesquisar</Button>
-      </LayoutGridCol>
-    </LayoutGridRow>
-
     <LayoutGridRow class="team-list">
       <LayoutGridCol m="4" t="5" d="3" class="team-list__locations">
         <h2>Conheça a equipa</h2>
         <div v-if="teamLocations" class="team-list__locations__list">
           <span class="team-list__locations__list__title">Selecione a Unidade</span>
           <ul>
-            <li
-              v-for="location in teamLocations"
-              :class="{ '--selected': location.id == currentLocationId }"
-              @click="changeLocation(location.id)"
-            >
-              <Icon name="icon:location" size="40" />
-              <span>{{ location.title }}</span>
+            <li v-for="location in teamLocations" :class="{ '--selected': location.id == currentLocationId }">
+              <div class="location" @click="changeLocation(location.id)">
+                <Icon name="icon:location" size="40" />
+                <span>{{ location.title }}</span>
+              </div>
+
+              <div v-if="getServices(location.id) && location.id == currentLocationId" class="services">
+                <CustomCheckbox
+                  v-for="service in getServices(location.id)"
+                  :label="service?.title"
+                  class="service-checkbox"
+                  @click="changeService(service?.id)"
+                ></CustomCheckbox>
+              </div>
             </li>
           </ul>
           <Button class="team-list__locations__list__view-all" @click="resetFilters()">Ver equipa completa</Button>
@@ -72,7 +60,8 @@
 import { Routes } from '~/models/routes.model';
 import type { TeamLocation, TeamMember, TeamService } from '~/models/team.model';
 
-const { getTeamMembers, getService, getTeamServices, getTeamLocations, getDefaultLocationId } = useTeam();
+const { getTeamMembers, getService, getTeamServices, getTeamLocations, getDefaultLocationId, getServicesByLocation } =
+  useTeam();
 const localePath = useLocalePath();
 
 // Locations
@@ -83,7 +72,6 @@ const teamLocations: TeamLocation[] = getTeamLocations();
 // Services
 const currentServiceId = ref(0);
 const selectedServiceId = ref(currentServiceId.value);
-const teamServices: TeamService[] = getTeamServices();
 
 // Members
 const teamMembers = computed((): TeamMember[] => {
@@ -98,14 +86,25 @@ const resetFilters = () => {
   submitFilters();
 };
 
+const getServices = (location: number) => {
+  return getServicesByLocation(location);
+};
+
 const submitFilters = () => {
   currentLocationId.value = selectedLocationId.value;
   currentServiceId.value = selectedServiceId.value;
 };
 
 const changeLocation = (locationId: number) => {
+  console.log('changeLocation');
   currentLocationId.value = locationId;
   selectedLocationId.value = locationId;
+  changeService(0);
+};
+
+const changeService = (serviceId?: number) => {
+  currentServiceId.value = serviceId!;
+  selectedServiceId.value = serviceId!;
 };
 </script>
 
@@ -158,24 +157,38 @@ const changeLocation = (locationId: number) => {
         padding-bottom: 40px;
 
         li {
-          display: flex;
-          align-items: center;
-          font-weight: $font-weight-light;
-          color: $white;
-          cursor: pointer;
-          transition: $transition-duration ease-in-out all;
+          .location {
+            display: flex;
+            align-items: center;
+            font-weight: $font-weight-light;
+            color: $white;
+            cursor: pointer;
+            transition: $transition-duration ease-in-out all;
 
-          &:hover {
-            color: $medium-grey;
+            &:hover {
+              color: $medium-grey;
+            }
+
+            span {
+              display: block;
+            }
+          }
+
+          .services {
+            .service-checkbox {
+              padding: 12px 0;
+
+              :deep(label) {
+                font-size: 14px;
+              }
+            }
           }
 
           &.--selected {
-            font-weight: $font-weight-semi-bold;
-            color: $blue;
-          }
-
-          span {
-            display: block;
+            .location {
+              font-weight: $font-weight-semi-bold;
+              color: $blue;
+            }
           }
         }
       }

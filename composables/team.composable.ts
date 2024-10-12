@@ -192,6 +192,13 @@ export const useTeam = () => {
     return teamMembers.find((member) => member.slug === slug);
   };
 
+  const getServicesByLocation = (locationId: number) => {
+    const teamMembers = getTeamMembers(locationId);
+    const services = teamMembers.map((member) => getService(member.service));
+
+    return Array.from(new Map(services.map((service) => [service?.id, service])).values());
+  };
+
   return {
     getTeamMembers,
     getTeamServices,
@@ -200,5 +207,6 @@ export const useTeam = () => {
     getTeamLocations,
     getDefaultLocationId,
     getTeamMemberBySlug,
+    getServicesByLocation,
   };
 };

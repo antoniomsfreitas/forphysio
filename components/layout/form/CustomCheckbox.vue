@@ -17,7 +17,8 @@ import type { FormFieldValue } from '~/models/form.model';
 const props = defineProps({
   label: {
     type: String,
-    required: true,
+    required: false,
+    default: '',
   },
   modelValue: {
     type: Boolean as PropType<FormFieldValue>,
@@ -71,19 +72,15 @@ watch(
     }
 
     &::after {
-      content: '';
       position: absolute;
-      left: 6px;
-      top: 6px;
-      width: 10px;
-      height: 10px;
-      background-color: transparent;
-      transition: $transition-duration ease-in-out background;
+      left: 4px;
+      top: 1px;
+      font-size: 19px;
     }
   }
 
   &--checked label::after {
-    background-color: $blue;
+    content: '\2715';
   }
 
   &--error label::before {
