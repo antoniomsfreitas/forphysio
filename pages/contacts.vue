@@ -16,19 +16,16 @@
           {{ $t('contacts.page-subtitle') }}
         </p>
 
-        <div class="intro-block__contacts">
+        <div v-if="contacts_intro" class="intro-block__contacts">
           <a
-            v-if="social.whatsapp"
-            :href="'https://wa.me/' + social.whatsapp.value"
+            v-for="contact in contacts_intro"
+            :key="contact.id"
+            :href="contact.link"
             class="intro-block__contacts__item"
+            target="_blank"
           >
-            <Icon name="icon:whatsapp" />
-            <span>{{ social.whatsapp.value }}</span>
-          </a>
-
-          <a v-if="social.email" :href="'mailto:' + social.email.value" class="intro-block__contacts__item">
-            <Icon name="icon:email" />
-            <span>{{ social.email.value }}</span>
+            <Icon :name="'icon:' + contact.icon" />
+            <span>{{ contact.value }}</span>
           </a>
         </div>
 
@@ -66,15 +63,27 @@
         </LayoutGridRow>
       </LayoutGrid>
     </div>
+
+    <SocialMediaBanner />
   </div>
 </template>
 
 <script setup lang="ts">
-const { social } = useContacts();
+const { getContactsData } = useContacts();
+const { data, status } = await getContactsData({ contacts_intro: true });
 
-// @TODO :: API request
+const contacts_intro = computed(() => data.value);
+
 const emit = defineEmits(['onDataLoaded']);
-emit('onDataLoaded');
+watch(
+  status,
+  (newStatus) => {
+    if (newStatus == 'success') {
+      emit('onDataLoaded');
+    }
+  },
+  { immediate: true },
+);
 </script>
 
 <style scoped lang="scss">
@@ -169,7 +178,6 @@ emit('onDataLoaded');
 }
 
 .form-block {
-  margin-bottom: 160px;
   background-color: $deep-grey;
 
   @include mq-mobile {
@@ -177,7 +185,7 @@ emit('onDataLoaded');
   }
 
   @include mq-tablet-desktop {
-    padding: 60px 0;
+    padding: 100px 0;
   }
 }
 </style>

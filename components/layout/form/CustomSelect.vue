@@ -108,7 +108,7 @@ const selectOption = (id: number) => {
 };
 
 const selectedLabel = computed(() => {
-  const selectedOption = props.options.find((option) => option.id === selectedValue.value);
+  const selectedOption = props.options?.find((option) => option.id === selectedValue.value);
 
   if (selectedOption) {
     defaultOption.value = false;

@@ -50,7 +50,6 @@ defineProps({
 </script>
 
 <style scoped lang="scss">
-BannerBlock,
 .appointment-banner {
   position: relative;
   @include mq-mobile-tablet {

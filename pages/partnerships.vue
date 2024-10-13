@@ -16,19 +16,16 @@
           {{ $t('partnerships.introduction') }}
         </p>
 
-        <div class="intro-block__contacts">
+        <div v-if="contacts_intro" class="intro-block__contacts">
           <a
-            v-if="social.whatsapp"
-            :href="'https://wa.me/' + social.whatsapp.value"
+            v-for="contact in contacts_intro"
+            :key="contact.id"
+            :href="contact.link"
             class="intro-block__contacts__item"
+            target="_blank"
           >
-            <Icon name="icon:whatsapp" />
-            <span>{{ social.whatsapp.value }}</span>
-          </a>
-
-          <a v-if="social.email" :href="'mailto:' + social.email.value" class="intro-block__contacts__item">
-            <Icon name="icon:email" />
-            <span>{{ social.email.value }}</span>
+            <Icon :name="'icon:' + contact.icon" />
+            <span>{{ contact.value }}</span>
           </a>
         </div>
 
@@ -60,12 +57,18 @@
 </template>
 
 <script setup lang="ts">
-const { social } = useContacts();
-const { getPage } = usePartnerships();
-const { data, status } = await getPage();
+// Contacts
+const { getContactsData } = useContacts();
+const { data: contactsData } = await getContactsData({ contacts_intro: true });
 
-const pageBlocks = computed(() => data.value?.pageBlocks);
-const partners = computed(() => data.value?.partners);
+const contacts_intro = computed(() => contactsData.value);
+
+// Page
+const { getPage } = usePartnerships();
+const { data: pageData, status } = await getPage();
+
+const pageBlocks = computed(() => pageData.value?.pageBlocks);
+const partners = computed(() => pageData.value?.partners);
 
 const emit = defineEmits(['onDataLoaded']);
 
