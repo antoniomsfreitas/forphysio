@@ -4,7 +4,7 @@
       <LayoutGridRow class="footer__inner">
         <LayoutGridCol m="4" t="12" d="3" class="footer__inner__logo" start-col-d="2">
           <NuxtLink to="/">
-            <NuxtImg src="/images/common/logo/logo-white.png" sizes="m:85px t:100px d:150px" />
+            <NuxtImg src="/images/common/logo/logo-white.png" sizes="m:85px t:150px d:150px" />
           </NuxtLink>
         </LayoutGridCol>
         <LayoutGridCol m="4" t="12" d="7" class="footer__inner__nav">
@@ -95,18 +95,6 @@ const currentYear = new Date().getFullYear();
 
     &__logo a {
       display: block;
-
-      img {
-        object-fit: contain;
-
-        @include mq-mobile {
-          width: 85px;
-        }
-
-        @include mq-tablet-desktop {
-          width: 150px;
-        }
-      }
     }
 
     &__nav {
@@ -192,8 +180,8 @@ const currentYear = new Date().getFullYear();
         align-items: flex-end;
 
         img {
-          object-fit: contain;
           height: 36px;
+          object-fit: contain;
         }
       }
     }
