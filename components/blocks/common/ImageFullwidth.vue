@@ -12,7 +12,7 @@
 <script setup lang="ts">
 import type { Image } from '~/models/blocks.model';
 
-const props = defineProps({
+defineProps({
   data: {
     type: Object as PropType<Image>,
     required: true,

@@ -12,7 +12,8 @@ export interface SingleImage {
 
 export interface IntroBlock {
   title: string;
-  text: string;
+  text?: string;
+  topics?: TitleTextBlock[];
   image: {
     mobile: string;
     tablet: string;
@@ -69,4 +70,10 @@ export interface TwoImagesGridBlock {
 export interface TitleTextBlock {
   title?: string;
   text?: string;
+}
+
+export interface ColumnTitleTextBlock {
+  title?: string;
+  textCol1?: string;
+  textCol2?: string;
 }
