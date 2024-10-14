@@ -13,7 +13,7 @@
 
       <template #content>
         <ul v-if="page?.introBlock?.topics" class="intro-block__topics">
-          <li v-for="topic in page?.introBlock.topics" :key="topic.title" class="intro-block__topics__item">
+          <li v-for="topic in page.introBlock.topics" :key="topic.title" class="intro-block__topics__item">
             <p class="intro-block__topics__item__title">
               {{ topic.title }}
             </p>
@@ -30,37 +30,37 @@
       <LayoutGrid>
         <LayoutGridRow>
           <LayoutGridCol m="4" t="12" d="12">
-            <h2>{{ page?.textBlock_1?.title }}</h2>
+            <h2>{{ page.textBlock_1?.title }}</h2>
           </LayoutGridCol>
         </LayoutGridRow>
         <LayoutGridRow>
           <LayoutGridCol m="4" t="6" d="6">
-            <p>{{ page?.textBlock_1?.textCol1 }}</p>
+            <p>{{ page.textBlock_1?.textCol1 }}</p>
           </LayoutGridCol>
           <LayoutGridCol m="4" t="6" d="6">
-            <p>{{ page?.textBlock_1?.textCol2 }}</p>
+            <p>{{ page.textBlock_1?.textCol2 }}</p>
           </LayoutGridCol>
         </LayoutGridRow>
       </LayoutGrid>
     </div>
 
     <div v-if="page?.imageFullwidth" class="container-block">
-      <ImageFullwidth :data="page?.imageFullwidth" />
+      <ImageFullwidth :data="page.imageFullwidth" />
     </div>
 
     <div v-if="page?.textBlock_2" class="container-block">
       <LayoutGrid>
         <LayoutGridRow>
           <LayoutGridCol m="4" t="12" d="12">
-            <h2>{{ page?.textBlock_2.title }}</h2>
+            <h2>{{ page.textBlock_2.title }}</h2>
           </LayoutGridCol>
         </LayoutGridRow>
         <LayoutGridRow>
           <LayoutGridCol m="4" t="6" d="6">
-            <p>{{ page?.textBlock_2?.textCol1 }}</p>
+            <p>{{ page.textBlock_2?.textCol1 }}</p>
           </LayoutGridCol>
           <LayoutGridCol m="4" t="6" d="6">
-            <p>{{ page?.textBlock_2?.textCol2 }}</p>
+            <p>{{ page.textBlock_2?.textCol2 }}</p>
           </LayoutGridCol>
         </LayoutGridRow>
       </LayoutGrid>
@@ -85,7 +85,7 @@
       <LayoutGrid>
         <LayoutGridRow>
           <LayoutGridCol m="4" t="7" d="7">
-            <p>{{ page?.textBlock_3?.text }}</p>
+            <p>{{ page.textBlock_3?.text }}</p>
           </LayoutGridCol>
         </LayoutGridRow>
       </LayoutGrid>
