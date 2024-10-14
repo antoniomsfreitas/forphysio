@@ -16,11 +16,12 @@
           {{ $t('contacts.page-subtitle') }}
         </p>
 
-        <div v-if="contacts_intro" class="intro-block__contacts">
+        <div v-if="contactsIntro" class="intro-block__contacts">
           <a
-            v-for="contact in contacts_intro"
+            v-for="contact in contactsIntro"
             :key="contact.id"
             :href="contact.link"
+            :title="contact.name"
             class="intro-block__contacts__item"
             target="_blank"
           >
@@ -70,9 +71,9 @@
 
 <script setup lang="ts">
 const { getContactsData } = useContacts();
-const { data, status } = await getContactsData({ contacts_intro: true });
+const { data, status } = await getContactsData({ contactsIntro: true });
 
-const contacts_intro = computed(() => data.value);
+const contactsIntro = computed(() => data.value);
 
 const emit = defineEmits(['onDataLoaded']);
 watch(

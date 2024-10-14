@@ -3,19 +3,15 @@ import type { Location, Contact } from '~/models/contacts';
 export const useContacts = () => {
   const { locale } = useI18n();
 
-  const getContactsData = async (visibility?: {
-    contacts_intro?: boolean;
-    social_media?: boolean;
-    footer?: boolean;
-  }) => {
+  const getContactsData = async (visibility?: { contactsIntro?: boolean; socialMedia?: boolean; footer?: boolean }) => {
     const key = `contacts-${JSON.stringify(visibility)}`;
 
     const { status, data } = await useAsyncData<Contact[]>(key, () =>
       $fetch('/api/contacts/contacts', {
         query: {
           locale: locale.value,
-          contacts_intro: visibility?.contacts_intro,
-          social_media: visibility?.social_media,
+          contactsIntro: visibility?.contactsIntro,
+          socialMedia: visibility?.socialMedia,
           footer: visibility?.footer,
         },
       }),

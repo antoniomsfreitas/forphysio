@@ -14,10 +14,10 @@
       <LayoutGrid>
         <LayoutGridRow>
           <LayoutGridCol m="4" t="6" d="6" start-col-t="4" start-col-d="4">
-            <p>Visite as nossas redes sociais</p>
+            <p>{{ $t('contacts.socialMediaBanner.title') }}</p>
 
             <ul>
-              <li v-for="contact in social_media" :key="contact.id">
+              <li v-for="contact in socialMedia" :key="contact.id">
                 <a :href="contact.link" :title="contact.value" target="_blank">
                   <Icon :name="'icon:' + contact.icon" />
                 </a>
@@ -32,9 +32,9 @@
 
 <script setup lang="ts">
 const { getContactsData } = useContacts();
-const { data } = await getContactsData({ social_media: true });
+const { data } = await getContactsData({ socialMedia: true });
 
-const social_media = computed(() => data.value);
+const socialMedia = computed(() => data.value);
 </script>
 
 <style scoped lang="scss">

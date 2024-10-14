@@ -16,11 +16,12 @@
           {{ $t('partnerships.introduction') }}
         </p>
 
-        <div v-if="contacts_intro" class="intro-block__contacts">
+        <div v-if="contactsIntro" class="intro-block__contacts">
           <a
-            v-for="contact in contacts_intro"
+            v-for="contact in contactsIntro"
             :key="contact.id"
             :href="contact.link"
+            :title="contact.name"
             class="intro-block__contacts__item"
             target="_blank"
           >
@@ -59,9 +60,9 @@
 <script setup lang="ts">
 // Contacts
 const { getContactsData } = useContacts();
-const { data: contactsData } = await getContactsData({ contacts_intro: true });
+const { data: contactsData } = await getContactsData({ contactsIntro: true });
 
-const contacts_intro = computed(() => contactsData.value);
+const contactsIntro = computed(() => contactsData.value);
 
 // Page
 const { getPage } = usePartnerships();

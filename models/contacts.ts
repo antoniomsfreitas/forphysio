@@ -14,8 +14,8 @@ export interface Contact {
   link: string;
   icon: string;
   visibility: {
-    contacts_intro: boolean;
-    social_media: boolean;
+    contactsIntro: boolean;
+    socialMedia: boolean;
     footer: boolean;
   };
 }

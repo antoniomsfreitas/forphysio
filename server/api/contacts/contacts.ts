@@ -2,13 +2,13 @@ import { getFormattedDataByLocale } from '~/utils/api.util';
 import type { Contact } from '~/models/contacts';
 import { data } from '../../data/contacts/contacts';
 
-const getContacts = (visibility?: { contacts_intro?: boolean; social_media?: boolean; footer?: boolean }) => {
-  if (visibility?.contacts_intro) {
-    return data.filter((contact) => contact.visibility.contacts_intro);
+const getContacts = (visibility?: { contactsIntro?: boolean; socialMedia?: boolean; footer?: boolean }) => {
+  if (visibility?.contactsIntro) {
+    return data.filter((contact) => contact.visibility.contactsIntro);
   }
 
-  if (visibility?.social_media) {
-    return data.filter((contact) => contact.visibility.social_media);
+  if (visibility?.socialMedia) {
+    return data.filter((contact) => contact.visibility.socialMedia);
   }
 
   if (visibility?.footer) {
@@ -19,11 +19,11 @@ const getContacts = (visibility?: { contacts_intro?: boolean; social_media?: boo
 };
 
 export default defineEventHandler((event): Contact[] => {
-  const { locale, contacts_intro, social_media, footer } = getQuery(event);
+  const { locale, contactsIntro, socialMedia, footer } = getQuery(event);
 
   const data = getContacts({
-    contacts_intro: contacts_intro as boolean,
-    social_media: social_media as boolean,
+    contactsIntro: contactsIntro as boolean,
+    socialMedia: socialMedia as boolean,
     footer: footer as boolean,
   });
 
