@@ -5,7 +5,6 @@
 
   "pages.services": "Services",
   "pages.services.landingPage.intro": "We have been providing specialized physiotherapy services since 2014.\n\nDuring our evolution, we added complementary services such as nutrition, Pilates, wellness, and medical consultations.",
-
   "pages.services.musculoskeletalPhysiotherapy": "Musculoskeletal physiotherapy",
   "pages.services.sportsPhysiotherapy": "Physiotherapy in sports",
   "pages.services.aquaticPhysiotherapyHydrotherapy": "Aquatic physiotherapy and hydrotherapy",
@@ -16,12 +15,17 @@
   "pages.services.nutrition": "Nutrition",
   "pages.services.healthWellBeing": "Health and well-being",
   "pages.services.medicalAppointments": "Medical Appointments",
+
   "pages.partnerships": "Partnerships",
   "pages.blog": "Blog",
   "pages.search": "Search",
   "pages.recruitment": "Recruitment",
   "pages.faqs": "Frequently Asked Questions",
+  "pages.units": "Clinics",
+  "pages.cancellation-policy": "Cancellation Policy",
+  "pages.privacy-policy": "Privacy Policy",
 
+  "general.forphysio-clinic": "ForPhysio Clinic",
   "general.bookAppointment": "Book appointment",
   "general.viewAll": "View all",
   "general.subscribe": "Subscribe",
@@ -35,6 +39,8 @@
   "general.ourUnits": "Our clinics",
   "general.selectUnit": "Select clinic",
   "general.readMore": "Read more",
+  "general.complaintsBook": "Complaints Book",
+  "general.complimentsBook": "Compliments Book",
 
   "contacts.page-title": "We're here to help you.",
   "contacts.page-subtitle": "Fill out the form below, or get in touch via email or Whatsapp.",
@@ -42,6 +48,7 @@
   "contacts.form-title": "Contact us.\nFill out the form",
   "contacts.socialMediaBanner.alt": "Some members of the ForPhysio team",
   "contacts.socialMediaBanner.title": "Visit our social networks",
+  "general.copyright": "All rights reserved",
 
   "form-field.name": "Name",
   "form-field.phone": "Phone contact",

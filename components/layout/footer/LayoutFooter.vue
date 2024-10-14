@@ -8,32 +8,32 @@
           </NuxtLink>
         </LayoutGridCol>
         <LayoutGridCol m="4" t="12" d="7" class="footer__inner__nav">
-          <ul v-if="mainMenu.left.length" class="footer__inner__nav__main-menu footer__inner__nav__main-menu--left">
-            <li v-for="menu in mainMenu.left" :key="menu.name" class="footer__inner__nav__main-menu__item">
-              <NuxtLink :to="menu.link" :title="menu.name">
-                {{ menu.name }}
+          <ul v-if="mainMenuLeft.length" class="footer__inner__nav__main-menu footer__inner__nav__main-menu--left">
+            <li v-for="menu in mainMenuLeft" :key="menu.name" class="footer__inner__nav__main-menu__item">
+              <NuxtLink :to="localePath(menu.route.name)" :title="$t(menu.name)">
+                {{ $t(menu.name) }}
               </NuxtLink>
             </li>
           </ul>
 
-          <ul v-if="mainMenu.right.length" class="footer__inner__nav__main-menu footer__inner__nav__main-menu--right">
-            <li v-for="menu in mainMenu.right" :key="menu.name" class="footer__inner__nav__main-menu__item">
-              <NuxtLink :to="menu.link" :title="menu.name">
-                {{ menu.name }}
+          <ul v-if="mainMenuRight.length" class="footer__inner__nav__main-menu footer__inner__nav__main-menu--right">
+            <li v-for="menu in mainMenuRight" :key="menu.name" class="footer__inner__nav__main-menu__item">
+              <NuxtLink :to="localePath(menu.route.name)" :title="$t(menu.name)">
+                {{ $t(menu.name) }}
               </NuxtLink>
             </li>
           </ul>
 
-          <ul v-if="socialMenu.length" class="footer__inner__nav__social-menu">
-            <li v-for="menu in socialMenu" :key="menu.name" class="footer__inner__nav__social-menu__item">
+          <ul v-if="contactsFooter" class="footer__inner__nav__social-menu">
+            <li v-for="menu in contactsFooter" :key="menu.name" class="footer__inner__nav__social-menu__item">
               <NuxtLink :to="menu.link" :title="menu.name" target="__blank">
                 <Icon :name="'icon:' + menu.icon" />
               </NuxtLink>
             </li>
           </ul>
 
-          <ul v-if="logosMenu.length" class="footer__inner__nav__logos-menu">
-            <li v-for="menu in logosMenu" :key="menu.name">
+          <ul v-if="data.logosMenu.length" class="footer__inner__nav__logos-menu">
+            <li v-for="menu in data.logosMenu" :key="menu.name">
               <NuxtLink :to="menu.link" :title="menu.name" target="__blank">
                 <NuxtImg :src="'/images/common/external-logos/' + menu.image" height="36px" />
               </NuxtLink>
@@ -43,12 +43,35 @@
       </LayoutGridRow>
     </LayoutGrid>
 
-    <p class="footer__copyright">ForPhysio Clinic 2024 © Todos os direitos reservados</p>
+    <p class="footer__copyright">
+      {{ $t('general.forphysio-clinic') }} {{ currentYear }} &copy; {{ $t('general.copyright') }}
+    </p>
   </footer>
 </template>
 
 <script setup lang="ts">
-const { mainMenu, socialMenu, logosMenu } = useFooter();
+import type { FooterMenu } from '~/models/layout.model';
+
+const props = defineProps({
+  data: {
+    type: Object as PropType<FooterMenu>,
+    required: true,
+  },
+});
+
+const localePath = useLocalePath();
+const { getContactsData } = useContacts();
+
+const { data: contactsData } = await getContactsData({ footer: true });
+const contactsFooter = computed(() => contactsData.value);
+
+const mainMenu = computed(() => props.data.mainMenu);
+const [mainMenuLeft, mainMenuRight] = [
+  mainMenu.value.slice(0, mainMenu.value.length >> 1),
+  mainMenu.value.slice(mainMenu.value.length >> 1),
+];
+
+const currentYear = new Date().getFullYear();
 </script>
 
 <style scoped lang="scss">
