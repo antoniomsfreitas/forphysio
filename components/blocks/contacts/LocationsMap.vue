@@ -9,7 +9,7 @@
             <li
               v-for="location in locations"
               :key="location.id"
-              :class="{ '--selected': location.id == currentLocationId }"
+              :class="{ 'location-selected': location.id == currentLocationId }"
               @click="changeLocation(location.id)"
             >
               <Icon name="icon:location" size="40" />
@@ -38,9 +38,10 @@
 </template>
 
 <script setup lang="ts">
-const { getVisibleLocations } = useContacts();
+const { getLocationsData } = useContacts();
+const { data } = await getLocationsData();
 
-const locations = getVisibleLocations();
+const locations = computed(() => data?.value);
 const loading = ref(false);
 
 const changeLocation = async (locationId: number) => {
@@ -54,7 +55,7 @@ const changeLocation = async (locationId: number) => {
 };
 
 const currentLocationId = ref(2);
-const currentLocation = computed(() => locations.find((location) => location.id == currentLocationId.value));
+const currentLocation = computed(() => locations.value?.find((location) => location.id == currentLocationId.value));
 </script>
 
 <style scoped lang="scss">
@@ -65,9 +66,9 @@ const currentLocation = computed(() => locations.find((location) => location.id 
     }
 
     h2 {
-      text-wrap: balance;
-      line-height: 1.1;
       padding-bottom: 40px;
+      line-height: 1.1;
+      text-wrap: balance;
     }
 
     &__list {
@@ -76,8 +77,8 @@ const currentLocation = computed(() => locations.find((location) => location.id 
 
       &__title {
         display: block;
-        font-weight: $font-weight-semi-bold;
         padding-bottom: 14px;
+        font-weight: $font-weight-semi-bold;
       }
 
       ul {
@@ -97,7 +98,7 @@ const currentLocation = computed(() => locations.find((location) => location.id 
             color: $medium-grey;
           }
 
-          &.--selected {
+          &.location-selected {
             font-weight: $font-weight-semi-bold;
             color: $blue;
           }

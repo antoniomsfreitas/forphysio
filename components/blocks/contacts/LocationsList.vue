@@ -2,14 +2,14 @@
   <div class="locations-list">
     <h3>{{ $t('contacts.available-units') }}:</h3>
     <ul>
-      <li v-for="location in locations">
+      <li v-for="location in locations" :key="location.id">
         <p class="title">{{ location.name }}</p>
         <p class="address">{{ location.address }}</p>
         <p class="phone">
           <Icon name="icon:phone" />
           <span>{{ location.phone }}</span>
         </p>
-        <p class="hours" v-html="location.hours"></p>
+        <p class="hours" v-html="location.hours" />
       </li>
     </ul>
   </div>
@@ -22,12 +22,14 @@ const props = defineProps({
   locationsId: {
     type: Array as PropType<number[]>,
     required: false,
+    default: null,
   },
 });
 
-const { getLocations } = useContacts();
+const { getLocationsData } = useContacts();
+const { data } = await getLocationsData({ idList: props.locationsId });
 
-const locations = getLocations(props?.locationsId);
+const locations = computed(() => data?.value);
 </script>
 
 <style scoped lang="scss">
@@ -59,12 +61,12 @@ const locations = getLocations(props?.locationsId);
     }
 
     li {
-      font-size: 18px;
-      line-height: 1.2;
-      font-weight: $font-weight-light;
       display: flex;
       flex-direction: column;
       gap: 8px;
+      font-size: 18px;
+      font-weight: $font-weight-light;
+      line-height: 1.2;
 
       .title {
         font-size: 20px;
@@ -73,8 +75,8 @@ const locations = getLocations(props?.locationsId);
 
       .phone {
         display: flex;
-        align-items: center;
         gap: 4px;
+        align-items: center;
 
         span {
           display: block;

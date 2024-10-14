@@ -1,3 +1,4 @@
+import { LocationEnum } from './contacts/locations';
 export const data = [
   {
     id: 1,
@@ -18,7 +19,12 @@ export const data = [
       },
     },
     image: '/images/services/list/fisioterapia-musculo-esqueletica.jpg',
-    locations: [1, 2, 3, 4, 5],
+    locations: [
+      LocationEnum.MARINHA_GRANDE,
+      LocationEnum.CALDAS_RAINHA,
+      LocationEnum.LISBOA_LUMIAR,
+      LocationEnum.OEIRAS,
+    ],
     homepage: true,
     blocks: {
       intro: {
@@ -230,7 +236,12 @@ export const data = [
       },
     },
     image: '/images/services/list/fisioterapia-no-desporto.jpg',
-    locations: [1, 2, 3, 4, 5],
+    locations: [
+      LocationEnum.MARINHA_GRANDE,
+      LocationEnum.CALDAS_RAINHA,
+      LocationEnum.LISBOA_LUMIAR,
+      LocationEnum.OEIRAS,
+    ],
     homepage: true,
     detailLink: '',
     blocks: {
@@ -436,7 +447,7 @@ export const data = [
       },
     },
     image: '/images/services/list/fisioterapia-aquatica-e-hidroterapia.jpg',
-    locations: [2, 4],
+    locations: [LocationEnum.CALDAS_RAINHA, LocationEnum.LISBOA_LUMIAR],
     homepage: true,
     blocks: {
       intro: {
@@ -649,7 +660,12 @@ export const data = [
       },
     },
     image: '/images/services/list/fisioterapia-no-envelhecimento.jpg',
-    locations: [1, 2, 3, 4, 5],
+    locations: [
+      LocationEnum.MARINHA_GRANDE,
+      LocationEnum.CALDAS_RAINHA,
+      LocationEnum.LISBOA_LUMIAR,
+      LocationEnum.OEIRAS,
+    ],
     homepage: true,
     blocks: {
       intro: {
@@ -1067,7 +1083,12 @@ export const data = [
     },
     image: '/images/services/list/fisioterapia-na-saude-da-mulher.jpg',
     homepage: true,
-    locations: [1, 2, 3, 4, 5],
+    locations: [
+      LocationEnum.MARINHA_GRANDE,
+      LocationEnum.CALDAS_RAINHA,
+      LocationEnum.LISBOA_LUMIAR,
+      LocationEnum.OEIRAS,
+    ],
     blocks: {
       intro: {
         title: {
@@ -1278,7 +1299,7 @@ export const data = [
       },
     },
     image: '/images/services/list/pilates-clinico.jpg',
-    locations: [1],
+    locations: [LocationEnum.MARINHA_GRANDE],
     homepage: false,
     blocks: {
       intro: {
@@ -1489,7 +1510,7 @@ export const data = [
       },
     },
     image: '/images/services/list/nutricao.jpg',
-    locations: [1, 2, 3, 5],
+    locations: [LocationEnum.MARINHA_GRANDE, LocationEnum.CALDAS_RAINHA, LocationEnum.OEIRAS],
     homepage: false,
     blocks: {
       intro: {
@@ -1650,7 +1671,7 @@ export const data = [
       },
     },
     image: '/images/services/list/saude-e-bem-estar.jpg',
-    locations: [1, 2, 3, 5],
+    locations: [LocationEnum.MARINHA_GRANDE, LocationEnum.CALDAS_RAINHA, LocationEnum.OEIRAS],
     homepage: false,
     blocks: {
       intro: {
@@ -1829,7 +1850,12 @@ export const data = [
       },
     },
     image: '/images/services/list/consultas-medicas.jpg',
-    locations: [1, 2, 3, 4, 5],
+    locations: [
+      LocationEnum.MARINHA_GRANDE,
+      LocationEnum.CALDAS_RAINHA,
+      LocationEnum.LISBOA_LUMIAR,
+      LocationEnum.OEIRAS,
+    ],
     homepage: false,
     blocks: {
       intro: {
