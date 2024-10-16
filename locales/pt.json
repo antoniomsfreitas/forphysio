@@ -5,7 +5,6 @@
 
   "pages.services": "Serviços",
   "pages.services.landingPage.intro": "Prestamos serviços especializados de fisioterapia desde 2014.\n\nDurante a nossa evolução, adicionámos serviços complementares de nutrição, pilates, bem-estar e consultas médicas",
-
   "pages.services.musculoskeletalPhysiotherapy": "Fisioterapia músculo esquelética",
   "pages.services.sportsPhysiotherapy": "Fisioterapia no desporto",
   "pages.services.aquaticPhysiotherapyHydrotherapy": "Fisioterapia aquática e hidroterapia",
@@ -22,7 +21,11 @@
   "pages.recruitment": "Recrutamento",
   "pages.search": "Pesquisa",
   "pages.faqs": "Perguntas Frequentes",
+  "pages.units": "Unidades",
+  "pages.cancellation-policy": "Política de Cancelamento",
+  "pages.privacy-policy": "Política de Privacidade",
 
+  "general.forphysio-clinic": "Clínica ForPhysio",
   "general.bookAppointment": "Marcar consulta",
   "general.viewAll": "Ver todos",
   "general.subscribe": "Subscrever",
@@ -35,7 +38,9 @@
   "general.view-all": "Ver todos",
   "general.ourUnits": "As nossas unidades",
   "general.selectUnit": "Selecione a Unidade",
-  "general.readMore": "Ler mais",
+  "general.complaintsBook": "Livro de Reclamações",
+  "general.complimentsBook": "Livro de Elogios",
+  "general.copyright": "Todos os direitos reservados",
 
   "contacts.page-title": "Estamos aqui para o ajudar.",
   "contacts.page-subtitle": "Preencha o formulário abaixo, ou contacte-nos através do e-mail ou Whatsapp.",
