@@ -1,47 +1,43 @@
 <template>
   <LayoutGrid>
-    <LayoutGridRow class="team-list-title">
-      <LayoutGridCol m="4" t="12" d="12">
-        <h3>Encontre o seu profissional</h3>
-      </LayoutGridCol>
-    </LayoutGridRow>
-    <LayoutGridRow class="team-filters">
-      <LayoutGridCol m="4" t="4" d="4" start-col-d="2">
-        <CustomSelect v-model="selectedLocationId" :options="teamLocations" default-label="Localizações" />
-      </LayoutGridCol>
-
-      <LayoutGridCol m="4" t="4" d="4">
-        <CustomSelect v-model="selectedServiceId" :options="teamServices" default-label="Serviços" />
-      </LayoutGridCol>
-
-      <LayoutGridCol m="4" t="4" d="2">
-        <Button class="team-filters__submit" size="large" @click="submitFilters()">Pesquisar</Button>
-      </LayoutGridCol>
-    </LayoutGridRow>
-
     <LayoutGridRow class="team-list">
       <LayoutGridCol m="4" t="5" d="3" class="team-list__locations">
         <h2>Conheça a equipa</h2>
-        <div v-if="teamLocations" class="team-list__locations__list">
+        <div v-if="locations" class="team-list__locations__list">
           <span class="team-list__locations__list__title">Selecione a Unidade</span>
           <ul>
-            <li
-              v-for="location in teamLocations"
-              :class="{ '--selected': location.id == currentLocationId }"
-              @click="changeLocation(location.id)"
-            >
-              <Icon name="icon:location" size="40" />
-              <span>{{ location.title }}</span>
+            <li v-for="location in locations">
+              <div v-if="location" class="location">
+                <div
+                  class="location__name"
+                  :class="{ 'location__name--selected': isCurrentLocation(location.id) }"
+                  @click="changeLocation(location.id)"
+                >
+                  <Icon name="icon:location" size="40" />
+                  <span>{{ location.name }}</span>
+                </div>
+
+                <div v-if="services && isCurrentLocation(location.id)" class="services">
+                  <div v-for="service in services" class="services__item">
+                    <CustomCheckbox
+                      v-if="service"
+                      :label="service.title"
+                      class="service-checkbox"
+                      @mouseup="toggleService(service?.id)"
+                    ></CustomCheckbox>
+                  </div>
+                </div>
+              </div>
             </li>
           </ul>
-          <Button class="team-list__locations__list__view-all" @click="resetFilters()">Ver equipa completa</Button>
+          <Button class="team-list__locations__list__view-all" @click="viewAll()">Ver equipa completa</Button>
         </div>
       </LayoutGridCol>
       <LayoutGridCol m="4" t="7" d="8" class="team-list__members">
         <LayoutGrid>
-          <LayoutGridRow v-if="teamMembers.length" :col-number-tablet="9" :col-number-desktop="8">
+          <LayoutGridRow v-if="currentMembers" :col-number-tablet="9" :col-number-desktop="8">
             <LayoutGridCol
-              v-for="member in teamMembers"
+              v-for="member in currentMembers.slice(0, numVisibleMembers)"
               :key="member.id"
               m="2"
               t="3"
@@ -51,16 +47,24 @@
               <CardTeam
                 v-if="member.name && member.image"
                 :title="member.name"
-                :subtitle="getService(member.service)?.title"
+                :subtitle="member.role"
                 :src="member.image"
                 :alt="member.name"
-                :link="localePath(Routes.TEAM) + '/' + member.slug"
+                :link="localePath({ name: Routes.TEAM_SLUG, params: { slug: member.slug } })"
               />
             </LayoutGridCol>
           </LayoutGridRow>
-
-          <LayoutGridRow v-else :col-number-tablet="9" :col-number-desktop="8">
-            <LayoutGridCol m="2" t="3" d="2" class="team-list__members__empty">Sem resultados.</LayoutGridCol>
+          <LayoutGridRow v-if="showMore" @click="handleShowMore">
+            <LayoutGridCol m="4" t="12" d="12" class="view-more">
+              <button type="button" aria-label="Ver mais">
+                <Icon name="icon:view-more" size="50" />
+              </button>
+            </LayoutGridCol>
+          </LayoutGridRow>
+          <LayoutGridRow v-if="loading">
+            <LayoutGridCol m="4" t="12" d="12">
+              <Icon name="icon:loading" size="50" />
+            </LayoutGridCol>
           </LayoutGridRow>
         </LayoutGrid>
       </LayoutGridCol>
@@ -70,63 +74,73 @@
 
 <script setup lang="ts">
 import { Routes } from '~/models/routes.model';
-import type { TeamLocation, TeamMember, TeamService } from '~/models/team.model';
 
-const { getTeamMembers, getService, getTeamServices, getTeamLocations, getDefaultLocationId } = useTeam();
 const localePath = useLocalePath();
+const { getTeamMembers, getLocations, getServicesByLocation, filterTeamMembers, defaultLocation } = useTeam();
 
-// Locations
-const currentLocationId = ref(getDefaultLocationId());
-const selectedLocationId = ref(currentLocationId.value);
-const teamLocations: TeamLocation[] = getTeamLocations();
+const { data, status } = await getTeamMembers();
+const allMembers = computed(() => data.value);
 
-// Services
-const currentServiceId = ref(0);
-const selectedServiceId = ref(currentServiceId.value);
-const teamServices: TeamService[] = getTeamServices();
+const currentLocation = ref(+defaultLocation);
+const currentServices = ref<number[]>([]);
 
-// Members
-const teamMembers = computed((): TeamMember[] => {
-  return getTeamMembers(currentLocationId.value, currentServiceId.value);
-});
+const currentMembers = computed(() =>
+  allMembers.value ? filterTeamMembers(allMembers.value, currentLocation.value, currentServices.value) : null,
+);
 
-// Methods
-const resetFilters = () => {
-  selectedLocationId.value = 0;
-  selectedServiceId.value = 0;
+const locations = allMembers.value ? getLocations(allMembers.value) : null;
+const services = computed(() =>
+  allMembers.value ? getServicesByLocation(allMembers.value, currentLocation.value) : null,
+);
 
-  submitFilters();
+const loading = ref(true);
+const maxByPage = 12;
+const numVisibleMembers = ref(maxByPage);
+const showMore = computed(() => currentMembers.value && numVisibleMembers.value < currentMembers.value.length);
+
+const changeLocation = (id: number) => {
+  currentServices.value = [];
+  currentLocation.value = id;
 };
 
-const submitFilters = () => {
-  currentLocationId.value = selectedLocationId.value;
-  currentServiceId.value = selectedServiceId.value;
+const toggleService = (id: number) => {
+  if (currentServices.value.includes(id)) {
+    // remove from current services
+    currentServices.value = currentServices.value.filter((serviceId) => serviceId != id);
+  } else {
+    // add to current services
+    currentServices.value.push(id);
+  }
 };
 
-const changeLocation = (locationId: number) => {
-  currentLocationId.value = locationId;
-  selectedLocationId.value = locationId;
+const viewAll = () => {
+  currentLocation.value = 0;
 };
+
+const isCurrentLocation = (id: number): boolean => {
+  return currentLocation.value === id;
+};
+
+const handleShowMore = () => {
+  numVisibleMembers.value += maxByPage;
+};
+
+const emit = defineEmits(['onDataLoaded']);
+watch(
+  status,
+  (newStatus) => {
+    if (newStatus === 'success') {
+      emit('onDataLoaded');
+    }
+  },
+  { immediate: true },
+);
 </script>
 
 <style scoped lang="scss">
 .team-list-title {
   margin-bottom: 40px;
   text-align: center;
-}
-
-.team-filters {
-  @include mq-mobile-tablet {
-    margin-bottom: 100px;
-  }
-
-  @include mq-desktop {
-    margin-bottom: 200px;
-  }
-
-  &__submit {
-    width: 100%;
-  }
 }
 
 .team-list {
@@ -158,24 +172,39 @@ const changeLocation = (locationId: number) => {
         padding-bottom: 40px;
 
         li {
-          display: flex;
-          align-items: center;
-          font-weight: $font-weight-light;
-          color: $white;
-          cursor: pointer;
-          transition: $transition-duration ease-in-out all;
+          .location {
+            &__name {
+              display: flex;
+              align-items: center;
+              font-weight: $font-weight-light;
+              color: $white;
+              cursor: pointer;
+              transition: $transition-duration ease-in-out all;
 
-          &:hover {
-            color: $medium-grey;
-          }
+              &:hover {
+                color: $medium-grey;
+              }
 
-          &.--selected {
-            font-weight: $font-weight-semi-bold;
-            color: $blue;
-          }
+              &--selected {
+                font-weight: $font-weight-semi-bold;
+                color: $blue;
+              }
 
-          span {
-            display: block;
+              span {
+                display: block;
+              }
+            }
+
+            .services {
+              padding-bottom: 10px;
+              &__item {
+                padding: 12px 0 12px 8px;
+
+                :deep(label) {
+                  font-size: 14px;
+                }
+              }
+            }
           }
         }
       }
@@ -204,6 +233,18 @@ const changeLocation = (locationId: number) => {
       font-size: 18px;
       line-height: 1.2;
       font-weight: $font-weight-light;
+    }
+  }
+
+  .view-more {
+    text-align: center;
+    padding-top: 50px;
+
+    button {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      cursor: pointer;
     }
   }
 }

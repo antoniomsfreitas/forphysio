@@ -2,6 +2,7 @@ export enum Routes {
   HOMEPAGE = '/',
   ABOUT = 'about',
   TEAM = 'team',
+  TEAM_SLUG = 'team-slug',
   CONTACTS = 'contacts',
   BLOG = 'blog',
   BLOG_SLUG = 'blog-slug',

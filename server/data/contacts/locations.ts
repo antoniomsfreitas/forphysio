@@ -3,6 +3,7 @@ export enum LocationEnum {
   CALDAS_RAINHA = 2,
   LISBOA_LUMIAR = 3,
   OEIRAS = 4,
+  AVEIRO = 4,
 }
 
 export const data = [
