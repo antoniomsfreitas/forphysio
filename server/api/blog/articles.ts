@@ -2,6 +2,7 @@ import type { Article } from '~/models/blog.model';
 import { getFormattedDataByLocale, getDataOrderedByDate } from '~/utils/api.util';
 import { data as articlesData } from '../../data/blog/articles';
 import { data as categoriesData } from '../../data/blog/categories';
+import { data as teamData } from '../../data/team/teamMembers';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function getTranslation(category: any, field: any, locale: string): string | undefined {
@@ -10,6 +11,10 @@ function getTranslation(category: any, field: any, locale: string): string | und
 
 const getCategories = (ids: number[]) => {
   return categoriesData.filter((category) => ids.includes(category.id));
+};
+
+const getTeamMember = (id: number) => {
+  return teamData.find((member) => member.id == id);
 };
 
 const getArticles = (
@@ -57,7 +62,7 @@ export default defineEventHandler((event): Article[] => {
   const articles: any = data.map((article: any) => ({
     ...article,
     categories: getCategories(article.categories),
-    // teamMembers: getTeamMembersByIds(item.teamMembers), // Substitui os IDs pelos membros da equipa
+    author: getTeamMember(article.author), // Substitui os IDs pelos membros da equipa
   }));
 
   return getFormattedDataByLocale(articles, locale as string);

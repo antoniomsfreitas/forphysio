@@ -13,6 +13,7 @@ export default defineNuxtConfig({
           additionalData: `
               @use "~/assets/styles/utils/_variables.scss" as *;
               @use "~/assets/styles/utils/_mixins.scss" as *;
+              @use "~/assets/styles/utils/_keyframes.scss" as *;
           `,
         },
       },
@@ -149,6 +150,18 @@ export default defineNuxtConfig({
         es: '/blog/categorias/[slug]',
         pt: '/blog/categorias/[slug]',
         'zh-SG': '/blog/categories/[slug]',
+      },
+      'blog/authors/index': {
+        en: '/blog/authors',
+        es: '/blog/autores',
+        pt: '/blog/autores',
+        'zh-SG': '/blog/authors',
+      },
+      'blog/authors/[slug]': {
+        en: '/blog/autores/[slug]',
+        es: '/blog/autores/[slug]',
+        pt: '/blog/authors/[slug]',
+        'zh-SG': '/blog/authors/[slug]',
       },
     },
   },

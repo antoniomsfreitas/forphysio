@@ -71,19 +71,18 @@ watch(
     }
 
     &::after {
-      content: '';
       position: absolute;
-      left: 6px;
-      top: 6px;
-      width: 10px;
-      height: 10px;
-      background-color: transparent;
-      transition: $transition-duration ease-in-out background;
+      content: '';
+      width: 22px;
+      height: 22px;
+      opacity: 0;
+      background: url(/assets/icons/close.svg) no-repeat center center/22px;
+      transition: 150ms ease-in-out all;
     }
   }
 
   &--checked label::after {
-    background-color: $blue;
+    opacity: 1;
   }
 
   &--error label::before {

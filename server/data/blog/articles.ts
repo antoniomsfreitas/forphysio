@@ -1,3 +1,5 @@
+import { teamEnum } from '../team/teamMembers';
+
 export const data = [
   {
     id: 1,
@@ -48,7 +50,7 @@ export const data = [
       },
     },
     categories: [1, 3],
-    author: 1,
+    author: teamEnum.NUNO_PINA,
     landingPage: true,
     highlight: {
       enabled: true,
@@ -170,7 +172,7 @@ export const data = [
       },
     },
     categories: [2],
-    author: 1,
+    author: teamEnum.BEATRIZ_SILVA,
     landingPage: true,
     blocks: {
       image_1: {

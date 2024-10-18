@@ -3,7 +3,7 @@
     <SwiperSlide v-for="member in teamList" :key="member.id" class="team-slider-container__slide">
       <CardTeam
         :title="member.name"
-        :subtitle="getService(member.service)?.title"
+        :subtitle="member.role"
         :src="member.image"
         :alt="member.name"
         :link="localePath(Routes.TEAM) + '/' + member.slug"
@@ -16,7 +16,7 @@
 import { Routes } from '~/models/routes.model';
 import type { TeamMember } from '~/models/team.model';
 
-defineProps({
+const props = defineProps({
   title: {
     type: String,
     required: true,
@@ -27,7 +27,6 @@ defineProps({
   },
 });
 
-const { getService } = useTeam();
 const localePath = useLocalePath();
 </script>
 

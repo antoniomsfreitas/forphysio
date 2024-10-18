@@ -22,7 +22,7 @@
             </p>
           </li>
         </ul>
-        <IconLink link="/contactos/" :text="$t('general.book-evaluation')" />
+        <IconLink link="/" :text="$t('general.book-evaluation')" />
       </template>
     </IntroBlock>
 

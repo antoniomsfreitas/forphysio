@@ -1,4 +1,18 @@
 import { LocationEnum } from './contacts/locations';
+
+export enum ServicesEnum {
+  FISIOTERAPIA_MUSCULO_ESQUELETICA = 1,
+  FISIOTERAPIA_DESPORTO = 2,
+  FISIOTERAPIA_AQUATICA_HIDROTERAPIA = 3,
+  FISIOTERAPIA_ENVELHECIMENTO = 4,
+  FISIOTERAPIA_ONLINE = 5,
+  FISIOTERAPIA_SAUDE_DA_MULHER = 6,
+  PILATES_CLINICO = 7,
+  NUTRICAO = 8,
+  SAUDE_BEM_ESTAR = 9,
+  CONSULTAS_MEDICAS = 10,
+}
+
 export const data = [
   {
     id: 1,

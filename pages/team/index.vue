@@ -1,23 +1,20 @@
 <template>
   <div class="container">
-    <IntroBlock page-title="A nossa equipa" class="intro-block">
-      <template #image>
+    <IntroBlock :page-title="page?.introBlock?.title || $t('pages.team')" class="intro-block">
+      <template v-if="page?.introBlock?.image" #image>
         <PictureImage
-          alt="A nossa equipa"
-          src="/images/team/intro/image-desktop.jpg"
-          src-t="/images/team/intro/image-tablet.jpg"
-          src-m="/images/team/intro/image-mobile.jpg"
+          :alt="page.introBlock.image.alt"
+          :src="page.introBlock.image.mobile"
+          :src-t="page.introBlock.image.tablet"
+          :src-d="page.introBlock.image.desktop"
           :cover="true"
         />
       </template>
 
       <template #content>
-        <p class="intro-block__text">
-          {{
-            'Acreditamos numa prática clínica idónea, responsável, centrada nas pessoas e suportada pela evidência científica.\n\nContamos com profissionais especializados e motivados, que todos os dias se dedicam à melhor e mais segura prestação de serviços de saúde.'
-          }}
-        </p>
-        <IconLink link="/contactos/" text="Marcar avaliação" />
+        <p v-if="page?.introBlock?.text" class="intro-block__text">{{ page.introBlock.text }}</p>
+
+        <IconLink link="/" :text="$t('general.book-evaluation')" />
       </template>
     </IntroBlock>
 
@@ -28,9 +25,22 @@
 </template>
 
 <script setup lang="ts">
-// @TODO :: API request
+const { getPage } = useTeam();
+const { data, status } = await getPage();
+
+const page = computed(() => data.value);
+
 const emit = defineEmits(['onDataLoaded']);
-emit('onDataLoaded');
+
+watch(
+  status,
+  (newStatus) => {
+    if (newStatus === 'success') {
+      emit('onDataLoaded');
+    }
+  },
+  { immediate: true },
+);
 </script>
 
 <style scoped lang="scss">
