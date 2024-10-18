@@ -5,7 +5,6 @@
 
   "pages.services": "服務",
   "pages.services.landingPage.intro": "自 2014 年以來，我們一直提供專業的物理治療服務。\n\n在我們的發展過程中, 我們增加了營養、普拉提、健康和醫療諮詢等輔助服務。",
-
   "pages.services.musculoskeletalPhysiotherapy": "肌肉骨骼物理治療",
   "pages.services.sportsPhysiotherapy": "運動中的物理治療",
   "pages.services.aquaticPhysiotherapyHydrotherapy": "水中物理治療和水療",
@@ -16,12 +15,17 @@
   "pages.services.nutrition": "營養",
   "pages.services.healthWellBeing": "健康與福祉",
   "pages.services.medicalAppointments": "醫療預約",
+
   "pages.partnerships": "夥伴關係",
   "pages.blog": "部落格",
   "pages.search": "搜尋網站",
   "pages.recruitment": "招募",
   "pages.faqs": "常見問題",
+  "pages.units": "診所",
+  "pages.cancellation-policy": "取消政策",
+  "pages.privacy-policy": "隱私權政策",
 
+  "general.forphysio-clinic": "ForPhysio 診所",
   "general.bookAppointment": "預約",
   "general.viewAll": "檢視全部",
   "general.subscribe": "訂閱電子報",
@@ -37,6 +41,9 @@
   "general.readMore": "閱讀更多",
   "general.viewMore": "看更多",
   "general.knowMore": "了解更多",
+  "general.complaintsBook": "投訴簿",
+  "general.complimentsBook": "讚美書",
+  "general.copyright": "保留所有權利",
 
   "contacts.page-title": "我們來幫您",
   "contacts.page-subtitle": "填寫下面的表格，或透過電子郵件或 Whatsapp 與我們聯繫。",
