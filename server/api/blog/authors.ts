@@ -15,7 +15,6 @@ const getTeamMember = (options?: { id?: number; slug?: string }) => {
 
 const getAuthors = (slug?: string) => {
   if (slug?.length) {
-    console.log('sara');
     const member = getTeamMember({ slug: slug });
 
     if (!member?.[0]) return null;
