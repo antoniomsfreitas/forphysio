@@ -36,6 +36,8 @@
   "general.ourUnits": "As nossas unidades",
   "general.selectUnit": "Selecione a Unidade",
   "general.readMore": "Ler mais",
+  "general.viewMore": "Ver mais",
+  "general.knowMore": "Saber mais",
 
   "contacts.page-title": "Estamos aqui para o ajudar.",
   "contacts.page-subtitle": "Preencha o formulário abaixo, ou contacte-nos através do e-mail ou Whatsapp.",
@@ -65,6 +67,10 @@
 
   "team.same-location-team": "Profissionais da mesma unidade",
   "team.how-to-arrive": "Como chegar",
+  "team.know-the-team": "Conheça a equipa",
+  "team.show-full-team": "Ver equipa completa",
+  "team.specialty": "Especialidade",
+  "team.specialties": "Especialidades",
 
   "search.label": "Pesquisar",
   "search.label.category": "Pesquisar por categoria",
@@ -72,6 +78,7 @@
   "blog.highlightedArticles": "Artigos em destaque",
   "blog.categories": "Categorias",
   "blog.author": "Autor",
+  "blog.authors": "Autores",
 
   "partnerships.introduction": "A ForPhysio Clinic dispõe de acordos que permitem ao cliente com as características descritas em baixo, ter acesso a preçários e condições exclusivas.",
   "partnerships.partners.title": "Parceiros",

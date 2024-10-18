@@ -2,9 +2,9 @@
   <LayoutGrid>
     <LayoutGridRow class="team-list">
       <LayoutGridCol m="4" t="5" d="3" class="team-list__locations">
-        <h2>Conheça a equipa</h2>
+        <h2>{{ $t('team.know-the-team') }}</h2>
         <div v-if="locations" class="team-list__locations__list">
-          <span class="team-list__locations__list__title">Selecione a Unidade</span>
+          <span class="team-list__locations__list__title">{{ $t('general.selectUnit') }}</span>
           <ul>
             <li v-for="location in locations">
               <div v-if="location" class="location">
@@ -24,21 +24,24 @@
                       :label="service.title"
                       class="service-checkbox"
                       @mouseup="toggleService(service?.id)"
-                    ></CustomCheckbox>
+                    />
                   </div>
                 </div>
               </div>
             </li>
           </ul>
-          <Button class="team-list__locations__list__view-all" @click="viewAll()">Ver equipa completa</Button>
+          <Button class="team-list__locations__list__view-all" @click="viewAll()">{{
+            $t('team.show-full-team')
+          }}</Button>
         </div>
       </LayoutGridCol>
+
       <LayoutGridCol m="4" t="7" d="8" class="team-list__members">
         <LayoutGrid>
           <LayoutGridRow v-if="currentMembers" :col-number-tablet="9" :col-number-desktop="8">
             <LayoutGridCol
               v-for="member in currentMembers.slice(0, numVisibleMembers)"
-              :key="member.id"
+              :key="member.id + currentServices.toString() + currentLocation.toString()"
               m="2"
               t="3"
               d="2"
@@ -51,19 +54,16 @@
                 :src="member.image"
                 :alt="member.name"
                 :link="localePath({ name: Routes.TEAM_SLUG, params: { slug: member.slug } })"
+                class="member"
               />
             </LayoutGridCol>
           </LayoutGridRow>
+
           <LayoutGridRow v-if="showMore" @click="handleShowMore">
             <LayoutGridCol m="4" t="12" d="12" class="view-more">
-              <button type="button" aria-label="Ver mais">
+              <button type="button" :aria-label="$t('general.viewMore')">
                 <Icon name="icon:view-more" size="50" />
               </button>
-            </LayoutGridCol>
-          </LayoutGridRow>
-          <LayoutGridRow v-if="loading">
-            <LayoutGridCol m="4" t="12" d="12">
-              <Icon name="icon:loading" size="50" />
             </LayoutGridCol>
           </LayoutGridRow>
         </LayoutGrid>
@@ -93,7 +93,6 @@ const services = computed(() =>
   allMembers.value ? getServicesByLocation(allMembers.value, currentLocation.value) : null,
 );
 
-const loading = ref(true);
 const maxByPage = 12;
 const numVisibleMembers = ref(maxByPage);
 const showMore = computed(() => currentMembers.value && numVisibleMembers.value < currentMembers.value.length);
@@ -115,6 +114,7 @@ const toggleService = (id: number) => {
 
 const viewAll = () => {
   currentLocation.value = 0;
+  currentServices.value = [];
 };
 
 const isCurrentLocation = (id: number): boolean => {
@@ -146,13 +146,17 @@ watch(
 .team-list {
   &__locations {
     @include mq-mobile {
-      margin-bottom: 100px;
+      margin-bottom: 50px;
     }
 
     h2 {
       text-wrap: balance;
       line-height: 1.1;
       padding-bottom: 40px;
+
+      @include mq-tablet {
+        font-size: 40px;
+      }
     }
 
     &__list {
@@ -185,7 +189,8 @@ watch(
                 color: $medium-grey;
               }
 
-              &--selected {
+              &--selected,
+              &--selected:hover {
                 font-weight: $font-weight-semi-bold;
                 color: $blue;
               }
@@ -196,9 +201,11 @@ watch(
             }
 
             .services {
+              opacity: 0;
+              animation: mini-slide-in-from-left 600ms forwards;
               padding-bottom: 10px;
               &__item {
-                padding: 12px 0 12px 8px;
+                padding: 12px 0 12px 42px;
 
                 :deep(label) {
                   font-size: 14px;
@@ -247,5 +254,10 @@ watch(
       cursor: pointer;
     }
   }
+}
+
+.member {
+  opacity: 0;
+  animation: zoom-in 600ms forwards;
 }
 </style>

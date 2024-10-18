@@ -55,7 +55,7 @@
 
       <LayoutGridRow v-if="article.author" class="article-author">
         <LayoutGridCol m="4" t="10" d="8" start-col-t="2" start-col-d="3">
-          <ArticleAuthor size="large" />
+          <ArticleAuthor :member="article.author" size="large" />
           <Button type="outline">Ver mais artigos deste autor</Button>
         </LayoutGridCol>
       </LayoutGridRow>

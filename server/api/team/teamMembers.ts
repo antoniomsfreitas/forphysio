@@ -18,7 +18,7 @@ const getServices = (servicesId: number[]) => {
   }));
 };
 
-const getTeam = (options?: { id?: number; slug?: string }) => {
+const getTeam = (options?: { id?: number; slug?: string; locationId?: number }) => {
   if (options?.id) {
     return teamData.filter((member) => member.id === options.id);
   }
@@ -27,13 +27,17 @@ const getTeam = (options?: { id?: number; slug?: string }) => {
     return teamData.filter((member) => member.slug === options.slug);
   }
 
+  if (options?.locationId) {
+    return teamData.filter((member) => member.location == options?.locationId);
+  }
+
   return teamData;
 };
 
 export default defineEventHandler((event): TeamMember[] => {
-  const { locale, id, slug } = getQuery(event);
+  const { locale, id, slug, locationId } = getQuery(event);
 
-  const data = getTeam({ id: id as number, slug: slug as string });
+  const data = getTeam({ id: id as number, slug: slug as string, locationId: locationId as number });
 
   const team: any = data.map((member: any) => ({
     ...member,

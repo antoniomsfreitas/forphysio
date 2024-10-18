@@ -8,11 +8,11 @@
               <Teleport :disabled="isMobile" to="#teleport-title">
                 <div class="intro-member-title">
                   <h1>{{ member.name }}</h1>
-                  <span v-if="props.service?.title?.length" class="intro-member-title__service">
-                    {{ props.service.title }}
+                  <span v-if="member.role" class="intro-member-title__service">
+                    {{ member.role }}
                   </span>
-                  <span v-if="props.location?.title?.length" class="intro-member-title__location">
-                    {{ props.location.title }}
+                  <span v-if="member.location?.name" class="intro-member-title__location">
+                    {{ member.location?.name }}
                   </span>
                 </div>
               </Teleport>
@@ -20,18 +20,62 @@
           </div>
 
           <div class="intro-member__image">
-            <img :src="imagePath" :alt="member.name" >
+            <img :src="imagePath" :alt="member.name" />
             <div class="intro-member__image__gradient" />
           </div>
         </LayoutGridCol>
 
-        <LayoutGridCol v-if="member.description?.length" m="4" t="7" d="5">
+        <LayoutGridCol v-if="member?.description" m="4" t="7" d="5">
           <div class="intro-member__content">
             <div id="teleport-title" class="intro-member__content__title" />
-            <p class="intro-member__content__description">{{ member.description }}</p>
-            <Button class="intro-member__content__button" size="large" @click="navigateTo(localePath(Routes.CONTACTS))">
-              Marcar consulta
-            </Button>
+
+            <p class="intro-member__content__description" :class="{ resume }">{{ member.description }}</p>
+
+            <template v-if="!resume">
+              <div v-if="member?.services || member.customService" class="intro-member__content__services">
+                <span>
+                  {{
+                    member?.services?.length && member?.services?.length > 1
+                      ? $t('team.specialties')
+                      : $t('team.specialty')
+                  }}:
+                </span>
+                <ul v-if="member?.services || member.customService">
+                  <li v-if="member.customService">
+                    {{ member.customService }}
+                  </li>
+                  <li v-for="service in member?.services">
+                    <NuxtLink :to="localePath({ name: Routes.SERVICES_SLUG, params: { slug: service.slug } })">
+                      {{ service.title }}
+                    </NuxtLink>
+                  </li>
+                </ul>
+              </div>
+
+              <Button
+                v-if="member.booking"
+                class="intro-member__content__button"
+                size="large"
+                @click="navigateTo(member.booking)"
+              >
+                {{ $t('general.bookAppointment') }}
+              </Button>
+
+              <Button
+                v-if="!member.booking && member.contactsPage"
+                class="intro-member__content__button"
+                size="large"
+                @click="navigateTo(localePath(Routes.CONTACTS))"
+              >
+                {{ $t('general.bookAppointment') }}
+              </Button>
+            </template>
+
+            <template v-else>
+              <Button size="large" class="intro-member__content__button" @click="navigateTo(member.booking)">
+                {{ $t('general.viewMore') }}
+              </Button>
+            </template>
           </div>
         </LayoutGridCol>
       </LayoutGridRow>
@@ -40,21 +84,18 @@
 </template>
 
 <script setup lang="ts">
+import type { TeamMember } from '~/models/team.model';
 import { Routes } from '~/models/routes.model';
-import type { TeamLocation, TeamMember, TeamService } from '~/models/team.model';
 
 const props = defineProps({
   member: {
     type: Object as PropType<TeamMember>,
     required: true,
   },
-  service: {
-    type: Object as PropType<TeamService>,
+  resume: {
+    type: Boolean,
     required: false,
-  },
-  location: {
-    type: Object as PropType<TeamLocation>,
-    required: false,
+    default: false,
   },
 });
 
@@ -97,15 +138,58 @@ const imagePath = '/images/team/members/detail/' + props.member.image;
     gap: 40px;
     align-items: flex-start;
 
-    &__description {
+    &__description,
+    &__services {
       font-size: 18px;
       font-weight: $font-weight-light;
       line-height: 1.5;
       color: $medium-grey;
     }
 
+    &__description.resume {
+      display: -webkit-box;
+      -webkit-line-clamp: 4; /* Limitar o texto a 3 linhas */
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
     &__button {
       min-width: 350px;
+
+      @include mq-mobile {
+        width: 100%;
+      }
+    }
+
+    &__services {
+      span {
+        color: #18a8bb;
+        padding-bottom: 4px;
+      }
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+          &:not(:last-child)::after {
+            font-size: 14px;
+            content: '\2022';
+            padding: 0 5px;
+          }
+
+          a {
+            color: $medium-grey;
+            text-decoration-color: transparent;
+            transition: $transition-duration ease-in-out all;
+
+            &:hover {
+              text-decoration-color: inherit;
+            }
+          }
+        }
+      }
     }
   }
 

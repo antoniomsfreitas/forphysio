@@ -7,13 +7,16 @@ export const useTeam = () => {
   const { locale } = useI18n();
   const defaultLocation = LocationEnum.CALDAS_RAINHA;
 
-  const getTeamMembers = async (options?: { id?: number; slug?: string }) => {
-    const { status, data } = await useAsyncData<TeamMember[]>('team-members', () =>
+  const getTeamMembers = async (options?: { id?: number; slug?: string; locationId?: number }) => {
+    const key = `team-${JSON.stringify(options)}`;
+
+    const { status, data } = await useAsyncData<TeamMember[]>(key, () =>
       $fetch('/api/team/teamMembers', {
         query: {
           locale: locale.value,
           id: options?.id,
           slug: options?.slug,
+          locationId: options?.locationId,
         },
       }),
     );
