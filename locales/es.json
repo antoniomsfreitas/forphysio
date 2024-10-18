@@ -5,7 +5,6 @@
 
   "pages.services": "Servicios",
   "pages.services.landingPage.intro": "Ofrecemos servicios especializados de fisioterapia desde 2014.\n\nDurante nuestra evolución, añadimos servicios complementarios de nutrición, pilates, bienestar y consultas médicas.",
-
   "pages.services.musculoskeletalPhysiotherapy": "Fisioterapia musculoesquelética",
   "pages.services.sportsPhysiotherapy": "Fisioterapia en el deporte",
   "pages.services.aquaticPhysiotherapyHydrotherapy": "Fisioterapia acuática e hidroterapia",
@@ -22,7 +21,11 @@
   "pages.recruitment": "Reclutamiento",
   "pages.search": "Buscar",
   "pages.faqs": "Preguntas frecuentes",
+  "pages.units": "Clínicas",
+  "pages.cancellation-policy": "Política de cancelación",
+  "pages.privacy-policy": "Política de privacidad",
 
+  "general.forphysio-clinic": "Clínica ForPhysio",
   "general.bookAppointment": "Marcar consulta",
   "general.viewAll": "Ver todos",
   "general.subscribe": "Suscribirse",
@@ -38,6 +41,8 @@
   "general.readMore": "Leer más",
   "general.viewMore": "Ver más",
   "general.knowMore": "Más información",
+  "general.complaintsBook": "Libro de quejas",
+  "general.complimentsBook": "Libro de felicitaciones",
 
   "contacts.page-title": "Estamos aquí para ayudarte.",
   "contacts.page-subtitle": "Completa el formulario a continuación, o contáctanos por correo electrónico o WhatsApp.",
@@ -45,6 +50,7 @@
   "contacts.form-title": "Contáctanos.\nCompleta el formulario",
   "contacts.socialMediaBanner.alt": "Algunos miembros del equipo de ForPhysio",
   "contacts.socialMediaBanner.title": "Visita nuestras redes sociales",
+  "general.copyright": "Todos los derechos reservados",
 
   "form-field.name": "Nombre",
   "form-field.phone": "Contacto telefónico",
