@@ -56,7 +56,13 @@
       <LayoutGridRow v-if="article.author" class="article-author">
         <LayoutGridCol m="4" t="10" d="8" start-col-t="2" start-col-d="3">
           <ArticleAuthor size="large" />
-          <Button type="outline">Ver mais artigos deste autor</Button>
+          <Button type="outline">{{ $t('blog.viewMoreArticlesAuthor') }}</Button>
+        </LayoutGridCol>
+      </LayoutGridRow>
+
+      <LayoutGridRow v-if="article.related?.length" class="article-related">
+        <LayoutGridCol m="4" t="12" d="12">
+          <ArticleSlideshow :data="article.related" :title="$t('blog.relatedArticles')" />
         </LayoutGridCol>
       </LayoutGridRow>
     </LayoutGrid>
@@ -77,15 +83,15 @@ const { getArticlesData } = useBlog();
 
 const slug = route.params.slug as string;
 const localePath = useLocalePath();
-const { data, status } = await getArticlesData({ slug: slug });
 
-const article = computed(() => data.value?.[0]);
+const { data: articleData, status } = await getArticlesData({ slug: slug, relatedArticles: true });
+const article = computed(() => articleData.value?.[0]);
 
 const emit = defineEmits(['onDataLoaded']);
 watch(
   status,
   (newStatus) => {
-    if (newStatus !== 'success' || !data.value?.length) {
+    if (newStatus !== 'success' || !articleData.value?.length) {
       // error
       navigateTo(localePath(Routes.NOT_FOUND));
     } else {
@@ -225,8 +231,19 @@ watch(
 }
 
 .article-author {
-  margin-bottom: 350px;
   text-align: center;
+
+  @include mq-mobile {
+    margin-bottom: 100px;
+  }
+
+  @include mq-tablet {
+    margin-bottom: 160px;
+  }
+
+  @include mq-desktop {
+    margin-bottom: 350px;
+  }
 
   .author {
     justify-content: center;
@@ -237,6 +254,16 @@ watch(
     @include mq-tablet-desktop {
       min-width: 340px;
     }
+  }
+}
+
+.article-related {
+  @include mq-mobile-tablet {
+    margin-bottom: 100px;
+  }
+
+  @include mq-desktop {
+    margin-bottom: 130px;
   }
 }
 </style>

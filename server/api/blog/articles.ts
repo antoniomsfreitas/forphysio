@@ -14,7 +14,13 @@ const getCategories = (ids: number[]) => {
 
 const getArticles = (
   locale: string,
-  options?: { slug?: string; category?: number; highlighted?: boolean; landingPage?: boolean },
+  options?: {
+    slug?: string;
+    highlighted?: boolean;
+    landingPage?: boolean;
+    relatedArticles?: boolean;
+    categories?: number[];
+  },
 ) => {
   // required fields
   const data = articlesData.filter((article) => article.title && article.imageList?.image);
@@ -27,11 +33,6 @@ const getArticles = (
     });
   }
 
-  if (options?.category !== undefined && options.category > 0) {
-    const category = options.category;
-    return data.filter((article) => article.categories.includes(category));
-  }
-
   if (options?.highlighted) {
     return data.filter((article) => article.highlight?.enabled);
   }
@@ -40,25 +41,39 @@ const getArticles = (
     return data.filter((article) => article.landingPage);
   }
 
-  return getDataOrderedByDate(articlesData);
+  if (options?.categories) {
+    return data.filter((article) => options.categories?.some((categoryId) => article.categories.includes(categoryId)));
+  }
+
+  return articlesData;
+};
+
+const getRelatedArticles = (locale: string, articleId: number, categories: number[]) => {
+  const articles = getArticles(locale, { categories: categories });
+
+  return articles.filter((article) => article.id != articleId);
 };
 
 export default defineEventHandler((event): Article[] => {
-  const { locale, slug, category, highlighted, landingPage } = getQuery(event);
+  const { locale, slug, highlighted, landingPage, relatedArticles } = getQuery(event);
 
   const data = getArticles(locale as string, {
     slug: slug as string,
-    category: category as number,
     highlighted: highlighted as boolean,
     landingPage: landingPage as boolean,
+    relatedArticles: relatedArticles as boolean,
   });
+
+  let related = [];
+  if (relatedArticles as boolean) {
+  }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const articles: any = data.map((article: any) => ({
     ...article,
+    related: !!relatedArticles ? getRelatedArticles(locale as string, article.id, article.categories) : null,
     categories: getCategories(article.categories),
-    // teamMembers: getTeamMembersByIds(item.teamMembers), // Substitui os IDs pelos membros da equipa
   }));
 
-  return getFormattedDataByLocale(articles, locale as string);
+  return getFormattedDataByLocale(getDataOrderedByDate(articles), locale as string);
 });
