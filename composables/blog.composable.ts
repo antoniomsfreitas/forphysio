@@ -8,9 +8,9 @@ export const useBlog = () => {
 
   const getArticlesData = async (options?: {
     slug?: string;
-    categoryId?: number;
     highlighted?: boolean;
     landingPage?: boolean;
+    relatedArticles?: boolean;
   }) => {
     const key = `articles-${JSON.stringify(options)}`;
 
@@ -19,9 +19,9 @@ export const useBlog = () => {
         query: {
           locale: locale.value,
           slug: options?.slug,
-          categoryId: options?.categoryId,
           highlighted: options?.highlighted,
           landingPage: options?.landingPage,
+          relatedArticles: options?.relatedArticles,
         },
       }),
     );
