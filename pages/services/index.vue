@@ -34,7 +34,7 @@
       </LayoutGrid>
     </div>
 
-    <LocationsMap class="locations-map" />
+    <LocationsMap v-if="locations" class="locations-map" :locations="locations" />
   </div>
 </template>
 
@@ -44,9 +44,13 @@ import { Routes } from '~/models/routes.model';
 
 const localePath = useLocalePath();
 const { getServicesListData } = useServices();
+const { getLocationsData } = useContacts();
 
-const { data, status } = await getServicesListData();
-const services = computed(() => data.value);
+const { data: servicesData, status } = await getServicesListData();
+const services = computed(() => servicesData.value);
+
+const { data: locationsData } = await getLocationsData();
+const locations = computed(() => locationsData.value);
 
 const emit = defineEmits(['onDataLoaded']);
 

@@ -34,13 +34,7 @@
       :data="service.blocks.imageFullwidth_2"
     />
 
-    <LayoutGrid v-if="service?.locations" class="locations-list-block">
-      <LayoutGridRow>
-        <LayoutGridCol m="4" t="8" d="5" start-col-t="2" start-col-d="2">
-          <LocationsList :locations-id="service.locations" />
-        </LayoutGridCol>
-      </LayoutGridRow>
-    </LayoutGrid>
+    <LocationsMap v-if="service?.locations" class="locations-map" :locations="service.locations" />
 
     <AppointmentBanner v-if="service?.blocks?.appointmentBanner" :data="service.blocks.appointmentBanner" />
   </div>
@@ -119,7 +113,7 @@ watch(
     }
 
     @include mq-tablet-desktop {
-      margin-bottom: 110px;
+      margin-bottom: 140px;
     }
   }
 
@@ -151,25 +145,17 @@ watch(
     }
   }
 
-  .locations-list-block {
+  .locations-map {
     @include mq-mobile {
       margin-bottom: 80px;
     }
 
     @include mq-tablet {
-      margin-bottom: 160px;
+      margin-bottom: 100px;
     }
 
     @include mq-desktop {
-      margin-bottom: 170px;
-    }
-
-    :deep(.locations-list) {
-      ul {
-        @include mq-tablet {
-          grid-template-columns: 1fr 1fr;
-        }
-      }
+      margin-bottom: 140px;
     }
   }
 

@@ -1,19 +1,24 @@
 <template>
   <LayoutGrid>
     <LayoutGridRow class="locations-map">
-      <LayoutGridCol m="4" t="5" d="3" class="locations-map__locations">
-        <h2 v-t="'general.ourUnits'" />
+      <LayoutGridCol m="4" t="4" d="3" class="locations-map__locations">
+        <h3>{{ title }}</h3>
         <div class="locations-map__locations__list">
-          <span v-t="'general.selectUnit'" class="locations-map__locations__list__title" />
           <ul>
-            <li
-              v-for="location in locations"
-              :key="location.id"
-              :class="{ 'location-selected': location.id == currentLocationId }"
-              @click="changeLocation(location.id)"
-            >
-              <Icon name="icon:location" size="40" />
-              <span>{{ location.name }}</span>
+            <li v-for="location in locations" :key="location.id" class="location" @click="changeLocation(location.id)">
+              <div class="location__name" :class="{ 'location__name--selected': isCurrentLocation(location.id) }">
+                <Icon name="icon:location" size="40" />
+                <span>{{ location.name }}</span>
+              </div>
+
+              <div v-if="isCurrentLocation(location.id)" class="location__detail">
+                <p class="address">{{ location.address }}</p>
+                <p class="phone">
+                  <Icon name="icon:phone" />
+                  <span>{{ location.phone }}</span>
+                </p>
+                <p class="hours" v-html="location.hours" />
+              </div>
             </li>
           </ul>
         </div>
@@ -21,7 +26,7 @@
 
       <LayoutGridCol
         m="4"
-        t="7"
+        t="8"
         d="9"
         class="locations-map__google-maps"
         :class="{ 'locations-map__google-maps--loading': loading }"
@@ -38,34 +43,62 @@
 </template>
 
 <script setup lang="ts">
-const { getLocationsData } = useContacts();
-const { data } = await getLocationsData();
+import type { PropType } from 'vue';
+import type { Location } from '~/models/contacts';
+import { LocationsList } from '~/server/data/contacts/locations';
 
-const locations = computed(() => data?.value);
+const { t } = useI18n();
+
+const props = defineProps({
+  locations: {
+    type: Object as PropType<Location[]>,
+    required: true,
+  },
+  title: {
+    type: String,
+    required: false,
+  },
+});
+
 const loading = ref(false);
+
+const title = computed(() => (props.title ? props.title : t('general.ourUnits')));
 
 const changeLocation = async (locationId: number) => {
   loading.value = true;
-
-  await new Promise((resolve) => setTimeout(resolve, 500));
   currentLocationId.value = locationId;
 
   await new Promise((resolve) => setTimeout(resolve, 500));
   loading.value = false;
 };
 
-const currentLocationId = ref(2);
-const currentLocation = computed(() => locations.value?.find((location) => location.id == currentLocationId.value));
+const defaultLocation = LocationsList.CALDAS_RAINHA;
+const currentLocationId = ref(defaultLocation);
+
+const currentLocation = computed(() => {
+  const location = props.locations?.find((location) => location.id == currentLocationId.value);
+
+  if (!location) {
+    currentLocationId.value = props.locations[0].id;
+    return props.locations[0];
+  }
+
+  return location;
+});
+
+const isCurrentLocation = (id: number): boolean => {
+  return currentLocationId.value === id;
+};
 </script>
 
 <style scoped lang="scss">
 .locations-map {
   &__locations {
     @include mq-mobile {
-      margin-bottom: 50px;
+      margin-bottom: 20px;
     }
 
-    h2 {
+    h3 {
       padding-bottom: 40px;
       line-height: 1.1;
       text-wrap: balance;
@@ -75,36 +108,59 @@ const currentLocation = computed(() => locations.value?.find((location) => locat
       font-size: 18px;
       line-height: 1.2;
 
-      &__title {
-        display: block;
-        padding-bottom: 14px;
-        font-weight: $font-weight-semi-bold;
-      }
-
       ul {
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: 24px;
 
         li {
-          display: flex;
-          align-items: center;
-          font-weight: $font-weight-light;
-          color: $white;
-          cursor: pointer;
-          transition: $transition-duration ease-in-out all;
+          .location {
+            &__name {
+              display: flex;
+              align-items: center;
+              font-weight: $font-weight-light;
+              color: $white;
+              cursor: pointer;
+              transition: $transition-duration ease-in-out all;
 
-          &:hover {
-            color: $medium-grey;
-          }
+              span {
+                display: block;
+              }
 
-          &.location-selected {
-            font-weight: $font-weight-semi-bold;
-            color: $blue;
-          }
+              &:hover {
+                color: $medium-grey;
+              }
 
-          span {
-            display: block;
+              &--selected,
+              &--selected:hover {
+                font-weight: $font-weight-semi-bold;
+                color: $blue;
+              }
+            }
+
+            &__detail {
+              animation: mini-slide-in-from-left 600ms forwards;
+              padding: 12px 0 12px 42px;
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+
+              p {
+                font-size: 16px;
+                font-weight: $font-weight-light;
+                line-height: 1.4;
+
+                &.phone {
+                  display: flex;
+                  gap: 4px;
+                  align-items: center;
+
+                  span {
+                    display: block;
+                  }
+                }
+              }
+            }
           }
         }
       }

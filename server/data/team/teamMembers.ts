@@ -1,4 +1,4 @@
-import { LocationEnum } from '../contacts/locations';
+import { LocationsList } from '../contacts/locations';
 import { ServicesList } from '../services';
 
 export enum teamMembersList {
@@ -46,7 +46,7 @@ export const data = [
       },
     },
     services: [ServicesList.FISIOTERAPIA_MUSCULO_ESQUELETICA, ServicesList.FISIOTERAPIA_DESPORTO],
-    location: LocationEnum.CALDAS_RAINHA,
+    location: LocationsList.CALDAS_RAINHA,
     image: 'nuno-pina.png',
   },
   {
@@ -71,7 +71,7 @@ export const data = [
       },
     },
     services: [ServicesList.FISIOTERAPIA_MUSCULO_ESQUELETICA, ServicesList.FISIOTERAPIA_ENVELHECIMENTO],
-    location: LocationEnum.CALDAS_RAINHA,
+    location: LocationsList.CALDAS_RAINHA,
     image: 'marisa-gomes.png',
   },
   {
@@ -101,7 +101,7 @@ export const data = [
       ServicesList.FISIOTERAPIA_ENVELHECIMENTO,
       ServicesList.FISIOTERAPIA_AQUATICA_HIDROTERAPIA,
     ],
-    location: LocationEnum.LISBOA_LUMIAR,
+    location: LocationsList.LISBOA_LUMIAR,
     image: 'beatriz-silva.png',
   },
   {
@@ -130,7 +130,7 @@ export const data = [
       ServicesList.FISIOTERAPIA_DESPORTO,
       ServicesList.PILATES_CLINICO,
     ],
-    location: LocationEnum.OEIRAS,
+    location: LocationsList.OEIRAS,
     image: 'clara-pardal.png',
   },
   {
@@ -178,7 +178,7 @@ export const data = [
       },
     },
     services: [ServicesList.CONSULTAS_MEDICAS],
-    location: LocationEnum.MARINHA_GRANDE,
+    location: LocationsList.MARINHA_GRANDE,
     image: 'luis-machado.png',
     contactsPage: true,
   },
@@ -209,7 +209,7 @@ export const data = [
       ServicesList.FISIOTERAPIA_DESPORTO,
       ServicesList.PILATES_CLINICO,
     ],
-    location: LocationEnum.MARINHA_GRANDE,
+    location: LocationsList.MARINHA_GRANDE,
     image: 'margarida-saboga.png',
   },
   {
@@ -234,7 +234,7 @@ export const data = [
       },
     },
     services: [ServicesList.FISIOTERAPIA_MUSCULO_ESQUELETICA, ServicesList.FISIOTERAPIA_DESPORTO],
-    location: LocationEnum.LISBOA_LUMIAR,
+    location: LocationsList.LISBOA_LUMIAR,
     image: 'joaquim-coelho.png',
   },
   {
@@ -266,7 +266,7 @@ export const data = [
         'zh-sg': '盆底和儿科物理治疗',
       },
     },
-    location: LocationEnum.AVEIRO,
+    location: LocationsList.AVEIRO,
     image: 'constanca-carreira.png',
   },
   {
@@ -291,7 +291,7 @@ export const data = [
       },
     },
     services: [ServicesList.FISIOTERAPIA_MUSCULO_ESQUELETICA, ServicesList.FISIOTERAPIA_DESPORTO],
-    location: LocationEnum.AVEIRO,
+    location: LocationsList.AVEIRO,
     image: 'rafael-mariz.png',
   },
   {
@@ -316,7 +316,7 @@ export const data = [
       },
     },
     services: [ServicesList.FISIOTERAPIA_MUSCULO_ESQUELETICA, ServicesList.FISIOTERAPIA_DESPORTO],
-    location: LocationEnum.LISBOA_LUMIAR,
+    location: LocationsList.LISBOA_LUMIAR,
     image: 'beatriz-lopes.png',
   },
   {
@@ -340,7 +340,7 @@ export const data = [
         'zh-sg': '物理治疗师',
       },
     },
-    location: LocationEnum.OEIRAS,
+    location: LocationsList.OEIRAS,
     services: [ServicesList.NUTRICAO],
     image: 'ricardo-cotovio.png',
   },
@@ -365,7 +365,7 @@ export const data = [
         'zh-sg': '物理治疗师',
       },
     },
-    location: LocationEnum.LISBOA_LUMIAR,
+    location: LocationsList.LISBOA_LUMIAR,
     customService: {
       translations: {
         pt: 'Fisioterapia Pélvica',
@@ -399,7 +399,7 @@ export const data = [
       },
     },
     services: [ServicesList.FISIOTERAPIA_MUSCULO_ESQUELETICA, ServicesList.FISIOTERAPIA_DESPORTO],
-    location: LocationEnum.OEIRAS,
+    location: LocationsList.OEIRAS,
     image: 'catarina-gama.png',
   },
   {
@@ -424,7 +424,7 @@ export const data = [
       },
     },
     services: [ServicesList.NUTRICAO],
-    location: LocationEnum.MARINHA_GRANDE,
+    location: LocationsList.MARINHA_GRANDE,
     image: 'filipe-vicente.png',
   },
   {
@@ -473,7 +473,7 @@ export const data = [
     },
     contactsPage: true,
     services: [ServicesList.CONSULTAS_MEDICAS],
-    location: LocationEnum.LISBOA_LUMIAR,
+    location: LocationsList.LISBOA_LUMIAR,
     image: 'paulo-pinheiro.png',
   },
   {
@@ -498,7 +498,7 @@ export const data = [
       },
     },
     services: [ServicesList.FISIOTERAPIA_MUSCULO_ESQUELETICA, ServicesList.FISIOTERAPIA_DESPORTO],
-    location: LocationEnum.CALDAS_RAINHA,
+    location: LocationsList.CALDAS_RAINHA,
     image: 'ana-clara.png',
   },
   {
@@ -528,7 +528,7 @@ export const data = [
       ServicesList.FISIOTERAPIA_DESPORTO,
       ServicesList.PILATES_CLINICO,
     ],
-    location: LocationEnum.MARINHA_GRANDE,
+    location: LocationsList.MARINHA_GRANDE,
     image: 'duarte-afonso.png',
   },
 ];
