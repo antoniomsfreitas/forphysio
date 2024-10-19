@@ -1,6 +1,11 @@
 import type { Service } from '~/models/services.model';
 import { getFormattedDataByLocale } from '~/utils/api.util';
 import { data as servicesData } from '../data/services';
+import { LocationsList, data as locationsData } from '../data/contacts/locations';
+
+const getLocations = (ids: LocationsList[]) => {
+  return locationsData.filter((location) => ids.includes(location.id));
+};
 
 const getServiceDetailBySlug = (serviceSlug: string, locale: string) => {
   return servicesData.find((service) => {
@@ -24,5 +29,10 @@ export default defineEventHandler((event): Service => {
     });
   }
 
-  return getFormattedDataByLocale(serviceDetailData, locale as string);
+  const service = {
+    ...serviceDetailData,
+    locations: serviceDetailData?.locationsId ? getLocations(serviceDetailData.locationsId) : null,
+  };
+
+  return getFormattedDataByLocale(service, locale as string);
 });

@@ -9,6 +9,13 @@
         :title="$t('team.same-location-team')"
         :team-list="relatedMembers"
       />
+
+      <LocationsMap
+        v-if="member.location"
+        :locations="[member.location]"
+        :title="$t('team.how-to-arrive')"
+        class="team-member-detail__locations"
+      />
     </div>
   </div>
 </template>
@@ -72,6 +79,20 @@ watch(
   }
 
   &__slider {
+    @include mq-mobile {
+      margin-bottom: 80px;
+    }
+
+    @include mq-tablet {
+      margin-bottom: 140px;
+    }
+
+    @include mq-desktop {
+      margin-bottom: 180px;
+    }
+  }
+
+  &__locations {
     margin-bottom: 100px;
   }
 }

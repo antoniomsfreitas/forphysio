@@ -34,26 +34,7 @@
       </template>
     </IntroBlock>
 
-    <LayoutGrid class="locations-block">
-      <LayoutGridRow>
-        <LayoutGridCol m="4" t="12" d="6">
-          <CardUI>
-            <PictureImage
-              :alt="$t('pages.contacts')"
-              class="locations-block__image"
-              src="/images/contacts/locations-block/image-mobile.jpg"
-              src-t="/images/contacts/locations-block/image-tablet.jpg"
-              src-d="/images/contacts/locations-block/image-desktop.jpg"
-              cover
-            />
-          </CardUI>
-        </LayoutGridCol>
-
-        <LayoutGridCol m="4" t="12" d="5" start-col-d="8">
-          <LocationsList />
-        </LayoutGridCol>
-      </LayoutGridRow>
-    </LayoutGrid>
+    <LocationsMap v-if="locations" :locations="locations" class="locations-map" />
 
     <div class="form-block">
       <LayoutGrid>
@@ -70,10 +51,12 @@
 </template>
 
 <script setup lang="ts">
-const { getContactsData } = useContacts();
-const { data, status } = await getContactsData({ contactsIntro: true });
+const { getContactsData, getLocationsData } = useContacts();
+const { data: contactsData, status } = await getContactsData({ contactsIntro: true });
+const { data: locationsData } = await getLocationsData();
 
-const contactsIntro = computed(() => data.value);
+const contactsIntro = computed(() => contactsData.value);
+const locations = computed(() => locationsData.value);
 
 const emit = defineEmits(['onDataLoaded']);
 watch(
@@ -93,12 +76,8 @@ watch(
     margin-bottom: 100px;
   }
 
-  @include mq-tablet {
+  @include mq-tablet-desktop {
     margin-bottom: 140px;
-  }
-
-  @include mq-desktop {
-    margin-bottom: 160px;
   }
 
   &__text {
@@ -156,26 +135,8 @@ watch(
   }
 }
 
-.locations-block {
-  @include mq-mobile {
-    margin-bottom: 100px;
-  }
-
-  @include mq-tablet-desktop {
-    margin-bottom: 160px;
-  }
-
-  .layout-grid-row {
-    @include mq-mobile-tablet {
-      row-gap: 100px;
-    }
-  }
-
-  &__image {
-    img {
-      max-width: 100%;
-    }
-  }
+.locations-map {
+  margin-bottom: 100px;
 }
 
 .form-block {

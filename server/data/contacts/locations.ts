@@ -1,4 +1,4 @@
-export enum LocationEnum {
+export enum LocationsList {
   MARINHA_GRANDE = 1,
   CALDAS_RAINHA = 2,
   LISBOA_LUMIAR = 3,
@@ -71,5 +71,21 @@ export const data = [
     },
     googleMapsSrc:
       'https://maps.google.com/maps?width=100%25&height=470&hl=en&q=Forphysio%20R.%20Sacadura%20Cabral%2065a,%201495-207%20Cruz%20Quebrada+(Forphysio%20%7C%20Oeiras)&t=&z=14&ie=UTF8&iwloc=B&output=embed',
+  },
+  {
+    id: 5,
+    name: 'Aveiro',
+    address: 'R. do Funchal 39, 2500-178',
+    phone: '+351 917 730 222',
+    hours: {
+      translations: {
+        pt: '<b>Seg-Sex:</b> 08h00-18h00\n<b>Sáb-Dom:</b> Encerrado',
+        en: '<b>Mon-Fri:</b> 08:00-18:00\n<b>Sat-Sun:</b> Closed',
+        es: '<b>Lun-Vie:</b> 08:00-18:00\n<b>Sáb-Dom:</b> Cerrado',
+        'zh-sg': '<b>周一至周五:</b> 08:00-18:00\n<b>周六至周日:</b> 休息',
+      },
+    },
+    googleMapsSrc:
+      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3028.9595886582088!2d-8.649838023534128!3d40.60871524393154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd23a3e9e679389f%3A0x6a4af0ecf5e3f523!2sForPhysio%20Aveiro!5e0!3m2!1spt-PT!2spt!4v1729356776084!5m2!1spt-PT!2spt',
   },
 ];
