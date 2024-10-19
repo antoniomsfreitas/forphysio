@@ -64,6 +64,12 @@ const imagePath = '/images/team/members/list/' + props.src;
     width: 100%;
     height: 100%;
     object-fit: contain;
+    transform: scale(1);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  &:hover img {
+    transform: scale(1.05);
   }
 
   &__content {

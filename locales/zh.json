@@ -39,6 +39,8 @@
   "general.ourUnits": "我們的診所",
   "general.selectUnit": "選擇診所",
   "general.readMore": "閱讀更多",
+  "general.viewMore": "看更多",
+  "general.knowMore": "了解更多",
   "general.complaintsBook": "投訴簿",
   "general.complimentsBook": "讚美書",
   "general.copyright": "保留所有權利",
@@ -71,6 +73,10 @@
 
   "team.same-location-team": "同一单位的专业人员",
   "team.how-to-arrive": "如何前往",
+  "team.know-the-team": "了解團隊",
+  "team.show-full-team": "顯示完整團隊",
+  "team.specialty": "專業",
+  "team.specialties": "專業",
 
   "search.label": "搜尋",
   "search.label.category": "依類別搜尋",
@@ -78,6 +84,7 @@
   "blog.highlightedArticles": "突出顯示的文章",
   "blog.categories": "類別",
   "blog.author": "作者",
+  "blog.authors": "作者",
   "blog.viewMoreArticlesAuthor": "查看作者的更多文章",
   "blog.relatedArticles": "相关项目",
 

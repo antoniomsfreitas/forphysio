@@ -39,6 +39,8 @@
   "general.ourUnits": "Our clinics",
   "general.selectUnit": "Select clinic",
   "general.readMore": "Read more",
+  "general.viewMore": "View more",
+  "general.knowMore": "Know more",
   "general.complaintsBook": "Complaints Book",
   "general.complimentsBook": "Compliments Book",
 
@@ -71,6 +73,10 @@
 
   "team.same-location-team": "Professionals from the same unit",
   "team.how-to-arrive": "How to Arrive",
+  "team.know-the-team": "Know the team",
+  "team.show-full-team": "Show full team",
+  "team.specialty": "Specialty",
+  "team.specialties": "Specialties",
 
   "search.label": "Search",
   "search.label.category": "Search by category",
@@ -78,6 +84,7 @@
   "blog.highlightedArticles": "Highlighted Articles",
   "blog.categories": "Categorias",
   "blog.author": "Author",
+  "blog.authors": "Authors",
   "blog.viewMoreArticlesAuthor": "See more articles by the author",
   "blog.relatedArticles": "Related Articles",
 
