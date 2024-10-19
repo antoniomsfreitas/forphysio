@@ -10,6 +10,7 @@ export interface Article {
   imageList: SingleImage;
   categories: ArticleCategory[];
   author: TeamMember;
+  related?: Article[];
   landingPage: boolean;
   highlight: {
     enabled: boolean;
