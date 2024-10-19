@@ -69,10 +69,6 @@ export default defineEventHandler((event): Article[] => {
     relatedArticles: relatedArticles as boolean,
   });
 
-  let related = [];
-  if (relatedArticles as boolean) {
-  }
-
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const articles: any = data.map((article: any) => ({
     ...article,
