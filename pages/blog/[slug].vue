@@ -55,7 +55,6 @@
 
       <LayoutGridRow v-if="article.author" class="article-author">
         <LayoutGridCol m="4" t="10" d="8" start-col-t="2" start-col-d="3">
-
           <ArticleAuthor :member="article.author" size="large" />
           <Button
             type="outline"
@@ -90,7 +89,7 @@ const { getArticlesData } = useBlog();
 const slug = route.params.slug as string;
 const localePath = useLocalePath();
 
-const { data: articleData, status } = await getArticlesData({ slug: slug, relatedArticles: true });
+const { data: articleData, status } = await getArticlesData({ slug, relatedArticles: true });
 const article = computed(() => articleData.value?.[0]);
 
 const emit = defineEmits(['onDataLoaded']);
