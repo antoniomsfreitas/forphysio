@@ -1,24 +1,20 @@
 <template>
-  <div v-if="member" class="team-member-detail">
-    <IntroMember class="team-member-detail__intro" :member="member" :service="service" :location="location" />
+  <div class="container">
+    <div v-if="member" class="team-member-detail">
+      <IntroMember class="team-member-detail__intro" :member="member" />
 
-    <TeamSlider
-      class="team-member-detail__slider"
-      :title="$t('team.same-location-team')"
-      :team-list="getTeamMembers(member.location)"
-    />
-
-    <GoogleMaps
-      v-if="location?.googleMapsSrc"
-      :title="$t('team.how-to-arrive')"
-      :google-maps-src="location.googleMapsSrc"
-    />
+      <TeamSlider
+        v-if="relatedMembers"
+        class="team-member-detail__slider"
+        :title="$t('team.same-location-team')"
+        :team-list="relatedMembers"
+      />
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { Routes } from '~/models/routes.model';
-import type { TeamMember, TeamLocation, TeamService } from '~/models/team.model';
 
 definePageMeta({
   validate: async (route) => {
@@ -28,21 +24,31 @@ definePageMeta({
 
 const route = useRoute();
 const localePath = useLocalePath();
-const { getTeamMembers, getTeamMemberBySlug, getService, getLocation } = useTeam();
-
 const slug = route.params.slug as string;
-const member: TeamMember | undefined = getTeamMemberBySlug(slug);
 
-if (!member) {
-  navigateTo(localePath(Routes.NOT_FOUND));
-}
+const { getTeamMembers } = useTeam();
+const { data: memberData, status } = await getTeamMembers({ slug: slug });
+const member = computed(() => memberData.value?.[0]);
 
-const service: TeamService | undefined = getService(member?.service);
-const location: TeamLocation | undefined = getLocation(member?.location);
+// Related members
+const { data: relatedMembersData } = await getTeamMembers({ locationId: member.value?.location?.id });
 
-// @TODO :: API request
+const relatedMembers = computed(() =>
+  relatedMembersData.value?.filter((relatedMember) => relatedMember.id !== member.value?.id),
+);
+
 const emit = defineEmits(['onDataLoaded']);
-emit('onDataLoaded');
+watch(
+  status,
+  (newStatus) => {
+    if (member && newStatus === 'success') {
+      emit('onDataLoaded');
+    } else {
+      navigateTo(localePath(Routes.NOT_FOUND));
+    }
+  },
+  { immediate: true },
+);
 </script>
 
 <style scoped lang="scss">

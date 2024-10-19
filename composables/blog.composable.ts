@@ -1,5 +1,6 @@
 import { Routes } from '~/models/routes.model';
 import type { Article, ArticleCategory } from '../models/blog.model';
+import type { TeamMember } from '~/models/team.model';
 
 export const useBlog = () => {
   const { locale } = useI18n();
@@ -59,6 +60,24 @@ export const useBlog = () => {
     };
   };
 
+  const getAuthorsData = async (options?: { slug?: string }) => {
+    const key = `articles-${JSON.stringify(options)}`;
+
+    const { status, data } = await useAsyncData<TeamMember[]>(key, () =>
+      $fetch('/api/blog/authors', {
+        query: {
+          locale: locale.value,
+          slug: options?.slug,
+        },
+      }),
+    );
+
+    return {
+      status,
+      data,
+    };
+  };
+
   const buildBlogPage = async () => {
     try {
       const [highlightedArticle, articlesLandingPage, categoriesSlideshow, categoriesLandingPage] = await Promise.all([
@@ -94,5 +113,6 @@ export const useBlog = () => {
     getCategoriesData,
     getCategoryLink,
     getArticleLink,
+    getAuthorsData,
   };
 };

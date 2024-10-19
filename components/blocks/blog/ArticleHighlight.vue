@@ -20,7 +20,7 @@
 
           <p class="article-intro">{{ data.highlight.intro }}</p>
 
-          <ArticleAuthor size="small" />
+          <ArticleAuthor :member="data.author" size="small" />
 
           <NuxtLink :to="getArticleLink(data.slug)" :title="$t('general.readMore')">
             <Button type="secondary">{{ $t('general.readMore') }}</Button>

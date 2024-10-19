@@ -1,9 +1,9 @@
 <template>
   <div class="author" :size="size">
-    <img :src="data.image" :alt="data.name" />
+    <img :src="'/images/team/members/list/' + member.image" :alt="member.name" />
     <div class="author__info">
       <p class="label">{{ $t('blog.author') }}</p>
-      <p class="name">{{ data.name }}</p>
+      <p class="name">{{ member.name }}</p>
     </div>
   </div>
 </template>
@@ -11,18 +11,11 @@
 <script setup lang="ts">
 import type { TeamMember } from '~/models/team.model';
 
-const data: TeamMember = {
-  id: 1,
-  name: 'Nuno Pina',
-  slug: 'nuno-pina',
-  image: '/images/team/members/list/nuno-pina.png',
-};
-
 defineProps({
-  //   data: {
-  //     type: Object as PropType<TeamMember>,
-  //     required: true,
-  //   },
+  member: {
+    type: Object as PropType<TeamMember>,
+    required: true,
+  },
   size: {
     type: String as PropType<'small' | 'large'>,
     required: false,
