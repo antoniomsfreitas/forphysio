@@ -3,24 +3,24 @@ import { ServicesList } from '../services';
 
 export enum teamMembersList {
   NUNO_PINA = 1,
-  MARISA_GOMES = 2,
-  BEATRIZ_SILVA = 3,
+  BEATRIZ_SILVA = 2,
+  MARGARIDA_SABOGA = 3,
   CLARA_PARDAL = 4,
-  JOAO_FAIA = 5,
-  LUIS_MACHADO = 6,
-  MARGARIDA_SABOGA = 7,
+  ANA_CLARA = 5,
+  JOAO_FAIA = 6,
+  BEATRIZ_LOPES = 7,
   JOAQUIM_COELHO = 8,
-  CONSTANCA_CARREIRA = 9,
-  RAFAEL_MARIZ = 10,
-  BEATRIZ_LOPES = 11,
-  RICARDO_COTOVIO = 12,
-  JOANA_ROCHA = 13,
-  CATARINA_GAMA = 14,
-  FILIPE_VICENTE = 15,
-  GUILHERME_PINA = 16,
-  PAULO_PINHEIRO = 17,
-  ANA_CLARA = 18,
-  DUARTE_AFONSO = 19,
+  MARISA_GOMES = 9,
+  JOANA_ROCHA = 10,
+  CONSTANCA_CARREIRA = 11,
+  RAFAEL_MARIZ = 12,
+  CATARINA_GAMA = 13,
+  DUARTE_AFONSO = 14,
+  RICARDO_COTOVIO = 15,
+  FILIPE_VICENTE = 16,
+  GUILHERME_PINA = 17,
+  LUIS_MACHADO = 18,
+  PAULO_PINHEIRO = 19,
 }
 
 export const data = [
@@ -51,31 +51,6 @@ export const data = [
   },
   {
     id: 2,
-    slug: 'marisa-gomes',
-    name: 'Marisa Gomes',
-    description: {
-      translations: {
-        pt: 'Marisa  Gomes  integra  a  equipa  ForPhysio Clinic desde  2024.\nAtualmente, desempenha funções como fisioterapeuta da Unidade de Saúde  Balance by ForPhysio Caldas da Rainha, onde exerce a sua intervenção clínica.\n\nÉ licenciada em fisioterapia pela Escola Superior de Saúde de Leiria, onde se  encontra a realizar o mestrado em Fisioterapia: Ramo Prescrição Fisioterapêutica  de Exercício Físico.',
-        en: 'Marisa Gomes has been part of the ForPhysio Clinic team since 2024.\nCurrently, she works as a physiotherapist at the Balance by ForPhysio Health Unit in Caldas da Rainha, where she performs her clinical practice.\n\nShe holds a degree in physiotherapy from the Escola Superior de Saúde de Leiria, where she is pursuing a master’s degree in Physiotherapy: Therapeutic Exercise Prescription.',
-        es: 'Marisa Gomes forma parte del equipo de ForPhysio Clinic desde 2024.\nActualmente, trabaja como fisioterapeuta en la Unidad de Salud Balance by ForPhysio en Caldas da Rainha, donde realiza su práctica clínica.\n\nTiene una licenciatura en fisioterapia por la Escuela Superior de Salud de Leiria, donde está cursando una maestría en Fisioterapia: Prescripción de Ejercicio Terapéutico.',
-        'zh-sg':
-          'Marisa Gomes 自2024年起加入ForPhysio诊所团队。目前，她在Caldas da Rainha的Balance by ForPhysio健康中心担任物理治疗师，进行临床实践。\n\n她毕业于莱里亚健康学院的物理治疗专业，现正在攻读物理治疗硕士学位，专业方向为运动处方。',
-      },
-    },
-    role: {
-      translations: {
-        pt: 'Fisioterapeuta',
-        en: 'Physiotherapist',
-        es: 'Fisioterapeuta',
-        'zh-sg': '物理治疗师',
-      },
-    },
-    services: [ServicesList.FISIOTERAPIA_MUSCULO_ESQUELETICA, ServicesList.FISIOTERAPIA_ENVELHECIMENTO],
-    location: LocationEnum.CALDAS_RAINHA,
-    image: 'marisa-gomes.png',
-  },
-  {
-    id: 3,
     slug: 'beatriz-silva',
     name: 'Beatriz Silva',
     description: {
@@ -103,6 +78,36 @@ export const data = [
     ],
     location: LocationEnum.LISBOA_LUMIAR,
     image: 'beatriz-silva.png',
+  },
+  {
+    id: 3,
+    slug: 'margarida-saboga',
+    name: 'Margarida Saboga',
+    description: {
+      translations: {
+        pt: 'Margarida Saboga integra a equipa ForPhysio Clinic desde 2021. Atualmente, desempenha funções como fisioterapeuta e coordenadora da unidade ForPhysio Marinha Grande, exercendo a sua intervenção clínica na mesma unidade.\nÉ licenciada em fisioterapia pela Escola Superior de Saúde de Leiria.\n\nNeste momento, colabora paralelamente com o Sporting Clube Marinhense, realizando o acompanhamento da equipa sénior de hóquei em patins.\n\nTendo especial interesse na área da fisioterapia desportiva, acompanha na unidade vários atletas de basquetebol, andebol, atletismo e muay thai.',
+        en: 'Margarida Saboga has been part of the ForPhysio Clinic team since 2021. Currently, she works as a physiotherapist and coordinator at the ForPhysio Marinha Grande unit, where she performs her clinical practice.\nShe holds a degree in physiotherapy from the Escola Superior de Saúde de Leiria.\n\nAt the moment, she is also working with Sporting Clube Marinhense, providing care for the senior roller hockey team.\n\nWith a special interest in sports physiotherapy, she treats athletes from basketball, handball, athletics, and Muay Thai at the clinic.',
+        es: 'Margarida Saboga forma parte del equipo de ForPhysio Clinic desde 2021. Actualmente, trabaja como fisioterapeuta y coordinadora de la unidad ForPhysio Marinha Grande, donde realiza su práctica clínica.\nTiene una licenciatura en fisioterapia por la Escuela Superior de Salud de Leiria.\n\nActualmente, también colabora con el Sporting Clube Marinhense, realizando el seguimiento del equipo senior de hockey sobre patines.\n\nCon especial interés en la fisioterapia deportiva, en la unidad atiende a varios atletas de baloncesto, balonmano, atletismo y muay thai.',
+        'zh-sg':
+          'Margarida Saboga 自2021年起加入ForPhysio诊所团队。目前，她在ForPhysio Marinha Grande单位担任物理治疗师和协调员，并在该单位进行临床实践。\n她毕业于莱里亚健康学院，拥有物理治疗学位。\n\n目前，她还与Sporting Clube Marinhense合作，负责为高级轮滑曲棍球队提供护理。\n\n她对运动物理治疗有着特别的兴趣，在该单位治疗的运动员包括篮球、手球、田径和泰拳运动员。',
+      },
+    },
+    role: {
+      translations: {
+        pt: 'Fisioterapeuta',
+        en: 'Physiotherapist',
+        es: 'Fisioterapeuta',
+        'zh-sg': '物理治疗师',
+      },
+    },
+    services: [
+      ServicesList.FISIOTERAPIA_MUSCULO_ESQUELETICA,
+      ServicesList.FISIOTERAPIA_ENVELHECIMENTO,
+      ServicesList.FISIOTERAPIA_DESPORTO,
+      ServicesList.PILATES_CLINICO,
+    ],
+    location: LocationEnum.MARINHA_GRANDE,
+    image: 'margarida-saboga.png',
   },
   {
     id: 4,
@@ -135,6 +140,31 @@ export const data = [
   },
   {
     id: 5,
+    slug: 'ana-clara',
+    name: 'Ana Clara',
+    description: {
+      translations: {
+        pt: 'Ana Clara integra a equipa ForPhysio Clinic desde 2024.\nAtualmente, desempenha funções como fisioterapeuta da Unidade de Saúde Balance by ForPhysio Caldas da Rainha.\n\nÉ licenciada em fisioterapia pela Escola Superior de Saúde de Leiria. O seu percurso tem estado muito ligado à fisioterapia desportiva. Atualmente, é coordenadora do departamento médico do Caldas Rugby Clube, onde exerce funções como fisioterapeuta da equipa sénior de Rugby. Acompanha também atletas da Federação Portuguesa de Lohan Kao Tempo.',
+        en: 'Ana Clara has been part of the ForPhysio Clinic team since 2024.\nShe currently works as a physiotherapist at the Balance by ForPhysio Caldas da Rainha Health Unit.\n\nShe graduated in physiotherapy from the Escola Superior de Saúde de Leiria. Her career has been closely linked to sports physiotherapy. Currently, she is the coordinator of the medical department of Caldas Rugby Club, where she serves as the physiotherapist for the senior Rugby team. She also supports athletes from the Portuguese Lohan Kao Tempo Federation.',
+        es: 'Ana Clara integra el equipo de ForPhysio Clinic desde 2024.\nActualmente, desempeña funciones como fisioterapeuta de la Unidad de Salud Balance by ForPhysio Caldas da Rainha.\n\nEs licenciada en fisioterapia por la Escuela Superior de Salud de Leiria. Su trayectoria ha estado muy vinculada a la fisioterapia deportiva. Actualmente, es coordinadora del departamento médico del Caldas Rugby Club, donde ejerce funciones como fisioterapeuta del equipo sénior de Rugby. También acompaña a atletas de la Federación Portuguesa de Lohan Kao Tempo.',
+        'zh-sg':
+          '安娜·克拉拉自2024年起加入ForPhysio Clinic团队。\n她目前在ForPhysio Caldas da Rainha健康单位担任物理治疗师。\n\n她毕业于里斯本的健康高级学院，获得物理治疗学位。她的职业生涯与运动物理治疗密切相关。目前，她是卡尔达斯橄榄球俱乐部医疗部门的协调员，担任橄榄球高级球队的物理治疗师。她还支持葡萄牙Lohan Kao Tempo联合会的运动员。',
+      },
+    },
+    role: {
+      translations: {
+        pt: 'Fisioterapeuta',
+        en: 'Physiotherapist',
+        es: 'Fisioterapeuta',
+        'zh-sg': '物理治疗师',
+      },
+    },
+    services: [ServicesList.FISIOTERAPIA_MUSCULO_ESQUELETICA, ServicesList.FISIOTERAPIA_DESPORTO],
+    location: LocationEnum.CALDAS_RAINHA,
+    image: 'ana-clara.png',
+  },
+  {
+    id: 6,
     slug: 'joao-faia',
     name: 'João Faia',
     description: {
@@ -157,42 +187,16 @@ export const data = [
     image: 'joao-faia.png',
   },
   {
-    id: 6,
-    slug: 'luis-machado',
-    name: 'Luís Machado',
-    description: {
-      translations: {
-        pt: 'Luís Machado colabora com a equipa da ForPhysio Clinic desde 2023, realizando consultas de ortopedia na unidade da ForPhysio Marinha Grande.\n\nÉ cirurgião ortopedista com especial interesse e dedicação exclusiva à articulação do joelho.',
-        en: 'Luís Machado has been collaborating with the ForPhysio Clinic team since 2023, providing orthopedic consultations at the ForPhysio Marinha Grande unit.\n\nHe is an orthopedic surgeon with a special interest and exclusive focus on the knee joint.',
-        es: 'Luís Machado colabora con el equipo de ForPhysio Clinic desde 2023, realizando consultas de ortopedia en la unidad de ForPhysio Marinha Grande.\n\nEs cirujano ortopédico con especial interés y dedicación exclusiva a la articulación de la rodilla.',
-        'zh-sg':
-          'Luís Machado 自2023年起与ForPhysio诊所团队合作，在ForPhysio Marinha Grande单位提供骨科咨询服务。\n\n他是一名骨科医生，特别关注并专注于膝关节。',
-      },
-    },
-    role: {
-      translations: {
-        pt: 'Cirurgião Ortopedista',
-        en: 'Orthopedic Surgeon',
-        es: 'Cirujano Ortopédico',
-        'zh-sg': '骨科外科医生',
-      },
-    },
-    services: [ServicesList.CONSULTAS_MEDICAS],
-    location: LocationEnum.MARINHA_GRANDE,
-    image: 'luis-machado.png',
-    contactsPage: true,
-  },
-  {
     id: 7,
-    slug: 'margarida-saboga',
-    name: 'Margarida Saboga',
+    slug: 'beatriz-lopes',
+    name: 'Beatriz Lopes',
     description: {
       translations: {
-        pt: 'Margarida Saboga integra a equipa ForPhysio Clinic desde 2021. Atualmente, desempenha funções como fisioterapeuta e coordenadora da unidade ForPhysio Marinha Grande, exercendo a sua intervenção clínica na mesma unidade.\nÉ licenciada em fisioterapia pela Escola Superior de Saúde de Leiria.\n\nNeste momento, colabora paralelamente com o Sporting Clube Marinhense, realizando o acompanhamento da equipa sénior de hóquei em patins.\n\nTendo especial interesse na área da fisioterapia desportiva, acompanha na unidade vários atletas de basquetebol, andebol, atletismo e muay thai.',
-        en: 'Margarida Saboga has been part of the ForPhysio Clinic team since 2021. Currently, she works as a physiotherapist and coordinator at the ForPhysio Marinha Grande unit, where she performs her clinical practice.\nShe holds a degree in physiotherapy from the Escola Superior de Saúde de Leiria.\n\nAt the moment, she is also working with Sporting Clube Marinhense, providing care for the senior roller hockey team.\n\nWith a special interest in sports physiotherapy, she treats athletes from basketball, handball, athletics, and Muay Thai at the clinic.',
-        es: 'Margarida Saboga forma parte del equipo de ForPhysio Clinic desde 2021. Actualmente, trabaja como fisioterapeuta y coordinadora de la unidad ForPhysio Marinha Grande, donde realiza su práctica clínica.\nTiene una licenciatura en fisioterapia por la Escuela Superior de Salud de Leiria.\n\nActualmente, también colabora con el Sporting Clube Marinhense, realizando el seguimiento del equipo senior de hockey sobre patines.\n\nCon especial interés en la fisioterapia deportiva, en la unidad atiende a varios atletas de baloncesto, balonmano, atletismo y muay thai.',
+        pt: 'Beatriz Lopes integra a equipa ForPhysio Clinic desde Agosto de 2024. Atualmente, desempenha funções como fisioterapeuta na Unidade de Saúde Balance by ForPhysio Lumiar, exercendo a sua intervenção clínica na mesma unidade. \n\nÉ licenciada em Fisioterapia pelo Escola Superior de Saúde de Alcoitão, e tem aprofundado o seu expertise em Strength and Conditioning, Performance, e na Fisioterapia Desportiva, encontrando-se a realizar a Pós Graduação em Fisioterapia Desportiva pela CESPU. \nAtualmente é fisioterapeuta da equipa de futebol masculino U15 do Sporting Clube de Portugal. \n\nDurante vários anos foi atleta federada de futebol, mantendo uma ligação próxima a este desporto até aos dias de hoje. \n\nUm dos maiores objetivos para a sua carreira passa por contribuir para a mudança do que é a generalidade dos cuidados de fisioterapia atuais, por acreditar que o fisioterapeuta é um profissional com competências para promover a saúde e bem-estar de forma excecional.',
+        en: 'Beatriz Lopes has been part of the ForPhysio Clinic team since August 2024. Currently, she works as a physiotherapist at the Balance by ForPhysio Lumiar Health Unit, where she performs her clinical practice.\n\nShe holds a degree in Physiotherapy from the Escola Superior de Saúde de Alcoitão and has deepened her expertise in Strength and Conditioning, Performance, and Sports Physiotherapy, currently pursuing a postgraduate degree in Sports Physiotherapy at CESPU.\nShe is currently the physiotherapist for the U15 male football team of Sporting Clube de Portugal.\n\nFor several years, she was a federated football athlete, maintaining a close connection to the sport to this day.\n\nOne of her biggest career goals is to contribute to changing the general landscape of current physiotherapy care, as she believes that physiotherapists are professionals with the skills to exceptionally promote health and well-being.',
+        es: 'Beatriz Lopes forma parte del equipo de ForPhysio Clinic desde agosto de 2024. Actualmente, trabaja como fisioterapeuta en la Unidad de Salud Balance by ForPhysio Lumiar, donde realiza su práctica clínica.\n\nEs licenciada en Fisioterapia por la Escuela Superior de Salud de Alcoitão y ha profundizado su experiencia en Fuerza y Acondicionamiento, Rendimiento y Fisioterapia Deportiva, y actualmente está realizando la Posgrado en Fisioterapia Deportiva en CESPU.\nActualmente es fisioterapeuta del equipo masculino de fútbol U15 del Sporting Clube de Portugal.\n\nDurante varios años fue atleta federada de fútbol, manteniendo una estrecha conexión con este deporte hasta el día de hoy.\n\nUno de sus mayores objetivos en su carrera es contribuir a cambiar la generalidad de los cuidados de fisioterapia actuales, ya que cree que el fisioterapeuta es un profesional con competencias para promover la salud y el bienestar de manera excepcional.',
         'zh-sg':
-          'Margarida Saboga 自2021年起加入ForPhysio诊所团队。目前，她在ForPhysio Marinha Grande单位担任物理治疗师和协调员，并在该单位进行临床实践。\n她毕业于莱里亚健康学院，拥有物理治疗学位。\n\n目前，她还与Sporting Clube Marinhense合作，负责为高级轮滑曲棍球队提供护理。\n\n她对运动物理治疗有着特别的兴趣，在该单位治疗的运动员包括篮球、手球、田径和泰拳运动员。',
+          'Beatriz Lopes 自2024年8月起加入ForPhysio诊所团队。目前，她在Balance by ForPhysio Lumiar健康单位担任物理治疗师，并在该单位进行临床实践。\n\n她毕业于阿尔科伊唐健康学院，专攻物理治疗，并在力量和体能训练、表现以及运动物理治疗方面深化了自己的专业知识，目前正在CESPU攻读运动物理治疗的研究生学位。\n她目前是葡萄牙体育俱乐部U15男子足球队的物理治疗师。\n\n多年来，她是一名注册足球运动员，并与这一运动保持密切联系至今。\n\n她职业生涯的最大目标之一是为改变当前物理治疗护理的整体状况做出贡献，因为她相信物理治疗师是一位能够卓越促进健康和福祉的专业人士。',
       },
     },
     role: {
@@ -203,14 +207,9 @@ export const data = [
         'zh-sg': '物理治疗师',
       },
     },
-    services: [
-      ServicesList.FISIOTERAPIA_MUSCULO_ESQUELETICA,
-      ServicesList.FISIOTERAPIA_ENVELHECIMENTO,
-      ServicesList.FISIOTERAPIA_DESPORTO,
-      ServicesList.PILATES_CLINICO,
-    ],
-    location: LocationEnum.MARINHA_GRANDE,
-    image: 'margarida-saboga.png',
+    services: [ServicesList.FISIOTERAPIA_MUSCULO_ESQUELETICA, ServicesList.FISIOTERAPIA_DESPORTO],
+    location: LocationEnum.LISBOA_LUMIAR,
+    image: 'beatriz-lopes.png',
   },
   {
     id: 8,
@@ -239,15 +238,15 @@ export const data = [
   },
   {
     id: 9,
-    slug: 'constanca-carreira',
-    name: 'Constança Carreira',
+    slug: 'marisa-gomes',
+    name: 'Marisa Gomes',
     description: {
       translations: {
-        pt: 'Constança Carreira integra a equipa ForPhysio desde outubro de 2024. Atualmente, desempenha funções como fisioterapeuta na Unidade de Saúde Balance by ForPhysio Aveiro, exercendo a sua intervenção clínica na mesma unidade.\nÉ fisioterapeuta formada na Escola Superior de Saúde da Universidade de Aveiro, tendo vindo a direcionar a sua prática profissional para a saúde pélvica e para a pediatria, contando já com diversas formações em ambas as áreas.\n\nConsidera essencial e fascinante poder entregar os cuidados prestados a começar na Saúde Pélvica, feminina e masculina, acompanhando o processo desde a gravidez e a parentalidade até ao pós-parto e à saúde infantil.',
-        en: 'Constança Carreira has been part of the ForPhysio team since October 2024. Currently, she works as a physiotherapist at the Balance by ForPhysio Aveiro Health Unit, where she performs her clinical practice.\nShe is a physiotherapist trained at the Escola Superior de Saúde da Universidade de Aveiro and has directed her professional practice towards pelvic health and pediatrics, with various training courses in both areas.\n\nShe considers it essential and fascinating to provide care that begins with Pelvic Health, both female and male, accompanying the process from pregnancy and parenthood to postpartum and child health.',
-        es: 'Constança Carreira forma parte del equipo de ForPhysio desde octubre de 2024. Actualmente, trabaja como fisioterapeuta en la Unidad de Salud Balance by ForPhysio Aveiro, donde realiza su práctica clínica.\nEs fisioterapeuta formada en la Escuela Superior de Salud de la Universidad de Aveiro, y ha orientado su práctica profesional hacia la salud pélvica y la pediatría, con diversas formaciones en ambas áreas.\n\nConsidera esencial y fascinante poder brindar cuidados que comienzan en la Salud Pélvica, tanto femenina como masculina, acompañando el proceso desde el embarazo y la paternidad hasta el posparto y la salud infantil.',
+        pt: 'Marisa  Gomes  integra  a  equipa  ForPhysio Clinic desde  2024.\nAtualmente, desempenha funções como fisioterapeuta da Unidade de Saúde  Balance by ForPhysio Caldas da Rainha, onde exerce a sua intervenção clínica.\n\nÉ licenciada em fisioterapia pela Escola Superior de Saúde de Leiria, onde se  encontra a realizar o mestrado em Fisioterapia: Ramo Prescrição Fisioterapêutica  de Exercício Físico.',
+        en: 'Marisa Gomes has been part of the ForPhysio Clinic team since 2024.\nCurrently, she works as a physiotherapist at the Balance by ForPhysio Health Unit in Caldas da Rainha, where she performs her clinical practice.\n\nShe holds a degree in physiotherapy from the Escola Superior de Saúde de Leiria, where she is pursuing a master’s degree in Physiotherapy: Therapeutic Exercise Prescription.',
+        es: 'Marisa Gomes forma parte del equipo de ForPhysio Clinic desde 2024.\nActualmente, trabaja como fisioterapeuta en la Unidad de Salud Balance by ForPhysio en Caldas da Rainha, donde realiza su práctica clínica.\n\nTiene una licenciatura en fisioterapia por la Escuela Superior de Salud de Leiria, donde está cursando una maestría en Fisioterapia: Prescripción de Ejercicio Terapéutico.',
         'zh-sg':
-          'Constança Carreira 自2024年10月起加入ForPhysio团队。目前，她在Balance by ForPhysio Aveiro健康单位担任物理治疗师，并在该单位进行临床实践。\n她是阿威罗大学健康学院的物理治疗师，已将她的职业实践方向转向盆底健康和儿科，并在这两个领域接受了多次培训。\n\n她认为，从盆底健康开始提供护理是至关重要且迷人的，能够伴随整个过程，从怀孕和为人父母到产后和儿童健康。',
+          'Marisa Gomes 自2024年起加入ForPhysio诊所团队。目前，她在Caldas da Rainha的Balance by ForPhysio健康中心担任物理治疗师，进行临床实践。\n\n她毕业于莱里亚健康学院的物理治疗专业，现正在攻读物理治疗硕士学位，专业方向为运动处方。',
       },
     },
     role: {
@@ -258,94 +257,12 @@ export const data = [
         'zh-sg': '物理治疗师',
       },
     },
-    customService: {
-      translations: {
-        pt: 'Fisioterapia Pélvica e Infantil',
-        en: 'Pelvic and Pediatric Physiotherapy',
-        es: 'Fisioterapia Pélvica y Pediátrica',
-        'zh-sg': '盆底和儿科物理治疗',
-      },
-    },
-    location: LocationEnum.AVEIRO,
-    image: 'constanca-carreira.png',
+    services: [ServicesList.FISIOTERAPIA_MUSCULO_ESQUELETICA, ServicesList.FISIOTERAPIA_ENVELHECIMENTO],
+    location: LocationEnum.CALDAS_RAINHA,
+    image: 'marisa-gomes.png',
   },
   {
     id: 10,
-    slug: 'rafael-mariz',
-    name: 'Rafael Mariz',
-    description: {
-      translations: {
-        pt: 'Rafael Mariz integra a equipa ForPhysio Clinic desde outubro de 2024. Atualmente, desempenha funções como fisioterapeuta na Unidade de Saúde Balance by ForPhysio Aveiro, exercendo a sua intervenção clínica na mesma unidade.\n\nÉ licenciado pela Escola Superior de Saúde da Universidade de Aveiro e, atualmente, frequenta o mestrado de Fisioterapia Cardiovascular e Respiratória, na mesma Instituição de Ensino Superior.\n\nDe momento, encontra-se a trabalhar na área da músculo-esquelética, e conta também com formação na área de Strength and Conditioning.\n\nAtualmente colabora com a Federação Portuguesa de Andebol.',
-        en: 'Rafael Mariz has been part of the ForPhysio Clinic team since October 2024. Currently, he works as a physiotherapist at the Balance by ForPhysio Aveiro Health Unit, where he performs his clinical practice.\n\nHe holds a degree from the Escola Superior de Saúde da Universidade de Aveiro and is currently pursuing a master’s degree in Cardiovascular and Respiratory Physiotherapy at the same higher education institution.\n\nAt the moment, he is working in the musculoskeletal area and also has training in Strength and Conditioning.\n\nHe currently collaborates with the Portuguese Handball Federation.',
-        es: 'Rafael Mariz forma parte del equipo de ForPhysio Clinic desde octubre de 2024. Actualmente, trabaja como fisioterapeuta en la Unidad de Salud Balance by ForPhysio Aveiro, donde realiza su práctica clínica.\n\nEs licenciado por la Escuela Superior de Salud de la Universidad de Aveiro y, actualmente, está cursando el máster en Fisioterapia Cardiovascular y Respiratoria en la misma Institución de Educación Superior.\n\nEn este momento, trabaja en el área musculoesquelética y también tiene formación en Fuerza y Acondicionamiento.\n\nActualmente colabora con la Federación Portuguesa de Balonmano.',
-        'zh-sg':
-          'Rafael Mariz 自2024年10月起加入ForPhysio诊所团队。目前，他在Balance by ForPhysio Aveiro健康单位担任物理治疗师，并在该单位进行临床实践。\n\n他毕业于阿威罗大学健康学院，目前正在攻读同一高等教育机构的心血管和呼吸物理治疗硕士学位。\n\n目前，他在肌肉骨骼领域工作，并在力量和体能训练方面接受过培训。\n\n他目前与葡萄牙手球协会合作。',
-      },
-    },
-    role: {
-      translations: {
-        pt: 'Fisioterapeuta',
-        en: 'Physiotherapist',
-        es: 'Fisioterapeuta',
-        'zh-sg': '物理治疗师',
-      },
-    },
-    services: [ServicesList.FISIOTERAPIA_MUSCULO_ESQUELETICA, ServicesList.FISIOTERAPIA_DESPORTO],
-    location: LocationEnum.AVEIRO,
-    image: 'rafael-mariz.png',
-  },
-  {
-    id: 11,
-    slug: 'beatriz-lopes',
-    name: 'Beatriz Lopes',
-    description: {
-      translations: {
-        pt: 'Beatriz Lopes integra a equipa ForPhysio Clinic desde Agosto de 2024. Atualmente, desempenha funções como fisioterapeuta na Unidade de Saúde Balance by ForPhysio Lumiar, exercendo a sua intervenção clínica na mesma unidade. \n\nÉ licenciada em Fisioterapia pelo Escola Superior de Saúde de Alcoitão, e tem aprofundado o seu expertise em Strength and Conditioning, Performance, e na Fisioterapia Desportiva, encontrando-se a realizar a Pós Graduação em Fisioterapia Desportiva pela CESPU. \nAtualmente é fisioterapeuta da equipa de futebol masculino U15 do Sporting Clube de Portugal. \n\nDurante vários anos foi atleta federada de futebol, mantendo uma ligação próxima a este desporto até aos dias de hoje. \n\nUm dos maiores objetivos para a sua carreira passa por contribuir para a mudança do que é a generalidade dos cuidados de fisioterapia atuais, por acreditar que o fisioterapeuta é um profissional com competências para promover a saúde e bem-estar de forma excecional.',
-        en: 'Beatriz Lopes has been part of the ForPhysio Clinic team since August 2024. Currently, she works as a physiotherapist at the Balance by ForPhysio Lumiar Health Unit, where she performs her clinical practice.\n\nShe holds a degree in Physiotherapy from the Escola Superior de Saúde de Alcoitão and has deepened her expertise in Strength and Conditioning, Performance, and Sports Physiotherapy, currently pursuing a postgraduate degree in Sports Physiotherapy at CESPU.\nShe is currently the physiotherapist for the U15 male football team of Sporting Clube de Portugal.\n\nFor several years, she was a federated football athlete, maintaining a close connection to the sport to this day.\n\nOne of her biggest career goals is to contribute to changing the general landscape of current physiotherapy care, as she believes that physiotherapists are professionals with the skills to exceptionally promote health and well-being.',
-        es: 'Beatriz Lopes forma parte del equipo de ForPhysio Clinic desde agosto de 2024. Actualmente, trabaja como fisioterapeuta en la Unidad de Salud Balance by ForPhysio Lumiar, donde realiza su práctica clínica.\n\nEs licenciada en Fisioterapia por la Escuela Superior de Salud de Alcoitão y ha profundizado su experiencia en Fuerza y Acondicionamiento, Rendimiento y Fisioterapia Deportiva, y actualmente está realizando la Posgrado en Fisioterapia Deportiva en CESPU.\nActualmente es fisioterapeuta del equipo masculino de fútbol U15 del Sporting Clube de Portugal.\n\nDurante varios años fue atleta federada de fútbol, manteniendo una estrecha conexión con este deporte hasta el día de hoy.\n\nUno de sus mayores objetivos en su carrera es contribuir a cambiar la generalidad de los cuidados de fisioterapia actuales, ya que cree que el fisioterapeuta es un profesional con competencias para promover la salud y el bienestar de manera excepcional.',
-        'zh-sg':
-          'Beatriz Lopes 自2024年8月起加入ForPhysio诊所团队。目前，她在Balance by ForPhysio Lumiar健康单位担任物理治疗师，并在该单位进行临床实践。\n\n她毕业于阿尔科伊唐健康学院，专攻物理治疗，并在力量和体能训练、表现以及运动物理治疗方面深化了自己的专业知识，目前正在CESPU攻读运动物理治疗的研究生学位。\n她目前是葡萄牙体育俱乐部U15男子足球队的物理治疗师。\n\n多年来，她是一名注册足球运动员，并与这一运动保持密切联系至今。\n\n她职业生涯的最大目标之一是为改变当前物理治疗护理的整体状况做出贡献，因为她相信物理治疗师是一位能够卓越促进健康和福祉的专业人士。',
-      },
-    },
-    role: {
-      translations: {
-        pt: 'Fisioterapeuta',
-        en: 'Physiotherapist',
-        es: 'Fisioterapeuta',
-        'zh-sg': '物理治疗师',
-      },
-    },
-    services: [ServicesList.FISIOTERAPIA_MUSCULO_ESQUELETICA, ServicesList.FISIOTERAPIA_DESPORTO],
-    location: LocationEnum.LISBOA_LUMIAR,
-    image: 'beatriz-lopes.png',
-  },
-  {
-    id: 12,
-    slug: 'ricardo-cotovio',
-    name: 'Ricardo Cotovio',
-    description: {
-      translations: {
-        pt: 'Ricardo Cotovio integra a equipa ForPhysio Clinic desde 2018. Coordenador da área da nutrição ForPhysio Clinic, atualmente presta consultas na unidade ForPhysio Oeiras.\n\nO Ricardo é licenciado em Dietética e Nutrição pela Escola Superior de Tecnologia da Saúde de Lisboa (2015) e membro da Ordem dos Nutricionistas (3955N) desde Dezembro 2018. \nDesde o início da sua carreira que colabora paralelamente com instituições desportivas de renome nacional e internacional como o Belenenses SAD, Al-Wehda (Arábia Saudita) e Shakhtar Donetsk (Ucrânia).\n\nJá em Portugal, colaborou com o Vitória FC e o Estrela da Amadora FC, e, neste momento, encontra-se em colaboração com a equipa sénior de futebol do Casa Pia.',
-        en: 'Ricardo Cotovio has been part of the ForPhysio Clinic team since 2018. As the coordinator of the nutrition area at ForPhysio Clinic, he currently provides consultations at the ForPhysio Oeiras unit.\n\nRicardo holds a degree in Dietetics and Nutrition from the Escola Superior de Tecnologia da Saúde de Lisboa (2015) and has been a member of the Order of Nutritionists (3955N) since December 2018. Since the beginning of his career, he has collaborated with renowned national and international sports institutions such as Belenenses SAD, Al-Wehda (Saudi Arabia), and Shakhtar Donetsk (Ukraine).\n\nIn Portugal, he has collaborated with Vitória FC and Estrela da Amadora FC, and is currently working with the senior football team of Casa Pia.',
-        es: 'Ricardo Cotovio forma parte del equipo de ForPhysio Clinic desde 2018. Coordinador del área de nutrición de ForPhysio Clinic, actualmente ofrece consultas en la unidad de ForPhysio Oeiras.\n\nRicardo es licenciado en Dietética y Nutrición por la Escuela Superior de Tecnología de la Salud de Lisboa (2015) y miembro de la Orden de Nutricionistas (3955N) desde diciembre de 2018. Desde el inicio de su carrera, ha colaborado con instituciones deportivas de renombre nacional e internacional, como Belenenses SAD, Al-Wehda (Arabia Saudita) y Shakhtar Donetsk (Ucrania).\n\nYa en Portugal, ha colaborado con el Vitória FC y el Estrela da Amadora FC, y en este momento, se encuentra colaborando con el equipo senior de fútbol del Casa Pia.',
-        'zh-sg':
-          'Ricardo Cotovio 自2018年起加入ForPhysio诊所团队。作为ForPhysio诊所营养领域的协调员，他目前在ForPhysio Oeiras单位提供咨询。\n\nRicardo于2015年毕业于里斯本健康科技高等学院，获得营养与饮食学学位，并自2018年12月以来成为营养师协会（3955N）的成员。自职业生涯初期以来，他与著名的国家和国际体育机构合作，如Belenenses SAD、Al-Wehda（沙特阿拉伯）和Shakhtar Donetsk（乌克兰）。\n\n在葡萄牙，他曾与维多利亚足球俱乐部和阿马多拉明星足球俱乐部合作，目前正与Casa Pia的男子足球队合作。',
-      },
-    },
-    role: {
-      translations: {
-        pt: 'Fisioterapeuta',
-        en: 'Physiotherapist',
-        es: 'Fisioterapeuta',
-        'zh-sg': '物理治疗师',
-      },
-    },
-    location: LocationEnum.OEIRAS,
-    services: [ServicesList.NUTRICAO],
-    image: 'ricardo-cotovio.png',
-  },
-  {
-    id: 13,
     slug: 'joana-rocha',
     name: 'Joana Rocha',
     description: {
@@ -378,7 +295,64 @@ export const data = [
     image: 'joana-rocha.png',
   },
   {
-    id: 14,
+    id: 11,
+    slug: 'constanca-carreira',
+    name: 'Constança Carreira',
+    description: {
+      translations: {
+        pt: 'Constança Carreira integra a equipa ForPhysio desde outubro de 2024. Atualmente, desempenha funções como fisioterapeuta na Unidade de Saúde Balance by ForPhysio Aveiro, exercendo a sua intervenção clínica na mesma unidade.\nÉ fisioterapeuta formada na Escola Superior de Saúde da Universidade de Aveiro, tendo vindo a direcionar a sua prática profissional para a saúde pélvica e para a pediatria, contando já com diversas formações em ambas as áreas.\n\nConsidera essencial e fascinante poder entregar os cuidados prestados a começar na Saúde Pélvica, feminina e masculina, acompanhando o processo desde a gravidez e a parentalidade até ao pós-parto e à saúde infantil.',
+        en: 'Constança Carreira has been part of the ForPhysio team since October 2024. Currently, she works as a physiotherapist at the Balance by ForPhysio Aveiro Health Unit, where she performs her clinical practice.\nShe is a physiotherapist trained at the Escola Superior de Saúde da Universidade de Aveiro and has directed her professional practice towards pelvic health and pediatrics, with various training courses in both areas.\n\nShe considers it essential and fascinating to provide care that begins with Pelvic Health, both female and male, accompanying the process from pregnancy and parenthood to postpartum and child health.',
+        es: 'Constança Carreira forma parte del equipo de ForPhysio desde octubre de 2024. Actualmente, trabaja como fisioterapeuta en la Unidad de Salud Balance by ForPhysio Aveiro, donde realiza su práctica clínica.\nEs fisioterapeuta formada en la Escuela Superior de Salud de la Universidad de Aveiro, y ha orientado su práctica profesional hacia la salud pélvica y la pediatría, con diversas formaciones en ambas áreas.\n\nConsidera esencial y fascinante poder brindar cuidados que comienzan en la Salud Pélvica, tanto femenina como masculina, acompañando el proceso desde el embarazo y la paternidad hasta el posparto y la salud infantil.',
+        'zh-sg':
+          'Constança Carreira 自2024年10月起加入ForPhysio团队。目前，她在Balance by ForPhysio Aveiro健康单位担任物理治疗师，并在该单位进行临床实践。\n她是阿威罗大学健康学院的物理治疗师，已将她的职业实践方向转向盆底健康和儿科，并在这两个领域接受了多次培训。\n\n她认为，从盆底健康开始提供护理是至关重要且迷人的，能够伴随整个过程，从怀孕和为人父母到产后和儿童健康。',
+      },
+    },
+    role: {
+      translations: {
+        pt: 'Fisioterapeuta',
+        en: 'Physiotherapist',
+        es: 'Fisioterapeuta',
+        'zh-sg': '物理治疗师',
+      },
+    },
+    customService: {
+      translations: {
+        pt: 'Fisioterapia Pélvica e Infantil',
+        en: 'Pelvic and Pediatric Physiotherapy',
+        es: 'Fisioterapia Pélvica y Pediátrica',
+        'zh-sg': '盆底和儿科物理治疗',
+      },
+    },
+    location: LocationEnum.AVEIRO,
+    image: 'constanca-carreira.png',
+  },
+  {
+    id: 12,
+    slug: 'rafael-mariz',
+    name: 'Rafael Mariz',
+    description: {
+      translations: {
+        pt: 'Rafael Mariz integra a equipa ForPhysio Clinic desde outubro de 2024. Atualmente, desempenha funções como fisioterapeuta na Unidade de Saúde Balance by ForPhysio Aveiro, exercendo a sua intervenção clínica na mesma unidade.\n\nÉ licenciado pela Escola Superior de Saúde da Universidade de Aveiro e, atualmente, frequenta o mestrado de Fisioterapia Cardiovascular e Respiratória, na mesma Instituição de Ensino Superior.\n\nDe momento, encontra-se a trabalhar na área da músculo-esquelética, e conta também com formação na área de Strength and Conditioning.\n\nAtualmente colabora com a Federação Portuguesa de Andebol.',
+        en: 'Rafael Mariz has been part of the ForPhysio Clinic team since October 2024. Currently, he works as a physiotherapist at the Balance by ForPhysio Aveiro Health Unit, where he performs his clinical practice.\n\nHe holds a degree from the Escola Superior de Saúde da Universidade de Aveiro and is currently pursuing a master’s degree in Cardiovascular and Respiratory Physiotherapy at the same higher education institution.\n\nAt the moment, he is working in the musculoskeletal area and also has training in Strength and Conditioning.\n\nHe currently collaborates with the Portuguese Handball Federation.',
+        es: 'Rafael Mariz forma parte del equipo de ForPhysio Clinic desde octubre de 2024. Actualmente, trabaja como fisioterapeuta en la Unidad de Salud Balance by ForPhysio Aveiro, donde realiza su práctica clínica.\n\nEs licenciado por la Escuela Superior de Salud de la Universidad de Aveiro y, actualmente, está cursando el máster en Fisioterapia Cardiovascular y Respiratoria en la misma Institución de Educación Superior.\n\nEn este momento, trabaja en el área musculoesquelética y también tiene formación en Fuerza y Acondicionamiento.\n\nActualmente colabora con la Federación Portuguesa de Balonmano.',
+        'zh-sg':
+          'Rafael Mariz 自2024年10月起加入ForPhysio诊所团队。目前，他在Balance by ForPhysio Aveiro健康单位担任物理治疗师，并在该单位进行临床实践。\n\n他毕业于阿威罗大学健康学院，目前正在攻读同一高等教育机构的心血管和呼吸物理治疗硕士学位。\n\n目前，他在肌肉骨骼领域工作，并在力量和体能训练方面接受过培训。\n\n他目前与葡萄牙手球协会合作。',
+      },
+    },
+    role: {
+      translations: {
+        pt: 'Fisioterapeuta',
+        en: 'Physiotherapist',
+        es: 'Fisioterapeuta',
+        'zh-sg': '物理治疗师',
+      },
+    },
+    services: [ServicesList.FISIOTERAPIA_MUSCULO_ESQUELETICA, ServicesList.FISIOTERAPIA_DESPORTO],
+    location: LocationEnum.AVEIRO,
+    image: 'rafael-mariz.png',
+  },
+  {
+    id: 13,
     slug: 'catarina-gama',
     name: 'Catarina Gama',
     description: {
@@ -403,106 +377,7 @@ export const data = [
     image: 'catarina-gama.png',
   },
   {
-    id: 15,
-    slug: 'filipe-vicente',
-    name: 'Filipe Vicente',
-    description: {
-      translations: {
-        pt: 'Filipe Vicente integra a equipa ForPhysio Clinic desde 2021. Licenciado em Dietética e Nutrição pela Escola Superior de Saúde do Instituto Politécnico de Leiria (2019) e membro efetivo da Ordem dos Nutricionistas desde 2020.\n\nO Filipe colaborou com o Leixões Sport Clube na época 2020/2021, contando com formação especializada no âmbito da nutrição desportiva.\nAtualmente, exerce a sua prática profissional nas áreas da nutrição clínica e desportiva, prestando consultas de avaliação e acompanhamento na unidade ForPhysio Marinha Grande.\n\nAficionado por futebol e praticante de treino de resistência há alguns anos, o nosso nutricionista não se cansa de reforçar que “uma alimentação equilibrada, aliada à prática de atividade física regular, são, inegavelmente, promotores da saúde e de uma maior longevidade”.\nAcredita que fomentar uma boa relação com a comida é o fator chave para a adoção de comportamentos mais saudáveis, facilitando também a manutenção destes a longo prazo no quotidiano.',
-        en: 'Filipe Vicente has been part of the ForPhysio Clinic team since 2021. He holds a degree in Dietetics and Nutrition from the Escola Superior de Saúde of the Polytechnic Institute of Leiria (2019) and has been a full member of the Order of Nutritionists since 2020.\n\nFilipe collaborated with Leixões Sport Clube during the 2020/2021 season, with specialized training in sports nutrition.\nHe currently practices in the fields of clinical and sports nutrition, providing assessment and follow-up consultations at the ForPhysio Marinha Grande unit.\n\nA football enthusiast and a resistance training practitioner for several years, our nutritionist emphasizes that “a balanced diet, combined with regular physical activity, is undeniably a promoter of health and greater longevity.”\nHe believes that fostering a good relationship with food is the key factor for adopting healthier behaviors, also facilitating the long-term maintenance of these habits in daily life.',
-        es: 'Filipe Vicente forma parte del equipo de ForPhysio Clinic desde 2021. Licenciado en Dietética y Nutrición por la Escuela Superior de Salud del Instituto Politécnico de Leiria (2019) y miembro efectivo de la Orden de Nutricionistas desde 2020.\n\nFilipe colaboró con el Leixões Sport Clube durante la temporada 2020/2021, con formación especializada en nutrición deportiva.\nActualmente, ejerce su práctica profesional en las áreas de nutrición clínica y deportiva, ofreciendo consultas de evaluación y seguimiento en la unidad ForPhysio Marinha Grande.\n\nAficionado al fútbol y practicante de entrenamiento de resistencia desde hace algunos años, nuestro nutricionista no se cansa de enfatizar que “una alimentación equilibrada, unida a la práctica de actividad física regular, son, innegablemente, promotores de la salud y una mayor longevidad”.\nCree que fomentar una buena relación con la comida es el factor clave para adoptar comportamientos más saludables, facilitando también el mantenimiento de estos a largo plazo en la vida diaria.',
-        'zh-sg':
-          'Filipe Vicente自2021年起加入ForPhysio Clinic团队。他毕业于里斯本健康科技高等学院（2019年），获得饮食和营养学学位，并自2020年起成为营养师协会的正式会员。\n\nFilipe在2020/2021赛季与Leixões Sport Clube合作，并接受了专业的运动营养培训。\n目前，他在临床营养和运动营养领域工作，在ForPhysio Marinha Grande单位提供评估和跟踪咨询。\n\n作为一个热爱足球并且多年进行耐力训练的营养师，他不断强调“均衡饮食与规律体育锻炼是健康和长寿的重要促进因素”。\n他认为，培养与食物的良好关系是采取更健康行为的关键因素，并能帮助人们在日常生活中长期维持这些习惯。',
-      },
-    },
-    role: {
-      translations: {
-        pt: 'Nutricionista',
-        en: 'Nutritionist',
-        es: 'Nutricionista',
-        'zh-sg': '营养师',
-      },
-    },
-    services: [ServicesList.NUTRICAO],
-    location: LocationEnum.MARINHA_GRANDE,
-    image: 'filipe-vicente.png',
-  },
-  {
-    id: 16,
-    slug: 'guilherme-pina',
-    name: 'Guilherme Pina',
-    description: {
-      translations: {
-        pt: 'Guilherme Pina integra a equipa ForPhysio Clinic desde 2022.\nAtualmente, desempenha funções como Personal Trainer, com foco no Strength and Conditioning.\n\nÉ licenciado em Educação Física e Desporto desde 2022 pela Universidade Lusófona e está a tirar mestrado em Treino de Alto Rendimento na Faculdade de Motricidade Humana.\n\nEstando sempre ligado à natação, neste momento é treinador desta modalidade.',
-        en: 'Guilherme Pina has been part of the ForPhysio Clinic team since 2022.\nHe currently works as a Personal Trainer, focusing on Strength and Conditioning.\n\nHe graduated in Physical Education and Sports in 2022 from Universidade Lusófona and is pursuing a Master’s in High-Performance Training at the Faculty of Human Motricity.\n\nAlways connected to swimming, he is currently a coach in this discipline.',
-        es: 'Guilherme Pina integra el equipo de ForPhysio Clinic desde 2022.\nActualmente, desempeña funciones como Entrenador Personal, centrado en el Strength and Conditioning.\n\nSe graduó en Educación Física y Deportes en 2022 en la Universidad Lusófona y está cursando una maestría en Entrenamiento de Alto Rendimiento en la Facultad de Motricidad Humana.\n\nSiempre vinculado a la natación, en este momento es entrenador de esta modalidad.',
-        'zh-sg':
-          'Guilherme Pina自2022年起加入ForPhysio Clinic团队。\n目前，他担任私人教练，专注于力量与体能训练。\n\n他于2022年毕业于里斯本的卢索方大学，获得体育教育和运动学位，目前正在人类运动学院攻读高水平训练硕士学位。\n\n他一直与游泳保持联系，目前是该项目的教练。',
-      },
-    },
-    role: {
-      translations: {
-        pt: 'Fisiologista do Exercício',
-        en: 'Exercise Physiologist',
-        es: 'Fisiologista del Ejercicio',
-        'zh-sg': '运动生理学家',
-      },
-    },
-    image: 'guilherme-pina.png',
-  },
-  {
-    id: 17,
-    slug: 'paulo-pinheiro',
-    name: 'Paulo Pinheiro',
-    description: {
-      translations: {
-        pt: 'Dr. Paulo Pinheiro colabora com a equipa da ForPhysio Clinic desde 2024, realizando consultas de ortopedia na Unidade de Saúde Balance by ForPhysio Lumiar.\nÉ especialista em Medicina Desportiva, intervindo também no Sporting Clube de Portugal e no Hospital Amadora Sintra.',
-        en: 'Dr. Paulo Pinheiro has been collaborating with the ForPhysio Clinic team since 2024, providing orthopedic consultations at the Balance by ForPhysio Lumiar Health Unit.\nHe is a specialist in Sports Medicine, also working with Sporting Clube de Portugal and Hospital Amadora Sintra.',
-        es: 'El Dr. Paulo Pinheiro colabora con el equipo de ForPhysio Clinic desde 2024, realizando consultas de ortopedia en la Unidad de Salud Balance by ForPhysio Lumiar.\nEs especialista en Medicina Deportiva, interviniendo también en el Sporting Clube de Portugal y en el Hospital Amadora Sintra.',
-        'zh-sg':
-          '保罗·皮尼罗博士自2024年起与ForPhysio Clinic团队合作，在ForPhysio Lumiar健康单位提供骨科咨询。\n他是体育医学专家，也在里斯本体育俱乐部和阿马多拉辛特医院工作。',
-      },
-    },
-    role: {
-      translations: {
-        pt: 'Médico Ortopedista',
-        en: 'Orthopedic Doctor',
-        es: 'Médico Ortopedista',
-        'zh-sg': '骨科医生',
-      },
-    },
-    contactsPage: true,
-    services: [ServicesList.CONSULTAS_MEDICAS],
-    location: LocationEnum.LISBOA_LUMIAR,
-    image: 'paulo-pinheiro.png',
-  },
-  {
-    id: 18,
-    slug: 'ana-clara',
-    name: 'Ana Clara',
-    description: {
-      translations: {
-        pt: 'Ana Clara integra a equipa ForPhysio Clinic desde 2024.\nAtualmente, desempenha funções como fisioterapeuta da Unidade de Saúde Balance by ForPhysio Caldas da Rainha.\n\nÉ licenciada em fisioterapia pela Escola Superior de Saúde de Leiria. O seu percurso tem estado muito ligado à fisioterapia desportiva. Atualmente, é coordenadora do departamento médico do Caldas Rugby Clube, onde exerce funções como fisioterapeuta da equipa sénior de Rugby. Acompanha também atletas da Federação Portuguesa de Lohan Kao Tempo.',
-        en: 'Ana Clara has been part of the ForPhysio Clinic team since 2024.\nShe currently works as a physiotherapist at the Balance by ForPhysio Caldas da Rainha Health Unit.\n\nShe graduated in physiotherapy from the Escola Superior de Saúde de Leiria. Her career has been closely linked to sports physiotherapy. Currently, she is the coordinator of the medical department of Caldas Rugby Club, where she serves as the physiotherapist for the senior Rugby team. She also supports athletes from the Portuguese Lohan Kao Tempo Federation.',
-        es: 'Ana Clara integra el equipo de ForPhysio Clinic desde 2024.\nActualmente, desempeña funciones como fisioterapeuta de la Unidad de Salud Balance by ForPhysio Caldas da Rainha.\n\nEs licenciada en fisioterapia por la Escuela Superior de Salud de Leiria. Su trayectoria ha estado muy vinculada a la fisioterapia deportiva. Actualmente, es coordinadora del departamento médico del Caldas Rugby Club, donde ejerce funciones como fisioterapeuta del equipo sénior de Rugby. También acompaña a atletas de la Federación Portuguesa de Lohan Kao Tempo.',
-        'zh-sg':
-          '安娜·克拉拉自2024年起加入ForPhysio Clinic团队。\n她目前在ForPhysio Caldas da Rainha健康单位担任物理治疗师。\n\n她毕业于里斯本的健康高级学院，获得物理治疗学位。她的职业生涯与运动物理治疗密切相关。目前，她是卡尔达斯橄榄球俱乐部医疗部门的协调员，担任橄榄球高级球队的物理治疗师。她还支持葡萄牙Lohan Kao Tempo联合会的运动员。',
-      },
-    },
-    role: {
-      translations: {
-        pt: 'Fisioterapeuta',
-        en: 'Physiotherapist',
-        es: 'Fisioterapeuta',
-        'zh-sg': '物理治疗师',
-      },
-    },
-    services: [ServicesList.FISIOTERAPIA_MUSCULO_ESQUELETICA, ServicesList.FISIOTERAPIA_DESPORTO],
-    location: LocationEnum.CALDAS_RAINHA,
-    image: 'ana-clara.png',
-  },
-  {
-    id: 19,
+    id: 14,
     slug: 'duarte-afonso',
     name: 'Duarte Afonso',
     description: {
@@ -530,5 +405,130 @@ export const data = [
     ],
     location: LocationEnum.MARINHA_GRANDE,
     image: 'duarte-afonso.png',
+  },
+  {
+    id: 15,
+    slug: 'ricardo-cotovio',
+    name: 'Ricardo Cotovio',
+    description: {
+      translations: {
+        pt: 'Ricardo Cotovio integra a equipa ForPhysio Clinic desde 2018. Coordenador da área da nutrição ForPhysio Clinic, atualmente presta consultas na unidade ForPhysio Oeiras.\n\nO Ricardo é licenciado em Dietética e Nutrição pela Escola Superior de Tecnologia da Saúde de Lisboa (2015) e membro da Ordem dos Nutricionistas (3955N) desde Dezembro 2018. \nDesde o início da sua carreira que colabora paralelamente com instituições desportivas de renome nacional e internacional como o Belenenses SAD, Al-Wehda (Arábia Saudita) e Shakhtar Donetsk (Ucrânia).\n\nJá em Portugal, colaborou com o Vitória FC e o Estrela da Amadora FC, e, neste momento, encontra-se em colaboração com a equipa sénior de futebol do Casa Pia.',
+        en: 'Ricardo Cotovio has been part of the ForPhysio Clinic team since 2018. As the coordinator of the nutrition area at ForPhysio Clinic, he currently provides consultations at the ForPhysio Oeiras unit.\n\nRicardo holds a degree in Dietetics and Nutrition from the Escola Superior de Tecnologia da Saúde de Lisboa (2015) and has been a member of the Order of Nutritionists (3955N) since December 2018. Since the beginning of his career, he has collaborated with renowned national and international sports institutions such as Belenenses SAD, Al-Wehda (Saudi Arabia), and Shakhtar Donetsk (Ukraine).\n\nIn Portugal, he has collaborated with Vitória FC and Estrela da Amadora FC, and is currently working with the senior football team of Casa Pia.',
+        es: 'Ricardo Cotovio forma parte del equipo de ForPhysio Clinic desde 2018. Coordinador del área de nutrición de ForPhysio Clinic, actualmente ofrece consultas en la unidad de ForPhysio Oeiras.\n\nRicardo es licenciado en Dietética y Nutrición por la Escuela Superior de Tecnología de la Salud de Lisboa (2015) y miembro de la Orden de Nutricionistas (3955N) desde diciembre de 2018. Desde el inicio de su carrera, ha colaborado con instituciones deportivas de renombre nacional e internacional, como Belenenses SAD, Al-Wehda (Arabia Saudita) y Shakhtar Donetsk (Ucrania).\n\nYa en Portugal, ha colaborado con el Vitória FC y el Estrela da Amadora FC, y en este momento, se encuentra colaborando con el equipo senior de fútbol del Casa Pia.',
+        'zh-sg':
+          'Ricardo Cotovio 自2018年起加入ForPhysio诊所团队。作为ForPhysio诊所营养领域的协调员，他目前在ForPhysio Oeiras单位提供咨询。\n\nRicardo于2015年毕业于里斯本健康科技高等学院，获得营养与饮食学学位，并自2018年12月以来成为营养师协会（3955N）的成员。自职业生涯初期以来，他与著名的国家和国际体育机构合作，如Belenenses SAD、Al-Wehda（沙特阿拉伯）和Shakhtar Donetsk（乌克兰）。\n\n在葡萄牙，他曾与维多利亚足球俱乐部和阿马多拉明星足球俱乐部合作，目前正与Casa Pia的男子足球队合作。',
+      },
+    },
+    role: {
+      translations: {
+        pt: 'Fisioterapeuta',
+        en: 'Physiotherapist',
+        es: 'Fisioterapeuta',
+        'zh-sg': '物理治疗师',
+      },
+    },
+    location: LocationEnum.OEIRAS,
+    services: [ServicesList.NUTRICAO],
+    image: 'ricardo-cotovio.png',
+  },
+  {
+    id: 16,
+    slug: 'filipe-vicente',
+    name: 'Filipe Vicente',
+    description: {
+      translations: {
+        pt: 'Filipe Vicente integra a equipa ForPhysio Clinic desde 2021. Licenciado em Dietética e Nutrição pela Escola Superior de Saúde do Instituto Politécnico de Leiria (2019) e membro efetivo da Ordem dos Nutricionistas desde 2020.\n\nO Filipe colaborou com o Leixões Sport Clube na época 2020/2021, contando com formação especializada no âmbito da nutrição desportiva.\nAtualmente, exerce a sua prática profissional nas áreas da nutrição clínica e desportiva, prestando consultas de avaliação e acompanhamento na unidade ForPhysio Marinha Grande.\n\nAficionado por futebol e praticante de treino de resistência há alguns anos, o nosso nutricionista não se cansa de reforçar que “uma alimentação equilibrada, aliada à prática de atividade física regular, são, inegavelmente, promotores da saúde e de uma maior longevidade”.\nAcredita que fomentar uma boa relação com a comida é o fator chave para a adoção de comportamentos mais saudáveis, facilitando também a manutenção destes a longo prazo no quotidiano.',
+        en: 'Filipe Vicente has been part of the ForPhysio Clinic team since 2021. He holds a degree in Dietetics and Nutrition from the Escola Superior de Saúde of the Polytechnic Institute of Leiria (2019) and has been a full member of the Order of Nutritionists since 2020.\n\nFilipe collaborated with Leixões Sport Clube during the 2020/2021 season, with specialized training in sports nutrition.\nHe currently practices in the fields of clinical and sports nutrition, providing assessment and follow-up consultations at the ForPhysio Marinha Grande unit.\n\nA football enthusiast and a resistance training practitioner for several years, our nutritionist emphasizes that “a balanced diet, combined with regular physical activity, is undeniably a promoter of health and greater longevity.”\nHe believes that fostering a good relationship with food is the key factor for adopting healthier behaviors, also facilitating the long-term maintenance of these habits in daily life.',
+        es: 'Filipe Vicente forma parte del equipo de ForPhysio Clinic desde 2021. Licenciado en Dietética y Nutrición por la Escuela Superior de Salud del Instituto Politécnico de Leiria (2019) y miembro efectivo de la Orden de Nutricionistas desde 2020.\n\nFilipe colaboró con el Leixões Sport Clube durante la temporada 2020/2021, con formación especializada en nutrición deportiva.\nActualmente, ejerce su práctica profesional en las áreas de nutrición clínica y deportiva, ofreciendo consultas de evaluación y seguimiento en la unidad ForPhysio Marinha Grande.\n\nAficionado al fútbol y practicante de entrenamiento de resistencia desde hace algunos años, nuestro nutricionista no se cansa de enfatizar que “una alimentación equilibrada, unida a la práctica de actividad física regular, son, innegablemente, promotores de la salud y una mayor longevidad”.\nCree que fomentar una buena relación con la comida es el factor clave para adoptar comportamientos más saludables, facilitando también el mantenimiento de estos a largo plazo en la vida diaria.',
+        'zh-sg':
+          'Filipe Vicente自2021年起加入ForPhysio Clinic团队。他毕业于里斯本健康科技高等学院（2019年），获得饮食和营养学学位，并自2020年起成为营养师协会的正式会员。\n\nFilipe在2020/2021赛季与Leixões Sport Clube合作，并接受了专业的运动营养培训。\n目前，他在临床营养和运动营养领域工作，在ForPhysio Marinha Grande单位提供评估和跟踪咨询。\n\n作为一个热爱足球并且多年进行耐力训练的营养师，他不断强调“均衡饮食与规律体育锻炼是健康和长寿的重要促进因素”。\n他认为，培养与食物的良好关系是采取更健康行为的关键因素，并能帮助人们在日常生活中长期维持这些习惯。',
+      },
+    },
+    role: {
+      translations: {
+        pt: 'Nutricionista',
+        en: 'Nutritionist',
+        es: 'Nutricionista',
+        'zh-sg': '营养师',
+      },
+    },
+    services: [ServicesList.NUTRICAO],
+    location: LocationEnum.MARINHA_GRANDE,
+    image: 'filipe-vicente.png',
+  },
+  {
+    id: 17,
+    slug: 'guilherme-pina',
+    name: 'Guilherme Pina',
+    description: {
+      translations: {
+        pt: 'Guilherme Pina integra a equipa ForPhysio Clinic desde 2022.\nAtualmente, desempenha funções como Personal Trainer, com foco no Strength and Conditioning.\n\nÉ licenciado em Educação Física e Desporto desde 2022 pela Universidade Lusófona e está a tirar mestrado em Treino de Alto Rendimento na Faculdade de Motricidade Humana.\n\nEstando sempre ligado à natação, neste momento é treinador desta modalidade.',
+        en: 'Guilherme Pina has been part of the ForPhysio Clinic team since 2022.\nHe currently works as a Personal Trainer, focusing on Strength and Conditioning.\n\nHe graduated in Physical Education and Sports in 2022 from Universidade Lusófona and is pursuing a Master’s in High-Performance Training at the Faculty of Human Motricity.\n\nAlways connected to swimming, he is currently a coach in this discipline.',
+        es: 'Guilherme Pina integra el equipo de ForPhysio Clinic desde 2022.\nActualmente, desempeña funciones como Entrenador Personal, centrado en el Strength and Conditioning.\n\nSe graduó en Educación Física y Deportes en 2022 en la Universidad Lusófona y está cursando una maestría en Entrenamiento de Alto Rendimiento en la Facultad de Motricidad Humana.\n\nSiempre vinculado a la natación, en este momento es entrenador de esta modalidad.',
+        'zh-sg':
+          'Guilherme Pina自2022年起加入ForPhysio Clinic团队。\n目前，他担任私人教练，专注于力量与体能训练。\n\n他于2022年毕业于里斯本的卢索方大学，获得体育教育和运动学位，目前正在人类运动学院攻读高水平训练硕士学位。\n\n他一直与游泳保持联系，目前是该项目的教练。',
+      },
+    },
+    role: {
+      translations: {
+        pt: 'Fisiologista do Exercício',
+        en: 'Exercise Physiologist',
+        es: 'Fisiologista del Ejercicio',
+        'zh-sg': '运动生理学家',
+      },
+    },
+    image: 'guilherme-pina.png',
+  },
+  {
+    id: 18,
+    slug: 'luis-machado',
+    name: 'Luís Machado',
+    description: {
+      translations: {
+        pt: 'Luís Machado colabora com a equipa da ForPhysio Clinic desde 2023, realizando consultas de ortopedia na unidade da ForPhysio Marinha Grande.\n\nÉ cirurgião ortopedista com especial interesse e dedicação exclusiva à articulação do joelho.',
+        en: 'Luís Machado has been collaborating with the ForPhysio Clinic team since 2023, providing orthopedic consultations at the ForPhysio Marinha Grande unit.\n\nHe is an orthopedic surgeon with a special interest and exclusive focus on the knee joint.',
+        es: 'Luís Machado colabora con el equipo de ForPhysio Clinic desde 2023, realizando consultas de ortopedia en la unidad de ForPhysio Marinha Grande.\n\nEs cirujano ortopédico con especial interés y dedicación exclusiva a la articulación de la rodilla.',
+        'zh-sg':
+          'Luís Machado 自2023年起与ForPhysio诊所团队合作，在ForPhysio Marinha Grande单位提供骨科咨询服务。\n\n他是一名骨科医生，特别关注并专注于膝关节。',
+      },
+    },
+    role: {
+      translations: {
+        pt: 'Cirurgião Ortopedista',
+        en: 'Orthopedic Surgeon',
+        es: 'Cirujano Ortopédico',
+        'zh-sg': '骨科外科医生',
+      },
+    },
+    services: [ServicesList.CONSULTAS_MEDICAS],
+    location: LocationEnum.MARINHA_GRANDE,
+    image: 'luis-machado.png',
+    contactsPage: true,
+  },
+  {
+    id: 19,
+    slug: 'paulo-pinheiro',
+    name: 'Paulo Pinheiro',
+    description: {
+      translations: {
+        pt: 'Dr. Paulo Pinheiro colabora com a equipa da ForPhysio Clinic desde 2024, realizando consultas de ortopedia na Unidade de Saúde Balance by ForPhysio Lumiar.\nÉ especialista em Medicina Desportiva, intervindo também no Sporting Clube de Portugal e no Hospital Amadora Sintra.',
+        en: 'Dr. Paulo Pinheiro has been collaborating with the ForPhysio Clinic team since 2024, providing orthopedic consultations at the Balance by ForPhysio Lumiar Health Unit.\nHe is a specialist in Sports Medicine, also working with Sporting Clube de Portugal and Hospital Amadora Sintra.',
+        es: 'El Dr. Paulo Pinheiro colabora con el equipo de ForPhysio Clinic desde 2024, realizando consultas de ortopedia en la Unidad de Salud Balance by ForPhysio Lumiar.\nEs especialista en Medicina Deportiva, interviniendo también en el Sporting Clube de Portugal y en el Hospital Amadora Sintra.',
+        'zh-sg':
+          '保罗·皮尼罗博士自2024年起与ForPhysio Clinic团队合作，在ForPhysio Lumiar健康单位提供骨科咨询。\n他是体育医学专家，也在里斯本体育俱乐部和阿马多拉辛特医院工作。',
+      },
+    },
+    role: {
+      translations: {
+        pt: 'Médico Ortopedista',
+        en: 'Orthopedic Doctor',
+        es: 'Médico Ortopedista',
+        'zh-sg': '骨科医生',
+      },
+    },
+    contactsPage: true,
+    services: [ServicesList.CONSULTAS_MEDICAS],
+    location: LocationEnum.LISBOA_LUMIAR,
+    image: 'paulo-pinheiro.png',
   },
 ];
