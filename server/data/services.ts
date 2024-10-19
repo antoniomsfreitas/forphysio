@@ -1,6 +1,6 @@
 import { LocationEnum } from './contacts/locations';
 
-export enum ServicesEnum {
+export enum ServicesList {
   FISIOTERAPIA_MUSCULO_ESQUELETICA = 1,
   FISIOTERAPIA_DESPORTO = 2,
   FISIOTERAPIA_AQUATICA_HIDROTERAPIA = 3,

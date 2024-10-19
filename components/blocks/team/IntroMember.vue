@@ -29,17 +29,11 @@
           <div class="intro-member__content">
             <div id="teleport-title" class="intro-member__content__title" />
 
-            <p class="intro-member__content__description" :class="{ resume }">{{ member.description }}</p>
+            <p class="intro-member__content__description">{{ description }}</p>
 
             <template v-if="!resume">
               <div v-if="member?.services || member.customService" class="intro-member__content__services">
-                <span>
-                  {{
-                    member?.services?.length && member?.services?.length > 1
-                      ? $t('team.specialties')
-                      : $t('team.specialty')
-                  }}:
-                </span>
+                <span> {{ specialtyTitle }}: </span>
                 <ul v-if="member?.services || member.customService">
                   <li v-if="member.customService">
                     {{ member.customService }}
@@ -100,8 +94,17 @@ const props = defineProps({
 });
 
 const localePath = useLocalePath();
+const { t } = useI18n();
 
 const imagePath = '/images/team/members/detail/' + props.member.image;
+
+const specialtyTitle = computed(() =>
+  (props.member?.services?.length ?? 0) > 1 ? t('team.specialties') : t('team.specialty'),
+);
+
+const description = computed(() =>
+  props.resume && props.member?.description ? truncateText(props.member.description, 220) : props.member.description,
+);
 </script>
 
 <style scoped lang="scss">
@@ -144,14 +147,6 @@ const imagePath = '/images/team/members/detail/' + props.member.image;
       font-weight: $font-weight-light;
       line-height: 1.5;
       color: $medium-grey;
-    }
-
-    &__description.resume {
-      display: -webkit-box;
-      -webkit-line-clamp: 4; /* Limitar o texto a 3 linhas */
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      text-overflow: ellipsis;
     }
 
     &__button {
