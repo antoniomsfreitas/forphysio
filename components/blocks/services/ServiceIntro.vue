@@ -19,7 +19,9 @@
             <LayoutGridCol m="4" t="8" d="10" start-col-t="3" start-col-d="2">
               <h1 v-text="data.title" />
 
-              <Button type="outline">{{ $t('general.book-evaluation') }}</Button>
+              <NuxtLink :to="localePath(Routes.CONTACTS)">
+                <Button type="outline">{{ $t('general.book-evaluation') }}</Button>
+              </NuxtLink>
             </LayoutGridCol>
           </LayoutGridRow>
         </LayoutGrid>
@@ -38,6 +40,7 @@
 
 <script setup lang="ts">
 import type { IntroBlock } from '~/models/blocks.model';
+import { Routes } from '~/models/routes.model';
 
 defineProps({
   data: {
@@ -45,6 +48,8 @@ defineProps({
     required: true,
   },
 });
+
+const localePath = useLocalePath();
 </script>
 
 <style scoped lang="scss">
