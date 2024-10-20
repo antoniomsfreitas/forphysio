@@ -34,7 +34,7 @@ const localePath = useLocalePath();
 <style scoped lang="scss">
 .team-slider-container {
   &__slide {
-    max-width: 100%;
+    max-width: 97%;
 
     @include mq-mobile-tablet {
       width: 140px;

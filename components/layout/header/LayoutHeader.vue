@@ -1,5 +1,10 @@
 <template>
-  <header ref="headerRef" class="header" :style="isDesktop ? headerFixedStyles : null">
+  <header
+    ref="headerRef"
+    class="header"
+    :class="{ 'header--hidden': isHeaderHidden }"
+    :style="isDesktop ? headerFixedStyles : null"
+  >
     <LayoutGrid>
       <LayoutGridRow>
         <LayoutGridCol m="4" t="12">
@@ -28,6 +33,10 @@
 import type { HeaderMenu } from '~/models/layout.model';
 import { useFixedHeader } from 'vue-use-fixed-header';
 
+const { isHeaderVisible } = useLayout();
+
+const isHeaderHidden = computed(() => !isHeaderVisible.value && isDesktop.value);
+
 defineProps({
   data: {
     type: Object as PropType<HeaderMenu>,
@@ -48,6 +57,10 @@ const { styles: headerFixedStyles } = useFixedHeader(headerRef);
   width: 100%;
   height: var(--header-height);
   background-color: $deep-grey;
+
+  &--hidden {
+    transform: translateY(-101%) !important;
+  }
 
   @include mq-mobile-tablet {
     position: fixed;

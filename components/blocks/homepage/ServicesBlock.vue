@@ -48,7 +48,7 @@ const getServicesPage = (slug?: string): string => {
 .services-slideshow-container {
   &__slide {
     width: 348px;
-    max-width: 100%;
+    max-width: 97%;
   }
 }
 </style>

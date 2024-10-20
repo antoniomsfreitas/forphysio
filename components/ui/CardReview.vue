@@ -9,7 +9,7 @@
     </div>
 
     <div class="card-customer-review__author">
-      <img :src="photo" :alt="alt" class="card-customer-review__author__img" >
+      <img :src="photo" :alt="alt" class="card-customer-review__author__img" />
       <span class="card-customer-review__author__name">{{ author }}</span>
     </div>
   </CardUI>
@@ -49,7 +49,6 @@ defineProps({
   align-items: flex-start;
   justify-content: space-between;
   height: 100%;
-  min-height: 390px;
   padding: 14px 30px;
   background-color: $white;
 

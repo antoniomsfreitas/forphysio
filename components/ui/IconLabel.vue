@@ -1,13 +1,8 @@
 <template>
-  <NuxtLink
-    :to="props.link"
-    :target="linkTarget"
-    class="icon-link"
-    :class="{ 'icon-link--semi-bold': semiBold, 'icon-link--light': !semiBold }"
-  >
-    <span>{{ props.text }}</span>
-    <Icon :name="icon" />
-  </NuxtLink>
+  <div class="icon-label" :class="{ 'icon-label--semi-bold': semiBold }">
+    <span>{{ props.label }}</span>
+    <Icon :name="props.icon" />
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -19,23 +14,13 @@ const props = defineProps({
     required: false,
     default: 'icon:link-arrow',
   },
-  link: {
-    type: String,
-    required: false,
-    default: '',
-  },
-  text: {
+  label: {
     type: String,
     required: true,
   },
-  external: {
-    type: Boolean,
-    default: false,
-    required: false,
-  },
   color: {
     type: String as PropType<IconLinkColors>,
-    default: IconLinkColors.BLUE,
+    default: IconLinkColors.WHITE,
     required: false,
   },
   semiBold: {
@@ -44,12 +29,10 @@ const props = defineProps({
     required: false,
   },
 });
-
-const linkTarget = computed(() => (props.external ? '_blank' : '_self'));
 </script>
 
 <style scoped lang="scss">
-.icon-link {
+.icon-label {
   $color: v-bind(color);
 
   display: flex;
