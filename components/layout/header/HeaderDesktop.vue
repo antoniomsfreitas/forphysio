@@ -43,8 +43,10 @@
           <Icon name="icon:search-white" />
         </NuxtLink>
 
-        <NuxtLink :to="buttonOption.route.name" class="button button--secondary">
-          {{ $t(buttonOption.name) }}
+        <NuxtLink :to="buttonOption.route.name">
+          <Button size="small" type="secondary">
+            {{ $t(buttonOption.name) }}
+          </Button>
         </NuxtLink>
       </div>
     </div>

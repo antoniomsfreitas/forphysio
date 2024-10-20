@@ -32,7 +32,7 @@
             <p class="intro-member__content__description">{{ description }}</p>
 
             <template v-if="!resume">
-              <div v-if="member?.services || member.customService" class="intro-member__content__services">
+              <div v-if="member?.services?.length || member.customService" class="intro-member__content__services">
                 <span> {{ specialtyTitle }}: </span>
                 <ul v-if="member?.services || member.customService">
                   <li v-if="member.customService">
@@ -46,14 +46,11 @@
                 </ul>
               </div>
 
-              <Button
-                v-if="member.booking"
-                class="intro-member__content__button"
-                size="large"
-                @click="navigateTo(member.booking)"
-              >
-                {{ $t('general.bookAppointment') }}
-              </Button>
+              <NuxtLink v-if="member.booking" :to="member.booking" target="__blank">
+                <Button class="intro-member__content__button" size="large">
+                  {{ $t('general.bookAppointment') }}
+                </Button>
+              </NuxtLink>
 
               <Button
                 v-if="!member.booking && member.contactsPage"

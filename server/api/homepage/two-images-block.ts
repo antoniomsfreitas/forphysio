@@ -66,7 +66,7 @@ export const data = {
         },
       },
       cta: {
-        link: Routes.CONTACTS,
+        link: Routes.SERVICES,
         label: {
           translations: {
             pt: 'Marcar consulta',
@@ -79,15 +79,15 @@ export const data = {
       image: {
         alt: {
           translations: {
-            pt: 'Equipa da ForPhysio reunida em um momento descontraído',
-            en: 'ForPhysio team at a relaxed moment',
-            es: 'El equipo de ForPhysio en un momento relajado',
-            'zh-sg': '放鬆時的物理治療團隊',
+            pt: 'Imagem de uma profissional da ForPhysio a auxiliar a sua paciente num exercício de alongamento.',
+            en: 'Picture of a ForPhysio professional helping her patient with a stretching exercise.',
+            es: 'Imagen de una profesional de ForPhysio ayudando a su paciente con un ejercicio de estiramiento.',
+            'zh-sg': 'ForPhysio 專業人員幫助病人做伸展運動的圖片。',
           },
         },
-        mobile: '/images/homepage/two-images-block/image-2/image-2-mobile.jpg',
-        tablet: '/images/homepage/two-images-block/image-2/image-2-tablet.jpg',
-        desktop: '/images/homepage/two-images-block/image-2/image-2-desktop.jpg',
+        mobile: '/images/homepage/two-images-block/image-3/image-3-mobile.jpg',
+        tablet: '/images/homepage/two-images-block/image-3/image-3-tablet.jpg',
+        desktop: '/images/homepage/two-images-block/image-3/image-3-desktop.jpg',
       },
     },
   ],

@@ -26,7 +26,7 @@ export const data = [
     },
     title: {
       translations: {
-        pt: 'Fisioterapia Músculo Esquelética',
+        pt: 'Fisioterapia Músculo-Esquelética',
         en: 'Musculoskeletal Physiotherapy',
         es: 'Fisioterapia Musculoesquelética',
         'zh-sg': '肌肉骨骼物理治疗',

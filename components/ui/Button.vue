@@ -114,9 +114,11 @@ const props = defineProps({
   }
 
   &[button-size='small'] {
-    padding-top: 3px;
-    padding-bottom: 3px;
-    font-size: 14px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 12px;
+    line-height: 1.5;
+    min-width: 160px;
   }
 }
 </style>

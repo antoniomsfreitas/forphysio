@@ -78,6 +78,7 @@ export const data = [
     ],
     location: LocationsList.LISBOA_LUMIAR,
     image: 'beatriz-silva.png',
+    booking: 'https://pt.zappysoftware.com/m/beatrizsilva-3-3-3#pro',
   },
   {
     id: 3,
@@ -108,6 +109,7 @@ export const data = [
     ],
     location: LocationsList.MARINHA_GRANDE,
     image: 'margarida-saboga.png',
+    booking: 'https://pt.zappysoftware.com/m/margaridasaboga#pro',
   },
   {
     id: 4,
@@ -137,6 +139,7 @@ export const data = [
     ],
     location: LocationsList.OEIRAS,
     image: 'clara-pardal.png',
+    booking: 'https://pt.zappysoftware.com/m/clarapardal#pro',
   },
   {
     id: 5,
@@ -162,6 +165,7 @@ export const data = [
     services: [ServicesList.FISIOTERAPIA_MUSCULO_ESQUELETICA, ServicesList.FISIOTERAPIA_DESPORTO],
     location: LocationsList.CALDAS_RAINHA,
     image: 'ana-clara.png',
+    booking: 'https://pt.zappysoftware.com/m/anaclara-4#pro',
   },
   {
     id: 6,
@@ -210,6 +214,7 @@ export const data = [
     services: [ServicesList.FISIOTERAPIA_MUSCULO_ESQUELETICA, ServicesList.FISIOTERAPIA_DESPORTO],
     location: LocationsList.LISBOA_LUMIAR,
     image: 'beatriz-lopes.png',
+    booking: 'https://pt.zappysoftware.com/m/beatrizlopes-5#pro',
   },
   {
     id: 8,
@@ -235,6 +240,7 @@ export const data = [
     services: [ServicesList.FISIOTERAPIA_MUSCULO_ESQUELETICA, ServicesList.FISIOTERAPIA_DESPORTO],
     location: LocationsList.LISBOA_LUMIAR,
     image: 'joaquim-coelho.png',
+    booking: 'https://pt.zappysoftware.com/m/joaquimcoelho',
   },
   {
     id: 9,
@@ -260,6 +266,7 @@ export const data = [
     services: [ServicesList.FISIOTERAPIA_MUSCULO_ESQUELETICA, ServicesList.FISIOTERAPIA_ENVELHECIMENTO],
     location: LocationsList.CALDAS_RAINHA,
     image: 'marisa-gomes.png',
+    booking: 'https://pt.zappysoftware.com/m/marisagomes-2#pro',
   },
   {
     id: 10,
@@ -325,6 +332,7 @@ export const data = [
     },
     location: LocationsList.AVEIRO,
     image: 'constanca-carreira.png',
+    booking: 'https://pt.zappysoftware.com/m/constancacarreira-2#pro',
   },
   {
     id: 12,
@@ -350,6 +358,7 @@ export const data = [
     services: [ServicesList.FISIOTERAPIA_MUSCULO_ESQUELETICA, ServicesList.FISIOTERAPIA_DESPORTO],
     location: LocationsList.AVEIRO,
     image: 'rafael-mariz.png',
+    booking: 'https://pt.zappysoftware.com/m/rafaelmariz#pro',
   },
   {
     id: 13,
@@ -430,6 +439,7 @@ export const data = [
     location: LocationsList.OEIRAS,
     services: [ServicesList.NUTRICAO],
     image: 'ricardo-cotovio.png',
+    booking: 'https://pt.zappysoftware.com/m/ricardocotovio-2#pro',
   },
   {
     id: 16,
@@ -455,6 +465,7 @@ export const data = [
     services: [ServicesList.NUTRICAO],
     location: LocationsList.MARINHA_GRANDE,
     image: 'filipe-vicente.png',
+    booking: 'https://pt.zappysoftware.com/m/filipevicente-2#pro',
   },
   {
     id: 17,

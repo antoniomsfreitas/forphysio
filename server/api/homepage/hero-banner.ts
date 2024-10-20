@@ -1,5 +1,5 @@
 import { Routes } from '~/models/routes.model';
-import type { HeroBanner } from '~/models/blocks/hero-banner.model';
+import type { HeroBannerBlock } from '~/models/blocks/hero-banner.model';
 import { getFormattedDataByLocale } from '~/utils/api.util';
 
 export const data = {
@@ -30,15 +30,15 @@ export const data = {
       image: {
         alt: {
           translations: {
-            pt: 'Imagem de um profissional de fisioterapia a ajudar o seu paciente no exercício supino com barra.',
-            en: 'Image of a physiotherapy professional helping his patient with the bench press exercise.',
-            es: 'Imagen de un profesional de la fisioterapia ayudando a su paciente con el ejercicio de press de banca.',
-            'zh-sg': '物理治療師協助病人進行臥推練習的影像',
+            pt: 'Imagem de um profissional de fisioterapia a ajudar o seu paciente',
+            en: 'Image of a physiotherapy professional helping his patient',
+            es: 'Imagen de un profesional de la fisioterapia ayudando a su paciente',
+            'zh-sg': '物理治疗专业人员帮助病人的图片',
           },
         },
-        mobile: '/images/homepage/hero-banner-block/image-1/image-1-mobile.jpg',
-        tablet: '/images/homepage/hero-banner-block/image-1/image-1-tablet.jpg',
-        desktop: '/images/homepage/hero-banner-block/image-1/image-1-desktop.jpg',
+        mobile: '/images/homepage/hero-banner-block/image-4/image-4-mobile.jpeg',
+        tablet: '/images/homepage/hero-banner-block/image-4/image-4-tablet.jpeg',
+        desktop: '/images/homepage/hero-banner-block/image-4/image-4-desktop.jpeg',
       },
     },
     {
@@ -46,15 +46,15 @@ export const data = {
       image: {
         alt: {
           translations: {
-            pt: 'Imagem de um profissional de fisioterapia a ajudar o seu paciente com um problema de joelho.',
-            en: 'Image of a physiotherapy professional helping his patient with a knee problem.',
-            es: 'Imagen de un profesional de la fisioterapia ayudando a su paciente con un problema de rodilla.',
-            'zh-sg': '物理治療師幫助膝蓋有問題的病人的圖像',
+            pt: 'Imagem de um profissional de fisioterapia a ajudar o seu paciente',
+            en: 'Image of a physiotherapy professional helping his patient',
+            es: 'Imagen de un profesional de la fisioterapia ayudando a su paciente',
+            'zh-sg': '物理治疗专业人员帮助病人的图片',
           },
         },
-        mobile: '/images/homepage/hero-banner-block/image-2/image-2-mobile.jpg',
-        tablet: '/images/homepage/hero-banner-block/image-2/image-2-tablet.jpg',
-        desktop: '/images/homepage/hero-banner-block/image-2/image-2-desktop.jpg',
+        mobile: '/images/homepage/hero-banner-block/image-5/image-5-mobile.jpg',
+        tablet: '/images/homepage/hero-banner-block/image-5/image-5-tablet.jpg',
+        desktop: '/images/homepage/hero-banner-block/image-5/image-5-desktop.jpg',
       },
     },
     {
@@ -68,15 +68,15 @@ export const data = {
             'zh-sg': '一位女士接受物理治療專家提供的健康治療的圖片。',
           },
         },
-        mobile: '/images/homepage/hero-banner-block/image-3/image-3-mobile.jpg',
-        tablet: '/images/homepage/hero-banner-block/image-3/image-3-tablet.jpg',
-        desktop: '/images/homepage/hero-banner-block/image-3/image-3-desktop.jpg',
+        mobile: '/images/homepage/hero-banner-block/image-6/image-6-mobile.jpg',
+        tablet: '/images/homepage/hero-banner-block/image-6/image-6-tablet.jpg',
+        desktop: '/images/homepage/hero-banner-block/image-6/image-6-desktop.jpg',
       },
     },
   ],
 };
 
-export default defineEventHandler((event): HeroBanner => {
+export default defineEventHandler((event): HeroBannerBlock => {
   const { locale } = getQuery(event);
 
   return getFormattedDataByLocale(data, locale as string);

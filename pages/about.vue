@@ -148,6 +148,7 @@ watch(
         padding-bottom: 4px;
         font-weight: $font-weight-semi-bold;
         text-transform: uppercase;
+        color: $white;
       }
     }
   }
