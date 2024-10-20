@@ -35,7 +35,12 @@ const slug = route.params.slug as string;
 
 const { getTeamMembers } = useTeam();
 const { data: memberData, status } = await getTeamMembers({ slug: slug });
+
 const member = computed(() => memberData.value?.[0]);
+
+if (!member.value) {
+  navigateTo(localePath(Routes.NOT_FOUND));
+}
 
 // Related members
 const { data: relatedMembersData } = await getTeamMembers({ locationId: member.value?.location?.id });
@@ -48,10 +53,8 @@ const emit = defineEmits(['onDataLoaded']);
 watch(
   status,
   (newStatus) => {
-    if (member && newStatus === 'success') {
+    if (newStatus === 'success') {
       emit('onDataLoaded');
-    } else {
-      navigateTo(localePath(Routes.NOT_FOUND));
     }
   },
   { immediate: true },

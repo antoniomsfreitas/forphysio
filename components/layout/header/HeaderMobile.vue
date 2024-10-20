@@ -3,8 +3,10 @@
     <div class="header__inner__bottom-bar">
       <Icon name="icon:hamburger-menu" size="29" @click="toggleMenuSidebar" />
 
-      <NuxtLink v-if="buttonOption" :to="localePath(buttonOption.route.name)" class="button button--secondary">
-        {{ $t(buttonOption.name) }}
+      <NuxtLink v-if="buttonOption" :to="localePath(buttonOption.route.name)">
+        <Button size="small" type="secondary">
+          {{ $t(buttonOption.name) }}
+        </Button>
       </NuxtLink>
 
       <NuxtLink v-if="searchOption" :to="localePath(searchOption.route.name)" :title="$t(searchOption.name)">
