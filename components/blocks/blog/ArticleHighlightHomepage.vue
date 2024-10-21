@@ -32,7 +32,7 @@
                   particularidade em termos de mobilidade (...)"
                 </p>
 
-                <ArticleAuthor size="small" class="content__author" />
+                <!--<ArticleAuthor size="small" class="content__author" />-->
 
                 <NuxtLink class="content__button" to="#" :title="$t('general.readMore')">
                   <Button :size="btnSize">{{ $t('general.readMore') }}</Button>
