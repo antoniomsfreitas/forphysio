@@ -16,5 +16,6 @@ export enum Routes {
   RECRUITMENT = 'recruitment',
   FAQ = 'faq',
   SEARCH = 'search',
+  PRIVACY_POLICY = 'privacy-policy',
   NOT_FOUND = '404',
 }
