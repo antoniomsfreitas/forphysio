@@ -49,7 +49,7 @@ export const data = [
         },
       },
     },
-    categories: [1, 3],
+    categories: [3],
     author: teamMembersList.NUNO_PINA,
     landingPage: true,
     highlight: {
@@ -172,7 +172,7 @@ export const data = [
       },
     },
     categories: [2],
-    author: teamMembersList.BEATRIZ_SILVA,
+    author: teamMembersList.NUNO_PINA,
     landingPage: true,
     blocks: {
       image_1: {
@@ -190,19 +190,20 @@ export const data = [
       },
       text_1: {
         translations: {
-          pt: 'Ao nível da tibiotársica (tornozelo) o movimento mais comumente restringido é o de dorsiflexão (trazer a ponta do pé para cima ou, em carga, levar o joelho para a frente).',
-          en: 'At the tibio-tarsal level (ankle), the most commonly restricted movement is dorsiflexion (bringing the tip of the foot upwards or, under load, moving the knee forward).',
-          es: 'A nivel tibio-tarsal (tobillo), el movimiento más comúnmente restringido es la dorsiflexión (llevar la punta del pie hacia arriba o, en carga, mover la rodilla hacia adelante).',
-          'zh-sg': '在胫距关节（脚踝）处，最常见的受限运动是背屈（将脚尖向上拉或在负重时将膝盖向前移动）。',
+          pt: 'A articulação da anca é não só responsável por fornecer uma base estável para a coluna manter o corpo na posição vertical, mas também possibilita uma ampla amplitude de movimento que permite o movimento distal dos nossos membros inferiores.\nRestrições de mobilidade nesta articulação poderão afetar padrões de movimento muito importantes como o agachar, correr e saltar.\nÉ fundamental que tenha níveis adequados de mobilidade da anca para o seu desempenho desportivo, e mais ainda para a vida quotidiana.\nA amplitude de movimento e o controlo motor são requisitos importantes para maximizar a performance diária.',
+          en: 'The hip joint is not only responsible for providing a stable base for the spine to keep the body in an upright position, but it also allows for a wide range of motion that facilitates distal movement of our lower limbs.\nMobility restrictions in this joint can affect crucial movement patterns such as squatting, running, and jumping.\nIt is essential to have adequate levels of hip mobility for your sports performance, and even more so for daily life.\nRange of motion and motor control are important requirements to maximize daily performance.',
+          es: 'La articulación de la cadera no solo es responsable de proporcionar una base estable para que la columna mantenga el cuerpo en posición vertical, sino que también permite un amplio rango de movimiento que facilita el movimiento distal de nuestras extremidades inferiores.\nLas restricciones de movilidad en esta articulación pueden afectar patrones de movimiento muy importantes, como agacharse, correr y saltar.\nEs fundamental tener niveles adecuados de movilidad de la cadera para su rendimiento deportivo, y aún más para la vida cotidiana.\nEl rango de movimiento y el control motor son requisitos importantes para maximizar el rendimiento diario.',
+          'zh-sg':
+            '髋关节不仅负责为脊柱提供一个稳定的基础，以保持身体直立，还可以实现广泛的运动范围，从而促进我们下肢的远端运动。\n该关节的活动受限可能会影响诸如蹲下、跑步和跳跃等重要的运动模式。\n对于运动表现而言，髋关节的活动水平至关重要，更不用说日常生活了。\n运动范围和运动控制是最大化日常表现的重要要求。',
         },
       },
       text_2: {
         translations: {
-          pt: 'Deixamos aqui alguns exemplos de exercícios para ganho de mobilidade. Durante estes exercícios é normal sentir um alongamento no tendão de Aquiles (parte de trás do tornozelo) ou um ligeiro desconforto na região anterior da tibiotársica devido ao contacto ósseo.\n\nExercícios:\n1 - Banded Joint Mobilization\n2-Weighted Box Ankle Mobilization\n3 - Multidirecional Ankle Mobility\n4 - Deficit Heel Raises (unilateral)\n5 - Full ROM Split Squat',
-          en: 'Here are some examples of exercises for mobility gain. During these exercises, it is normal to feel a stretch in the Achilles tendon (back of the ankle) or slight discomfort in the anterior tibio-tarsal region due to bone contact.\n\nExercises:\n1 - Banded Joint Mobilization\n2-Weighted Box Ankle Mobilization\n3 - Multidirectional Ankle Mobility\n4 - Deficit Heel Raises (unilateral)\n5 - Full ROM Split Squat',
-          es: 'Aquí hay algunos ejemplos de ejercicios para mejorar la movilidad. Durante estos ejercicios, es normal sentir un estiramiento en el tendón de Aquiles (parte posterior del tobillo) o una ligera incomodidad en la región anterior tibio-tarsal debido al contacto óseo.\n\nEjercicios:\n1 - Movilización articular con banda\n2-Movilización del tobillo con caja con peso\n3 - Movilidad multidireccional del tobillo\n4 - Elevaciones de talón en déficit (unilateral)\n5 - Sentadilla dividida con rango completo de movimiento',
+          pt: 'Uma das estratégias para melhorar este aspeto são os exercícios de mobilidade articular.\nEstes exercícios quando realizados adequadamente e de forma consistente podem permitir melhorias ao nível da mobilidade articular.\n\nExercícios:\n1 - Hip 90/90\n2 - Couch Stretch\n3 - Adductor Stretch\n4 - Pigeon Pose to Hip Flexor Stretch\n5 - Cossack Squat',
+          en: 'One of the strategies to improve this aspect is joint mobility exercises.\nWhen performed properly and consistently, these exercises can lead to improvements in joint mobility.\n\nExercises:\n1 - Hip 90/90\n2 - Couch Stretch\n3 - Adductor Stretch\n4 - Pigeon Pose to Hip Flexor Stretch\n5 - Cossack Squat',
+          es: 'Una de las estrategias para mejorar este aspecto son los ejercicios de movilidad articular.\nCuando se realizan correctamente y de manera consistente, estos ejercicios pueden permitir mejoras en la movilidad articular.\n\nEjercicios:\n1 - Hip 90/90\n2 - Couch Stretch\n3 - Adductor Stretch\n4 - Pigeon Pose to Hip Flexor Stretch\n5 - Cossack Squat',
           'zh-sg':
-            '这里有一些提高活动能力的练习示例。在这些练习中，感觉到跟腱（脚踝后部）拉伸或由于骨骼接触而在胫距关节前部区域感到轻微不适是正常的。\n\n练习：\n1 - 带状关节活动\n2-负重箱脚踝活动\n3 - 多方向脚踝活动\n4 - 赤字脚跟抬起（单侧）\n5 - 全范围运动分腿蹲',
+            '改善这一方面的策略之一是关节活动性练习。\n这些练习如果正确且持续地进行，可以改善关节活动性。\n\n练习：\n1 - Hip 90/90\n2 - Couch Stretch\n3 - Adductor Stretch\n4 - Pigeon Pose to Hip Flexor Stretch\n5 - Cossack Squat',
         },
       },
     },

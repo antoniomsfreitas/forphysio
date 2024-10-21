@@ -50,11 +50,15 @@ defineProps({
     }
 
     :deep(ul) {
+      @include mq-desktop {
+        max-width: 50%;
+      }
+
       li {
         display: flex;
         color: $medium-grey;
         font-weight: $font-weight-light;
-        line-height: 1.2;
+        line-height: 1.3;
         padding-bottom: 12px;
 
         @include mq-mobile-tablet {

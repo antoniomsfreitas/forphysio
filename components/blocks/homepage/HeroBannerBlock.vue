@@ -25,7 +25,7 @@
       <LayoutGrid>
         <LayoutGridRow>
           <LayoutGridCol m="4" t="12" class="hero-banner__content__info">
-            <h2 class="hero-banner__content__info__title">{{ info.title }}</h2>
+            <h2 class="hero-banner__content__info__title" v-html="info.title" />
 
             <Button
               type="outline"
@@ -147,7 +147,7 @@ const handleClickButton = () => {
 
         @include mq-mobile {
           margin-bottom: 50px;
-          font-size: 24px;
+          font-size: 22px;
           line-height: 28px;
           letter-spacing: 0;
         }

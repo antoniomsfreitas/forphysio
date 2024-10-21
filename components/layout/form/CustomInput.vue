@@ -1,10 +1,13 @@
 <template>
-  <div class="input-container">
+  <div class="input-container" :class="{ 'input-container--required': required }">
     <label v-if="label">{{ label }}</label>
 
     <div
       class="input-container__input"
-      :class="{ 'input-container--error': hasError, 'input-container--search': search }"
+      :class="{
+        'input-container--error': hasError,
+        'input-container--search': search,
+      }"
     >
       <component
         :is="component"
@@ -100,6 +103,12 @@ const updateValue = (value: String | Number | Boolean) => {
     font-weight: $font-weight-light;
     line-height: 1.2;
     padding-bottom: 10px;
+  }
+
+  &--required label::after {
+    content: '*';
+    color: $blue;
+    margin-left: 4px;
   }
 
   input,

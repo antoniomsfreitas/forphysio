@@ -53,11 +53,11 @@ export const data = [
         },
         text: {
           translations: {
-            pt: 'A Fisioterapia Músculo Esquelética é uma área que pretende ajudar a prevenir, reduzir ou a eliminar a dor, e as limitações funcionais.\n\nTal como em outras áreas da fisioterapia, carece de uma avaliação meticulosa, e a uma intervenção que recorre a técnicas manuais, exercício e educação.',
-            en: 'Musculoskeletal Physiotherapy aims to help prevent, reduce, or eliminate pain and functional limitations.\n\nAs in other areas of physiotherapy, it requires meticulous assessment and an intervention that relies on manual techniques, exercise, and education.',
-            es: 'La fisioterapia musculoesquelética tiene como objetivo prevenir, reducir o eliminar el dolor y las limitaciones funcionales.\n\nAl igual que en otras áreas de la fisioterapia, requiere una evaluación meticulosa e intervenciones basadas en técnicas manuales, ejercicio y educación.',
+            pt: 'A Fisioterapia Músculo-Esquelética é uma área que pretende ajudar a prevenir, reduzir ou eliminar a dor e as limitações funcionais.\n\nTal como em outras áreas da fisioterapia, carece de uma avaliação meticulosa, e de uma intervenção que recorre a técnicas manuais, exercício e educação.',
+            en: 'Musculoskeletal Physiotherapy is a field that aims to help prevent, reduce, or eliminate pain and functional limitations.\n\nLike in other areas of physiotherapy, it requires a meticulous assessment and an intervention that employs manual techniques, exercise, and education.',
+            es: 'La fisioterapia musculoesquelética es un área que pretende ayudar a prevenir, reducir o eliminar el dolor y las limitaciones funcionales.\n\nAl igual que en otras áreas de la fisioterapia, requiere una evaluación meticulosa y una intervención que recurre a técnicas manuales, ejercicio y educación.',
             'zh-sg':
-              '肌肉骨骼物理治疗旨在帮助预防、减少或消除疼痛和功能性限制。\n\n与物理治疗的其他领域一样，它需要仔细的评估，并依靠手动技术、锻炼和教育来进行干预。',
+              '肌肉骨骼物理治疗是一个旨在帮助预防、减少或消除疼痛和功能限制的领域。\n\n与物理治疗的其他领域一样，它需要细致的评估，以及使用手动技术、运动和教育的干预。',
           },
         },
         image: {
@@ -185,10 +185,10 @@ export const data = [
       topics_2: {
         title: {
           translations: {
-            pt: 'Porquê optar pela ForPhysio?',
-            en: 'Why choose ForPhysio?',
-            es: '¿Por qué elegir ForPhysio?',
-            'zh-sg': '为什么选择 ForPhysio？',
+            pt: 'Porquê optar pela ForPhysio Clinic?',
+            en: 'Why choose ForPhysio Clinic?',
+            es: '¿Por qué optar por ForPhysio Clinic?',
+            'zh-sg': '为什么选择 ForPhysio Clinic？',
           },
         },
         topics: {
@@ -295,10 +295,10 @@ export const data = [
       sideImage: {
         title: {
           translations: {
-            pt: 'Para quem é indicada a fisioterapia online?',
-            en: 'Who is online physiotherapy for?',
-            es: '¿Para quién está indicada la fisioterapia online?',
-            'zh-sg': '在線物理治療適合誰？',
+            pt: 'Para quem é indicada a fisioterapia no desporto?',
+            en: 'Who is sports physiotherapy indicated for?',
+            es: '¿Para quién está indicada la fisioterapia en el deporte?',
+            'zh-sg': '运动理疗适合谁？',
           },
         },
         text: {
@@ -403,10 +403,10 @@ export const data = [
       topics_2: {
         title: {
           translations: {
-            pt: 'Porquê optar pela ForPhysio?',
-            en: 'Why choose ForPhysio?',
-            es: '¿Por qué optar por ForPhysio?',
-            'zh-sg': '為什麼選擇ForPhysio？',
+            pt: 'Porquê optar pela ForPhysio Clinic?',
+            en: 'Why choose ForPhysio Clinic?',
+            es: '¿Por qué optar por ForPhysio Clinic?',
+            'zh-sg': '為什麼選擇ForPhysio Clinic？',
           },
         },
         topics: {
@@ -462,7 +462,7 @@ export const data = [
       },
     },
     image: '/images/services/list/fisioterapia-aquatica-e-hidroterapia.jpg',
-    locationsId: [LocationsList.CALDAS_RAINHA, LocationsList.LISBOA_LUMIAR],
+    locationsId: [LocationsList.LISBOA_LUMIAR],
     homepage: true,
     blocks: {
       intro: {
@@ -616,10 +616,10 @@ export const data = [
       topics_2: {
         title: {
           translations: {
-            pt: 'Porquê optar pela ForPhysio?',
-            en: 'Why choose ForPhysio?',
-            es: '¿Por qué optar por ForPhysio?',
-            'zh-sg': '为什么选择ForPhysio？',
+            pt: 'Porquê optar pela ForPhysio Clinic?',
+            en: 'Why choose ForPhysio Clinic?',
+            es: '¿Por qué optar por ForPhysio Clinic?',
+            'zh-sg': '为什么选择ForPhysio Clinic？',
           },
         },
         topics: {
@@ -683,12 +683,7 @@ export const data = [
     },
     image: '/images/services/list/fisioterapia-na-saude-da-mulher.jpg',
     homepage: true,
-    locationsId: [
-      LocationsList.MARINHA_GRANDE,
-      LocationsList.CALDAS_RAINHA,
-      LocationsList.LISBOA_LUMIAR,
-      LocationsList.OEIRAS,
-    ],
+    locationsId: [LocationsList.CALDAS_RAINHA, LocationsList.AVEIRO, LocationsList.LISBOA_LUMIAR],
     blocks: {
       intro: {
         title: {
@@ -701,11 +696,11 @@ export const data = [
         },
         text: {
           translations: {
-            pt: 'A Saúde da Mulher é uma área de intervenção da Fisioterapia que visa reabilitar e prevenir condições pélvicas, acompanhar a Mulher no decorrer da sua gravidez e auxiliar na recuperação durante o período de pós-parto.\n\nAjudamos as Mulheres a conhecerem o seu corpo e como cuidar dele, em todas as suas fases, desde a menstruação até à menopausa, sem tabus e sem preconceitos, de forma a melhorar a sua qualidade de vida.',
-            en: "Women's Health is a field of Physiotherapy intervention aimed at rehabilitating and preventing pelvic conditions, supporting women throughout their pregnancy, and assisting in recovery during the postpartum period.\n\nWe help women understand their bodies and how to take care of them at all stages, from menstruation to menopause, without taboos or prejudices, to improve their quality of life.",
-            es: 'La Salud de la Mujer es un área de intervención de la Fisioterapia que tiene como objetivo rehabilitar y prevenir condiciones pélvicas, acompañar a la mujer a lo largo de su embarazo y ayudar en la recuperación durante el periodo de posparto.\n\nAyudamos a las mujeres a conocer su cuerpo y cómo cuidarlo en todas sus fases, desde la menstruación hasta la menopausia, sin tabúes ni prejuicios, para mejorar su calidad de vida.',
+            pt: 'A Saúde Pélvica é uma área de intervenção da Fisioterapia que visa reabilitar e prevenir condições pélvicas (Homem e Mulher), acompanhar a Mulher no decorrer da sua gravidez e auxiliar na recuperação durante o período de pós-parto.\n\nAjudamos as Mulheres e os Homens a conhecerem o seu corpo e como cuidar dele, em todas as suas fases, sem tabus e sem preconceitos, de forma a melhorar a sua qualidade de vida.',
+            en: 'Pelvic Health is a field of Physiotherapy focused on rehabilitating and preventing pelvic conditions (for both Men and Women), supporting Women throughout their pregnancy, and aiding in recovery during the postpartum period.\n\nWe help both Women and Men to understand their bodies and how to care for them in every phase of life, without taboos or prejudices, to improve their quality of life.',
+            es: 'La Salud Pélvica es un área de intervención de la Fisioterapia que se centra en rehabilitar y prevenir condiciones pélvicas (tanto en hombres como en mujeres), acompañar a la mujer durante su embarazo y ayudar en la recuperación durante el período posparto.\n\nAyudamos a mujeres y hombres a conocer su cuerpo y cómo cuidarlo en todas sus etapas, sin tabúes ni prejuicios, para mejorar su calidad de vida.',
             'zh-sg':
-              '女性健康是物理治疗的一个干预领域，旨在康复和预防盆腔疾病，支持女性在怀孕期间和产后恢复。\n\n我们帮助女性了解自己的身体及如何在各个阶段照顾自己，从月经到更年期，没有禁忌和偏见，以改善她们的生活质量。',
+              '盆腔健康是物理治疗的一个领域，旨在康复和预防盆腔疾病（包括男性和女性），支持女性在怀孕期间的身心健康，并帮助她们在产后恢复。\n\n我们帮助男性和女性了解自己的身体以及如何在生活的每个阶段照顾自己，不带任何禁忌和偏见，以改善他们的生活质量。',
           },
         },
         image: {
@@ -733,10 +728,10 @@ export const data = [
         },
         text: {
           translations: {
-            pt: 'Para todas as todas as mulheres, de <span class="highlight">todas as idades</span>.',
-            en: 'For all women, of <span class="highlight">all ages</span>.',
-            es: 'Para todas las mujeres, de <span class="highlight">todas las edades</span>.',
-            'zh-sg': '适合所有<span class="highlight">年龄段</span>的女性。',
+            pt: 'Para todas as todas as mulheres e homens, de <span class="highlight">todas as idades</span>.',
+            en: 'For all women and men, of <span class="highlight">all ages</span>.',
+            es: 'Para todas las mujeres y hombres, de <span class="highlight">todas las edades</span>.',
+            'zh-sg': '适用于所有年龄段的女性和男性，<span class="highlight">无论年龄</span>。',
           },
         },
         image: {
@@ -777,11 +772,11 @@ export const data = [
         },
         topics: {
           translations: {
-            pt: '<ul><li>Pré e pós parto</li><li>Diástase abdominal</li><li>Disfunções sexuais (dor durante a relação, vaginismo)</li><li>Endometriose</li><li>Obstipação</li><li>Prolapso de órgãos pélvicos (descida dos órgãos)</li><li>Menopausa</li><li>Incontinência (perda) urinária, fecal ou de gases</li></ul>',
-            en: '<ul><li>Pre and post childbirth</li><li>Abdominal diastasis</li><li>Sexual dysfunctions (pain during intercourse, vaginismus)</li><li>Endometriosis</li><li>Constipation</li><li>Pelvic organ prolapse (descent of organs)</li><li>Menopause</li><li>Urinary, fecal, or gas incontinence</li></ul>',
-            es: '<ul><li>Pre y post parto</li><li>Diástasis abdominal</li><li>Disfunciones sexuales (dolor durante la relación, vaginismo)</li><li>Endometriosis</li><li>Estreñimiento</li><li>Prolapso de órganos pélvicos (descenso de órganos)</li><li>Menopausia</li><li>Incontinencia (pérdida) urinaria, fecal o de gases</li></ul>',
+            pt: '<ul><li>Pré e pós parto</li><li>Diástase abdominal</li><li>Disfunções sexuais (dor durante a relação, vaginismo)</li><li>Disfunções sexuais do Homem (disfunção erétil, dor)</li><li>Endometriose</li><li>Obstipação</li><li>Prolapso de órgãos pélvicos (descida dos órgãos)</li><li>Menopausa</li><li>Incontinência (perda) urinária, fecal ou de gases</li></ul>',
+            en: '<ul><li>Pre and postnatal</li><li>Abdominal diastasis</li><li>Sexual dysfunction (pain during intercourse, vaginismus)</li><li>Male sexual dysfunction (erectile dysfunction, pain)</li><li>Endometriosis</li><li>Constipation</li><li>Pelvic organ prolapse (descent of organs)</li><li>Menopause</li><li>Incontinence (loss) of urine, feces, or gas</li></ul>',
+            es: '<ul><li>Antes y después del parto</li><li>Diástasis abdominal</li><li>Disfunciones sexuales (dolor durante la relación, vaginismo)</li><li>Disfunciones sexuales del Hombre (disfunción eréctil, dolor)</li><li>Endometriosis</li><li>Estreñimiento</li><li>Prolapso de órganos pélvicos (descenso de los órganos)</li><li>Menopausia</li><li>Incontinencia (pérdida) urinaria, fecal o de gases</li></ul>',
             'zh-sg':
-              '<ul><li>产前和产后</li><li>腹部分离</li><li>性功能障碍（性交疼痛、阴道痉挛）</li><li>子宫内膜异位症</li><li>便秘</li><li>盆腔器官脱垂（器官下垂）</li><li>更年期</li><li>尿失禁、粪便失禁或气体失禁（泄漏）</li></ul>',
+              '<ul><li>产前和产后</li><li>腹部分离</li><li>性功能障碍（性交时疼痛，阴道痉挛）</li><li>男性性功能障碍（勃起功能障碍，疼痛）</li><li>子宫内膜异位症</li><li>便秘</li><li>盆腔器官脱垂（器官下垂）</li><li>更年期</li><li>尿失禁、粪便失禁或气体失禁</li></ul>',
           },
         },
       },
@@ -833,19 +828,19 @@ export const data = [
       topics_2: {
         title: {
           translations: {
-            pt: 'Porquê optar pela ForPhysio?',
-            en: 'Why choose ForPhysio?',
-            es: '¿Por qué optar por ForPhysio?',
-            'zh-sg': '为什么选择ForPhysio？',
+            pt: 'Porquê optar pela ForPhysio Clinic?',
+            en: 'Why choose ForPhysio Clinic?',
+            es: '¿Por qué optar por ForPhysio Clinic?',
+            'zh-sg': '为什么选择ForPhysio Clinic？',
           },
         },
         topics: {
           translations: {
-            pt: '<ul><li>Avaliação subjetiva e física individualizada</li><li>Fisioterapeutas especializados em Saúde da Mulher</li><li>60 minutos dedicados ao cliente, sempre na presença do(a) fisioterapeuta</li><li>Intervenção baseada na melhor evidência científica</li><li>Monitorização constante da evolução</li><li>Relatório de alta em fisioterapia</li></ul>',
-            en: "<ul><li>Subjective and physical individualized assessment</li><li>Physiotherapists specialized in Women's Health</li><li>60 minutes dedicated to the client, always in the presence of the physiotherapist</li><li>Intervention based on the best scientific evidence</li><li>Constant monitoring of progress</li><li>Physiotherapy discharge report</li></ul>",
-            es: '<ul><li>Evaluación subjetiva y física individualizada</li><li>Fisioterapeutas especializados en Salud de la Mujer</li><li>60 minutos dedicados al cliente, siempre en presencia del fisioterapeuta</li><li>Intervención basada en la mejor evidencia científica</li><li>Monitoreo constante de la evolución</li><li>Informe de alta en fisioterapia</li></ul>',
+            pt: '<ul><li>Avaliação subjetiva e física individualizada</li><li>Fisioterapeutas especializados em Saúde Pélvica</li><li>60 minutos dedicados ao cliente, sempre na presença do(a) fisioterapeuta</li><li>Intervenção baseada na melhor evidência científica</li><li>Monitorização constante da evolução</li><li>Relatório de alta em fisioterapia</li></ul>',
+            en: '<ul><li>Individualized subjective and physical assessment</li><li>Pelvic Health specialized physiotherapists</li><li>60 minutes dedicated to the client, always in the presence of the physiotherapist</li><li>Intervention based on the best scientific evidence</li><li>Constant monitoring of progress</li><li>Discharge report in physiotherapy</li></ul>',
+            es: '<ul><li>Evaluación subjetiva y física individualizada</li><li>Fisioterapeutas especializados en Salud Pélvica</li><li>60 minutos dedicados al cliente, siempre en presencia del fisioterapeuta</li><li>Intervención basada en la mejor evidencia científica</li><li>Monitoreo constante de la evolución</li><li>Informe de alta en fisioterapia</li></ul>',
             'zh-sg':
-              '<ul><li>个体化的主观和身体评估</li><li>专门研究女性健康的物理治疗师</li><li>为客户提供60分钟的服务，始终与物理治疗师在一起</li><li>基于最佳科学证据的干预</li><li>不断监测进展</li><li>物理治疗出院报告</li></ul>',
+              '<ul><li>个性化的主观和身体评估</li><li>专业于盆腔健康的物理治疗师</li><li>为客户提供60分钟的专注时间，始终在物理治疗师的陪伴下</li><li>基于最佳科学证据的干预</li><li>不断监测进展</li><li>物理治疗的出院报告</li></ul>',
           },
         },
       },
@@ -903,7 +898,7 @@ export const data = [
       intro: {
         title: {
           translations: {
-            pt: 'Fisioterapia no envelhecimento ativo',
+            pt: 'Fisioterapia no Envelhecimento Ativo',
             en: 'Physiotherapy in Active Aging',
             es: 'Fisioterapia en el envejecimiento activo',
             'zh-sg': '活跃老龄化中的物理治疗',
@@ -934,8 +929,8 @@ export const data = [
       sideImage: {
         title: {
           translations: {
-            pt: 'Para quem é indicada a Fisioterapia no envelhecimento ativo?',
-            en: 'Who is Physiotherapy in Active Aging indicated for?',
+            pt: 'Para quem é indicada a fisioterapia no envelhecimento ativo?',
+            en: 'Who is physiotherapy in active aging indicated for?',
             es: '¿Para quién está indicada la fisioterapia en el envejecimiento activo?',
             'zh-sg': '活跃老龄化中的物理治疗适合谁？',
           },
@@ -1050,10 +1045,10 @@ export const data = [
       topics_2: {
         title: {
           translations: {
-            pt: 'Porquê optar pela ForPhysio?',
-            en: 'Why choose ForPhysio?',
-            es: '¿Por qué optar por ForPhysio?',
-            'zh-sg': '为什么选择ForPhysio？',
+            pt: 'Porquê optar pela ForPhysio Clinic?',
+            en: 'Why choose ForPhysio Clinic?',
+            es: '¿Por qué optar por ForPhysio Clinic?',
+            'zh-sg': '为什么选择ForPhysio Clinic？',
           },
         },
         topics: {
@@ -1116,7 +1111,7 @@ export const data = [
       },
     },
     image: '/images/services/list/pilates-clinico.jpg',
-    locationsId: [LocationsList.MARINHA_GRANDE],
+    locationsId: [LocationsList.MARINHA_GRANDE, LocationsList.OEIRAS],
     homepage: false,
     blocks: {
       intro: {
@@ -1261,10 +1256,10 @@ export const data = [
       topics_2: {
         title: {
           translations: {
-            pt: 'Porquê optar pela ForPhysio?',
-            en: 'Why choose ForPhysio?',
-            es: '¿Por qué optar por ForPhysio?',
-            'zh-sg': '为什么选择ForPhysio？',
+            pt: 'Porquê optar pela ForPhysio Clinic?',
+            en: 'Why choose ForPhysio Clinic?',
+            es: '¿Por qué optar por ForPhysio Clinic?',
+            'zh-sg': '为什么选择ForPhysio Clinic？',
           },
         },
         topics: {
@@ -1472,10 +1467,10 @@ export const data = [
       topics_2: {
         title: {
           translations: {
-            pt: 'Porquê optar pela ForPhysio?',
-            en: 'Why choose ForPhysio?',
-            es: '¿Por qué optar por ForPhysio?',
-            'zh-sg': '为什么选择ForPhysio？',
+            pt: 'Porquê optar pela ForPhysio Clinic?',
+            en: 'Why choose ForPhysio Clinic?',
+            es: '¿Por qué optar por ForPhysio Clinic?',
+            'zh-sg': '为什么选择ForPhysio Clinic？',
           },
         },
         topics: {
@@ -1525,7 +1520,7 @@ export const data = [
       },
     },
     image: '/images/services/list/nutricao.jpg',
-    locationsId: [LocationsList.MARINHA_GRANDE, LocationsList.CALDAS_RAINHA, LocationsList.OEIRAS],
+    locationsId: [LocationsList.MARINHA_GRANDE, LocationsList.OEIRAS],
     homepage: false,
     blocks: {
       intro: {
@@ -1865,12 +1860,7 @@ export const data = [
       },
     },
     image: '/images/services/list/consultas-medicas.jpg',
-    locationsId: [
-      LocationsList.MARINHA_GRANDE,
-      LocationsList.CALDAS_RAINHA,
-      LocationsList.LISBOA_LUMIAR,
-      LocationsList.OEIRAS,
-    ],
+    locationsId: [LocationsList.MARINHA_GRANDE, LocationsList.LISBOA_LUMIAR],
     homepage: false,
     blocks: {
       intro: {

@@ -46,7 +46,6 @@ export const data = [
       },
     },
     services: [ServicesList.FISIOTERAPIA_MUSCULO_ESQUELETICA, ServicesList.FISIOTERAPIA_DESPORTO],
-    location: LocationsList.CALDAS_RAINHA,
     image: 'nuno-pina.png',
   },
   {
@@ -162,7 +161,11 @@ export const data = [
         'zh-sg': '物理治疗师',
       },
     },
-    services: [ServicesList.FISIOTERAPIA_MUSCULO_ESQUELETICA, ServicesList.FISIOTERAPIA_DESPORTO],
+    services: [
+      ServicesList.FISIOTERAPIA_MUSCULO_ESQUELETICA,
+      ServicesList.FISIOTERAPIA_DESPORTO,
+      ServicesList.FISIOTERAPIA_ENVELHECIMENTO,
+    ],
     location: LocationsList.CALDAS_RAINHA,
     image: 'ana-clara.png',
     booking: 'https://pt.zappysoftware.com/m/anaclara-4#pro',
@@ -211,7 +214,11 @@ export const data = [
         'zh-sg': '物理治疗师',
       },
     },
-    services: [ServicesList.FISIOTERAPIA_MUSCULO_ESQUELETICA, ServicesList.FISIOTERAPIA_DESPORTO],
+    services: [
+      ServicesList.FISIOTERAPIA_MUSCULO_ESQUELETICA,
+      ServicesList.FISIOTERAPIA_DESPORTO,
+      ServicesList.FISIOTERAPIA_ENVELHECIMENTO,
+    ],
     location: LocationsList.LISBOA_LUMIAR,
     image: 'beatriz-lopes.png',
     booking: 'https://pt.zappysoftware.com/m/beatrizlopes-5#pro',
@@ -290,14 +297,7 @@ export const data = [
       },
     },
     location: LocationsList.LISBOA_LUMIAR,
-    customService: {
-      translations: {
-        pt: 'Fisioterapia Pélvica',
-        en: 'Pelvic Physiotherapy',
-        es: 'Fisioterapia Pélvica',
-        'zh-sg': '盆底物理治疗',
-      },
-    },
+    services: [ServicesList.FISIOTERAPIA_PELVICA],
     contactsPage: true,
     image: 'joana-rocha.png',
   },
@@ -322,14 +322,7 @@ export const data = [
         'zh-sg': '物理治疗师',
       },
     },
-    customService: {
-      translations: {
-        pt: 'Fisioterapia Pélvica e Infantil',
-        en: 'Pelvic and Pediatric Physiotherapy',
-        es: 'Fisioterapia Pélvica y Pediátrica',
-        'zh-sg': '盆底和儿科物理治疗',
-      },
-    },
+    services: [ServicesList.FISIOTERAPIA_PELVICA],
     location: LocationsList.AVEIRO,
     image: 'constanca-carreira.png',
     booking: 'https://pt.zappysoftware.com/m/constancacarreira-2#pro',
@@ -384,6 +377,7 @@ export const data = [
     services: [ServicesList.FISIOTERAPIA_MUSCULO_ESQUELETICA, ServicesList.FISIOTERAPIA_DESPORTO],
     location: LocationsList.OEIRAS,
     image: 'catarina-gama.png',
+    externalMember: true,
   },
   {
     id: 14,
@@ -414,6 +408,7 @@ export const data = [
     ],
     location: LocationsList.MARINHA_GRANDE,
     image: 'duarte-afonso.png',
+    externalMember: true,
   },
   {
     id: 15,

@@ -10,30 +10,11 @@ export const data = [
     },
     answer: {
       translations: {
-        pt: 'O sucesso da intervenção depende não só da competência do profissional,  mas também da informação que lhe é transmitida. Deste modo, caso os  tenha, é aconselhado a trazer os exames mais recentes relacionados com a  sua condição clínica. Além do mais, para facilitar a avaliação, recomendamos o uso de roupa  prática/desportiva.',
-        en: "The success of the intervention depends not only on the professional's competence but also on the information provided to them. Therefore, if available, it is advised to bring the most recent medical tests related to your clinical condition. Additionally, to facilitate the evaluation, we recommend wearing comfortable/sports clothing.",
-        es: 'El éxito de la intervención depende no solo de la competencia del profesional, sino también de la información que se le proporcione. Por lo tanto, si tiene, se aconseja llevar los exámenes más recientes relacionados con su condición clínica. Además, para facilitar la evaluación, recomendamos usar ropa cómoda/deportiva.',
+        pt: 'O sucesso da intervenção depende não só da competência do profissional, mas também da informação que lhe é transmitida. Deste modo, caso os tenha, é aconselhado a trazer os exames mais recentes relacionados com a sua condição clínica. Além do mais, para facilitar a avaliação, recomendamos o uso de roupa prática/desportiva.',
+        en: 'The success of the intervention depends not only on the competence of the professional but also on the information provided to them. Therefore, if you have them, it is advisable to bring the most recent examinations related to your clinical condition. Furthermore, to facilitate the assessment, we recommend wearing practical/sports clothing.',
+        es: 'El éxito de la intervención depende no solo de la competencia del profesional, sino también de la información que se le transmita. Por lo tanto, si los tiene, se aconseja traer los exámenes más recientes relacionados con su condición clínica. Además, para facilitar la evaluación, recomendamos usar ropa práctica/deportiva.',
         'zh-sg':
-          '干预的成功不仅取决于专业人员的能力，还取决于向他们提供的信息。因此，如果有的话，建议携带与您的临床状况相关的最新检查。此外，为了便于评估，我们建议穿着舒适/运动服。',
-      },
-    },
-  },
-  {
-    question: {
-      translations: {
-        pt: 'Como faço para agendar?',
-        en: 'How do I schedule?',
-        es: '¿Cómo hago para agendar?',
-        'zh-sg': '我如何预约？',
-      },
-    },
-    answer: {
-      translations: {
-        pt: 'Poderá agendar a consulta de 3 formas:\n• Chamada para o número de contacto da clínica;\n• Chamada/Mensagem WhatsApp para o número da ForPhysio Clinic;\n• Deslocar-se até uma unidade ForPhysio Clinic.',
-        en: "You can schedule the appointment in 3 ways:\n• Call the clinic's contact number;\n• Call/Send a WhatsApp message to ForPhysio Clinic's number;\n• Visit a ForPhysio Clinic location.",
-        es: 'Puede agendar la consulta de 3 formas:\n• Llamada al número de contacto de la clínica;\n• Llamada/Mensaje de WhatsApp al número de ForPhysio Clinic;\n• Acudir a una unidad de ForPhysio Clinic.',
-        'zh-sg':
-          '您可以通过以下 3 种方式预约：\n• 拨打诊所的联系电话；\n• 拨打/发送 WhatsApp 消息到 ForPhysio Clinic 的号码；\n• 亲自前往 ForPhysio Clinic 诊所。',
+          '干预的成功不仅取决于专业人员的能力，还取决于提供给他们的信息。因此，如果您有相关的检查，建议您带上与您的临床状况相关的最新检查报告。此外，为了方便评估，我们建议穿着实用/运动服装。',
       },
     },
   },
@@ -48,10 +29,29 @@ export const data = [
     },
     answer: {
       translations: {
-        pt: 'Sim.',
-        en: 'Yes.',
-        es: 'Sí.',
-        'zh-sg': '是的。',
+        pt: 'Sim.\nO preço é definido consoante a frequência semanal e a deslocação necessária.\nPara mais informações, entre em contacto connosco, através do formulário de contacto.',
+        en: 'Yes.\nThe price is determined based on the weekly frequency and the necessary travel.\nFor more information, please contact us through the contact form.',
+        es: 'Sí.\nEl precio se define según la frecuencia semanal y el desplazamiento necesario.\nPara más información, contáctenos a través del formulario de contacto.',
+        'zh-sg': '是的。\n价格根据每周的频率和所需的出行而定。\n如需更多信息，请通过联系表格与我们联系。',
+      },
+    },
+  },
+  {
+    question: {
+      translations: {
+        pt: 'Como faço para agendar?',
+        en: 'How do I schedule?',
+        es: '¿Cómo hago para agendar?',
+        'zh-sg': '我如何预约？',
+      },
+    },
+    answer: {
+      translations: {
+        pt: 'Poderá agendar a consulta de 4 formas:\n• Chamada para o número de contacto da clínica;\n• Chamada/Mensagem WhatsApp para o número da ForPhysio Clinic Group;\n• Formulário de contacto;\n• Deslocar-se até uma unidade ForPhysio.',
+        en: "You can schedule the appointment in 4 ways:\n• Call the clinic's contact number;\n• Call/WhatsApp message to the ForPhysio Clinic Group number;\n• Contact form;\n• Visit a ForPhysio unit.",
+        es: 'Puede agendar la cita de 4 maneras:\n• Llamando al número de contacto de la clínica;\n• Llamada/Mensaje de WhatsApp al número del ForPhysio Clinic Group;\n• Formulario de contacto;\n• Acudiendo a una unidad de ForPhysio.',
+        'zh-sg':
+          '您可以通过以下四种方式预约咨询：\n• 拨打诊所的联系电话；\n• 给ForPhysio Clinic Group号码发送WhatsApp消息/拨打电话；\n• 联系表格；\n• 前往ForPhysio单位。',
       },
     },
   },
@@ -66,10 +66,10 @@ export const data = [
     },
     answer: {
       translations: {
-        pt: 'Sim.',
-        en: 'Yes.',
-        es: 'Sí.',
-        'zh-sg': '是的。',
+        pt: 'Sim.\nO preçário varia consoante a frequência semanal e duração da sessão.\nPara mais informações, entre em contacto connosco, através do formulário de contacto.',
+        en: 'Yes.\nThe pricing varies according to the weekly frequency and the duration of the session.\nFor more information, please contact us through the contact form.',
+        es: 'Sí.\nLa tarifa varía según la frecuencia semanal y la duración de la sesión.\nPara más información, contáctenos a través del formulario de contacto.',
+        'zh-sg': '是的。\n价格根据每周的频率和会议的持续时间而有所不同。\n如需更多信息，请通过联系表单与我们联系。',
       },
     },
   },
@@ -84,10 +84,11 @@ export const data = [
     },
     answer: {
       translations: {
-        pt: 'Não.',
-        en: 'No.',
-        es: 'No.',
-        'zh-sg': '没有。',
+        pt: 'Não.\nAceitamos clientes com prescrição do SNS. Contudo, o preço praticado é o tabelado para cada unidade.\nPara mais informações, entre em contacto connosco, através do formulário de contacto.',
+        en: 'No.\nWe accept clients with SNS prescriptions. However, the price charged is the standard price for each unit.\nFor more information, please contact us through the contact form.',
+        es: 'No.\nAceptamos clientes con prescripción del SNS. Sin embargo, el precio aplicado es el tarifado para cada unidad.\nPara más información, contáctenos a través del formulario de contacto.',
+        'zh-sg':
+          '不。\n我们接受持有SNS处方的客户。不过，收取的价格是每个单位的标准价格。\n如需更多信息，请通过联系表单与我们联系。',
       },
     },
   },
@@ -102,10 +103,10 @@ export const data = [
     },
     answer: {
       translations: {
-        pt: 'Sim. Com o seguro de saúde da Medicare.',
-        en: 'Yes. With Medicare health insurance.',
-        es: 'Sí. Con el seguro de salud de Medicare.',
-        'zh-sg': '有的。与 Medicare 健康保险公司有合作。',
+        pt: 'Sim. Com o plano de saúde da Medicare.',
+        en: 'Yes. With the Medicare health plan.',
+        es: 'Sí. Con el plan de salud de Medicare.',
+        'zh-sg': '是的。与医疗保险计划一起。',
       },
     },
   },
@@ -121,10 +122,10 @@ export const data = [
     answer: {
       translations: {
         pt: 'A consulta de avaliação tem duração de cerca de 60 minutos, sempre acompanhado pelo(a) fisioterapeuta.\nO profissional recolhe a sua história clínica e contexto, de forma a guiar a sua avaliação personalizada. Com os resultados obtidos, permite delinear um plano de intervenção específico a si e às suas necessidades.',
-        en: 'The assessment consultation lasts about 60 minutes, always accompanied by the physiotherapist.\nThe professional gathers your medical history and context to guide a personalized assessment. Based on the results, a specific intervention plan is tailored to you and your needs.',
-        es: 'La consulta de evaluación tiene una duración de unos 60 minutos, siempre acompañado por el/la fisioterapeuta.\nEl profesional recoge su historial clínico y contexto para guiar una evaluación personalizada. Con los resultados obtenidos, se permite delinear un plan de intervención específico para usted y sus necesidades.',
+        en: 'The assessment consultation lasts about 60 minutes, always accompanied by the physiotherapist.\nThe professional collects your clinical history and context to guide your personalized assessment. With the obtained results, it allows outlining a specific intervention plan tailored to you and your needs.',
+        es: 'La consulta de evaluación tiene una duración de aproximadamente 60 minutos, siempre acompañado por el fisioterapeuta.\nEl profesional recopila su historia clínica y contexto, para guiar su evaluación personalizada. Con los resultados obtenidos, se puede delinear un plan de intervención específico para usted y sus necesidades.',
         'zh-sg':
-          '评估咨询约 60 分钟，由物理治疗师全程陪同。\n专业人员会收集您的病史和背景，以指导个性化评估。根据获得的结果，制定一个专门针对您及其需求的干预计划。',
+          '评估咨询大约持续60分钟，始终由物理治疗师陪同。\n专业人士收集您的病史和背景，以指导您的个性化评估。根据获得的结果，可以制定针对您及您需求的具体干预计划。',
       },
     },
   },

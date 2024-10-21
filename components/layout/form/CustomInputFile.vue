@@ -1,5 +1,5 @@
 <template>
-  <div class="input-container">
+  <div class="input-container" :class="{ 'input-container--required': required }">
     <div class="input-label">
       <span>{{ label }}</span>
       <span class="extensions">( .pdf )</span>
@@ -84,6 +84,12 @@ const uploadFile = (event: Event) => {
       margin-left: 8px;
       color: #a1a2a4;
     }
+  }
+
+  &--required .input-label::after {
+    content: '*';
+    color: $blue;
+    margin-left: 4px;
   }
 
   input {

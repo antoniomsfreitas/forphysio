@@ -118,7 +118,7 @@ const formData: FormData = reactive({
   },
   message: {
     value: '',
-    required: true,
+    required: false,
     errorMessage: '',
   },
   terms: {

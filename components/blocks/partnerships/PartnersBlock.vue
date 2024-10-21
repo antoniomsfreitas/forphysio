@@ -67,31 +67,33 @@ defineProps({
   }
 
   ul {
-    display: grid;
-
-    @include mq-mobile-tablet {
-      row-gap: 40px;
-    }
-
-    @include mq-mobile {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    @include mq-tablet {
-      grid-template-columns: repeat(4, 1fr);
-    }
-
-    @include mq-desktop {
-      grid-template-columns: repeat(6, 1fr);
-      row-gap: 60px;
-    }
+    display: flex;
+    row-gap: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
 
     li {
+      display: flex;
+      justify-content: center;
+
+      @include mq-mobile {
+        width: 33%;
+      }
+
+      @include mq-tablet {
+        width: 25%;
+      }
+
+      @include mq-desktop {
+        width: 16%;
+      }
+
       .partner {
         display: flex;
         flex-direction: column;
         gap: 14px;
         align-items: center;
+        width: 100px;
 
         img {
           width: 100px;

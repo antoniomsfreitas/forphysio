@@ -49,7 +49,7 @@ export const useTeam = () => {
           ?.filter((member) => member.location && member.location.id)
           .map((member) => [member.location?.id, member.location]),
       ).values(),
-    );
+    ).sort((a, b) => (a?.id ?? 0) - (b?.id ?? 0));
   };
 
   const getServicesByLocation = (teamMembers: TeamMember[], locationId: number): (Service | undefined)[] => {
@@ -67,11 +67,13 @@ export const useTeam = () => {
     let data = teamMembers;
 
     if (locationId) {
-      data = teamMembers.filter((member) => member.location?.id === locationId);
+      data = teamMembers.filter((member) => member.location?.id === locationId && !member.externalMember);
     }
 
     if (servicesId?.length) {
-      data = data.filter((member) => member.services?.some((service) => servicesId.includes(service.id)));
+      data = data.filter((member) =>
+        member.services?.some((service) => servicesId.includes(service.id) && !member.externalMember),
+      );
     }
 
     return data;

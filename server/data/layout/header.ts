@@ -1,5 +1,5 @@
 import { Routes } from '~/models/routes.model';
-import { data as servicesData } from '../services';
+import { data as servicesData, ServicesList } from '../services';
 
 const getServiceSlugById = (id: number) => {
   const service = servicesData.find((service) => {
@@ -28,43 +28,49 @@ export const data = {
         { name: 'general.viewAll', route: { name: Routes.SERVICES }, viewAll: true },
         {
           name: 'pages.services.musculoskeletalPhysiotherapy',
-          route: { name: Routes.SERVICES_SLUG, slug: getServiceSlugById(1) },
+          route: {
+            name: Routes.SERVICES_SLUG,
+            slug: getServiceSlugById(ServicesList.FISIOTERAPIA_MUSCULO_ESQUELETICA),
+          },
         },
         {
           name: 'pages.services.sportsPhysiotherapy',
-          route: { name: Routes.SERVICES_SLUG, slug: getServiceSlugById(2) },
+          route: { name: Routes.SERVICES_SLUG, slug: getServiceSlugById(ServicesList.FISIOTERAPIA_DESPORTO) },
         },
         {
           name: 'pages.services.aquaticPhysiotherapyHydrotherapy',
-          route: { name: Routes.SERVICES_SLUG, slug: getServiceSlugById(3) },
+          route: {
+            name: Routes.SERVICES_SLUG,
+            slug: getServiceSlugById(ServicesList.FISIOTERAPIA_AQUATICA_HIDROTERAPIA),
+          },
         },
         {
           name: 'pages.services.ageingPhysiotherapy',
-          route: { name: Routes.SERVICES_SLUG, slug: getServiceSlugById(4) },
+          route: { name: Routes.SERVICES_SLUG, slug: getServiceSlugById(ServicesList.FISIOTERAPIA_ENVELHECIMENTO) },
         },
         {
           name: 'pages.services.onlinePhysioterapy',
-          route: { name: Routes.SERVICES_SLUG, slug: getServiceSlugById(5) },
+          route: { name: Routes.SERVICES_SLUG, slug: getServiceSlugById(ServicesList.FISIOTERAPIA_ONLINE) },
         },
         {
           name: 'pages.services.womenHealthPhysiotherapy',
-          route: { name: Routes.SERVICES_SLUG, slug: getServiceSlugById(6) },
+          route: { name: Routes.SERVICES_SLUG, slug: getServiceSlugById(ServicesList.FISIOTERAPIA_PELVICA) },
         },
         {
           name: 'pages.services.clinicalPilates',
-          route: { name: Routes.SERVICES_SLUG, slug: getServiceSlugById(7) },
+          route: { name: Routes.SERVICES_SLUG, slug: getServiceSlugById(ServicesList.PILATES_CLINICO) },
         },
         {
           name: 'pages.services.nutrition',
-          route: { name: Routes.SERVICES_SLUG, slug: getServiceSlugById(8) },
+          route: { name: Routes.SERVICES_SLUG, slug: getServiceSlugById(ServicesList.NUTRICAO) },
         },
         {
           name: 'pages.services.healthWellBeing',
-          route: { name: Routes.SERVICES_SLUG, slug: getServiceSlugById(9) },
+          route: { name: Routes.SERVICES_SLUG, slug: getServiceSlugById(ServicesList.SAUDE_BEM_ESTAR) },
         },
         {
           name: 'pages.services.medicalAppointments',
-          route: { name: Routes.SERVICES_SLUG, slug: getServiceSlugById(10) },
+          route: { name: Routes.SERVICES_SLUG, slug: getServiceSlugById(ServicesList.CONSULTAS_MEDICAS) },
         },
       ],
     },

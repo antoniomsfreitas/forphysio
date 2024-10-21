@@ -63,9 +63,11 @@
             </template>
 
             <template v-else>
-              <Button size="large" class="intro-member__content__button" @click="navigateTo(member.booking)">
-                {{ $t('general.viewMore') }}
-              </Button>
+              <NuxtLink :to="localePath({ name: Routes.TEAM_SLUG, params: { slug: member.slug } })">
+                <Button size="large" class="intro-member__content__button">
+                  {{ $t('general.viewMore') }}
+                </Button>
+              </NuxtLink>
             </template>
           </div>
         </LayoutGridCol>

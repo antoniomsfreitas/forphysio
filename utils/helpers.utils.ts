@@ -1,3 +1,5 @@
+import { Routes } from '~/models/routes.model';
+
 /**
  * Locale message translation
  * @param string A target locale message key
@@ -32,4 +34,18 @@ export function truncateText(text: string, maxLength: number): string {
   }
 
   return truncated + ' (...)';
+}
+
+/**
+ * Replaces placeholders in the format {ROUTES.*} within a given string
+ * with their corresponding values from the Routes enum.
+ *
+ * @param text - The original string containing placeholders to be replaced.
+ * @returns A new string with placeholders replaced by their corresponding route values,
+ *          or the original string if no replacements were made.
+ */
+export function replaceRoute(text: string): string {
+  const localePath = useLocalePath();
+
+  return text.replaceAll('{ROUTE.CONTACTS}', localePath(Routes.CONTACTS));
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="custom-select" :class="{ 'custom-select--error': hasError }">
+  <div class="custom-select" :class="{ 'custom-select--error': hasError, 'custom-select--required': required }">
     <label v-if="topLabel?.length">{{ topLabel }}</label>
 
     <div
@@ -81,6 +81,11 @@ const props = defineProps({
     default: false,
     required: false,
   },
+  required: {
+    type: Boolean,
+    default: false,
+    required: false,
+  },
 });
 
 const emit = defineEmits(['update:modelValue']);
@@ -159,6 +164,12 @@ $border-radius: 28px;
     line-height: 1.2;
     padding-bottom: 10px;
     color: $white;
+  }
+
+  &--required label::after {
+    content: '*';
+    color: $blue;
+    margin-left: 4px;
   }
 
   &__selected-option {

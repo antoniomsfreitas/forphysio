@@ -10,8 +10,8 @@
       <LayoutGridRow v-if="category?.articles" class="articles-block">
         <LayoutGridCol v-for="article in category?.articles" :key="article.id" m="2" t="4" d="3">
           <BlogCard
-            type="article"
             :title="article.title"
+            :subtitle="article.subtitle"
             :src="article.imageList.image"
             :alt="article.imageList.alt"
             :slug="article.slug"

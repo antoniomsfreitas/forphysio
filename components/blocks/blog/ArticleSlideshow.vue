@@ -32,6 +32,7 @@
                 :slug="item.slug"
                 :alt="item.imageList.alt"
                 :link-title="$t('general.view-all')"
+                :type="type"
               />
             </SwiperSlide>
           </Swiper>
@@ -58,6 +59,11 @@ defineProps({
     type: String,
     required: false,
     default: '',
+  },
+  type: {
+    type: String as PropType<'article' | 'category'>,
+    required: false,
+    default: 'article',
   },
 });
 
