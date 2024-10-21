@@ -16,7 +16,7 @@
     <div class="header__inner__right">
       <ul class="header__inner__right__menu">
         <li v-for="menu in mainMenu" :key="menu.name" class="header__inner__right__menu__item">
-          <NuxtLink :to="localePath(menu.route)">
+          <NuxtLink :to="localePath(menu.route.name)">
             <span>{{ $t(menu.name) }}</span>
             <Icon v-if="menu.submenu?.length" name="icon:arrow-down" />
           </NuxtLink>
@@ -30,19 +30,23 @@
                 'header__inner__right__menu__item__submenu__item--view-all': submenu.viewAll,
               }"
             >
-              <NuxtLink :to="localePath(submenu.route)">{{ $t(submenu.name) }}</NuxtLink>
+              <NuxtLink :to="localePath({ name: submenu.route.name, params: { slug: submenu.route?.slug } })">
+                {{ $t(submenu.name) }}
+              </NuxtLink>
             </li>
           </ul>
         </li>
       </ul>
 
       <div class="header__inner__right__options">
-        <NuxtLink :to="searchOption.route" :title="$t(searchOption.name)">
+        <NuxtLink :to="searchOption.route.name" :title="$t(searchOption.name)">
           <Icon name="icon:search-white" />
         </NuxtLink>
 
-        <NuxtLink :to="buttonOption.route" class="button button--secondary">
-          {{ $t(buttonOption.name) }}
+        <NuxtLink :to="buttonOption.route.name">
+          <Button size="small" type="secondary">
+            {{ $t(buttonOption.name) }}
+          </Button>
         </NuxtLink>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import { Routes } from '~/models/routes.model';
 import type { Article, ArticleCategory } from '../models/blog.model';
+import type { TeamMember } from '~/models/team.model';
 
 export const useBlog = () => {
   const { locale } = useI18n();
@@ -7,9 +8,9 @@ export const useBlog = () => {
 
   const getArticlesData = async (options?: {
     slug?: string;
-    categoryId?: number;
     highlighted?: boolean;
     landingPage?: boolean;
+    relatedArticles?: boolean;
   }) => {
     const key = `articles-${JSON.stringify(options)}`;
 
@@ -18,9 +19,9 @@ export const useBlog = () => {
         query: {
           locale: locale.value,
           slug: options?.slug,
-          categoryId: options?.categoryId,
           highlighted: options?.highlighted,
           landingPage: options?.landingPage,
+          relatedArticles: options?.relatedArticles,
         },
       }),
     );
@@ -49,6 +50,24 @@ export const useBlog = () => {
           slideshow: options?.slideshow,
           landingPage: options?.landingPage,
           searchQuery: options?.searchQuery,
+        },
+      }),
+    );
+
+    return {
+      status,
+      data,
+    };
+  };
+
+  const getAuthorsData = async (options?: { slug?: string }) => {
+    const key = `articles-${JSON.stringify(options)}`;
+
+    const { status, data } = await useAsyncData<TeamMember[]>(key, () =>
+      $fetch('/api/blog/authors', {
+        query: {
+          locale: locale.value,
+          slug: options?.slug,
         },
       }),
     );
@@ -94,5 +113,6 @@ export const useBlog = () => {
     getCategoriesData,
     getCategoryLink,
     getArticleLink,
+    getAuthorsData,
   };
 };

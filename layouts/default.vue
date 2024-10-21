@@ -6,7 +6,7 @@
       <slot />
     </main>
 
-    <LayoutFooter />
+    <LayoutFooter v-if="footerData" :data="footerData" />
   </div>
 </template>
 
@@ -17,6 +17,7 @@ const { getLayoutData } = useLayout();
 const { data, status } = await getLayoutData();
 
 const headerData = computed(() => data.value?.header);
+const footerData = computed(() => data.value?.footer);
 
 const emit = defineEmits(['onDataLoaded']);
 

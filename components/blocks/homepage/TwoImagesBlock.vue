@@ -16,7 +16,9 @@
             <div class="two-images-block__item__content">
               <h3 class="two-images-block__item__content__title">{{ highlight.title }}</h3>
               <p class="two-images-block__item__content__description">{{ highlight.description }}</p>
-              <span class="button button--tertiary">{{ highlight.cta.label }}</span>
+              <Button type="outline">
+                {{ highlight.cta.label }}
+              </Button>
             </div>
           </NuxtLink>
 
@@ -104,10 +106,8 @@ defineProps({
         }
       }
 
-      .button {
-        min-height: 40px;
-        font-size: 18px;
-        line-height: 1.2;
+      button {
+        min-width: 200px;
       }
     }
 

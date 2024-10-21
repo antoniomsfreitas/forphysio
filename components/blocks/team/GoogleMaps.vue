@@ -46,5 +46,9 @@ defineProps({
     color: $white;
     text-align: left;
   }
+
+  iframe {
+    border-radius: 15px;
+  }
 }
 </style>

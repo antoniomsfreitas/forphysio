@@ -22,10 +22,10 @@
 
             <div class="newsletter-block__content__form form">
               <div class="input-container">
-                <input type="text" placeholder="exemplo@email.com" >
+                <input type="text" placeholder="exemplo@email.com" />
               </div>
 
-              <button v-t="'general.subscribe'" type="submit" class="button button--primary" />
+              <Button>{{ $t('general.subscribe') }}</Button>
             </div>
           </LayoutGridCol>
         </LayoutGridRow>

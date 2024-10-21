@@ -2,7 +2,9 @@
   "pages.about": "Sobre nós",
   "pages.team": "Equipa",
   "pages.contacts": "Contactos",
+
   "pages.services": "Serviços",
+  "pages.services.landingPage.intro": "Prestamos serviços especializados de fisioterapia desde 2014.\n\nDurante a nossa evolução, adicionámos serviços complementares de nutrição, pilates, bem-estar e consultas médicas",
   "pages.services.musculoskeletalPhysiotherapy": "Fisioterapia músculo esquelética",
   "pages.services.sportsPhysiotherapy": "Fisioterapia no desporto",
   "pages.services.aquaticPhysiotherapyHydrotherapy": "Fisioterapia aquática e hidroterapia",
@@ -13,12 +15,17 @@
   "pages.services.nutrition": "Nutrição",
   "pages.services.healthWellBeing": "Saúde e bem-estar",
   "pages.services.medicalAppointments": "Consultas médicas",
+
   "pages.partnerships": "Acordos",
   "pages.blog": "Blog",
   "pages.recruitment": "Recrutamento",
   "pages.search": "Pesquisa",
   "pages.faqs": "Perguntas Frequentes",
+  "pages.units": "Unidades",
+  "pages.cancellation-policy": "Política de Cancelamento",
+  "pages.privacy-policy": "Política de Privacidade",
 
+  "general.forphysio-clinic": "Clínica ForPhysio",
   "general.bookAppointment": "Marcar consulta",
   "general.viewAll": "Ver todos",
   "general.subscribe": "Subscrever",
@@ -32,11 +39,18 @@
   "general.ourUnits": "As nossas unidades",
   "general.selectUnit": "Selecione a Unidade",
   "general.readMore": "Ler mais",
+  "general.viewMore": "Ver mais",
+  "general.knowMore": "Saber mais",
+  "general.complaintsBook": "Livro de Reclamações",
+  "general.complimentsBook": "Livro de Elogios",
+  "general.copyright": "Todos os direitos reservados",
 
   "contacts.page-title": "Estamos aqui para o ajudar.",
   "contacts.page-subtitle": "Preencha o formulário abaixo, ou contacte-nos através do e-mail ou Whatsapp.",
   "contacts.available-units": "Unidades disponíveis",
   "contacts.form-title": "Fale connosco.\nPreencha o formulário",
+  "contacts.socialMediaBanner.alt": "Alguns membros da equipa da ForPhysio",
+  "contacts.socialMediaBanner.title": "Visite as nossas redes sociais",
 
   "form-field.name": "Nome",
   "form-field.phone": "Contacto telefónico",
@@ -59,6 +73,10 @@
 
   "team.same-location-team": "Profissionais da mesma unidade",
   "team.how-to-arrive": "Como chegar",
+  "team.know-the-team": "Conheça a equipa",
+  "team.show-full-team": "Ver equipa completa",
+  "team.specialty": "Especialidade",
+  "team.specialties": "Especialidades",
 
   "search.label": "Pesquisar",
   "search.label.category": "Pesquisar por categoria",
@@ -66,6 +84,9 @@
   "blog.highlightedArticles": "Artigos em destaque",
   "blog.categories": "Categorias",
   "blog.author": "Autor",
+  "blog.authors": "Autores",
+  "blog.viewMoreArticlesAuthor": "Ver mais artigos deste autor",
+  "blog.relatedArticles": "Artigos Relacionados",
 
   "partnerships.introduction": "A ForPhysio Clinic dispõe de acordos que permitem ao cliente com as características descritas em baixo, ter acesso a preçários e condições exclusivas.",
   "partnerships.partners.title": "Parceiros",

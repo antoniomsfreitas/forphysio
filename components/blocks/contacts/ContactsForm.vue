@@ -37,7 +37,7 @@
       />
 
       <CustomSelect
-        v-if="isContactsForm"
+        v-if="isContactsForm && services"
         :options="services"
         :top-label="t('form-field.service')"
         :default-label="'-- ' + t('form-field.service.default-label') + ' --'"
@@ -80,8 +80,10 @@ import CustomInput from '~/components/layout/form/CustomInput.vue';
 import type { FormData } from '~/models/form.model';
 
 const { t } = useI18n();
+const { getServicesListData } = useServices();
 
-const { services } = useServices();
+const { data } = await getServicesListData();
+const services = computed(() => data.value);
 
 const isContactsForm = computed(() => props.type == 'contacts');
 const isRecruitmentForm = computed(() => props.type == 'recruitment');
@@ -159,9 +161,9 @@ const validateForm = () => {
 <style scoped lang="scss">
 .contacts-form {
   h3 {
+    padding-bottom: 40px;
     line-height: 1.2;
     text-align: center;
-    padding-bottom: 40px;
   }
 }
 </style>

@@ -12,24 +12,19 @@
       </template>
 
       <template #content>
-        <p class="intro-block__text">
-          {{
-            'Prestamos serviços especializados de fisioterapia desde 2014.\n\nDurante a nossa evolução, adicionámos serviços complementares de nutrição, pilates, bem-estar e consultas médicas.'
-          }}
-        </p>
-
-        <IconLink link="/contactos/" text="Marcar avaliação" />
+        <p class="intro-block__text">{{ $t('pages.services.landingPage.intro') }}</p>
+        <IconLink :link="Routes.CONTACTS" :text="$t('general.bookAppointment')" />
       </template>
     </IntroBlock>
 
-    <div class="services-grid">
+    <div v-if="services" class="services-grid">
       <LayoutGrid>
         <LayoutGridRow>
-          <LayoutGridCol m="2" t="4" d="3" v-for="service in services" :index="service.id">
+          <LayoutGridCol v-for="service in services" :key="service.id" m="2" t="4" d="3" :index="service.id">
             <CardImage
               :title="service.title"
-              :src="getImagePath(service.image)"
-              :link="getDetailPage(service.slug)"
+              :src="service.image"
+              :link="buildDetailPage(service.slug)"
               :alt="$t('general.image') + ': ' + service.image"
               :link-title="$t('general.viewDetail')"
               size="small"
@@ -39,22 +34,37 @@
       </LayoutGrid>
     </div>
 
-    <LocationsMap class="locations-map" />
+    <LocationsMap v-if="locations" class="locations-map" :locations="locations" />
   </div>
 </template>
 
 <script setup lang="ts">
-import { Routes } from '~/models/routes.model';
 import { useServices } from '~/composables/services.composable';
+import { Routes } from '~/models/routes.model';
 
 const localePath = useLocalePath();
-const { services } = useServices();
+const { getServicesListData } = useServices();
+const { getLocationsData } = useContacts();
 
-const getImagePath = (image: string) => {
-  return '/images/services/list/' + image;
-};
+const { data: servicesData, status } = await getServicesListData();
+const services = computed(() => servicesData.value);
 
-const getDetailPage = (slug: string): string => {
+const { data: locationsData } = await getLocationsData();
+const locations = computed(() => locationsData.value);
+
+const emit = defineEmits(['onDataLoaded']);
+
+watch(
+  status,
+  (newStatus) => {
+    if (newStatus === 'success') {
+      emit('onDataLoaded');
+    }
+  },
+  { immediate: true },
+);
+
+const buildDetailPage = (slug: string): string => {
   return `${localePath(Routes.SERVICES)}/${slug}`;
 };
 </script>

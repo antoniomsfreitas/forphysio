@@ -65,6 +65,11 @@ const props = defineProps({
     font-weight: $font-weight-light;
     line-height: 1.3;
     text-wrap: balance;
+    color: $medium-grey;
+
+    h1 {
+      color: $white;
+    }
 
     @include mq-mobile {
       font-size: 18px;

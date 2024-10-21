@@ -27,12 +27,14 @@
           <LayoutGridCol m="4" t="12" class="hero-banner__content__info">
             <h2 class="hero-banner__content__info__title">{{ info.title }}</h2>
 
-            <button
-              class="hero-banner__content__info__button button button--tertiary"
+            <Button
+              type="outline"
+              size="medium"
+              class="hero-banner__content__info__button"
               @click.prevent="handleClickButton"
             >
               {{ info.cta.label }}
-            </button>
+            </Button>
 
             <div class="swiper-custom-scrollbar hero-banner__content__info__scrollbar" />
           </LayoutGridCol>
@@ -76,11 +78,17 @@ const handleClickButton = () => {
   }
 
   @include mq-desktop {
-    height: 780px;
+    height: 800px;
   }
 
   &__gradient {
-    @include gradient-overlay('bottom-top', 70);
+    @include mq-mobile {
+      @include gradient-overlay('bottom-top', 100);
+    }
+
+    @include mq-tablet-desktop {
+      @include gradient-overlay('bottom-top', 70);
+    }
   }
 
   &__slideshow {
@@ -135,11 +143,13 @@ const handleClickButton = () => {
       font-weight: $font-weight-semi-bold;
 
       &__title {
+        text-wrap: balance;
+
         @include mq-mobile {
           margin-bottom: 50px;
           font-size: 24px;
           line-height: 28px;
-          letter-spacing: 1px;
+          letter-spacing: 0;
         }
 
         @include mq-tablet {
@@ -156,24 +166,15 @@ const handleClickButton = () => {
       }
 
       &__button {
-        min-height: 32px;
         pointer-events: all;
+        min-width: 270px;
 
         @include mq-mobile {
-          padding: 7px 48px;
           margin-bottom: 40px;
-          font-size: 12px;
-          line-height: 18px;
         }
 
         @include mq-tablet {
           margin-bottom: 60px;
-        }
-
-        @include mq-tablet-desktop {
-          padding: 13px 61px;
-          font-size: 20px;
-          line-height: 24px;
         }
 
         @include mq-desktop {

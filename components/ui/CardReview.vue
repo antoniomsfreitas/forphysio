@@ -75,6 +75,7 @@ defineProps({
 
     &__img {
       flex: 0 0 68px;
+      border-radius: 50%;
     }
 
     &__name {

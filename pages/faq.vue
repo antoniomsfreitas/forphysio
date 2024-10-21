@@ -30,8 +30,6 @@
 </template>
 
 <script setup lang="ts">
-import { useFAQs } from '~/composables/faq.composable';
-
 const { getFAQs } = useFAQs();
 const { data, status } = await getFAQs();
 

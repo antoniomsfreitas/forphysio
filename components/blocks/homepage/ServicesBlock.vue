@@ -3,7 +3,7 @@
     <SwiperSlide v-for="service in services" :key="service.id" class="services-slideshow-container__slide">
       <CardImage
         :title="service.title"
-        :src="getImagePath(service.image)"
+        :src="service.image"
         :link="getServicesPage(service.slug)"
         :alt="$t('general.image') + ': ' + service.image"
         :link-title="$t('general.viewDetail')"
@@ -13,7 +13,7 @@
     <SwiperSlide class="services-slideshow-container__slide">
       <CardImage
         :title="$t('general.view-all')"
-        :src="getImagePath('view-all.jpg')"
+        src="/images/services/list/view-all.jpg"
         :link="getServicesPage()"
         :alt="$t('general.view-all')"
         :link-title="$t('general.view-all')"
@@ -23,17 +23,14 @@
 </template>
 
 <script setup lang="ts">
-import { Routes } from '~/models/routes.model';
 import { useServices } from '~/composables/services.composable';
+import { Routes } from '~/models/routes.model';
 
 const localePath = useLocalePath();
-const { getHomepageServices } = useServices();
+const { getServicesListData } = useServices();
 
-const services = getHomepageServices();
-
-const getImagePath = (image: string) => {
-  return '/images/services/list/' + image;
-};
+const { data } = await getServicesListData(true);
+const services = computed(() => data.value);
 
 const getServicesPage = (slug?: string): string => {
   if (slug) {

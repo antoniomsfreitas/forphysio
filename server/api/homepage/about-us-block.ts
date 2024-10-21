@@ -49,9 +49,9 @@ export const data = {
         'zh-sg': 'ForPhysio 專業人員幫助病人做伸展運動的圖片。',
       },
     },
-    mobile: '/images/homepage/about-us-block/image-1/image-1-mobile.jpg',
-    tablet: '/images/homepage/about-us-block/image-1/image-1-tablet.jpg',
-    desktop: '/images/homepage/about-us-block/image-1/image-1-desktop.jpg',
+    mobile: '/images/homepage/about-us-block/image-2/image-2-mobile.jpg',
+    tablet: '/images/homepage/about-us-block/image-2/image-2-tablet.jpg',
+    desktop: '/images/homepage/about-us-block/image-2/image-2-desktop.jpg',
   },
 };
 

@@ -1,11 +1,15 @@
 import type { Image, IntroBlock, TopicsBlock, BannerBlock, SideImageBlock, TwoImagesGridBlock } from './blocks.model';
+import type { Location } from './contacts';
 
-export interface Service {
+export interface ServiceList {
   id: number;
   slug: string;
   title: string;
   image: string;
-  locations?: number[];
+  locations?: Location[];
+}
+
+export interface Service extends ServiceList {
   homepage: boolean;
   blocks?: {
     intro?: IntroBlock;

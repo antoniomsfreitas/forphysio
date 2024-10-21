@@ -2,7 +2,9 @@
   "pages.about": "關於我們",
   "pages.team": "團隊",
   "pages.contacts": "聯絡人",
+
   "pages.services": "服務",
+  "pages.services.landingPage.intro": "自 2014 年以來，我們一直提供專業的物理治療服務。\n\n在我們的發展過程中, 我們增加了營養、普拉提、健康和醫療諮詢等輔助服務。",
   "pages.services.musculoskeletalPhysiotherapy": "肌肉骨骼物理治療",
   "pages.services.sportsPhysiotherapy": "運動中的物理治療",
   "pages.services.aquaticPhysiotherapyHydrotherapy": "水中物理治療和水療",
@@ -13,12 +15,17 @@
   "pages.services.nutrition": "營養",
   "pages.services.healthWellBeing": "健康與福祉",
   "pages.services.medicalAppointments": "醫療預約",
+
   "pages.partnerships": "夥伴關係",
   "pages.blog": "部落格",
   "pages.search": "搜尋網站",
   "pages.recruitment": "招募",
   "pages.faqs": "常見問題",
+  "pages.units": "診所",
+  "pages.cancellation-policy": "取消政策",
+  "pages.privacy-policy": "隱私權政策",
 
+  "general.forphysio-clinic": "ForPhysio 診所",
   "general.bookAppointment": "預約",
   "general.viewAll": "檢視全部",
   "general.subscribe": "訂閱電子報",
@@ -32,11 +39,18 @@
   "general.ourUnits": "我們的診所",
   "general.selectUnit": "選擇診所",
   "general.readMore": "閱讀更多",
+  "general.viewMore": "看更多",
+  "general.knowMore": "了解更多",
+  "general.complaintsBook": "投訴簿",
+  "general.complimentsBook": "讚美書",
+  "general.copyright": "保留所有權利",
 
   "contacts.page-title": "我們來幫您",
   "contacts.page-subtitle": "填寫下面的表格，或透過電子郵件或 Whatsapp 與我們聯繫。",
   "contacts.available-units": "可用單位",
   "contacts.form-title": "聯絡我們\n填寫表格",
+  "contacts.socialMediaBanner.alt": "ForPhysio 團隊的部分成員",
+  "contacts.socialMediaBanner.title": "訪問我們的社交網絡",
 
   "form-field.name": "名稱",
   "form-field.phone": "聯絡電話",
@@ -59,6 +73,10 @@
 
   "team.same-location-team": "同一单位的专业人员",
   "team.how-to-arrive": "如何前往",
+  "team.know-the-team": "了解團隊",
+  "team.show-full-team": "顯示完整團隊",
+  "team.specialty": "專業",
+  "team.specialties": "專業",
 
   "search.label": "搜尋",
   "search.label.category": "依類別搜尋",
@@ -66,6 +84,9 @@
   "blog.highlightedArticles": "突出顯示的文章",
   "blog.categories": "類別",
   "blog.author": "作者",
+  "blog.authors": "作者",
+  "blog.viewMoreArticlesAuthor": "查看作者的更多文章",
+  "blog.relatedArticles": "相关项目",
 
   "partnerships.introduction": "ForPhysio Clinic 已簽訂協議，允許具有下述特徵的客戶獲得獨家價格和條件。",
   "partnerships.partners.title": "合作夥伴",

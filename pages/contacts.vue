@@ -16,19 +16,17 @@
           {{ $t('contacts.page-subtitle') }}
         </p>
 
-        <div class="intro-block__contacts">
+        <div v-if="contactsIntro" class="intro-block__contacts">
           <a
-            v-if="social.whatsapp"
-            :href="'https://wa.me/' + social.whatsapp.value"
+            v-for="contact in contactsIntro"
+            :key="contact.id"
+            :href="contact.link"
+            :title="contact.name"
             class="intro-block__contacts__item"
+            target="_blank"
           >
-            <Icon name="icon:whatsapp" />
-            <span>{{ social.whatsapp.value }}</span>
-          </a>
-
-          <a v-if="social.email" :href="'mailto:' + social.email.value" class="intro-block__contacts__item">
-            <Icon name="icon:email" />
-            <span>{{ social.email.value }}</span>
+            <Icon :name="'icon:' + contact.icon" />
+            <span>{{ contact.value }}</span>
           </a>
         </div>
 
@@ -36,26 +34,7 @@
       </template>
     </IntroBlock>
 
-    <LayoutGrid class="locations-block">
-      <LayoutGridRow>
-        <LayoutGridCol m="4" t="12" d="6">
-          <CardUI>
-            <PictureImage
-              :alt="$t('pages.contacts')"
-              class="locations-block__image"
-              src="/images/contacts/locations-block/image-mobile.jpg"
-              src-t="/images/contacts/locations-block/image-tablet.jpg"
-              src-d="/images/contacts/locations-block/image-desktop.jpg"
-              cover
-            />
-          </CardUI>
-        </LayoutGridCol>
-
-        <LayoutGridCol m="4" t="12" d="5" start-col-d="8">
-          <LocationsList />
-        </LayoutGridCol>
-      </LayoutGridRow>
-    </LayoutGrid>
+    <LocationsMap v-if="locations" :locations="locations" class="locations-map" />
 
     <div class="form-block">
       <LayoutGrid>
@@ -66,11 +45,29 @@
         </LayoutGridRow>
       </LayoutGrid>
     </div>
+
+    <SocialMediaBanner />
   </div>
 </template>
 
 <script setup lang="ts">
-const { social } = useContacts();
+const { getContactsData, getLocationsData } = useContacts();
+const { data: contactsData, status } = await getContactsData({ contactsIntro: true });
+const { data: locationsData } = await getLocationsData();
+
+const contactsIntro = computed(() => contactsData.value);
+const locations = computed(() => locationsData.value);
+
+const emit = defineEmits(['onDataLoaded']);
+watch(
+  status,
+  (newStatus) => {
+    if (newStatus == 'success') {
+      emit('onDataLoaded');
+    }
+  },
+  { immediate: true },
+);
 </script>
 
 <style scoped lang="scss">
@@ -79,12 +76,8 @@ const { social } = useContacts();
     margin-bottom: 100px;
   }
 
-  @include mq-tablet {
+  @include mq-tablet-desktop {
     margin-bottom: 140px;
-  }
-
-  @include mq-desktop {
-    margin-bottom: 160px;
   }
 
   &__text {
@@ -142,30 +135,11 @@ const { social } = useContacts();
   }
 }
 
-.locations-block {
-  @include mq-mobile {
-    margin-bottom: 100px;
-  }
-
-  @include mq-tablet-desktop {
-    margin-bottom: 160px;
-  }
-
-  .layout-grid-row {
-    @include mq-mobile-tablet {
-      row-gap: 100px;
-    }
-  }
-
-  &__image {
-    img {
-      max-width: 100%;
-    }
-  }
+.locations-map {
+  margin-bottom: 100px;
 }
 
 .form-block {
-  margin-bottom: 160px;
   background-color: $deep-grey;
 
   @include mq-mobile {
@@ -173,7 +147,7 @@ const { social } = useContacts();
   }
 
   @include mq-tablet-desktop {
-    padding: 60px 0;
+    padding: 100px 0;
   }
 }
 </style>

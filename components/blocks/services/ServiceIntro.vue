@@ -19,13 +19,9 @@
             <LayoutGridCol m="4" t="8" d="10" start-col-t="3" start-col-d="2">
               <h1 v-text="data.title" />
 
-              <Button type="outline" v-t="'general.book-evaluation'" />
-            </LayoutGridCol>
-          </LayoutGridRow>
-
-          <LayoutGridRow v-if="version == '1'">
-            <LayoutGridCol m="4" t="8" d="8" start-col-t="3" start-col-d="3">
-              <p v-text="data.text" />
+              <NuxtLink :to="localePath(Routes.CONTACTS)">
+                <Button type="outline">{{ $t('general.book-evaluation') }}</Button>
+              </NuxtLink>
             </LayoutGridCol>
           </LayoutGridRow>
         </LayoutGrid>
@@ -33,7 +29,7 @@
     </div>
 
     <LayoutGrid>
-      <LayoutGridRow v-if="version == '2'" class="intro-text">
+      <LayoutGridRow class="intro-text">
         <LayoutGridCol m="4" t="8" d="8" start-col-t="3" start-col-d="3">
           <p v-text="data.text" />
         </LayoutGridCol>
@@ -44,6 +40,7 @@
 
 <script setup lang="ts">
 import type { IntroBlock } from '~/models/blocks.model';
+import { Routes } from '~/models/routes.model';
 
 defineProps({
   data: {
@@ -52,9 +49,7 @@ defineProps({
   },
 });
 
-// TEMP - FOR TEST PURPOSES
-const route = useRoute();
-const version = route.query.version || '1';
+const localePath = useLocalePath();
 </script>
 
 <style scoped lang="scss">
@@ -93,20 +88,6 @@ const version = route.query.version || '1';
 
       @include mq-tablet-desktop {
         margin-bottom: 50px;
-      }
-    }
-
-    p {
-      font-weight: $font-weight-light;
-      line-height: 1.2;
-      text-align: center;
-
-      @include mq-mobile-tablet {
-        font-size: 18px;
-      }
-
-      @include mq-desktop {
-        font-size: 28px;
       }
     }
   }
