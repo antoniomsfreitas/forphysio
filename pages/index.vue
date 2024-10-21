@@ -1,14 +1,15 @@
 <template>
   <div v-if="data" class="container">
-    <HeroBannerBlock v-if="heroBannerData" class="container__hero-banner-block" :data="heroBannerData" />
-    <AboutUsBlock v-if="aboutUsBlockData" class="container__about-us-block" :data="aboutUsBlockData" />
-    <TwoImagesBlock v-if="twoImagesBlockData" class="container__two-images-block" :data="twoImagesBlockData" />
-    <ServicesBlock class="container__services-block" />
+    <HeroBannerBlock v-if="heroBannerData" class="hero-banner-block" :data="heroBannerData" />
+    <AboutUsBlock v-if="aboutUsBlockData" class="about-us-block" :data="aboutUsBlockData" />
+    <TwoImagesBlock v-if="twoImagesBlockData" class="two-images-block" :data="twoImagesBlockData" />
+    <ServicesBlock class="services-block" />
     <CustomersReviewsBlock
       v-if="customersReviewsBlockData"
-      class="container__customers-reviews-block"
+      class="customers-reviews-block"
       :data="customersReviewsBlockData"
     />
+    <BlogBlock class="blog-block" />
     <NewsletterBlock v-if="newsletterBlockData" :data="newsletterBlockData" />
   </div>
 </template>
@@ -37,7 +38,7 @@ watch(
 
 <style scoped lang="scss">
 .container {
-  &__hero-banner-block {
+  .hero-banner-block {
     @include mq-mobile {
       margin-bottom: 100px;
     }
@@ -47,7 +48,7 @@ watch(
     }
   }
 
-  &__about-us-block {
+  .about-us-block {
     @include mq-mobile-tablet {
       margin-bottom: 80px;
     }
@@ -57,11 +58,11 @@ watch(
     }
   }
 
-  &__two-images-block {
+  .two-images-block {
     margin-bottom: 100px;
   }
 
-  &__services-block {
+  .services-block {
     @include mq-mobile {
       margin-bottom: 130px;
     }
@@ -75,7 +76,7 @@ watch(
     }
   }
 
-  &__customers-reviews-block {
+  .customers-reviews-block {
     @include mq-mobile {
       margin-bottom: 130px;
     }
@@ -86,6 +87,20 @@ watch(
 
     @include mq-desktop {
       margin-bottom: 110px;
+    }
+  }
+
+  .blog-block {
+    @include mq-mobile {
+      margin-bottom: 130px;
+    }
+
+    @include mq-mobile-tablet {
+      margin-bottom: 100px;
+    }
+
+    @include mq-desktop {
+      margin-bottom: 136px;
     }
   }
 }
