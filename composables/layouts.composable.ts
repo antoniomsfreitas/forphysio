@@ -1,6 +1,12 @@
 import type { Layout } from '~/models/layout.model';
 
+const isHeaderVisible = ref(true);
+
 export const useLayout = () => {
+  const setHeaderVisibility = (isVisible: boolean) => {
+    isHeaderVisible.value = isVisible;
+  };
+
   const { locale } = useI18n();
 
   const getLayoutData = async () => {
@@ -20,5 +26,7 @@ export const useLayout = () => {
 
   return {
     getLayoutData,
+    isHeaderVisible,
+    setHeaderVisibility,
   };
 };

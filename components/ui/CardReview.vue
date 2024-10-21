@@ -49,7 +49,6 @@ defineProps({
   align-items: flex-start;
   justify-content: space-between;
   height: 100%;
-  min-height: 390px;
   padding: 14px 30px;
   background-color: $white;
 

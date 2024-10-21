@@ -10,12 +10,12 @@
   margin: 0 auto;
 
   @include breakpoint-to('t') {
-    padding: 0 24px;
+    padding: 0 $grid-mobile-tablet-offset;
   }
 
   @include breakpoint-from('t') {
     max-width: 1504px;
-    padding: 0 32px;
+    padding: 0 $grid-desktop-offset;
   }
 }
 </style>

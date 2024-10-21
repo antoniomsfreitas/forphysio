@@ -21,7 +21,7 @@ defineProps({
 .customers-reviews-slideshow-container {
   &__slide {
     width: 343px;
-    max-width: 100%;
+    max-width: 97%;
     height: auto;
   }
 }

@@ -75,6 +75,7 @@ const slidesPerView = computed(() => {
 });
 
 const spaceBetween = computed(() => (isMobile ? 16 : 24));
+
 onMounted(() => {
   swiperInitialized.value = true;
 });
@@ -91,7 +92,7 @@ onMounted(() => {
 
   &__swiper-container {
     &__slide {
-      max-width: 100%;
+      max-width: 97%;
     }
 
     &__scrollbar {
