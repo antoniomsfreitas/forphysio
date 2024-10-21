@@ -105,7 +105,6 @@ onBeforeUnmount(() => {
   min-height: 100vh;
   display: flex;
   overflow: hidden;
-  align-items: center;
   justify-content: flex-start;
 
   .highlighted-article {
