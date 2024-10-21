@@ -27,16 +27,8 @@ export const data = {
       route: { name: Routes.CONTACTS },
     },
     {
-      name: 'pages.units',
-      route: { name: Routes.HOMEPAGE },
-    },
-    {
-      name: 'pages.cancellation-policy',
-      route: { name: Routes.HOMEPAGE },
-    },
-    {
       name: 'pages.privacy-policy',
-      route: { name: Routes.HOMEPAGE },
+      route: { name: Routes.PRIVACY_POLICY },
     },
     {
       name: 'pages.faqs',

@@ -103,6 +103,12 @@ export default defineNuxtConfig({
         pt: '/perguntas-frequentes',
         'zh-SG': '/frequently-asked-questions',
       },
+      'privacy-policy': {
+        en: '/privacy-policy',
+        es: '/politica-de-privacidad',
+        pt: '/politica-de-privacidade',
+        'zh-SG': '/privacy-policy',
+      },
       'team/index': {
         en: '/team',
         es: '/equipo',
