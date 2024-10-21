@@ -125,20 +125,20 @@ export const data = {
     },
     textCol1: {
       translations: {
-        pt: 'A ForPhysio Clinic é uma empresa portuguesa que presta serviços de fisioterapia desde Outubro de 2014.\n\nDe forma a diferenciar a sua oferta de serviços, o fisioterapeuta Nuno Pina, fundador da ForPhysio Clinic e atual diretor, identificou a necessidade de criar serviços de fisioterapia que permitissem minimizar os períodos de recuperação e melhorar os resultados após intervenção clínica.',
-        en: 'ForPhysio Clinic is a Portuguese company that has been providing physiotherapy services since October 2014.\n\nIn order to differentiate its service offerings, physiotherapist Nuno Pina, founder and current director of ForPhysio Clinic, identified the need to create physiotherapy services that would minimize recovery times and improve results after clinical intervention.',
-        es: 'ForPhysio Clinic es una empresa portuguesa que ha estado proporcionando servicios de fisioterapia desde octubre de 2014.\n\nPara diferenciar su oferta de servicios, el fisioterapeuta Nuno Pina, fundador y actual director de ForPhysio Clinic, identificó la necesidad de crear servicios de fisioterapia que permitieran minimizar los tiempos de recuperación y mejorar los resultados tras la intervención clínica.',
+        pt: 'A ForPhysio é uma empresa portuguesa que presta serviços de fisioterapia desde Outubro de 2014, inicialmente dedicada aos serviços de fisioterapia músculo-esquelética e fisioterapia no desporto.\nDe forma a diferenciar a sua oferta, o fisioterapeuta Nuno Pina, fundador da ForPhysio, identificou a necessidade de criar serviços de fisioterapia que permitissem minimizar os períodos de recuperação e com melhores resultados.\nDesde esse momento que a ForPhysio tem evoluído consistentemente, com serviços de elevada qualidade e rigor, baseados na evidência científica mais atual.',
+        en: 'ForPhysio is a Portuguese company that has been providing physiotherapy services since October 2014, initially focused on musculoskeletal physiotherapy and sports physiotherapy services.\nIn order to differentiate its offering, physiotherapist Nuno Pina, founder of ForPhysio, identified the need to create physiotherapy services that would minimize recovery times and yield better results.\nSince then, ForPhysio has consistently evolved, offering high-quality and rigorous services based on the latest scientific evidence.',
+        es: 'ForPhysio es una empresa portuguesa que presta servicios de fisioterapia desde octubre de 2014, inicialmente dedicada a los servicios de fisioterapia musculoesquelética y fisioterapia en el deporte.\nPara diferenciar su oferta, el fisioterapeuta Nuno Pina, fundador de ForPhysio, identificó la necesidad de crear servicios de fisioterapia que permitieran minimizar los períodos de recuperación y obtener mejores resultados.\nDesde ese momento, ForPhysio ha evolucionado de manera constante, con servicios de alta calidad y rigor, basados en la evidencia científica más actual.',
         'zh-sg':
-          'ForPhysio Clinic是一家自2014年10月以来提供物理治疗服务的葡萄牙公司。\n\n为了使其服务与众不同，ForPhysio Clinic的创始人兼现任主任Nuno Pina理疗师认识到有必要创建一种物理治疗服务，以尽量缩短恢复时间并改善临床干预后的效果。',
+          'ForPhysio是一家自2014年10月以来提供物理治疗服务的葡萄牙公司，最初专注于肌肉骨骼物理治疗和运动物理治疗服务。\n为了区分其产品，ForPhysio的创始人、物理治疗师Nuno Pina意识到需要创建可以缩短恢复时间并获得更好结果的物理治疗服务。\n从那时起，ForPhysio持续发展，提供基于最新科学证据的高质量和严谨服务。',
       },
     },
     textCol2: {
       translations: {
-        pt: 'Desde esse momento que a ForPhysio Clinic tem evoluído consistentemente. Além do serviço de fisioterapia foram adicionados serviços complementares, de nutrição, performance e bem-estar. A coordenação do departamento de fisioterapia da Federação Portuguesa de Natação entre 2016 e 2020, é um marco na história da empresa.',
-        en: 'Since then, ForPhysio Clinic has consistently evolved. In addition to physiotherapy services, complementary services in nutrition, performance, and wellness have been added. Coordinating the physiotherapy department of the Portuguese Swimming Federation from 2016 to 2020 is a milestone in the company’s history.',
-        es: 'Desde ese momento, ForPhysio Clinic ha evolucionado consistentemente. Además de los servicios de fisioterapia, se han añadido servicios complementarios en nutrición, rendimiento y bienestar. La coordinación del departamento de fisioterapia de la Federación Portuguesa de Natación entre 2016 y 2020 es un hito en la historia de la empresa.',
+        pt: 'A coordenação do departamento de fisioterapia da Federação Portuguesa de Natação entre 2016 e 2020, rumo aos Jogos Olímpicos em Tóquio, é um marco na história da empresa. Uma parceria que motivou a criação do projeto “Mais Natação com Futuro”, assumido pela equipa de fisioterapeutas da ForPhysio. Este projeto incluiu a edição de um livro e 16 ações de formação sobre prevenção de lesões em nadadores.\nEm 2017, a ForPhysio passou a incluir serviços de fisioterapia no envelhecimento ativo, nutrição e pilates, em unidade própria localizada na cidade de Oeiras.',
+        en: 'The coordination of the physiotherapy department of the Portuguese Swimming Federation between 2016 and 2020, leading up to the Tokyo Olympic Games, is a landmark in the company’s history. This partnership inspired the creation of the project “More Swimming with a Future,” undertaken by the ForPhysio team of physiotherapists. This project included the publication of a book and 16 training sessions on injury prevention for swimmers.\nIn 2017, ForPhysio began offering physiotherapy services for active aging, nutrition, and pilates at its own facility located in the city of Oeiras.',
+        es: 'La coordinación del departamento de fisioterapia de la Federación Portuguesa de Natación entre 2016 y 2020, con rumbo a los Juegos Olímpicos de Tokio, es un hito en la historia de la empresa. Una colaboración que motivó la creación del proyecto “Más Natación con Futuro”, asumido por el equipo de fisioterapeutas de ForPhysio. Este proyecto incluyó la edición de un libro y 16 acciones de formación sobre prevención de lesiones en nadadores.\nEn 2017, ForPhysio comenzó a ofrecer servicios de fisioterapia para el envejecimiento activo, nutrición y pilates, en una unidad propia ubicada en la ciudad de Oeiras.',
         'zh-sg':
-          '自那时以来，ForPhysio Clinic不断发展。除了物理治疗服务外，还增加了营养、运动表现和健康方面的辅助服务。2016年至2020年期间协调葡萄牙游泳联合会物理治疗部门是公司历史上的一个里程碑。',
+          '2016年至2020年间，葡萄牙游泳联合会物理治疗部门的协调工作，朝着东京奥运会的目标，是公司历史上的一个里程碑。这个合作关系激励了“更多未来游泳”项目的创建，该项目由ForPhysio的物理治疗师团队负责。该项目包括一本书的出版和16次关于游泳运动员伤害预防的培训活动。\n2017年，ForPhysio开始在位于奥埃拉斯市的自有单位提供主动老龄化、营养和普拉提的物理治疗服务。',
       },
     },
   },
@@ -160,11 +160,11 @@ export const data = {
   textBlock_3: {
     text: {
       translations: {
-        pt: 'Aos dias de hoje, a ForPhysio conta com mais de dez parceiros em diversas áreas, e uma equipa de vinte profissionais que colaboram em 2 unidades próprias e 3 unidades parceiras, tornando possível o acesso a serviços de excelência.',
-        en: 'To date, ForPhysio has over ten partners in various fields, and a team of twenty professionals collaborating in 2 own units and 3 partner units, making access to excellent services possible.',
-        es: 'Hasta la fecha, ForPhysio cuenta con más de diez socios en varias áreas, y un equipo de veinte profesionales que colaboran en 2 unidades propias y 3 unidades asociadas, lo que hace posible el acceso a servicios de excelencia.',
+        pt: 'A designação ForPhysio Clinic, associada a uma atualização na sua imagem e comunicação, surge em 2022 e passa a incluir os serviços de fisioterapia pélvica, fisioterapia no meio aquático e serviços de bem-estar.\nHoje, a ForPhysio Clinic conta com 5 unidades e uma equipa de mais de 20 profissionais que torna possível o acesso a serviços de saúde especializados em reabilitação clínica e desportiva.',
+        en: 'The designation ForPhysio Clinic, associated with an update to its image and communication, emerged in 2022 and now includes pelvic physiotherapy services, aquatic physiotherapy, and wellness services.\nToday, ForPhysio Clinic has 5 units and a team of over 20 professionals, making it possible to access specialized healthcare services in clinical and sports rehabilitation.',
+        es: 'La designación ForPhysio Clinic, asociada a una actualización en su imagen y comunicación, surge en 2022 y ahora incluye los servicios de fisioterapia pélvica, fisioterapia en el medio acuático y servicios de bienestar.\nHoy, ForPhysio Clinic cuenta con 5 unidades y un equipo de más de 20 profesionales que hacen posible el acceso a servicios de salud especializados en rehabilitación clínica y deportiva.',
         'zh-sg':
-          '截至目前，ForPhysio在多个领域拥有超过十个合作伙伴，并有一支由二十名专业人员组成的团队，在两家自有单位和三家合作单位中合作，使得能够提供卓越的服务。',
+          'ForPhysio Clinic的名称于2022年出现，并与其形象和沟通的更新相关，现在包括盆底物理治疗、水中物理治疗和健康服务。目前，ForPhysio Clinic拥有5个单位和超过20名专业人员，使人们能够获得临床和运动康复的专业医疗服务。',
       },
     },
   },

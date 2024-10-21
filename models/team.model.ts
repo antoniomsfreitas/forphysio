@@ -21,4 +21,5 @@ export interface TeamMember {
   contactsPage?: boolean;
   inactive?: boolean;
   articles?: Article[];
+  externalMember?: boolean;
 }

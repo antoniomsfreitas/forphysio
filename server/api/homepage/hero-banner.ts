@@ -6,7 +6,7 @@ export const data = {
   info: {
     title: {
       translations: {
-        pt: 'Exercício • Fisioterapia • Bem-Estar',
+        pt: 'Exercício&nbsp;• Fisioterapia&nbsp;• Bem-Estar',
         en: 'Exercise • Physiotherapy • Wellness',
         es: 'Ejercicio • Fisioterapia • Bienestar.',
         'zh-sg': '運動 • 物理治療 • 健康',
@@ -21,7 +21,7 @@ export const data = {
           'zh-sg': '預約',
         },
       },
-      link: Routes.CONTACTS,
+      link: Routes.SERVICES,
     },
   },
   sliders: [

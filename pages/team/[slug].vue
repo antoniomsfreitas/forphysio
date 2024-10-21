@@ -4,14 +4,14 @@
       <IntroMember class="team-member-detail__intro" :member="member" />
 
       <TeamSlider
-        v-if="relatedMembers"
+        v-if="member.location?.id && relatedMembers"
         class="team-member-detail__slider"
         :title="$t('team.same-location-team')"
         :team-list="relatedMembers"
       />
 
       <LocationsMap
-        v-if="member.location"
+        v-if="member.location?.id"
         :locations="[member.location]"
         :title="$t('team.how-to-arrive')"
         class="team-member-detail__locations"
