@@ -45,7 +45,7 @@ export const data = [
       intro: {
         title: {
           translations: {
-            pt: 'Fisioterapia\nmúsculo-esquelética',
+            pt: 'Fisioterapia\nMúsculo-Esquelética',
             en: 'Musculoskeletal\nPhysiotherapy',
             es: 'Fisioterapia\nmusculoesquelética',
             'zh-sg': '肌肉骨骼\n物理治疗',
@@ -256,6 +256,7 @@ export const data = [
       LocationsList.CALDAS_RAINHA,
       LocationsList.LISBOA_LUMIAR,
       LocationsList.OEIRAS,
+      LocationsList.AVEIRO,
     ],
     homepage: true,
     detailLink: '',
@@ -720,10 +721,10 @@ export const data = [
       sideImage: {
         title: {
           translations: {
-            pt: 'Para quem é indicada a fisioterapia na saúde da mulher?',
-            en: "Who is physiotherapy in women's health indicated for?",
-            es: '¿Para quién está indicada la fisioterapia en la salud de la mujer?',
-            'zh-sg': '女性健康的物理治疗适用于谁？',
+            pt: 'Para quem é indicada a fisioterapia pélvica?',
+            en: 'Who is pelvic physiotherapy indicated for?',
+            es: '¿Para quién está indicada la fisioterapia pélvica?',
+            'zh-sg': '盆底理疗适合谁？',
           },
         },
         text: {
@@ -892,6 +893,7 @@ export const data = [
       LocationsList.CALDAS_RAINHA,
       LocationsList.LISBOA_LUMIAR,
       LocationsList.OEIRAS,
+      LocationsList.AVEIRO,
     ],
     homepage: true,
     blocks: {
@@ -1681,7 +1683,12 @@ export const data = [
       },
     },
     image: '/images/services/list/saude-e-bem-estar.jpg',
-    locationsId: [LocationsList.MARINHA_GRANDE, LocationsList.CALDAS_RAINHA, LocationsList.OEIRAS],
+    locationsId: [
+      LocationsList.MARINHA_GRANDE,
+      LocationsList.CALDAS_RAINHA,
+      LocationsList.OEIRAS,
+      LocationsList.AVEIRO,
+    ],
     homepage: false,
     blocks: {
       intro: {

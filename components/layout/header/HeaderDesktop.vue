@@ -43,7 +43,7 @@
           <Icon name="icon:search-white" />
         </NuxtLink>
 
-        <NuxtLink :to="buttonOption.route.name">
+        <NuxtLink :to="localePath(buttonOption.route.name)">
           <Button size="small" type="secondary">
             {{ $t(buttonOption.name) }}
           </Button>
