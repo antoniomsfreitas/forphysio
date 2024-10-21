@@ -47,14 +47,14 @@ const localePath = useLocalePath();
   overflow: hidden;
 
   .highlighted-article {
-    width: 100%;
     position: relative;
+    width: 100%;
   }
 
   &__bottom {
-    margin-top: -95px;
     position: relative;
     z-index: 3;
+    margin-top: -95px;
   }
 
   .slideshow {
@@ -62,9 +62,9 @@ const localePath = useLocalePath();
   }
 
   .fullscreen-cta {
-    width: 100%;
     display: flex;
     justify-content: flex-end;
+    width: 100%;
   }
 }
 </style>

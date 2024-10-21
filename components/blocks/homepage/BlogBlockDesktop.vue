@@ -101,17 +101,16 @@ onBeforeUnmount(() => {
 
 <style scoped lang="scss">
 .container {
-  min-height: 100vh;
-  overflow: hidden;
   position: relative;
-
+  min-height: 100vh;
   display: flex;
+  overflow: hidden;
   align-items: center;
   justify-content: flex-start;
 
   .highlighted-article {
-    width: 100%;
     position: relative;
+    width: 100%;
 
     &:deep(.content__col) {
       opacity: 0;
@@ -121,15 +120,15 @@ onBeforeUnmount(() => {
 
   .fullscreen-cta {
     position: absolute;
-    width: 100%;
-    z-index: 4;
     bottom: 0;
     left: 0;
+    z-index: 4;
+    width: 100%;
 
     &__container {
-      width: 100%;
       display: flex;
       justify-content: flex-end;
+      width: 100%;
       padding-bottom: 20px;
     }
 
@@ -150,8 +149,8 @@ onBeforeUnmount(() => {
   .slideshow {
     position: absolute;
     top: 152px;
-    left: calc(55vw - 100px - $grid-desktop-offset);
     right: 0;
+    left: calc(55vw - 100px - $grid-desktop-offset);
     z-index: 3;
     height: 628px;
     transition:
@@ -165,12 +164,12 @@ onBeforeUnmount(() => {
     }
 
     &__overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 4;
       width: 100%;
       height: 100%;
-      position: absolute;
-      z-index: 4;
-      left: 0;
-      top: 0;
       cursor: pointer;
 
       &:hover + .slideshow__container {
@@ -192,8 +191,8 @@ onBeforeUnmount(() => {
     }
 
     .slideshow {
-      left: 0;
       right: 0;
+      left: 0;
       transition-delay: 400ms;
 
       &__overlay {

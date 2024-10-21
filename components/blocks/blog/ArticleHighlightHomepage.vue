@@ -52,10 +52,10 @@ const btnSize = computed(() => (isMobile.value ? 'small' : 'medium'));
 
 <style scoped lang="scss">
 .image {
-  height: 100%;
   position: absolute;
-  left: 0;
   top: 0;
+  left: 0;
+  height: 100%;
   transition: left 800ms ease 400ms;
 
   @include mq-desktop {
@@ -71,7 +71,7 @@ const btnSize = computed(() => (isMobile.value ? 'small' : 'medium'));
     height: 100%;
 
     @include mq-desktop {
-      border-radius: 0px 15px 15px 0px;
+      border-radius: 0 15px 15px 0;
     }
   }
 
@@ -123,7 +123,6 @@ const btnSize = computed(() => (isMobile.value ? 'small' : 'medium'));
       display: flex;
       gap: 6px;
       align-items: center;
-
       font-weight: $font-weight-semi-bold;
       letter-spacing: 0.4px;
 
@@ -190,12 +189,12 @@ const btnSize = computed(() => (isMobile.value ? 'small' : 'medium'));
   }
 
   &__intro {
-    line-height: 1.2;
     font-weight: $font-weight-light;
+    line-height: 1.2;
 
     @include mq-tablet-desktop {
-      margin-bottom: 40px;
       max-width: 360px;
+      margin-bottom: 40px;
       font-size: 18px;
     }
 
