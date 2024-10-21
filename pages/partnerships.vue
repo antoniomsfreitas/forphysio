@@ -30,7 +30,9 @@
           </a>
         </div>
 
-        <Button type="outline" size="medium">{{ $t('general.book-evaluation') }}</Button>
+        <NuxtLink :to="localePath(Routes.SERVICES)" :title="$t('general.book-evaluation')">
+          <Button type="outline" size="medium">{{ $t('general.book-evaluation') }}</Button>
+        </NuxtLink>
       </template>
     </IntroBlock>
 
@@ -38,7 +40,7 @@
       <LayoutGridRow v-for="block in pageBlocks" :key="block.title" class="title-text-block">
         <LayoutGridCol m="4" t="8" d="7">
           <h3>{{ block.title }}</h3>
-          <p>{{ block.text }}</p>
+          <p v-if="block.text" v-html="replaceRoute(block.text)"></p>
         </LayoutGridCol>
       </LayoutGridRow>
     </LayoutGrid>
@@ -58,6 +60,10 @@
 </template>
 
 <script setup lang="ts">
+import { Routes } from '~/models/routes.model';
+
+const localePath = useLocalePath();
+
 // Contacts
 const { getContactsData } = useContacts();
 const { data: contactsData } = await getContactsData({ contactsIntro: true });
@@ -171,6 +177,10 @@ watch(
       @include mq-desktop {
         font-size: 24px;
       }
+    }
+
+    :deep(a) {
+      color: $white;
     }
   }
 }

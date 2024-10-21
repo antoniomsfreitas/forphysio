@@ -22,7 +22,7 @@ export const data = [
   {
     title: 'Ginásio Wellness',
     link: '',
-    image: '/images/partnerships/partners/default.png',
+    image: '/images/partnerships/partners/ginasio-wellness.png',
   },
   {
     title: 'Caldas Rugby Clube',
@@ -37,26 +37,21 @@ export const data = [
   {
     title: 'CNN',
     link: '',
-    image: '/images/partnerships/partners/default.png',
+    image: '/images/partnerships/partners/cnn.png',
   },
   {
-    title: 'CDUL Rugby',
+    title: 'Ahtive',
     link: '',
-    image: '/images/partnerships/partners/default.png',
+    image: '/images/partnerships/partners/ahtive.png',
   },
   {
     title: 'CDPA',
     link: '',
-    image: '/images/partnerships/partners/default.png',
+    image: '/images/partnerships/partners/cdpa.png',
   },
   {
     title: 'Balance',
     link: '',
     image: '/images/partnerships/partners/balance.png',
-  },
-  {
-    title: 'Fitness Factory',
-    link: '',
-    image: '/images/partnerships/partners/fitness_factory.png',
   },
 ];

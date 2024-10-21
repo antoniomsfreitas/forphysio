@@ -14,7 +14,7 @@
       <template #content>
         <p v-if="page?.introBlock?.text" class="intro-block__text">{{ page.introBlock.text }}</p>
 
-        <IconLink link="/" :text="$t('general.book-evaluation')" />
+        <IconLink :link="localePath(Routes.SERVICES)" :text="$t('general.book-evaluation')" />
       </template>
     </IntroBlock>
 
@@ -25,6 +25,9 @@
 </template>
 
 <script setup lang="ts">
+import { Routes } from '~/models/routes.model';
+
+const localePath = useLocalePath();
 const { getPage } = useTeam();
 const { data, status } = await getPage();
 

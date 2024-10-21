@@ -1,7 +1,13 @@
 <template>
-  <div class="custom-checkbox" :class="{ 'custom-checkbox--checked': modelValue, 'custom-checkbox--error': hasError }">
+  <div
+    class="custom-checkbox"
+    :class="{
+      'custom-checkbox--checked': modelValue,
+      'custom-checkbox--error': hasError,
+    }"
+  >
     <label>
-      <span>{{ label }}</span>
+      <span>{{ label }} <span v-if="required" class="required">*</span></span>
       <input type="checkbox" v-model="modelValue" @change="updateValue()" />
     </label>
 
@@ -25,6 +31,11 @@ const props = defineProps({
   },
   errorMessage: {
     type: String,
+    default: false,
+    required: false,
+  },
+  required: {
+    type: Boolean,
     default: false,
     required: false,
   },
@@ -78,6 +89,11 @@ watch(
       opacity: 0;
       background: url(/assets/icons/close.svg) no-repeat center center/22px;
       transition: 150ms ease-in-out all;
+    }
+
+    .required {
+      color: $blue;
+      margin-left: 4px;
     }
   }
 

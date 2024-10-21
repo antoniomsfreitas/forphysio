@@ -13,7 +13,7 @@
 
       <template #content>
         <p class="intro-block__text">{{ $t('pages.services.landingPage.intro') }}</p>
-        <IconLink :link="Routes.CONTACTS" :text="$t('general.bookAppointment')" />
+        <IconLink :link="localePath(Routes.CONTACTS)" :text="$t('general.bookAppointment')" />
       </template>
     </IntroBlock>
 

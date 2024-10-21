@@ -20,7 +20,7 @@
               <h1 v-text="data.title" />
 
               <NuxtLink :to="localePath(Routes.CONTACTS)">
-                <Button type="outline">{{ $t('general.book-evaluation') }}</Button>
+                <Button type="outline">{{ $t('general.bookAppointment') }}</Button>
               </NuxtLink>
             </LayoutGridCol>
           </LayoutGridRow>
