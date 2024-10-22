@@ -1,68 +1,70 @@
 <template>
-  <div class="contacts-form" @submit.prevent="handleSubmit">
-    <h3>{{ $t('contacts.form-title') }}</h3>
+  <div class="container">
+    <div v-if="enableContactForm" class="contacts-form" @submit.prevent="handleSubmit">
+      <h3>{{ $t('contacts.form-title') }}</h3>
 
-    <form class="form">
-      <CustomInput
-        type="text"
-        :label="t('form-field.name')"
-        v-model="formData.name.value"
-        :required="formData.name.required"
-        :errorMessage="formData.name?.errorMessage"
-      />
+      <form class="form">
+        <CustomInput
+          type="text"
+          :label="t('form-field.name')"
+          v-model="formData.name.value"
+          :required="formData.name.required"
+          :errorMessage="formData.name?.errorMessage"
+        />
 
-      <CustomInput
-        type="text"
-        :label="t('form-field.phone')"
-        v-model="formData.phone.value"
-        :required="formData.phone.required"
-        :errorMessage="formData.phone?.errorMessage"
-      />
+        <CustomInput
+          type="text"
+          :label="t('form-field.phone')"
+          v-model="formData.phone.value"
+          :required="formData.phone.required"
+          :errorMessage="formData.phone?.errorMessage"
+        />
 
-      <CustomInput
-        type="email"
-        :label="t('form-field.email')"
-        v-model="formData.email.value"
-        :required="formData.email.required"
-        :errorMessage="formData.email?.errorMessage"
-      />
+        <CustomInput
+          type="email"
+          :label="t('form-field.email')"
+          v-model="formData.email.value"
+          :required="formData.email.required"
+          :errorMessage="formData.email?.errorMessage"
+        />
 
-      <CustomInputFile
-        v-if="isRecruitmentForm"
-        :label="t('form-field.cv')"
-        v-model="formData.cv.value"
-        :required="formData.cv.required"
-        :errorMessage="formData.cv?.errorMessage"
-        @upload-file="handleUploadCV"
-      />
+        <CustomInputFile
+          v-if="isRecruitmentForm"
+          :label="t('form-field.cv')"
+          v-model="formData.cv.value"
+          :required="formData.cv.required"
+          :errorMessage="formData.cv?.errorMessage"
+          @upload-file="handleUploadCV"
+        />
 
-      <CustomSelect
-        v-if="isContactsForm && services"
-        :options="services"
-        :top-label="t('form-field.service')"
-        :default-label="'-- ' + t('form-field.service.default-label') + ' --'"
-        v-model="formData.service.value"
-        :required="formData.service.required"
-        :errorMessage="formData.service?.errorMessage"
-      />
+        <CustomSelect
+          v-if="isContactsForm && services"
+          :options="services"
+          :top-label="t('form-field.service')"
+          :default-label="'-- ' + t('form-field.service.default-label') + ' --'"
+          v-model="formData.service.value"
+          :required="formData.service.required"
+          :errorMessage="formData.service?.errorMessage"
+        />
 
-      <CustomInput
-        type="textarea"
-        :label="t('form-field.message')"
-        v-model="formData.message.value"
-        :required="formData.message.required"
-        :errorMessage="formData.message?.errorMessage"
-      />
+        <CustomInput
+          type="textarea"
+          :label="t('form-field.message')"
+          v-model="formData.message.value"
+          :required="formData.message.required"
+          :errorMessage="formData.message?.errorMessage"
+        />
 
-      <CustomCheckbox
-        :label="t('form-field.terms')"
-        v-model="formData.terms.value"
-        :required="formData.terms.required"
-        :errorMessage="formData.terms?.errorMessage"
-      />
+        <CustomCheckbox
+          :label="t('form-field.terms')"
+          v-model="formData.terms.value"
+          :required="formData.terms.required"
+          :errorMessage="formData.terms?.errorMessage"
+        />
 
-      <Button size="large">{{ $t('general.send') }}</Button>
-    </form>
+        <Button size="large">{{ $t('general.send') }}</Button>
+      </form>
+    </div>
   </div>
 </template>
 
@@ -78,6 +80,9 @@ const props = defineProps({
 import type { PropType } from 'vue';
 import CustomInput from '~/components/layout/form/CustomInput.vue';
 import type { FormData } from '~/models/form.model';
+
+const config = useRuntimeConfig();
+const enableContactForm = config.public.enableContactForm;
 
 const { t } = useI18n();
 const { getServicesListData } = useServices();

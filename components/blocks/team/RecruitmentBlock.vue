@@ -1,40 +1,42 @@
 <template>
-  <div class="recruitment-block">
-    <PictureImage
-      :alt="$t('recruitment-block.title')"
-      class="recruitment-block__image"
-      src="/images/team/recruitment-block/image-mobile.jpg"
-      src-t="/images/team/recruitment-block/image-tablet.jpg"
-      src-d="/images/team/recruitment-block/image-desktop.jpg"
-      cover
-    />
+  <div class="container">
+    <div v-if="enableRecruitment" class="recruitment-block">
+      <PictureImage
+        :alt="$t('recruitment-block.title')"
+        class="recruitment-block__image"
+        src="/images/team/recruitment-block/image-mobile.jpg"
+        src-t="/images/team/recruitment-block/image-tablet.jpg"
+        src-d="/images/team/recruitment-block/image-desktop.jpg"
+        cover
+      />
 
-    <div class="recruitment-block__gradient" />
+      <div class="recruitment-block__gradient" />
 
-    <div class="recruitment-block__content">
-      <LayoutGrid>
-        <LayoutGridRow>
-          <LayoutGridCol m="4" t="8" d="6">
-            <div class="recruitment-block__content__intro">
-              <h2 class="recruitment-block__content__intro__title">
-                {{ $t('recruitment-block.title') }}
-              </h2>
+      <div class="recruitment-block__content">
+        <LayoutGrid>
+          <LayoutGridRow>
+            <LayoutGridCol m="4" t="8" d="6">
+              <div class="recruitment-block__content__intro">
+                <h2 class="recruitment-block__content__intro__title">
+                  {{ $t('recruitment-block.title') }}
+                </h2>
 
-              <p class="recruitment-block__content__intro__text">
-                {{ $t('recruitment-block.subtitle') }}
-              </p>
+                <p class="recruitment-block__content__intro__text">
+                  {{ $t('recruitment-block.subtitle') }}
+                </p>
 
-              <Button
-                class="recruitment-block__content__intro__button"
-                type="outline"
-                @click="navigateTo(localePath(Routes.RECRUITMENT))"
-              >
-                {{ $t('recruitment-block.button') }}
-              </Button>
-            </div>
-          </LayoutGridCol>
-        </LayoutGridRow>
-      </LayoutGrid>
+                <Button
+                  class="recruitment-block__content__intro__button"
+                  type="outline"
+                  @click="navigateTo(localePath(Routes.RECRUITMENT))"
+                >
+                  {{ $t('recruitment-block.button') }}
+                </Button>
+              </div>
+            </LayoutGridCol>
+          </LayoutGridRow>
+        </LayoutGrid>
+      </div>
     </div>
   </div>
 </template>
@@ -42,6 +44,9 @@
 <script setup lang="ts">
 import { Routes } from '~/models/routes.model';
 const localePath = useLocalePath();
+const config = useRuntimeConfig();
+
+const enableRecruitment = config.public.enableRecruitment;
 </script>
 
 <style scoped lang="scss">

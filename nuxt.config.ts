@@ -181,4 +181,12 @@ export default defineNuxtConfig({
     ],
     allowedRoutes: ['/api/.*'],
   },
+  runtimeConfig: {
+    public: {
+      enableSearch: process.env.ENABLE_SEARCH === 'true',
+      enableContactForm: process.env.ENABLE_CONTACT_FORM === 'true',
+      enableNewsletter: process.env.ENABLE_NEWSLETTER === 'true',
+      enableRecruitment: process.env.ENABLE_RECRUITMENT === 'true',
+    },
+  },
 });
