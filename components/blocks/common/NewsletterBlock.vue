@@ -1,35 +1,37 @@
 <template>
-  <div class="newsletter-block">
-    <PictureImage
-      class="newsletter-block__image"
-      :alt="data.image.alt"
-      :src="data.image.mobile"
-      :src-t="data.image.tablet"
-      :src-d="data.image.desktop"
-      cover
-    />
+  <div class="container">
+    <div v-if="enableNewsletter" class="newsletter-block">
+      <PictureImage
+        class="newsletter-block__image"
+        :alt="data.image.alt"
+        :src="data.image.mobile"
+        :src-t="data.image.tablet"
+        :src-d="data.image.desktop"
+        cover
+      />
 
-    <div class="newsletter-block__gradient" />
+      <div class="newsletter-block__gradient" />
 
-    <div class="newsletter-block__content">
-      <LayoutGrid>
-        <LayoutGridRow>
-          <LayoutGridCol m="4" d="10" t="12" start-col-d="2">
-            <div class="newsletter-block__content__intro">
-              <h3 class="newsletter-block__content__intro__title">{{ data.title }}</h3>
-              <p class="newsletter-block__content__intro__text">{{ data.intro }}</p>
-            </div>
-
-            <div class="newsletter-block__content__form form">
-              <div class="input-container">
-                <input type="text" placeholder="exemplo@email.com" />
+      <div class="newsletter-block__content">
+        <LayoutGrid>
+          <LayoutGridRow>
+            <LayoutGridCol m="4" d="10" t="12" start-col-d="2">
+              <div class="newsletter-block__content__intro">
+                <h3 class="newsletter-block__content__intro__title">{{ data.title }}</h3>
+                <p class="newsletter-block__content__intro__text">{{ data.intro }}</p>
               </div>
 
-              <Button>{{ $t('general.subscribe') }}</Button>
-            </div>
-          </LayoutGridCol>
-        </LayoutGridRow>
-      </LayoutGrid>
+              <div class="newsletter-block__content__form form">
+                <div class="input-container">
+                  <input type="text" placeholder="exemplo@email.com" />
+                </div>
+
+                <Button>{{ $t('general.subscribe') }}</Button>
+              </div>
+            </LayoutGridCol>
+          </LayoutGridRow>
+        </LayoutGrid>
+      </div>
     </div>
   </div>
 </template>
@@ -43,6 +45,9 @@ defineProps({
     required: true,
   },
 });
+
+const config = useRuntimeConfig();
+const enableNewsletter = config.public.enableNewsletter;
 </script>
 
 <style scoped lang="scss">

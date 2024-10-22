@@ -3,17 +3,9 @@
     <LayoutGrid>
       <LayoutGridRow>
         <LayoutGridCol m="4" t="12">
-          <HeaderDesktop
-            :main-menu="data.mainMenu"
-            :search-option="data.searchOption"
-            :button-option="data.buttonOption"
-          />
+          <HeaderDesktop :main-menu="data.mainMenu" :button-option="data.buttonOption" :enable-search="enableSearch" />
 
-          <HeaderMobile
-            :main-menu="data.mainMenu"
-            :search-option="data.searchOption"
-            :button-option="data.buttonOption"
-          />
+          <HeaderMobile :main-menu="data.mainMenu" :button-option="data.buttonOption" :enable-search="enableSearch" />
         </LayoutGridCol>
       </LayoutGridRow>
     </LayoutGrid>
@@ -35,8 +27,10 @@ defineProps({
   },
 });
 
-const headerRef = ref(null);
+const config = useRuntimeConfig();
+const enableSearch = config.public.enableSearch;
 
+const headerRef = ref(null);
 const { styles: headerFixedStyles } = useFixedHeader(headerRef);
 </script>
 

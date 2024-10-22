@@ -9,9 +9,11 @@
         </Button>
       </NuxtLink>
 
-      <NuxtLink v-if="searchOption" :to="localePath(searchOption.route.name)" :title="$t(searchOption.name)">
-        <Icon name="icon:search-white" />
-      </NuxtLink>
+      <div class="search-container">
+        <NuxtLink v-if="enableSearch" :to="localePath(Routes.SEARCH)" :title="$t('pages.search')">
+          <Icon name="icon:search-white" />
+        </NuxtLink>
+      </div>
     </div>
 
     <div class="header__inner__sidebar" :class="{ 'header__inner__sidebar--opened': menuSidebarOpened }">
@@ -74,6 +76,8 @@
 
 <script setup lang="ts">
 import type { HeaderMenuOption } from '~/models/layout.model';
+import { Routes } from '~/models/routes.model';
+
 const localePath = useLocalePath();
 
 defineProps({
@@ -81,13 +85,13 @@ defineProps({
     type: Object as PropType<HeaderMenuOption[]>,
     required: true,
   },
-  searchOption: {
-    type: Object as PropType<HeaderMenuOption>,
-    required: true,
-  },
   buttonOption: {
     type: Object as PropType<HeaderMenuOption>,
     required: true,
+  },
+  enableSearch: {
+    type: Boolean,
+    required: false,
   },
 });
 

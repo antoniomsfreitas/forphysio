@@ -21,7 +21,6 @@ export interface HeaderMenuOption {
 
 export interface HeaderMenu {
   mainMenu: HeaderMenuOption[];
-  searchOption: HeaderMenuOption;
   buttonOption: HeaderMenuOption;
 }
 
