@@ -15,7 +15,7 @@ export enum Routes {
   PARTNERSHIPS = 'partnerships',
   RECRUITMENT = 'recruitment',
   FAQ = 'faq',
-  SEARCH = 'search',
+  SEARCH = '/',
   PRIVACY_POLICY = 'privacy-policy',
   NOT_FOUND = '404',
 }
