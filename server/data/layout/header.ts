@@ -90,10 +90,6 @@ export const data = {
       submenu: [],
     },
   ],
-  searchOption: {
-    name: 'pages.search',
-    route: { name: Routes.SEARCH },
-  },
   buttonOption: {
     name: 'general.bookAppointment',
     route: { name: Routes.CONTACTS },

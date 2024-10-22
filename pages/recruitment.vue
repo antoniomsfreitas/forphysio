@@ -2,7 +2,7 @@
   <div class="container">
     <IntroRecruitment class="intro-block" />
 
-    <LayoutGrid class="form-block">
+    <LayoutGrid v-if="enableRecruitment" class="form-block">
       <LayoutGridRow>
         <LayoutGridCol m="4" t="8" d="6" start-col-t="3" start-col-d="4">
           <ContactsForm type="recruitment" />
@@ -15,7 +15,9 @@
 <script setup lang="ts">
 import ContactsForm from '~/components/blocks/contacts/ContactsForm.vue';
 
-// @TODO :: API request
+const config = useRuntimeConfig();
+const enableRecruitment = config.public.enableRecruitment;
+
 const emit = defineEmits(['onDataLoaded']);
 emit('onDataLoaded');
 </script>
