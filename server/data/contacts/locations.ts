@@ -10,7 +10,7 @@ export const data = [
   {
     id: 1,
     name: 'Aveiro',
-    address: 'R. do Funchal 39, 2500-178',
+    address: 'R. Nossa Sra. do Carmo 1, 3810-026',
     phone: '+351 917 730 222',
     hours: {
       translations: {
@@ -60,7 +60,7 @@ export const data = [
     id: 4,
     name: 'Lisboa - Lumiar',
     address: 'R. Amílcar Cabral 40 B\n1750-020',
-    phone: '+351 918 078 788',
+    phone: '+351 917 730 222',
     hours: {
       translations: {
         pt: '<b>Seg - Sex:</b> 08h00-21h00\n<b>Sáb:</b> 09h00-13h00\n<b>Dom:</b> Encerrado',
@@ -70,13 +70,13 @@ export const data = [
       },
     },
     googleMapsSrc:
-      'https://maps.google.com/maps?width=100%25&height=470&hl=en&q=Forphysio%20caldas%20da%20rainha+(Forphysio%20%7C%20Caldas%20da%20Rainha)&t=&z=14&ie=UTF8&iwloc=B&output=embed',
+      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3110.9448395620548!2d-9.154474923601974!3d38.764969154506424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1933f37999cde5%3A0x995abf7287815b9f!2sForPhysio%20Lumiar!5e0!3m2!1spt-PT!2spt!4v1729554474459!5m2!1spt-PT!2spt',
   },
   {
     id: 5,
     name: 'Oeiras',
     address: 'R. Sacadura Cabral 65a\n1495-207 Cruz Quebrada',
-    phone: '+351 918 078 788',
+    phone: '+351 917 730 222',
     hours: {
       translations: {
         pt: '<b>Seg-Sex:</b> 08h00-21h00\n<b>Sáb:</b> 08h00-13h00\n<b>Dom:</b> Encerrado',
