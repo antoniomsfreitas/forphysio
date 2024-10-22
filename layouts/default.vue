@@ -13,6 +13,10 @@
 <script setup lang="ts">
 import { useLayout } from '~/composables/layouts.composable';
 
+useHead({
+  title: 'ForPhysio Clinic',
+});
+
 const { getLayoutData } = useLayout();
 const { data, status } = await getLayoutData();
 
