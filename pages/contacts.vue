@@ -30,7 +30,9 @@
           </a>
         </div>
 
-        <Button type="outline" size="medium">{{ $t('general.bookAppointment') }}</Button>
+        <NuxtLink :to="localePath(Routes.SERVICES)">
+          <Button type="outline" size="medium">{{ $t('general.bookAppointment') }}</Button>
+        </NuxtLink>
       </template>
     </IntroBlock>
 
@@ -51,9 +53,12 @@
 </template>
 
 <script setup lang="ts">
+import { Routes } from '~/models/routes.model';
+
 const { getContactsData, getLocationsData } = useContacts();
 const { data: contactsData, status } = await getContactsData({ contactsIntro: true });
 const { data: locationsData } = await getLocationsData();
+const localePath = useLocalePath();
 
 const contactsIntro = computed(() => contactsData.value);
 const locations = computed(() => locationsData.value);
