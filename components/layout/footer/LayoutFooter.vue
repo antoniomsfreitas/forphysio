@@ -95,6 +95,16 @@ const currentYear = new Date().getFullYear();
 
     &__logo a {
       display: block;
+
+      img {
+        @include mq-mobile {
+          max-width: 85px;
+        }
+
+        @include mq-tablet-desktop {
+          max-width: 150px;
+        }
+      }
     }
 
     &__nav {
