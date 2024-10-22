@@ -22,7 +22,7 @@
             </p>
           </li>
         </ul>
-        <IconLink link="/" :text="$t('general.book-evaluation')" />
+        <IconLink :link="localePath(Routes.SERVICES)" :text="$t('general.book-evaluation')" />
       </template>
     </IntroBlock>
 
@@ -94,6 +94,9 @@
 </template>
 
 <script setup lang="ts">
+import { Routes } from '~/models/routes.model';
+
+const localePath = useLocalePath();
 const { getPage } = useAboutPage();
 const { data, status } = await getPage();
 
