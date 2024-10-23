@@ -76,12 +76,12 @@
 import { Routes } from '~/models/routes.model';
 
 const localePath = useLocalePath();
-const { getTeamMembers, getLocations, getServicesByLocation, filterTeamMembers, defaultLocation } = useTeam();
+const { getTeamMembers, getLocations, getServicesByLocation, filterTeamMembers } = useTeam();
 
 const { data, status } = await getTeamMembers();
 const allMembers = computed(() => data.value);
 
-const currentLocation = ref(+defaultLocation);
+const currentLocation = ref(0);
 const currentServices = ref<number[]>([]);
 
 const currentMembers = computed(() =>

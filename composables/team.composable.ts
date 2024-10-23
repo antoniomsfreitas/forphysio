@@ -5,7 +5,6 @@ import { LocationsList } from '~/server/data/contacts/locations';
 
 export const useTeam = () => {
   const { locale } = useI18n();
-  const defaultLocation = LocationsList.CALDAS_RAINHA;
 
   const getTeamMembers = async (options?: { id?: number; slug?: string; locationId?: number }) => {
     const key = `team-${JSON.stringify(options)}`;
@@ -85,6 +84,5 @@ export const useTeam = () => {
     getLocations,
     getServicesByLocation,
     filterTeamMembers,
-    defaultLocation,
   };
 };
