@@ -1,5 +1,5 @@
 <template>
-  <ScrollbarSlideshow class="customers-reviews-slideshow-container" title="Testemunhos">
+  <ScrollbarSlideshow class="customers-reviews-slideshow-container" :title="$t('general.reviews')">
     <SwiperSlide v-for="item in data" :key="item.id" class="customers-reviews-slideshow-container__slide">
       <CardReview :author="item.author" :review="item.review" :photo="item.image" :alt="item.alt" :star="item.stars" />
     </SwiperSlide>
