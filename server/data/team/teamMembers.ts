@@ -39,10 +39,10 @@ export const data = [
     },
     role: {
       translations: {
-        pt: 'Fundador e Gerente',
-        en: 'Founder and Manager',
-        es: 'Fundador y Gerente',
-        'zh-sg': '创始人兼经理',
+        pt: 'Fundador e Fisioterapeuta',
+        en: 'Founder and Physiotherapist',
+        es: 'Fundador y Fisioterapeuta',
+        'zh-sg': '创始人兼物理治疗师',
       },
     },
     services: [ServicesList.FISIOTERAPIA_MUSCULO_ESQUELETICA, ServicesList.FISIOTERAPIA_DESPORTO],
@@ -63,10 +63,10 @@ export const data = [
     },
     role: {
       translations: {
-        pt: 'Fisioterapeuta, Coordenadora Geral e Gestora Financeira',
-        en: 'Physiotherapist, General Coordinator, and Financial Manager',
-        es: 'Fisioterapeuta, Coordinadora General y Gestora Financiera',
-        'zh-sg': '物理治疗师，总协调员和财务经理',
+        pt: 'Diretora Geral e Fisioterapeuta',
+        en: 'General Director and Physiotherapist',
+        es: 'Directora General y Fisioterapeuta',
+        'zh-sg': '总监兼物理治疗师',
       },
     },
     services: [
@@ -421,10 +421,10 @@ export const data = [
     },
     role: {
       translations: {
-        pt: 'Fisioterapeuta',
-        en: 'Physiotherapist',
-        es: 'Fisioterapeuta',
-        'zh-sg': '物理治疗师',
+        pt: 'Nutricionista',
+        en: 'Nutritionist',
+        es: 'Nutricionista',
+        'zh-sg': '营养师',
       },
     },
     location: LocationsList.OEIRAS,
@@ -522,10 +522,10 @@ export const data = [
     },
     role: {
       translations: {
-        pt: 'Médico Ortopedista',
-        en: 'Orthopedic Doctor',
-        es: 'Médico Ortopedista',
-        'zh-sg': '骨科医生',
+        pt: 'Fisiatra',
+        en: 'Physiatrist',
+        es: 'Fisiatra',
+        'zh-sg': '物理康复医师',
       },
     },
     contactsPage: true,
